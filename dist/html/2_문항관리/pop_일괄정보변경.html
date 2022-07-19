@@ -1,0 +1,371 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>문항목록-일괄정보변경</title>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css">
+<!-- <link rel="stylesheet" href="../../css/webfonts/fontawesome.min.css"/> -->
+<link rel="stylesheet" href="../../css/style.min.css">
+
+<script type="text/javascript" src="../../js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/admin.js"></script> 
+<script type="text/javascript" src="../../js/swiper.min.js"></script> 
+</head>
+<body style="background-color: #fff;">
+	<!-- 일괄 정보 변경 popup -->
+	<div class="window_pop pop_info_change">
+		<h2 class="title mb30">일괄 정보 변경</h2>
+
+		<div class="tabmenu">
+			<ul>
+				<li id="tab1" class="tab_btn w50p">
+					<input type="radio" checked name="tabmenu" id="tmenu1" class="tab">
+					<label class="tlabel1 label" for="tmenu1">STEP1  변경대상 및 옵션 선택</label>
+					<div class="tab_con">						
+						<h3 class="s_title mb08">변경 대상 선택</h3>
+
+						<div class="radio_box">
+							<ul class="mb15">
+								<li class="mb05">
+									<input type="radio" id="sel01" name="chgSelect" checked>
+									<label for="sel01">입력한 문항을 대상으로 (목록에서 선택 시 자동 기입)</label>
+								</li>
+								<li>
+									<input type="radio" id="sel02" name="chgSelect">
+									<label for="sel02">엑셀파일 업로드한 문항을 대상으로</label>
+								</li>
+							</ul>
+							<!-- 입력문항 대상 -->
+							<div class="mb30">
+								<p class="total sm mb05">총 00개</p>
+								<div class="scroll_border_box" style="height: 140px;">
+									<ul>
+										<li><a href="#none" class="t_underline black_color">00000</a></li>
+										<li><a href="#none" class="t_underline black_color">00000</a></li>
+										<li><a href="#none" class="t_underline black_color">00000</a></li>
+										<li><a href="#none" class="t_underline black_color">00000</a></li>
+										<li><a href="#none" class="t_underline black_color">00000</a></li>
+										<li><a href="#none" class="t_underline black_color">00000</a></li>
+									</ul>
+								</div>
+								<div class="right mt08">
+									<a href="#none" class="btn btn_green w80" onclick="openPop1()">문항추가</a>
+									<a href="#none" class="btn btn_gray ml08 w80">선택삭제</a>
+								</div>
+							</div>
+							<!-- //입력문항 대상 -->
+
+							<!-- 엑셀파일 업로드 대상 -->
+							<div class="mb30">
+								<table class="tbl_view">
+									<caption></caption>
+									<colgroup>
+										<col style="width:30%">
+										<col style="width:70%">
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row">문항 HWP 파일 업로드</th>
+											<td>
+												<div class="justify_between">
+													<span class="file_name">aa</span>
+													
+													<div>
+														<input type="file" id="inputFile" class="input_file_button">
+														<label for="inputFile" class="w80">검색</label>														
+														<a href="#none" class="btn btn_gray outline w80 ml05">파일 업로드</a>
+													</div>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<p class="justify_start mt12">
+									* 샘플파일과 동일한 양식으로 업로드해주세요.
+									<a href="#none" class="btn btn_gray outline w120 ml15">샘플파일 다운로드</a>
+								</p>
+								<div class="result mt25">
+									<span>업로드 결과 총 00문항</span>
+								</div>
+
+								
+
+							</div>
+							<!-- //엑셀파일 업로드 대상 -->
+						</div>						
+
+						<h3 class="s_title mb12">수정/변경 옵션 선택</h3>
+						<div>
+							<div class="radio_box mb20">
+								<div class="tit_box">
+									<input type="radio" id="chg01">
+									<label for="chg01">단원 정보 변경</label>
+								</div>
+								<ul>
+									<li class="mb08">
+										<input type="radio" id="chg01_01" name="chgInfo01">
+										<label for="chg01_01">기존 단원을 새로운 단원으로 변경 합니다.</label>
+									</li>
+									<li>
+										<input type="radio" id="chg01_02" name="chgInfo01">
+										<label for="chg01_02">기존 단원은 그대로 두고, 새로운 단원(교육과정 포함)를 추가합니다.</label>
+									</li>
+								</ul>
+							</div>
+							<div class="radio_box mb50">
+								<div class="tit_box">
+									<input type="radio" id="chg02">
+									<label for="chg02">속성 정보 변경</label>
+								</div>
+								<ul>
+									<li class="mb08">
+										<input type="radio" id="chg02_01" name="chgInfo02">
+										<label for="chg02_01">일부 속성 정보만 변경합니다. </label>
+									</li>
+									<li>
+										<input type="radio" id="chg02_02" name="chgInfo02">
+										<label for="chg02_02">엑셀파일로 속성 정보 전체를 변경합니다. </label>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="center mb30">
+							<a href="#none" class="btn large btn_green w200">다음 단계로 이동</a>
+							<a href="#none" class="btn large btn_gray outline" onClick="self.close();">닫기</a>
+						</div>
+					</div>
+				</li>
+				<li id="tab2" class="tab_btn w50p">
+					<input type="radio" name="tabmenu" id="tmenu2" class="tab">
+					<label class="tlabel2 label" for="tmenu2">STEP2  정보변경</label>
+					<div class="tab_con">						
+						
+						<!-- 단원 정보 변경 -->
+						<div class="mb35">
+							<h3 class="s_title mb00">단원 정보 변경 </h3>
+							<p class="txt mb20">- 기존 단원을 새로운 단원으로 변경합니다. </p>
+
+							<!-- select box -->
+							<div class="justify_start">
+								<span class="sel_tit">교육과정</span>
+								<select class="select_box w220">
+									<option value="">최하</option>
+									<option value="">최하</option>
+									<option value="">최하</option>
+									<option value="">최하</option>
+								</select>
+							</div>
+							<div class="justify_start mt15">
+								<span class="sel_tit">초중고 구분</span>
+								<select class="select_box">
+									<option value="">최하</option>
+									<option value="">최하</option>
+									<option value="">최하</option>
+									<option value="">최하</option>
+								</select>
+							</div>
+							<div class="justify_start mt15">
+								<span class="sel_tit">영역</span>
+								<select class="select_box">
+									<option value="">최하</option>
+									<option value="">최하</option>
+									<option value="">최하</option>
+									<option value="">최하</option>
+								</select>
+							</div>
+							<div class="justify_start mt15">
+								<span class="sel_tit">과목</span>
+								<select class="select_box">
+									<option value="">최하</option>
+									<option value="">최하</option>
+									<option value="">최하</option>
+									<option value="">최하</option>
+								</select>
+							</div>
+							<div class="justify_start mt15">
+								<span class="sel_tit">학년</span>
+								<select class="select_box w220">
+									<option value="">최하</option>
+									<option value="">최하</option>
+									<option value="">최하</option>
+									<option value="">최하</option>
+								</select>
+							</div>
+							<div class="justify_start mt15">
+								<span class="sel_tit">학기</span>
+								<select class="select_box">
+									<option value="">최하</option>
+									<option value="">최하</option>
+									<option value="">최하</option>
+									<option value="">최하</option>
+								</select>
+							</div>
+							<div class="justify_start mt15">
+								<span class="sel_tit">대단원</span>
+								<select class="select_box">
+									<option value="">최하</option>
+									<option value="">최하</option>
+									<option value="">최하</option>
+									<option value="">최하</option>
+								</select>
+							</div>
+							<div class="justify_start mt15">
+								<span class="sel_tit">중단원</span>
+								<select class="select_box">
+									<option value="">최하</option>
+									<option value="">최하</option>
+									<option value="">최하</option>
+									<option value="">최하</option>
+								</select>
+							</div>
+							<div class="justify_start mt15">
+								<span class="sel_tit">소단원</span>
+								<select class="select_box">
+									<option value="">최하</option>
+									<option value="">최하</option>
+									<option value="">최하</option>
+									<option value="">최하</option>
+								</select>
+							</div>
+							<div class="justify_start mt15">
+								<span class="sel_tit">토픽</span>
+								<select class="select_box">
+									<option value="">최하</option>
+									<option value="">최하</option>
+									<option value="">최하</option>
+									<option value="">최하</option>
+								</select>
+							</div>
+						</div>
+						<!-- // 단원 정보 변경 -->
+
+						<!-- 속성 정보 변경 -->
+						<div class="mb35">
+							<h3 class="s_title mb00">속성 정보 변경</h3>
+							<p class="txt mb20">- 일부 속성 정보만 변경 합니다.</p>
+
+							<!-- select box -->
+							<div class="justify_start">
+								<span class="sel_tit">난이도</span>
+								<select class="select_box w220">
+									<option value="">최하</option>
+								</select>
+							</div>
+							<div class="justify_start mt15">
+								<span class="sel_tit">문제상태</span>
+								<select class="select_box">
+									<option value="">작업중</option>
+								</select>
+							</div>
+							<div class="justify_start mt15">
+								<span class="sel_tit">빈출도</span>
+								<select class="select_box">
+									<option value="">1등급</option>
+								</select>
+							</div>
+							<div class="justify_start mt15">
+								<span class="sel_tit">문항형태</span>
+								<select class="select_box">
+									<option value="">일반</option>
+								</select>
+							</div>
+							<div class="justify_start mt15">
+								<span class="sel_tit">객체구분</span>
+								<select class="select_box w220">
+									<option value="">이미지</option>
+								</select>
+							</div>
+							<div class="justify_start mt15">
+								<span class="sel_tit">문제유형</span>
+								<select class="select_box">
+									<option value="">정답형</option>
+								</select>
+							</div>
+							<div class="justify_start mt15">
+								<span class="sel_tit">문항용도</span>
+								<select class="select_box">
+									<option value="">개념 TEST</option>
+								</select>
+							</div>
+							<div class="justify_start mt15">
+								<span class="sel_tit">사용영역</span>
+								<select class="select_box">
+									<option value="">기출문제</option>
+								</select>
+							</div>
+							<div class="justify_start mt15">
+								<span class="sel_tit">내용형태</span>
+								<select class="select_box">
+									<option value="">단일</option>
+								</select>
+							</div>
+							<div class="justify_start mt15">
+								<span class="sel_tit">키워드</span>
+								<input type="text" class="w220">
+							</div>
+						</div>
+						<!-- // 속성 정보 변경 -->
+
+						<!-- 속성정보선택 -->
+						<div class="mb35">
+							<h3 class="s_title mb00">속성 정보 선택</h3>
+							<p class="txt mb20">-  엑셀파일로 속성 정보 전체를 변경합니다.</p>
+							<table class="tbl_view">
+								<caption></caption>
+								<colgroup>
+									<col style="width:25%">
+									<col style="width:75%">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">속성 파일 업로드</th>
+										<td>
+											<div class="justify_between">
+												<span class="file_name">aa</span>
+												
+												<div>
+													<input type="file" id="inputFile" class="input_file_button">
+													<label for="inputFile" class="w80">검색</label>														
+													<a href="#none" class="btn btn_gray outline w80 ml05">파일 업로드</a>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<p class="justify_start mt12 mb30">
+								* 샘플파일과 동일한 양식으로 업로드해주세요.
+								<a href="#none" class="btn btn_gray outline w120 ml15">샘플파일 다운로드</a>
+							</p>
+
+							<h3 class="s_title mb00">속성 정보 업로드 결과</h3>
+							<div class="result mt12">
+								<span>정상적으로 변경 되었습니다.</span>
+							</div>
+						</div>							
+						<!-- //속성정보선택 -->
+						
+						<div class="justify_center mb30">
+							<a href="#none" class="btn large btn_gray">뒤로</a>
+							<a href="#none" class="btn large ml08 btn_green w80">변경 완료</a>
+							<a href="#none" class="btn large ml08 btn_gray outline" onClick="self.close();">닫기</a>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>			
+	</div>
+	<!-- //일괄 정보 변경 popup -->
+
+	<script>
+		/* window popup */
+		function openPop1(){
+			var popup1 = window.open('pop_문항추가.html', 'pop_문항추가', 'width=460px,height=283px');
+		}
+	</script>
+</body>
+
+</html>

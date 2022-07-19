@@ -1,0 +1,297 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head> 
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>통계관리-오류신고 관리 목록</title>
+	@@include('../include/inc_html_head.html')
+</head>
+<body>	 
+	<div id="wrap">
+		<!-- 상단 공통 영역 -->
+		@@include('../include/inc_header.html')
+		<div class="container">
+			<div class="local_nav">
+				<ul class="menu">
+					<li><a href="#none">작업내역</a></li>
+					<li><a href="#none">문항통계</a></li>
+					<li><a href="#none">시험지통계</a></li>
+					<li><a href="#none" class="on">오류신고 관리</a></li>
+					<li><a href="#none">이용로그</a></li>
+					<li><a href="#none">학습현황 분석</a></li>
+				</ul>
+			</div>
+
+			<!-- 컨텐츠 영역 -->
+			<div class="contents">
+				<section>
+					<h2 class="section_tit pt00">작업내역</h2>
+					<div class="justify_between_start mb40">
+						<!-- 계열사 -->
+						<div class="company_list">
+							<div class="justify_start">
+								<span class="mr30">계열사</span>
+								<div class="terms">
+									<select class="select_box w140">
+										<option value="">천재교육</option>
+										<option value="">천재교과서</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<!-- //계열사 -->
+	
+						<!-- 검색조건 -->
+						<div class="search_box_wrap">
+							<div class="search_box justify_between">
+								<div class="terms justify_start">
+									<span class="mr20">검색조건</span>
+									<select class="select_box w100 mr04">
+										<option value="">전체</option>
+										<option value="">전체</option>
+									</select>
+									
+									<input type="text" placeholder="키워드" class="w160 placeholder_black">
+
+									<span class="ml12">
+										<input class="w90 underline" type="text" id="from" placeholder="0000.00.00">
+										<span class="ml05 mr05">~</span>
+										<input class="w90 underline" type="text" id="to" placeholder="0000.00.00">
+									</span>
+								</div>
+								<div class="btn_wrap justify_start">
+									<a class="btn btn_green" href="#none">검색</a>
+									<a class="btn btn_gray ml08" href="#none">초기화</a>
+									<a class="btn_search_toggle ml08" href="#none">열기</a>
+								</div>
+							</div>
+							
+							<!-- search_toggle_box -->
+							<div class="search_toggle_box">
+								<div class="search_box">
+									<div class="box_list">
+										<div class="terms justify_start">
+											<span>내용구분</span>
+											<div class="chk_list">
+												<div>
+													<span class="check_box mr15">
+														<input type="checkbox" id="type1_0">
+														<label for="type1_0">전체</label>
+													</span>
+													<span class="check_box mr15">
+														<input type="checkbox" id="type1_1">
+														<label for="type1_1">내용오류</label>
+													</span>
+													<span class="check_box mr15">
+														<input type="checkbox" id="type1_2">
+														<label for="type1_2">분석오류</label>
+													</span>
+													<span class="check_box mr15">
+														<input type="checkbox" id="type1_3">
+														<label for="type1_3">기타오류</label>
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="search_box">
+									<div class="box_list">
+										<div class="terms justify_start">
+											<span>처리구분</span>
+											<div class="chk_list">
+												<div>
+													<span class="check_box mr15">
+														<input type="checkbox" id="type2_0">
+														<label for="type2_0">전체</label>
+													</span>
+													<span class="check_box mr15">
+														<input type="checkbox" id="type2_1">
+														<label for="type2_1">미처리</label>
+													</span>
+													<span class="check_box mr15">
+														<input type="checkbox" id="type2_2">
+														<label for="type2_2">처리중</label>
+													</span>
+													<span class="check_box mr15">
+														<input type="checkbox" id="type2_3">
+														<label for="type2_3">처리완료</label>
+													</span>
+													<span class="check_box mr15">
+														<input type="checkbox" id="type2_4">
+														<label for="type2_4">오류 없음</label>
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- //search_toggle_box -->
+						</div>
+						<!-- //검색조건 -->
+					</div>
+				</section>
+
+				<section class="section_wrap mt35">
+					<div class="justify_between mb08">
+						<div class="justify_start">
+							<p class="total sm">총 <span>00,000</span>개</p>
+							<select class="select_box w140 ml10">
+								<option value="">30개 보기</option>
+								<option value="">10개 보기</option>
+								<option value="">30개 보기</option>
+								<option value="">50개 보기</option>
+								<option value="">100개 보기</option>
+							</select>
+						</div>
+						
+						<div class="btn_wrap justify_start">
+							<a class="btn btn_gray outline" href="#none">삭제</a>
+							<a class="btn btn_gray outline w80 ml08" href="#none">전체선택</a>
+						</div>
+					</div>
+					<!-- 오류신고관리 리스트 -->
+					<div class="tbl_scroll_box" style="max-height: 620px;">
+						<table class="tbl_list">
+							<caption></caption>
+							<colgroup>
+								<col style="width:5%">
+								<col style="width:5%">
+								<col style="width:10%">
+								<col style="width:8%">
+								<col style="width:10%">
+								<col style="width:30%">
+								<col />
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col" class="first">
+										<div class="check_box">
+											<input type="checkbox" id="check0">
+											<label for="check0" class="pl16"></label>
+										</div>
+									</th>
+									<th scope="col">번호</th>
+									<th scope="col">계열사</th>
+									<th scope="col">오류 ID</th>
+									<th scope="col">내용구분</th>
+									<th scope="col">제목</th>
+									<th scope="col">작업자</th>
+									<th scope="col">신고일</th>
+									<th scope="col">처리구분</th>
+									<th scope="col">처리일</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="first">
+										<div class="check_box">
+											<input type="checkbox" id="check1">
+											<label for="check1" class="pl16"></label>
+										</div>
+									</td>
+									<td>1</td>
+									<td>계열사A</td>
+									<td>000</td>
+									<td>내용오류</td>
+									<td class="left">
+										<a class="t_link primary_color ellipsis" href="#none">
+											오류신고 제목이 한줄 이상 말줄임 말줄임 말줄임 오류신고 제목이 한줄 이상 말줄임 말줄임 말줄임
+										</a>
+									</td>
+									<td>홍길동</td>
+									<td>YYYY.MM.DD</td>
+									<td>처리완료</td>
+									<td>YYYY.MM.DD</td>
+								</tr>
+								<tr>
+									<td class="first">
+										<div class="check_box">
+											<input type="checkbox" id="check2">
+											<label for="check2" class="pl16"></label>
+										</div>
+									</td>
+									<td>1</td>
+									<td>계열사A</td>
+									<td>000</td>
+									<td>내용오류</td>
+									<td class="left">
+										<a class="t_link primary_color ellipsis" href="#none">
+											오류신고 제목이 한줄 이상 말줄임 말줄임 말줄임 오류신고 제목이 한줄 이상 말줄임 말줄임 말줄임
+										</a>
+									</td>
+									<td>홍길동</td>
+									<td>YYYY.MM.DD</td>
+									<td>처리완료</td>
+									<td>YYYY.MM.DD</td>
+								</tr>
+								<tr>
+									<td class="first">
+										<div class="check_box">
+											<input type="checkbox" id="check3">
+											<label for="check3" class="pl16"></label>
+										</div>
+									</td>
+									<td>1</td>
+									<td>계열사A</td>
+									<td>000</td>
+									<td>내용오류</td>
+									<td class="left">
+										<a class="t_link primary_color ellipsis" href="#none">
+											오류신고 제목이 한줄 이상 말줄임 말줄임 말줄임 오류신고 제목이 한줄 이상 말줄임 말줄임 말줄임
+										</a>
+									</td>
+									<td>홍길동</td>
+									<td>YYYY.MM.DD</td>
+									<td>처리완료</td>
+									<td>YYYY.MM.DD</td>
+								</tr>
+								<tr>
+									<td class="first">
+										<div class="check_box">
+											<input type="checkbox" id="check4">
+											<label for="check4" class="pl16"></label>
+										</div>
+									</td>
+									<td>1</td>
+									<td>계열사A</td>
+									<td>000</td>
+									<td>내용오류</td>
+									<td class="left">
+										<a class="t_link primary_color ellipsis" href="#none">
+											오류신고 제목이 한줄 이상 말줄임 말줄임 말줄임 오류신고 제목이 한줄 이상 말줄임 말줄임 말줄임
+										</a>
+									</td>
+									<td>홍길동</td>
+									<td>YYYY.MM.DD</td>
+									<td>처리완료</td>
+									<td>YYYY.MM.DD</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<!-- 페이징 -->
+					<div class="paging mt32">
+						<a href="javascript:void(0);" class="pprev"><img src="../../images/page_pprev.svg" alt="처음"></a> 
+						<a href="javascript:void(0);" class="prev"><img src="../../images/page_prev.svg" alt="이전"></a> 
+						<a href="javascript:void(0);" class="on">1 </a>
+						<a href="javascript:void(0);">2</a>
+						<a href="javascript:void(0);">3</a>
+						<a href="javascript:void(0);">4</a>
+						<a href="javascript:void(0);">5</a>
+						<a href="javascript:void(0);">6</a>
+						<a href="javascript:void(0);">7</a>
+						<a href="javascript:void(0);">8</a>
+						<a href="javascript:void(0);">9</a>
+						<a href="javascript:void(0);">10</a>
+						<a href="javascript:void(0);" class="next"><img src="../../images/page_next.svg" alt="다음"></a>
+						<a href="javascript:void(0);" class="nnext"><img src="../../images/page_nnext.svg" alt="끝"></a>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

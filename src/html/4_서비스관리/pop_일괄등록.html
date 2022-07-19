@@ -1,0 +1,240 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional/EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"/>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>문항목록-문항일괄업로드</title>
+	@@include('../include/inc_html_head.html')
+</head>
+
+<body style="background-color: #fff;">
+	<!-- 문항 일괄 업로드 popup -->
+	<div class="window_pop pop_all_upload">
+		<h2 class="title mb30">문항 일괄 업로드</h2>
+
+		<div class="justify_start_top">
+
+			<div class="left_area">
+				<div class="upload_box">
+					<h3 class="box_tit mb20">파일 업로드</h3>
+
+					<div class="terms">
+						<span class="mb07">HWP 파일 업로드</span>
+						<div class="right">
+							<span class="file_name w100p">문항100개 업로드.hwp</span>
+							<input type="file" id="inputFile" class="input_file_button">
+							<label for="inputFile">검색</label>
+						</div>
+					</div>
+
+					<div class="terms">
+						<span class="mb07">Excel 파일 업로드</span>
+						<div class="right">
+							<span class="file_name w100p">문항100개 업로드.xls</span>
+							<input type="file" id="inputFile" class="input_file_button">
+							<label for="inputFile">검색</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="right mt12">
+					<p class="p_text right mb05">* 업로드 확장자: hwp, xis, xlsx</p>
+					<a href="#none" class="btn btn_gray outline w80">HWP 샘플</a>
+					<a href="#none" class="btn btn_gray outline w80 ml08">Excel 샘플</a>
+				</div>
+
+				<a href="#none" class="w100p btn btn_green large mt20">문항 일괄 업로드</a>
+
+
+				<div class="upload_box scroll_box mt20" style="height:400px">
+					<p class="total mb10">총 000 문항</p>
+					<table class="tbl_list">
+						<caption></caption>
+						<colgroup>
+							<col style="width:50%">
+							<col style="width:50%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col" class="first">구분</th>
+								<th scope="col">ID</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="first">문항</td>
+								<td>000000</td>
+							</tr>
+							<tr>
+								<td class="first">문항</td>
+								<td>000000</td>
+							</tr>							
+							<tr>
+								<td class="first">문항</td>
+								<td>000000</td>
+							</tr>
+							<tr>
+								<td class="first">문항</td>
+								<td>000000</td>
+							</tr>
+							<tr>
+								<td class="first">문항</td>
+								<td>000000</td>
+							</tr>
+							<tr>
+								<td class="first">문항</td>
+								<td>000000</td>
+							</tr>
+							<tr>
+								<td class="first">문항</td>
+								<td>000000</td>
+							</tr>							
+							<tr>
+								<td class="first">문항</td>
+								<td>000000</td>
+							</tr>
+							<tr>
+								<td class="first">문항</td>
+								<td>000000</td>
+							</tr>
+							<tr>
+								<td class="first">문항</td>
+								<td>000000</td>
+							</tr>
+						</tbody>
+					</table>
+
+				</div>
+			</div>
+			
+			<div class="right_area flex_grow ml20">
+				<div class="preview_box scroll_box" style="height: 806px;">
+					<h3 class="box_tit">문항 미리보기</h3>
+					
+					<!-- 업로드 전 -->
+					<div class="txt mt60 mb60 center">
+						문항 업로드 결과를 확인할 수 있습니다.
+					</div>
+					<!-- // 업로드 전 -->
+
+					<!-- 업로드 완료 -->
+					<div class="complete_upload">
+						<span class="tit_id">문항ID 000000</span>
+						<div class="justify_start_top mb40">
+							<div class="mr20">
+								<p class="right">2015 교육과정 / 과목 / 대분류 / 중분류 / 소분류 / 토픽</p>
+
+								<div class="exam_area">
+									문항 영역
+								</div>
+							</div>
+							<table class="tbl_view">
+								<caption></caption>
+								<colgroup>
+									<col style="width:45%">
+									<col style="width:55%">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">문제형태 지정</th>
+										<td>5지 선택</td>
+									</tr>
+									<tr>
+										<th scope="row">난이도</th>
+										<td>최하</td>
+									</tr>
+									<tr>
+										<th scope="row">문제상태</th>
+										<td>등록</td>
+									</tr>
+									<tr>
+										<th scope="row">빈출도</th>
+										<td>1등급</td>
+									</tr>
+									<tr>
+										<th scope="row">문항형태</th>
+										<td>일반</td>
+									</tr>
+									<tr>
+										<th scope="row">객체구분</th>
+										<td>이미지</td>
+									</tr>
+									<tr>
+										<th scope="row">문제유형</th>
+										<td>정답형</td>
+									</tr>
+									<tr>
+										<th scope="row">문항용도</th>
+										<td>개념TEST</td>
+									</tr>
+									<tr>
+										<th scope="row">사용영역</th>
+										<td>기출문제</td>
+									</tr>
+									<tr>
+										<th scope="row">내용형태</th>
+										<td>단일</td>
+									</tr>
+									<tr>
+										<th scope="row">키워드</th>
+										<td>&nbsp;</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<span class="tit_id">지문ID 000000</span>
+						<div class="justify_start_top mb40">
+							<div class="mr20">
+								<p class="right">2015 교육과정 / 과목 / 대분류 / 중분류 / 소분류 / 토픽</p>
+
+								<div class="exam_area">
+									문항 영역
+								</div>
+							</div>
+							<table class="tbl_view">
+								<caption></caption>
+								<colgroup>
+									<col style="width:45%">
+									<col style="width:55%">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">키워드</th>
+										<td>&nbsp;</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<!-- // 업로드 완료 -->
+
+					<!-- 업로드 실패 -->
+					<div class="txt mt60 mb40 center">
+						문항 일괄 업로드에 실패하였습니다.
+					</div>
+					<div class="result">
+	
+						<!-- 오류 있을시 -->
+						<div class="error justify_center">
+							<span>문항 오류 : 2개 / 100개</span>
+							<a href="#none" class="btn btn_gray w200 ml20">업로드 오류 내역 다운로드</a>
+						</div>
+					</div>
+					<div class="info_txt right">
+						<p>* 업로드 오류 내역은 엑셀파일에서 확인할 수 있습니다.<br>
+							* 오류 내역이 있는 파일은 업로드가 되지 않으므로, 재작업 후 업로드해주세요.</p>
+					</div>
+					<!-- // 업로드 실패 -->
+
+
+				</div>
+			</div>
+		</div>
+	
+	</div>
+	<!-- //문항 일괄 업로드 popup -->
+</body>
+
+</html>

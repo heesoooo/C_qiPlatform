@@ -1,0 +1,519 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+	<head> 
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>상세보기</title>
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css">
+<!-- <link rel="stylesheet" href="../../css/webfonts/fontawesome.min.css"/> -->
+<link rel="stylesheet" href="../../css/style.min.css">
+
+<script type="text/javascript" src="../../js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/admin.js"></script> 
+<script type="text/javascript" src="../../js/swiper.min.js"></script> 
+	</head>
+<body style="background-color: #ffffff;">
+	<div class="window_pop">
+		<div class="modal_tit">
+			<h2 class="title mb25">상세보기</h2>
+            <div class="edit_question_location justify_start mb08">
+                <span>계열사 or 서비스명</span>
+                <span class="bar"></span>
+                <span>시험지ID: </span > 
+                <span class="t_underline primary_color pl05">000000</span>
+                <span class="bar"></span>
+                <span>시험지명</span>
+            </div>
+		</div>
+        <!-- tabmenu 영역 -->
+        <div class="radio_tab radio_box tbl_scroll_box" style="height: 765px;">
+            <ul>
+                <li id="tab1" class="tab_btn">
+                    <input type="radio" name="tabmenu" id="tmenu1" class="tab ml15" checked>
+                    <label class="label" for="tmenu1">미리보기</label>
+                    <div class="tab_con mt15">
+                        <ul>
+                            <li class="quesiton_item_area justify_center_top bt">
+                                <div class="quesiton_item">
+                                    <div class="edit_question_location justify_start mb08">
+                                        <div class="check_box mr10">
+                                            <input type="checkbox" id="q1">
+                                            <label for="q1" class="pl16"></label>
+                                        </div>
+                                        <span class="pr05"><strong>1.</strong></span>
+                                        <span>문항ID: </span > 
+                                        <span class="t_underline primary_color pl05">000000</span>
+                                        <span class="bar"></span>
+                                        <span>1. 덧셈과뺄셈 </span>
+                                        <span class="bar"></span>
+                                        <span>1.덧셈과 뺄셈</span>
+                                        <span class="bar"></span>
+                                        <span>개념TEST</span>
+                                        <span class="bar"></span>
+                                        <span> 5지선택</span>
+                                        <span class="bar"></span>
+                                        <span>상</span>
+                                    </div>
+                                    <div class="question mt08 ml25">
+                                        문제 영역
+                                    </div>
+                                    <p class="mt10 ml25">
+                                        <strong>&middot; 배점</strong> 5점
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="quesiton_item_area justify_center_top">
+                                <div class="quesiton_item">
+                                    <div class="edit_question_location justify_start mb08">
+                                        <div class="check_box mr10">
+                                            <input type="checkbox" id="q1">
+                                            <label for="q1" class="pl16"></label>
+                                        </div>
+                                        <span class="pr05"><strong>2.</strong></span>
+                                        <span>문항ID: </span > 
+                                        <span class="t_underline primary_color pl05">000000</span>
+                                        <span class="bar"></span>
+                                        <span>1. 덧셈과뺄셈 </span>
+                                        <span class="bar"></span>
+                                        <span>1.덧셈과 뺄셈</span>
+                                        <span class="bar"></span>
+                                        <span>개념TEST</span>
+                                        <span class="bar"></span>
+                                        <span> 5지선택</span>
+                                        <span class="bar"></span>
+                                        <span>상</span>
+                                    </div>
+                                    <div class="question mt08 ml25">
+                                        문제 영역
+                                    </div>
+                                    <p class="mt10 ml25">
+                                        <strong>&middot; 배점</strong> 5점
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="quesiton_item_area justify_center_top">
+                                <div class="quesiton_item">
+                                    <div class="edit_question_location justify_start mb08">
+                                        <div class="check_box mr10">
+                                            <input type="checkbox" id="q1">
+                                            <label for="q1" class="pl16"></label>
+                                        </div>
+                                        <span class="pr05"><strong>3.</strong></span>
+                                        <span>문항ID: </span > 
+                                        <span class="t_underline primary_color pl05">000000</span>
+                                        <span class="bar"></span>
+                                        <span>1. 덧셈과뺄셈 </span>
+                                        <span class="bar"></span>
+                                        <span>1.덧셈과 뺄셈</span>
+                                        <span class="bar"></span>
+                                        <span>개념TEST</span>
+                                        <span class="bar"></span>
+                                        <span> 5지선택</span>
+                                        <span class="bar"></span>
+                                        <span>상</span>
+                                    </div>
+                                    <div class="question mt08 ml25">
+                                        문제 영역
+                                    </div>
+                                    <p class="mt10 ml25">
+                                        <strong>&middot; 배점</strong> 5점
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li id="tab2" class="tab_btn">
+                    <input type="radio" name="tabmenu" id="tmenu2" class="tab ml15">
+                    <label class="label" for="tmenu2">문항목록</label>
+                    <div class="tab_con mt15">
+                        <table class="tbl_list">
+                            <caption></caption>
+                            <colgroup>
+                                <col width="4%">
+                                <col width="4%">
+                                <col />
+                                <col />
+                                <col />
+                                <col />
+                                <col width="10%">
+                                <col width="11%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="first">
+                                        <div class="check_box">
+                                            <input type="checkbox" id="check30">
+                                            <label for="check30" class="pl16"></label>
+                                        </div>
+                                    </th>
+                                    <th scope="col">번호</th>
+                                    <th scope="col">문항ID</th>
+                                    <th scope="col">대단원</th>
+                                    <th scope="col">중단원</th>
+                                    <th scope="col">문제형태</th>
+                                    <th scope="col">난이도</th>
+                                    <th scope="col">배점</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="first">
+                                        <div class="check_box">
+                                            <input type="checkbox" id="check30">
+                                            <label for="check30" class="pl16"></label>
+                                        </div>
+                                    </td>
+                                    <td>30</td>
+                                    <td><a class="t_link" href="#none">000000</a></td>
+                                    <td>1.덧셈과 뺄셈</td>
+                                    <td>1.덧셈과 뺄셈</td>
+                                    <td>5지 선택</td>
+                                    <td>상</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td class="first">
+                                        <div class="check_box">
+                                            <input type="checkbox" id="check29">
+                                            <label for="check29" class="pl16"></label>
+                                        </div>
+                                    </td>
+                                    <td>29</td>
+                                    <td><a class="t_link" href="#none">000000</a></td>
+                                    <td>1.덧셈과 뺄셈</td>
+                                    <td>1.덧셈과 뺄셈</td>
+                                    <td>5지 선택</td>
+                                    <td>상</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td class="first">
+                                        <div class="check_box">
+                                            <input type="checkbox" id="check28">
+                                            <label for="check28" class="pl16"></label>
+                                        </div>
+                                    </td>
+                                    <td>28</td>
+                                    <td><a class="t_link" href="#none">000000</a></td>
+                                    <td>1.덧셈과 뺄셈</td>
+                                    <td>1.덧셈과 뺄셈</td>
+                                    <td>5지 선택</td>
+                                    <td>상</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td class="first">
+                                        <div class="check_box">
+                                            <input type="checkbox" id="check27">
+                                            <label for="check27" class="pl16"></label>
+                                        </div>
+                                    </td>
+                                    <td>27</td>
+                                    <td><a class="t_link" href="#none">000000</a></td>
+                                    <td>1.덧셈과 뺄셈</td>
+                                    <td>1.덧셈과 뺄셈</td>
+                                    <td>5지 선택</td>
+                                    <td>상</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td class="first">
+                                        <div class="check_box">
+                                            <input type="checkbox" id="check26">
+                                            <label for="check26" class="pl16"></label>
+                                        </div>
+                                    </td>
+                                    <td>26</td>
+                                    <td><a class="t_link" href="#none">000000</a></td>
+                                    <td>1.덧셈과 뺄셈</td>
+                                    <td>1.덧셈과 뺄셈</td>
+                                    <td>5지 선택</td>
+                                    <td>상</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td class="first">
+                                        <div class="check_box">
+                                            <input type="checkbox" id="check25">
+                                            <label for="check25" class="pl16"></label>
+                                        </div>
+                                    </td>
+                                    <td>25</td>
+                                    <td><a class="t_link" href="#none">000000</a></td>
+                                    <td>1.덧셈과 뺄셈</td>
+                                    <td>1.덧셈과 뺄셈</td>
+                                    <td>5지 선택</td>
+                                    <td>상</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td class="first">
+                                        <div class="check_box">
+                                            <input type="checkbox" id="check24">
+                                            <label for="check24" class="pl16"></label>
+                                        </div>
+                                    </td>
+                                    <td>24</td>
+                                    <td><a class="t_link" href="#none">000000</a></td>
+                                    <td>1.덧셈과 뺄셈</td>
+                                    <td>1.덧셈과 뺄셈</td>
+                                    <td>5지 선택</td>
+                                    <td>상</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td class="first">
+                                        <div class="check_box">
+                                            <input type="checkbox" id="check23">
+                                            <label for="check23" class="pl16"></label>
+                                        </div>
+                                    </td>
+                                    <td>23</td>
+                                    <td><a class="t_link" href="#none">000000</a></td>
+                                    <td>1.덧셈과 뺄셈</td>
+                                    <td>1.덧셈과 뺄셈</td>
+                                    <td>5지 선택</td>
+                                    <td>상</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td class="first">
+                                        <div class="check_box">
+                                            <input type="checkbox" id="check22">
+                                            <label for="check22" class="pl16"></label>
+                                        </div>
+                                    </td>
+                                    <td>22</td>
+                                    <td><a class="t_link" href="#none">000000</a></td>
+                                    <td>1.덧셈과 뺄셈</td>
+                                    <td>1.덧셈과 뺄셈</td>
+                                    <td>5지 선택</td>
+                                    <td>상</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td class="first">
+                                        <div class="check_box">
+                                            <input type="checkbox" id="check21">
+                                            <label for="check21" class="pl16"></label>
+                                        </div>
+                                    </td>
+                                    <td>21</td>
+                                    <td><a class="t_link" href="#none">000000</a></td>
+                                    <td>1.덧셈과 뺄셈</td>
+                                    <td>1.덧셈과 뺄셈</td>
+                                    <td>5지 선택</td>
+                                    <td>상</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td class="first">
+                                        <div class="check_box">
+                                            <input type="checkbox" id="check20">
+                                            <label for="check20" class="pl16"></label>
+                                        </div>
+                                    </td>
+                                    <td>20</td>
+                                    <td><a class="t_link" href="#none">000000</a></td>
+                                    <td>1.덧셈과 뺄셈</td>
+                                    <td>1.덧셈과 뺄셈</td>
+                                    <td>5지 선택</td>
+                                    <td>상</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td class="first">
+                                        <div class="check_box">
+                                            <input type="checkbox" id="check19">
+                                            <label for="check19" class="pl16"></label>
+                                        </div>
+                                    </td>
+                                    <td>19</td>
+                                    <td><a class="t_link" href="#none">000000</a></td>
+                                    <td>1.덧셈과 뺄셈</td>
+                                    <td>1.덧셈과 뺄셈</td>
+                                    <td>5지 선택</td>
+                                    <td>상</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td class="first">
+                                        <div class="check_box">
+                                            <input type="checkbox" id="check18">
+                                            <label for="check18" class="pl16"></label>
+                                        </div>
+                                    </td>
+                                    <td>18</td>
+                                    <td><a class="t_link" href="#none">000000</a></td>
+                                    <td>1.덧셈과 뺄셈</td>
+                                    <td>1.덧셈과 뺄셈</td>
+                                    <td>5지 선택</td>
+                                    <td>상</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td class="first">
+                                        <div class="check_box">
+                                            <input type="checkbox" id="check17">
+                                            <label for="check17" class="pl16"></label>
+                                        </div>
+                                    </td>
+                                    <td>17</td>
+                                    <td><a class="t_link" href="#none">000000</a></td>
+                                    <td>1.덧셈과 뺄셈</td>
+                                    <td>1.덧셈과 뺄셈</td>
+                                    <td>5지 선택</td>
+                                    <td>상</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td class="first">
+                                        <div class="check_box">
+                                            <input type="checkbox" id="check16">
+                                            <label for="check16" class="pl16"></label>
+                                        </div>
+                                    </td>
+                                    <td>16</td>
+                                    <td><a class="t_link" href="#none">000000</a></td>
+                                    <td>1.덧셈과 뺄셈</td>
+                                    <td>1.덧셈과 뺄셈</td>
+                                    <td>5지 선택</td>
+                                    <td>상</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td class="first">
+                                        <div class="check_box">
+                                            <input type="checkbox" id="check15">
+                                            <label for="check15" class="pl16"></label>
+                                        </div>
+                                    </td>
+                                    <td>15</td>
+                                    <td><a class="t_link" href="#none">000000</a></td>
+                                    <td>1.덧셈과 뺄셈</td>
+                                    <td>1.덧셈과 뺄셈</td>
+                                    <td>5지 선택</td>
+                                    <td>상</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td class="first">
+                                        <div class="check_box">
+                                            <input type="checkbox" id="check14">
+                                            <label for="check14" class="pl16"></label>
+                                        </div>
+                                    </td>
+                                    <td>14</td>
+                                    <td><a class="t_link" href="#none">000000</a></td>
+                                    <td>1.덧셈과 뺄셈</td>
+                                    <td>1.덧셈과 뺄셈</td>
+                                    <td>5지 선택</td>
+                                    <td>상</td>
+                                    <td>5</td>
+                                <tr>
+                                    <td class="first">
+                                        <div class="check_box">
+                                            <input type="checkbox" id="check13">
+                                            <label for="check13" class="pl16"></label>
+                                        </div>
+                                    </td>
+                                    <td>13</td>
+                                    <td><a class="t_link" href="#none">000000</a></td>
+                                    <td>1.덧셈과 뺄셈</td>
+                                    <td>1.덧셈과 뺄셈</td>
+                                    <td>5지 선택</td>
+                                    <td>상</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td class="first">
+                                        <div class="check_box">
+                                            <input type="checkbox" id="check12">
+                                            <label for="check12" class="pl16"></label>
+                                        </div>
+                                    </td>
+                                    <td>12</td>
+                                    <td><a class="t_link" href="#none">000000</a></td>
+                                    <td>1.덧셈과 뺄셈</td>
+                                    <td>1.덧셈과 뺄셈</td>
+                                    <td>5지 선택</td>
+                                    <td>상</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td class="first">
+                                        <div class="check_box">
+                                            <input type="checkbox" id="check11">
+                                            <label for="check11" class="pl16"></label>
+                                        </div>
+                                    </td>
+                                    <td>11</td>
+                                    <td><a class="t_link" href="#none">000000</a></td>
+                                    <td>1.덧셈과 뺄셈</td>
+                                    <td>1.덧셈과 뺄셈</td>
+                                    <td>5지 선택</td>
+                                    <td>상</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td class="first">
+                                        <div class="check_box">
+                                            <input type="checkbox" id="check11">
+                                            <label for="check11" class="pl16"></label>
+                                        </div>
+                                    </td>
+                                    <td>10</td>
+                                    <td><a class="t_link" href="#none">000000</a></td>
+                                    <td>1.덧셈과 뺄셈</td>
+                                    <td>1.덧셈과 뺄셈</td>
+                                    <td>5지 선택</td>
+                                    <td>상</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td class="first">
+                                        <div class="check_box">
+                                            <input type="checkbox" id="check11">
+                                            <label for="check11" class="pl16"></label>
+                                        </div>
+                                    </td>
+                                    <td>9</td>
+                                    <td><a class="t_link" href="#none">000000</a></td>
+                                    <td>1.덧셈과 뺄셈</td>
+                                    <td>1.덧셈과 뺄셈</td>
+                                    <td>5지 선택</td>
+                                    <td>상</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td class="first">
+                                        <div class="check_box">
+                                            <input type="checkbox" id="check11">
+                                            <label for="check11" class="pl16"></label>
+                                        </div>
+                                    </td>
+                                    <td>8</td>
+                                    <td><a class="t_link" href="#none">000000</a></td>
+                                    <td>1.덧셈과 뺄셈</td>
+                                    <td>1.덧셈과 뺄셈</td>
+                                    <td>5지 선택</td>
+                                    <td>상</td>
+                                    <td>5</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </li>
+            </ul>
+        </div>
+		<div class="justify_center mt30">
+			<a class="close btn btn_gray outline large" href="#none">목록</a>
+			<a class="close btn btn_green large w180 ml08" href="#none">선택 문항 추가</a>
+		</div>
+	</div>
+    <script>
+    </script>
+</body>
+</html>

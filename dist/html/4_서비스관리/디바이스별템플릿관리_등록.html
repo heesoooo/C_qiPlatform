@@ -1,0 +1,351 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+	<head> 
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>서비스관리-디바이스별 템플릿 관리 - 설정</title>
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css">
+<!-- <link rel="stylesheet" href="../../css/webfonts/fontawesome.min.css"/> -->
+<link rel="stylesheet" href="../../css/style.min.css">
+
+<script type="text/javascript" src="../../js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/admin.js"></script> 
+<script type="text/javascript" src="../../js/swiper.min.js"></script> 
+	</head>
+    <body>	 
+	<div id="wrap">
+		<!-- 상단 공통 영역 -->
+		<div class="header-wrap">
+	<div class="header">
+		<div class="top">
+			<div class="logo justify_start">
+				<h1><img src="../../images/logo.svg" alt="천재교육" /></h1>
+				<select class="select_box w140 ml15">
+					<option value="">계열사 선택</option>
+					<option value="">천재교육</option>
+					<option value="">천재교과서</option>
+				</select>
+			</div>
+			<div class="justify_between">
+				<select class="select_box w120 mr10">
+					<option value="">문항통합관리자</option>
+					<option value="">관리자1</option>
+					<option value="">관리자2</option>
+				</select>
+				<a href="#none" class="belong">천재교육</a>
+				<a href="#none" class="name">홍길동(Hong)</a>
+				
+				<a href="#none" class="btn small btn_light w64">로그아웃</a>
+			</div>
+		</div>
+		<nav class="global_nav">
+			<ul class="menu">
+				<li><a href="#none" class="on">HOME</a></li>
+				<li><a href="#none">문항 관리</a></li>
+				<li><a href="#none">시험지 관리</a></li>
+				<li><a href="#none">서비스 관리</a></li>
+				<li><a href="#none">출처 관리</a></li>
+				<li><a href="#none">통계 관리</a></li>
+				<li><a href="#none">시스템 관리</a></li>
+				<li><a href="#none">데이터 관리</a></li>
+			</ul>
+		</nav>
+	</div>
+</div>
+		<div class="container">
+			<div class="local_nav">
+				<ul class="menu">
+					<li><a href="#none">서비스별 인덱스 관리</a></li>
+					<li><a href="#none" class="on">디바이스별 템플릿 관리</a></li>
+					<li><a href="#none">개념CODE 관리</a></li>
+					<li><a href="#none">클러스터링 관리</a></li>
+					<li><a href="#none">검색데이터 갱신</a></li>
+				</ul>
+			</div>
+
+			<!-- 컨텐츠 영역 -->
+			<div class="contents">
+                <h2 class="section_tit pt00">디바이스별 템플릿 설정</h2>
+				
+				<div class="justify_start_top setting_device">
+					<!-- left_section -->
+					<div>
+						<!-- 디바이스 정보 -->
+						<div class="left_section mb15">
+							<h2 class="pl17">디바이스 정보</h2>
+							<div class="service_info">
+								<ul>
+									<li class="justify_start">
+										<h4>계열사</h4>
+										<select class="select_box w140">
+											<option value="">공통</option>
+										</select>
+									</li>
+									<li class="justify_start mt25">
+										<h4>출력방법</h4>
+										<div class="radio_box">
+											<input type="radio" id="t1" name="method" checked=""><label for="t1">온라인</label>
+											<input class="ml05" type="radio" id="t2" name="method" value="PDF"><label for="t2">출력</label>
+										</div>
+									</li>
+									<li class="justify_start_top mt25">
+										<h4>디바이스</h4>
+										<div class="radio_box">
+											<div>
+												<input type="radio" id="t3" name="device" checked=""><label for="t3" class="mr15">PC</label>
+												<input type="radio" id="t4" name="device"><label for="t4">Tablet</label>
+											</div>
+											<div class="mt10">
+												<input type="radio" id="t5" name="device"><label for="t5">Mobile</label>											
+											</div>
+										</div>
+									</li>
+									<li class="justify_start_top mt25">
+										<h4>보기형태</h4>
+										<div class="radio_box">
+											<div>
+												<input type="radio" id="t6" name="viewtype" checked=""><label for="t6" class="mr15">시험지(다수 문항) 보기 </label>
+											</div>
+											<div class="mt10">
+												<input type="radio" id="t7" name="viewtype"><label for="t7">한 문항 보기</label>											
+											</div>
+										</div>
+									</li>
+									<li class="justify_start mt25">
+										<h4>화면</h4>
+										<div class="radio_box">
+											<input type="radio" id="t8" name="screen" checked=""><label for="t8" class="mr15">전체화면</label>
+											<input type="radio" id="t9" name="screen"><label for="t9">고정크기</label>
+										</div>
+									</li>
+									<li class="justify_start_top mt25">
+										<h4 class="mt08">사이즈</h4>
+										<div>
+											<select name="" id="" class="select_box w140">
+												<option value="일반PC (1920X1080)">일반PC (1920X1080)</option>
+											</select>
+											<a href="#none" class="btn btn_gray w80 mt04" onclick="openPop1()">기기등록</a>
+										</div>
+									</li>
+									<li class="justify_start mt25">
+										<h4>공유여부</h4>
+										<div class="radio_box">
+											<input type="radio" id="t10" name="share" checked=""><label for="t10" class="mr15">공유</label>
+											<input type="radio" id="t11" name="share"><label for="t11">미공유</label>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						
+						<!-- 템플릿 정보 -->
+						<div class="left_section mb15">
+							<h2 class="pl17">템플릿 정보</h2>
+							<div class="service_info">
+								<ul>
+									<li class="justify_start mt15">
+										<h4>서비스명</h4>
+										<select class="select_box w140">
+											<option value="">선택</option>
+										</select>
+									</li>
+									<li class="justify_start mt15">
+										<h4>템플릿명</h4>
+										<input type="text" class="w140 placeholder_black" placeholder="직접 입력">
+									</li>
+									<li class="justify_start mt15">
+										<h4>용지</h4>
+										<select class="select_box w140">
+											<option value="">A4</option>
+										</select>
+									</li>
+								</ul>
+							</div>
+						</div>
+						
+						<!-- 머릿말 서식 -->
+						<div class="left_section mb15">
+							<h2 class="pl17">머릿말 서식</h2>
+							<div class="service_info">
+								<ul>
+									<li class="justify_start_top">
+										<h4 class="mt08">머릿말 크기</h4>
+										<div>
+											<input type="text" class="placeholder_black w60" placeholder="입력">
+											<span class="ml04 mr04">x</span>
+											<input type="text" class="placeholder_black w60" placeholder="입력">
+
+											<!-- 첨부 -->
+											<!-- <input type="file" id="inputFile" class="input_file_button">
+											<label for="inputFile" class="mt04 w140 btn_green">첨부</label> -->
+											<a href="#none" class="btn btn_green mt04 w140">첨부</a>
+										</div>
+									</li>
+									<li class="justify_start_top mt15">
+										<h4 class="mt08">서비스명</h4>
+										<div>
+											<a href="#none" class="btn btn_green w70 outline">텍스트</a>
+											<a href="#none" class="btn btn_green w70 outline">이미지</a>
+											<a href="#none" class="btn btn_green outline mt04" style="width:143px">주관식 입력상자</a>
+										</div>										
+									</li>
+									
+									<li class="justify_start_top mt15">
+										<h4 class="mt08">템플릿명</h4>
+										<div>
+											<select class="select_box w140">
+												<option value="">신명조</option>
+											</select>
+											<select class="select_box w140 mt04">
+												<option value="">14pt</option>
+											</select>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- 본문서식 -->
+						<div class="left_section mb15">
+							<h2 class="pl17">본문서식</h2>
+							<div class="service_info">
+								<ul>
+									<li class="justify_start">
+										<h4>폰트 종류</h4>
+										<select class="select_box w140">
+											<option value="">신명조</option>
+										</select>
+									</li>
+									<li class="justify_start mt15">
+										<h4>폰트 크기</h4>
+										<select class="select_box w140">
+											<option value="">12pt</option>
+										</select>
+									</li>
+									<li class="justify_start mt15">
+										<h4>수식 크기</h4>
+										<select class="select_box w140">
+											<option value="">14pt</option>
+										</select>
+									</li>									
+									<li class="justify_start_top mt15">
+										<h4>단 설정</h4>
+										<div>
+											<select class="select_box w140">
+												<option value="">14pt</option>
+											</select>
+											<div class="justify_start mt04">
+												<span class="txt">간격</span>
+												<select class="select_box w100 ml15">
+													<option value="">10</option>
+												</select>
+											</div>
+										</div>
+									</li>
+									<li class="justify_start mt15">
+										<h4>단 구분선</h4>
+										<select class="select_box w140">
+											<option value="">선 없음</option>
+										</select>
+									</li>
+									<li class="justify_start mt15">
+										<h4>내어쓰기</h4>
+										<select class="select_box w140">
+											<option value="">15</option>
+										</select>
+									</li>
+									<li class="justify_start mt15">
+										<h4>블록설정</h4>
+										<div class="radio_box">
+											<input type="radio" name="settings" id="set01">
+											<label for="set01">설정</label>
+
+											<input type="radio" name="settings" id="set02" class="ml15">
+											<label for="set02">미설정</label>
+										</div>									
+									</li>
+									<li class="justify_start_top mt15">
+										<h4>크기 조정</h4>
+										<div class="check_box">
+											<input type="checkbox" id="resize1">
+											<label for="resize1">객체(그림, 그리기, 표 등)의<br>
+												<span>크기 다단에 맞춰 축소</span></label>
+										</div>
+									</li>
+									<li class="justify_start mt15">
+										<h4>이미지 크기</h4>
+										<div class="justify_start">
+											<span class="txt mr05">가로기준</span><input type="text" class="placeholder_black w60 mr05" placeholder="00"><span>%</span>
+										</div>
+									</li>
+									<li class="justify_start mt15">
+										<h4>표 크기</h4>
+										<div class="justify_start">
+											<span class="txt mr05">가로기준</span><input type="text" class="placeholder_black w60 mr05" placeholder="00"><span>%</span>
+										</div>
+									</li>
+									<li class="justify_start_top mt15">
+										<h4>스크롤 여부</h4>
+										<div class="check_box">
+											<input type="checkbox" id="resize2">
+											<label for="resize2">화면 사이즈보다 문항이 <br>
+												<span>클 경우 스크롤 적용</span></label>
+										</div>
+									</li>
+									<li class="justify_start mt15">
+										<h4>문항 간격</h4>
+										<select class="select_box w140">
+											<option value="">2줄</option>
+										</select>
+									</li>
+									<li class="justify_start mt15">
+										<h4>정렬</h4>
+										<select class="select_box w140">
+											<option value="">좌측 정렬</option>
+										</select>
+									</li>
+									<li class="justify_start_top mt15">
+										<h4 class="mt10">문제/해설</h4>
+										<div>
+											<select class="select_box w140">
+												<option value="">문제+정답/해설</option>
+												<option value="">문제+정답/해설</option>
+											</select>
+											<div class="radio_box mt08">
+												<input type="radio" id="a1" name="solving1" checked><label for="a1"> 문제 하단에 해설 표시</label><br>
+												<input type="radio" id="a2" name="solving1"><label for="a2"> 해설은 별도 페이지 분리</label>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<!-- right_section -->
+					<div class="right_section view_box">
+						<div class="right pr20 mb25">
+							<a href="#none" class="btn btn_gray w80 outline">인쇄하기</a>
+							<a href="#none" class="btn btn_gray w80">미리보기</a>
+							<a href="#none" class="btn btn_green w80">저장하기</a>
+							<a href="#none" class="btn btn_gray outline w80">수정하기</a>
+							<a href="#none" class="btn btn_gray outline">목록</a>
+						</div>
+
+						<div class="pl20 pr20 justify_center">
+							디바이스 미리보기 영역
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		/* window popup */
+		function openPop1(){
+			var popup1 = window.open('pop_기기등록.html', 'pop_기기등록', 'width=460px,height=254px');
+		}
+	</script>
+</body>
+</html>

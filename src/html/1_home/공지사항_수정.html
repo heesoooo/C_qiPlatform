@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+	<head> 
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>문항통합플랫폼</title>
+		@@include('../include/inc_html_head.html')
+	</head>
+<body>
+	 
+	<div id="wrap">
+		<!-- 상단 공통 영역 -->
+		@@include('../include/inc_header.html')
+		<div class="container">
+			<div class="local_nav">
+				<ul class="menu">
+					<li><a href="#none">HOME</a></li>
+					<li><a href="#none" class="on">공지사항</a></li>
+					<li><a href="#none">작업내역</a></li>
+					<li><a href="#none">내 폴더</a></li>
+				</ul>
+			</div>
+
+			<!-- 컨텐츠 영역 -->
+			<div class="contents">
+				<section>
+					<h2 class="section_tit pt00">공지사항</h2>
+					<table class="tbl_view tbl_info_box">
+						<caption></caption>
+						<colgroup>
+							<col width="7%">
+							<col width="5%">
+							<col width="7%">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>번호</th>
+								<td class="center">30</td>
+								<th>공지구분</th>
+								<td style="padding: 6px 10px;">
+									<div class="terms pl05">
+										<div class="radio_box">
+											<input type="radio" id="n1" name="notice" value="전체" checked=""> <label for="n1" class="pl05"> 공지</label>
+											<input type="radio" id="n2" name="notice" value="완료" class="ml05"> <label for="n2" class="pl05"> 긴급</label>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>제목</th>
+								<td colspan="3" style="padding: 6px 10px;">
+									<input type="text" class="w400 border_radius_0 medium" placeholder="제목을 입력하세요.">
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="tbl_view mt20">
+						<caption></caption>
+						<colgroup>
+							<col width="10%">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<td colspan="2" class="left msg_text_area">
+									<div class="msg_case">
+										안녕하세요~ 공지사항 안내드립니다.
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>첨부파일</th>
+								<td>
+									<p class="mb05">
+										<a class="attached" href="#none">공지사항 안내문.hwp</a>
+										<span class="delete"><img src="../../images/ic_delete.png" alt="삭제"></span>
+									</p>
+									<p>
+										<a class="attached" href="none">공지사항 안내문_2.hwp</a>
+										<span class="delete"><img src="../../images/ic_delete.png" alt="삭제"></span>
+									</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="justify_center mt40">
+						<p>
+							<a class="btn btn_gray outline w80 large" href="#none">취소</a>
+							<a class="btn btn_green w80 large ml10" href="#none">저장</a>
+						</p>
+					</div>
+				</section>
+			</div>
+		</div>
+
+	</div>
+	<script>
+	</script>
+</body>
+</html>

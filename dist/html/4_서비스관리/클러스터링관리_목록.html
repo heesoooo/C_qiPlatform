@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+	<head> 
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>서비스관리-클러스터링 관리-목록</title>
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css">
+<!-- <link rel="stylesheet" href="../../css/webfonts/fontawesome.min.css"/> -->
+<link rel="stylesheet" href="../../css/style.min.css">
+
+<script type="text/javascript" src="../../js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/admin.js"></script> 
+<script type="text/javascript" src="../../js/swiper.min.js"></script> 
+	</head>
+<body>
+	 
+	<div id="wrap">
+		<!-- 상단 공통 영역 -->
+		<div class="header-wrap">
+	<div class="header">
+		<div class="top">
+			<div class="logo justify_start">
+				<h1><img src="../../images/logo.svg" alt="천재교육" /></h1>
+				<select class="select_box w140 ml15">
+					<option value="">계열사 선택</option>
+					<option value="">천재교육</option>
+					<option value="">천재교과서</option>
+				</select>
+			</div>
+			<div class="justify_between">
+				<select class="select_box w120 mr10">
+					<option value="">문항통합관리자</option>
+					<option value="">관리자1</option>
+					<option value="">관리자2</option>
+				</select>
+				<a href="#none" class="belong">천재교육</a>
+				<a href="#none" class="name">홍길동(Hong)</a>
+				
+				<a href="#none" class="btn small btn_light w64">로그아웃</a>
+			</div>
+		</div>
+		<nav class="global_nav">
+			<ul class="menu">
+				<li><a href="#none" class="on">HOME</a></li>
+				<li><a href="#none">문항 관리</a></li>
+				<li><a href="#none">시험지 관리</a></li>
+				<li><a href="#none">서비스 관리</a></li>
+				<li><a href="#none">출처 관리</a></li>
+				<li><a href="#none">통계 관리</a></li>
+				<li><a href="#none">시스템 관리</a></li>
+				<li><a href="#none">데이터 관리</a></li>
+			</ul>
+		</nav>
+	</div>
+</div>
+		<div class="container">
+			<div class="local_nav">
+				<ul class="menu">
+					<li><a href="#none">서비스별 인덱스 관리</a></li>
+					<li><a href="#none">디바이스별 템플릿 관리</a></li>
+					<li><a href="#none">개념CODE 관리</a></li>
+					<li><a href="#none" class="on">클러스터링 관리</a></li>
+					<li><a href="#none">검색데이터 갱신</a></li>
+				</ul>
+			</div>
+
+			<!-- 컨텐츠 영역 -->
+			<div class="contents">
+				<section>
+					<h2 class="section_tit pt00">클러스터링 관리 <span class="s_tit">Concept Clusters 목록</span></h2>
+					<div class="justify_between">
+						<!-- 검색조건 -->
+						<div class="search_box_wrap">
+							<div class="search_box justify_between">
+								<div class="terms justify_start">
+									<input type="text" class="w220 placeholder_black" placeholder="개념CODE">
+									<input type="text" class="ml04 w220 placeholder_black" placeholder="검색어">
+								</div>
+	
+								<div class="btn_wrap justify_start">
+									<a class="btn btn_green ml05" href="#none">검색</a>
+								</div>
+							</div>
+						</div>
+						<!-- //검색조건 -->
+					</div>
+				</section>
+
+				<section class="section_wrap mt35">
+					<div class="justify_between mb08">
+						<p class="total sm">6058개중 1-15</p>
+						
+						<div class="btn_wrap justify_start">
+							<a class="btn btn_gray w120" href="#none">엑셀다운로드</a>
+							<a class="btn btn_green outline ml08" href="#none" onclick="openPop1()">등록</a>
+						</div>
+					</div>
+					<!-- 작업내역 리스트 -->
+					<div class="tbl_scroll_box" style="max-height: 620px;">
+						<table class="tbl_list">
+							<caption></caption>
+							<colgroup>
+								<col style="width:10%">
+								<col style="width:12%">
+								<col style="width:40%">
+								<col />
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">ID</th>
+									<th scope="col">개념 CODE</th>
+									<th scope="col">개념명</th>
+									<th scope="col">퍼센트</th>
+									<th scope="col">등록일</th>
+									<th scope="col">수정일</th>
+									<th scope="col">수정</th>
+									<th scope="col">삭제</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="first">0000</td>
+									<td>0000</td>
+									<td>수직선 위를 움직이는 점의 위치와 움직인 거리 </td>
+									<td>94</td>
+									<td>YYYY.MM.DD</td>
+									<td>YYYY.MM.DD</td>
+									<td>
+										<a href="#none" class="btn btn_lgreen small" onclick="openPop2()">수정</a>
+									</td>
+									<td>
+										<a href="#none" class="btn btn_light small">삭제</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="first">0000</td>
+									<td>0000</td>
+									<td>수직선 위를 움직이는 점의 위치와 움직인 거리 </td>
+									<td>94</td>
+									<td>YYYY.MM.DD</td>
+									<td>YYYY.MM.DD</td>
+									<td>
+										<a href="#none" class="btn btn_lgreen small">수정</a>
+									</td>
+									<td>
+										<a href="#none" class="btn btn_light small">삭제</a>
+									</td>
+								</tr>															
+							</tbody>
+						</table>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+	<script>      
+		/* window popup */
+		function openPop1(){ 
+			var popup1 = window.open('pop_conceptClusters_등록.html', 'pop_conceptClusters_등록', 'width=600px,height=302px');
+		}
+		function openPop2(){ 
+			var popup2 = window.open('pop_conceptClusters_수정.html', 'pop_conceptClusters_수정', 'width=600px,height=350px');
+		}
+	</script>
+</body>
+</html> 

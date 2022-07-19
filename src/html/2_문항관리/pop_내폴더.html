@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>문항목록-이동 폴더 선택</title>
+		@@include('../include/inc_html_head.html')
+	</head>
+	
+	<body style="background-color: #fff;">
+		<!-- 이동 폴더 선택 popup -->
+		<div class="window_pop pop_sel_folder">
+			
+            <div class="justify_between_start mb15">
+                <h2 class="title">이동 폴더 선택</h2>
+                <a href="#none" class="btn btn_gray w80">내 폴더 관리</a>
+            </div>
+
+			<table class="tbl_view tbl_folder center">
+				<caption></caption>
+				<colgroup>
+					<col width="13%">
+					<col />
+					<col width="20%">
+				</colgroup>
+				<thead>
+					<tr>
+						<th>선택</th>
+						<th>폴더목록</th>
+						<th>문항 수</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<div class="radio_box">
+								<input class="m00" type="radio" name="folder" value="" checked>
+							</div>
+						</td>
+						<td>작업자의 폴더 1</td>
+						<td>999</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="radio_box">
+								<input class="m00" type="radio" name="folder" value=""/>
+							</div>
+						</td>								
+						<td>작업자의 폴더 2</td>
+						<td>1</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="radio_box">
+								<input class="m00" type="radio" name="folder" value=""/>
+							</div>
+						</td>
+						<td>작업자의 폴더 2 </td>
+						<td>1</td>
+					</tr>
+
+				</tbody>
+			</table>
+			<div class="justify_center mt30">
+				<a class="btn btn_green large w160" href="#none">해당 폴더로 이동</a>
+			</div>
+		</div>
+		<!-- //이동 폴더 선택 popup -->
+	</body>
+	
+	</html>

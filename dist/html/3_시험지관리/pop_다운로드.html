@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+	<head> 
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>다운로드</title>
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css">
+<!-- <link rel="stylesheet" href="../../css/webfonts/fontawesome.min.css"/> -->
+<link rel="stylesheet" href="../../css/style.min.css">
+
+<script type="text/javascript" src="../../js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/admin.js"></script> 
+<script type="text/javascript" src="../../js/swiper.min.js"></script> 
+	</head>
+<body style="background-color: #ffffff;">
+    <div class="window_pop"> 
+        <div class="inner">
+            <div class="modal_tit">
+                <h2 class="title mb30">다운로드</h2>
+            </div>
+        </div>
+        <div class="download_area">
+            <ul>
+                <li class="justify_start">
+                    <h4>다운로드 문항 수</h4>
+                    <p class="txt">000문항</p>
+                </li>
+                <li class="justify_start_top mt25">
+                    <h4>템플릿 선택</h4>
+                    <div>
+                        <select class="select_box w200">
+                            <option value="">출력용 템플릿 선택</option>
+                            <option value="">온라인용 템플릿 선택</option>
+                        </select>
+                        <!-- 출력용 템플릿 선택시 노출 -->
+                        <!-- <div class="radio_box mt08">
+                            <input type="radio" id="t1" name="template" value="HWP" checked><label for="t1"> HWP</label>
+                            <input type="radio" id="t2" name="template" value="PDF"><label for="t2"> PDF</label>
+                        </div> -->
+
+                        <!-- 온라인용 템플릿 선택시 노출 -->
+                        <div class="radio_box mt08">
+                            <input type="radio" id="t1" name="template" value="HWP" checked><label for="t1"> PC</label>
+                            <input type="radio" id="t2" name="template" value="PDF"><label for="t2"> Tablet</label>
+                            <input type="radio" id="t3" name="template" value="PDF"><label for="t3"> Mobile</label>
+                        </div>
+                    </div>
+                </li>
+                <li class="justify_start_top mt20">
+                    <h4>문제/정답/해설 선택</h4>
+                    <div>
+                        <select class="select_box w200">
+                            <option value="">문제</option>
+                            <option value="">문제+정답/해설</option>
+                            <option value="">정답/해설</option>
+                        </select>
+
+                        <!-- 문제+정답/해설 선택시 노출 -->
+                        <!-- <div class="radio_box mt08">
+                            <input type="radio" id="a1" name="solving1" checked><label for="a1"> 문제 하단에 정답/해설 표시</label><br>
+                            <input type="radio" id="a2" name="solving1"><label for="a2"> 정답/해설은 별도 페이지로 분리</label>
+                        </div> -->
+
+                        <!-- 정답/해설 선택시 노출 -->
+                        <!-- <div class="radio_box mt08">
+                            <input type="radio" id="b1" name="solving2" checked><label for="b1"> 정답과 해설을 한 페이지에 표시</label><br>
+                            <input type="radio" id="b2" name="solving2"><label for="b2"> 정답과 해설을 별도 페이지로 분리</label>
+                        </div> -->
+                    </div>
+
+                </li>
+                <li class="justify_start mt25">
+                    <h4>문항 분석표</h4>
+                    <div class="check_box">
+                        <input type="checkbox" id="sel1" checked>
+                        <label for="sel1">Excel</label>
+                    </div>
+                </li>
+                <li class="justify_start_top mt25">
+                    <h4>
+                        문항 분석표<br>속성 선택
+                    </h4>
+                    <div class="flex_grow">
+                        <div class="terms">
+                            <div class="check_box">
+                                <input type="checkbox" id="all1" checked>
+                                <label for="all1">문학 속성</label>
+                            </div>
+                            <div class="check_list mt08">
+                                <div class="check_box">
+                                    <div class="list_line">
+                                        <input type="checkbox" id="list1">
+                                        <label for="list1">문항ID</label>
+                                        <input type="checkbox" id="list2">
+                                        <label for="list2">지문ID</label>
+                                        <input type="checkbox" id="list3">
+                                        <label for="list3">정답률</label>
+                                    </div>
+                                    <div class="list_line mt08">
+                                        <input type="checkbox" id="list4">
+                                        <label for="list4">문제형태</label>
+                                        <input type="checkbox" id="list5">
+                                        <label for="list5">선지배열</label>
+                                        <input type="checkbox" id="list6">
+                                        <label for="list6">채점가능</label>
+                                    </div>
+                                    <div class="list_line mt08">
+                                        <input type="checkbox" id="list7">
+                                        <label for="list7">문항용도</label>
+                                        <input type="checkbox" id="list8">
+                                        <label for="list8">출제빈도</label>
+                                        <input type="checkbox" id="list9">
+                                        <label for="list9">키워드</label>
+                                    </div>
+                                    <div class="list_line mt08">
+                                        <input type="checkbox" id="list10">
+                                        <label for="list10">문항상태</label>
+                                        <input type="checkbox" id="list11">
+                                        <label for="list11">출제연도</label>
+                                        <input type="checkbox" id="list12">
+                                        <label for="list12">출처</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="terms mt20">
+                            <div class="check_box">
+                                <input type="checkbox" id="all2" checked>
+                                <label for="all2">분석 속성</label>
+                            </div>
+                            <div class="check_list mt08">
+                                <div class="check_box">
+                                    <div class="list_line">
+                                        <input type="checkbox" id="list15">
+                                        <label for="list15">단원</label>
+                                        <input type="checkbox" id="list16">
+                                        <label for="list16">단원</label>
+                                        <input type="checkbox" id="list17">
+                                        <label for="list17">행동영역</label>
+                                    </div>
+                                    <div class="list_line mt08">
+                                        <input type="checkbox" id="list22">
+                                        <label for="list22">내용영역</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="mt30 justify_center">
+                <a class="btn btn_green large w180" href="#none">다운로드</a>
+                <a class="close btn outline btn_gray large ml08" href="#none" onclick="self.close();">닫기</a>
+            </div>
+        </div>
+    </div>
+    <script>
+
+    </script>
+</body>
+</html>

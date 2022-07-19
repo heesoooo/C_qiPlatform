@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+	<head> 
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>서비스관리-검색데이터 갱신</title>
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css">
+<!-- <link rel="stylesheet" href="../../css/webfonts/fontawesome.min.css"/> -->
+<link rel="stylesheet" href="../../css/style.min.css">
+
+<script type="text/javascript" src="../../js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/admin.js"></script> 
+<script type="text/javascript" src="../../js/swiper.min.js"></script> 
+	</head>
+<body>
+	 
+	<div id="wrap">
+		<!-- 상단 공통 영역 -->
+		<div class="header-wrap">
+	<div class="header">
+		<div class="top">
+			<div class="logo justify_start">
+				<h1><img src="../../images/logo.svg" alt="천재교육" /></h1>
+				<select class="select_box w140 ml15">
+					<option value="">계열사 선택</option>
+					<option value="">천재교육</option>
+					<option value="">천재교과서</option>
+				</select>
+			</div>
+			<div class="justify_between">
+				<select class="select_box w120 mr10">
+					<option value="">문항통합관리자</option>
+					<option value="">관리자1</option>
+					<option value="">관리자2</option>
+				</select>
+				<a href="#none" class="belong">천재교육</a>
+				<a href="#none" class="name">홍길동(Hong)</a>
+				
+				<a href="#none" class="btn small btn_light w64">로그아웃</a>
+			</div>
+		</div>
+		<nav class="global_nav">
+			<ul class="menu">
+				<li><a href="#none" class="on">HOME</a></li>
+				<li><a href="#none">문항 관리</a></li>
+				<li><a href="#none">시험지 관리</a></li>
+				<li><a href="#none">서비스 관리</a></li>
+				<li><a href="#none">출처 관리</a></li>
+				<li><a href="#none">통계 관리</a></li>
+				<li><a href="#none">시스템 관리</a></li>
+				<li><a href="#none">데이터 관리</a></li>
+			</ul>
+		</nav>
+	</div>
+</div>
+		<div class="container">
+			<div class="local_nav">
+				<ul class="menu">
+					<li><a href="#none">서비스별 인덱스 관리</a></li>
+					<li><a href="#none">디바이스별 템플릿 관리</a></li>
+					<li><a href="#none">개념CODE 관리</a></li>
+					<li><a href="#none">클러스터링 관리</a></li>
+					<li><a href="#none" class="on">검색데이터 갱신</a></li>
+				</ul>
+			</div>
+
+			<!-- 컨텐츠 영역 -->
+			<div class="contents">
+				<h2 class="section_tit pt00">검색데이터 갱신</h2>
+
+				<section class="section_wrap">
+					<div class="right mb08">
+						<a class="btn btn_green outline" href="#none" onclick="openPop1()">등록</a>
+					</div>
+					<!-- 검색데이터 리스트 -->
+					<div class="tbl_scroll_box" style="max-height: 620px;">
+						<table class="tbl_list">
+							<caption></caption>
+							<colgroup>
+								<col style="width:100%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col" class="first">ID</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="first">0000</td>
+								</tr>
+								<tr>
+									<td class="first">0000</td>
+								</tr>
+								<tr>
+									<td class="first">0000</td>
+								</tr>
+								<tr>
+									<td class="first">0000</td>
+								</tr>
+								<tr>
+									<td class="first">0000</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+	<script>      
+		/* window popup */
+		function openPop1(){ 
+			var popup1 = window.open('pop_검색데이터등록.html', 'pop_검색데이터등록', 'width=600px,height=350px');
+		}
+	</script>
+</body>
+</html> 

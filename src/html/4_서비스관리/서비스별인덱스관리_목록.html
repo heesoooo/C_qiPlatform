@@ -1,0 +1,599 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+	<head> 
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>서비스관리-서비스별 인덱스 관리</title>
+		@@include('../include/inc_html_head.html')
+	</head>
+<body>
+	 
+	<div id="wrap">
+		<!-- 상단 공통 영역 -->
+		@@include('../include/inc_header.html')
+		<div class="container">
+			<div class="local_nav">
+				<ul class="menu">
+					<li><a href="#none" class="on">서비스별 인덱스 관리</a></li>
+					<li><a href="#none">디바이스별 템플릿 관리</a></li>
+					<li><a href="#none">개념CODE 관리</a></li>
+					<li><a href="#none">클러스터링 관리</a></li>
+					<li><a href="#none">검색데이터 갱신</a></li>
+				</ul>
+			</div>
+
+			<!-- 컨텐츠 영역 -->
+			<div class="contents">
+				<section>
+					<h2 class="section_tit pt00">서비스별 인덱스 관리</h2>
+					<div class="justify_between">
+						<!-- 검색조건 -->
+						<div class="search_box_wrap">
+							<div class="search_box justify_between">
+								<div class="terms justify_start">
+									<span>검색조건</span>
+									<div class="check_box mr15">
+										<input type="checkbox" id="active">
+										<label for="active">활성</label>
+
+										<input type="checkbox" id="inactive">
+										<label for="inactive" class="ml15">비활성</label>
+									</div>
+									<select class="select_box w100 mr04">
+										<option value="">서비스명</option>
+									</select>
+									<input type="text" class="w160 placeholder_black" placeholder="인덱스명">
+									<span class="ml12">
+										<input class="w90 underline" type="text" id="from" placeholder="0000.00.00" autocomplete="off"> ~
+										<input class="w90 underline" type="text" id="to" placeholder="0000.00.00" autocomplete="off">
+									</span>
+								</div>
+	
+								<div class="btn_wrap justify_start">
+									<a class="btn btn_green ml05" href="#none">검색</a>
+									<a class="btn btn_gray ml05" href="#none">초기화</a>
+									<a class="btn_search_toggle ml08" href="#none">열기</a>
+								</div>
+							</div>
+							<!-- search_toggle_box -->
+							<div class="search_toggle_box">
+								<div class="search_box">
+									<div class="box_list">
+										<div class="terms justify_start">
+											<span>학교급</span>
+											<div class="chk_list">
+												<select class="select_box w100">
+													<option value="선택">선택</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="search_box">
+									<div class="box_list">
+										<div class="terms justify_start">
+											<span>영역</span>
+											<div class="chk_list">
+												<select class="select_box w100">
+													<option value="선택">선택</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="search_box">
+									<div class="box_list">
+										<div class="terms justify_start">
+											<span>과목</span>
+											<div class="chk_list">
+												<!-- 선택 전 -->
+												<p class="p_text col_light_gray">과목을 선택해 주세요.</p>
+
+												<!-- 선택 후 -->
+												<div>
+													<span class="radio_box mr15">
+														<input type="radio" id="type1_1" name="type1">
+														<label for="type1_1">물리학Ⅰ</label>
+													</span>
+													<span class="radio_box mr15">
+														<input type="radio" id="type1_2" name="type1">
+														<label for="type1_2">물리학Ⅱ</label>
+													</span>
+													<span class="radio_box mr15">
+														<input type="radio" id="type1_3" name="type1">
+														<label for="type1_3">화학Ⅰ</label>
+													</span>
+													<span class="radio_box mr15">
+														<input type="radio" id="type1_4" name="type1">
+														<label for="type1_4">지구과학Ⅰ</label>
+													</span>
+													<span class="radio_box mr15">
+														<input type="radio" id="type1_5" name="type1">
+														<label for="type1_5">지구과학Ⅱ</label>
+													</span>		
+													<span class="radio_box mr15">
+														<input type="radio" id="type1_6" name="type1">
+														<label for="type1_6">생명과학Ⅰ</label>
+													</span>
+													<span class="radio_box">
+														<input type="radio" id="type1_7">
+														<label for="type1_7">생명과학Ⅱ</label>
+													</span>												
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="search_box">
+									<div class="box_list">
+										<div class="terms justify_start">
+											<span>상위<br>인덱스</span>
+											<div class="chk_list">
+												<!-- 선택 전 -->
+												<p class="p_text col_light_gray">상위 인덱스를 선택해 주세요.</p>
+
+												<!-- 선택 후 -->
+												<div>
+													<span class="radio_box mr15">
+														<input type="radio" id="type2_1" name="type2">
+														<label for="type2_1">TEST ZONE</label>
+													</span>
+													<span class="radio_box mr15">
+														<input type="radio" id="type2_2" name="type2">
+														<label for="type2_2">내신 3종 모의고사</label>
+													</span>
+													<span class="radio_box mr15">
+														<input type="radio" id="type2_3" name="type2">
+														<label for="type2_3">시험서비스</label>
+													</span>
+													<span class="radio_box">
+														<input type="radio" id="type2_4" name="type2">
+														<label for="type2_4">진단검사</label>
+													</span>																							
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="search_box">
+									<div class="box_list">
+										<div class="terms justify_start">
+											<span>하위<br>인덱스</span>
+											<div class="chk_list">
+												<!-- 선택 전 -->
+												<p class="p_text col_light_gray">하위 인덱스를 선택해 주세요.</p>
+
+												<!-- 선택 후 -->
+												<div class="mb08">
+													<span class="radio_box mr15">
+														<input type="radio" id="type3_1" name="type3">
+														<label for="type3_1">AI 진단평가</label>
+													</span>
+													<span class="radio_box mr15">
+														<input type="radio" id="type3_2" name="type3">
+														<label for="type3_2">MAT 성취도평가</label>
+													</span>
+													<span class="radio_box mr15">
+														<input type="radio" id="type3_3" name="type3">
+														<label for="type3_3">확인테스트</label>
+													</span>
+													<span class="radio_box mr15">
+														<input type="radio" id="type3_4" name="type3">
+														<label for="type3_4">개념완성 퀴즈</label>
+													</span>	
+													<span class="radio_box mr15">
+														<input type="radio" id="type3_5" name="type3">
+														<label for="type3_5">T쌤 족보</label>
+													</span>
+													<span class="radio_box">
+														<input type="radio" id="type3_6" name="type3">
+														<label for="type3_6">DIY 만점족보</label>
+													</span>																							
+												</div>
+												<div>
+													<span class="radio_box mr15">
+														<input type="radio" id="type3_7" name="type3">
+														<label for="type3_7">기출문제 ZIP</label>
+													</span>
+													<span class="radio_box mr15">
+														<input type="radio" id="type3_8" name="type3">
+														<label for="type3_8">빈출 트레이닝</label>
+													</span>
+													<span class="radio_box mr15">
+														<input type="radio" id="type3_9" name="type3">
+														<label for="type3_9">영어듣기 능력평가</label>
+													</span>
+													<span class="radio_box">
+														<input type="radio" id="type3_10" name="type3">
+														<label for="type3_10">오답노트</label>
+													</span>																							
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- //search_toggle_box -->
+						</div>
+						<!-- //검색조건 -->
+					</div>
+				</section>
+
+				<section class="section_wrap mt35">
+					<div class="justify_between mb08">
+						<div class="justify_start">
+							<p class="total sm">총 <span>00,000</span>개</p>
+							<select class="select_box w140 ml10">
+								<option value="">30개 보기</option>
+								<option value="">10개 보기</option>
+								<option value="">30개 보기</option>
+								<option value="">50개 보기</option>
+								<option value="">100개 보기</option>
+							</select>
+						</div>
+						
+						<div class="btn_wrap justify_start">
+							<a class="btn btn_green outline w120" href="#none" onclick="openPop1()">인덱스 등록</a>
+							<a class="btn btn_gray outline ml05" href="#none">삭제</a>
+						</div>
+					</div>
+					<!-- 작업내역 리스트 -->
+					<div class="tbl_scroll_box" style="max-height: 620px;">
+						<table class="tbl_list">
+							<caption></caption>
+							<colgroup>
+								<col style="width:3%">
+								<col style="width:5%">
+								<col style="width:14%">
+								<col style="width:7%">
+								<col style="width:7%">
+								<col style="width:7%">
+								<col style="width:10%">
+								<col style="width:13%">
+								<col style="width:7%">
+								<col style="width:12%">
+								<col style="width:9%">
+								<col style="width:6%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col" class="first">
+										<div class="check_box">
+											<input type="checkbox" id="check0">
+											<label for="check0" class="pl16"></label>
+										</div>
+									</th>
+									<th scope="col">번호</th>
+									<th scope="col">서비스명</th>
+									<th scope="col">학교급</th>
+									<th scope="col">영역</th>
+									<th scope="col">과목</th>
+									<th scope="col">상위 인덱스명</th>
+									<th scope="col">하위 인덱스명</th>
+									<th scope="col">총 문항수</th>
+									<th scope="col">등록일</th>
+									<th scope="col">미리보기</th>
+									<th scope="col">수정</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="first">
+										<div class="check_box">
+											<input type="checkbox" id="check1">
+											<label for="check1" class="pl16"></label>
+										</div>
+									</td>
+									<td>1</td>
+									<td>e해법수학</td>
+									<td>초등</td>
+									<td>수학</td>
+									<td>수학</td>
+									<td>AI 맞춤학습</td>
+									<td><a class="t_link" href="#none">스마트 맞춤학습</a></td>
+									<td>30</td>
+									 <td>YYYY.MM.DD</td>
+									<td>
+										<a href="#none" class="btn small btn_lgreen w80" onclick="openPop3()">템플릿 선택</a>
+									</td>
+									<td>
+										<a href="#none" class="btn small btn_light" onclick="openPop2()">수정</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="first">
+										<div class="check_box">
+											<input type="checkbox" id="check2">
+											<label for="check2" class="pl16"></label>
+										</div>
+									</td>
+									<td>2</td>
+									<td>e해법수학</td>
+									<td>초등</td>
+									<td>수학</td>
+									<td>수학</td>
+									<td>AI 맞춤학습</td>
+									<td><a class="t_link" href="#none">스마트 맞춤학습</a></td>
+									<td>30</td>
+									 <td>YYYY.MM.DD</td>
+									<td>
+										<a href="#none" class="btn small btn_lgreen w80">템플릿 선택</a>
+									</td>
+									<td>
+										<a href="#none" class="btn small btn_light">수정</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="first">
+										<div class="check_box">
+											<input type="checkbox" id="check3">
+											<label for="check3" class="pl16"></label>
+										</div>
+									</td>
+									<td>3</td>
+									<td>e해법수학</td>
+									<td>초등</td>
+									<td>수학</td>
+									<td>수학</td>
+									<td>AI 맞춤학습</td>
+									<td><a class="t_link" href="#none">스마트 맞춤학습</a></td>
+									<td>30</td>
+									 <td>YYYY.MM.DD</td>
+									<td>
+										<a href="#none" class="btn small btn_lgreen w80">템플릿 선택</a>
+									</td>
+									<td>
+										<a href="#none" class="btn small btn_light">수정</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="first">
+										<div class="check_box">
+											<input type="checkbox" id="check4">
+											<label for="check4" class="pl16"></label>
+										</div>
+									</td>
+									<td>4</td>
+									<td>e해법수학</td>
+									<td>초등</td>
+									<td>수학</td>
+									<td>수학</td>
+									<td>AI 맞춤학습</td>
+									<td><a class="t_link" href="#none">스마트 맞춤학습</a></td>
+									<td>30</td>
+									 <td>YYYY.MM.DD</td>
+									<td>
+										<a href="#none" class="btn small btn_lgreen w80">템플릿 선택</a>
+									</td>
+									<td>
+										<a href="#none" class="btn small btn_light">수정</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="first">
+										<div class="check_box">
+											<input type="checkbox" id="check5">
+											<label for="check5" class="pl16"></label>
+										</div>
+									</td>
+									<td>5</td>
+									<td>e해법수학</td>
+									<td>초등</td>
+									<td>수학</td>
+									<td>수학</td>
+									<td>AI 맞춤학습</td>
+									<td><a class="t_link" href="#none">스마트 맞춤학습</a></td>
+									<td>30</td>
+									 <td>YYYY.MM.DD</td>
+									<td>
+										<a href="#none" class="btn small btn_lgreen w80">템플릿 선택</a>
+									</td>
+									<td>
+										<a href="#none" class="btn small btn_light">수정</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="first">
+										<div class="check_box">
+											<input type="checkbox" id="check6">
+											<label for="check6" class="pl16"></label>
+										</div>
+									</td>
+									<td>6</td>
+									<td>e해법수학</td>
+									<td>초등</td>
+									<td>수학</td>
+									<td>수학</td>
+									<td>AI 맞춤학습</td>
+									<td><a class="t_link" href="#none">스마트 맞춤학습</a></td>
+									<td>30</td>
+									 <td>YYYY.MM.DD</td>
+									<td>
+										<a href="#none" class="btn small btn_lgreen w80">템플릿 선택</a>
+									</td>
+									<td>
+										<a href="#none" class="btn small btn_light">수정</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="first">
+										<div class="check_box">
+											<input type="checkbox" id="check7">
+											<label for="check7" class="pl16"></label>
+										</div>
+									</td>
+									<td>7</td>
+									<td>e해법수학</td>
+									<td>초등</td>
+									<td>수학</td>
+									<td>수학</td>
+									<td>AI 맞춤학습</td>
+									<td><a class="t_link" href="#none">스마트 맞춤학습</a></td>
+									<td>30</td>
+									 <td>YYYY.MM.DD</td>
+									<td>
+										<a href="#none" class="btn small btn_lgreen w80">템플릿 선택</a>
+									</td>
+									<td>
+										<a href="#none" class="btn small btn_light">수정</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="first">
+										<div class="check_box">
+											<input type="checkbox" id="check8">
+											<label for="check8" class="pl16"></label>
+										</div>
+									</td>
+									<td>8</td>
+									<td>e해법수학</td>
+									<td>초등</td>
+									<td>수학</td>
+									<td>수학</td>
+									<td>AI 맞춤학습</td>
+									<td><a class="t_link" href="#none">스마트 맞춤학습</a></td>
+									<td>30</td>
+									 <td>YYYY.MM.DD</td>
+									<td>
+										<a href="#none" class="btn small btn_lgreen w80">템플릿 선택</a>
+									</td>
+									<td>
+										<a href="#none" class="btn small btn_light">수정</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="first">
+										<div class="check_box">
+											<input type="checkbox" id="check9">
+											<label for="check9" class="pl16"></label>
+										</div>
+									</td>
+									<td>9</td>
+									<td>e해법수학</td>
+									<td>초등</td>
+									<td>수학</td>
+									<td>수학</td>
+									<td>AI 맞춤학습</td>
+									<td><a class="t_link" href="#none">스마트 맞춤학습</a></td>
+									<td>30</td>
+									 <td>YYYY.MM.DD</td>
+									<td>
+										<a href="#none" class="btn small btn_lgreen w80">템플릿 선택</a>
+									</td>
+									<td>
+										<a href="#none" class="btn small btn_light">수정</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="first">
+										<div class="check_box">
+											<input type="checkbox" id="check10">
+											<label for="check10" class="pl16"></label>
+										</div>
+									</td>
+									<td>10</td>
+									<td>e해법수학</td>
+									<td>초등</td>
+									<td>수학</td>
+									<td>수학</td>
+									<td>AI 맞춤학습</td>
+									<td><a class="t_link" href="#none">스마트 맞춤학습</a></td>
+									<td>30</td>
+									 <td>YYYY.MM.DD</td>
+									<td>
+										<a href="#none" class="btn small btn_lgreen w80">템플릿 선택</a>
+									</td>
+									<td>
+										<a href="#none" class="btn small btn_light">수정</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="first">
+										<div class="check_box">
+											<input type="checkbox" id="check11">
+											<label for="check11" class="pl16"></label>
+										</div>
+									</td>
+									<td>11</td>
+									<td>e해법수학</td>
+									<td>초등</td>
+									<td>수학</td>
+									<td>수학</td>
+									<td>AI 맞춤학습</td>
+									<td><a class="t_link" href="#none">스마트 맞춤학습</a></td>
+									<td>30</td>
+									 <td>YYYY.MM.DD</td>
+									<td>
+										<a href="#none" class="btn small btn_lgreen w80">템플릿 선택</a>
+									</td>
+									<td>
+										<a href="#none" class="btn small btn_light">수정</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="first">
+										<div class="check_box">
+											<input type="checkbox" id="check12">
+											<label for="check12" class="pl16"></label>
+										</div>
+									</td>
+									<td>12</td>
+									<td>e해법수학</td>
+									<td>초등</td>
+									<td>수학</td>
+									<td>수학</td>
+									<td>AI 맞춤학습</td>
+									<td><a class="t_link" href="#none">스마트 맞춤학습</a></td>
+									<td>30</td>
+									 <td>YYYY.MM.DD</td>
+									<td>
+										<a href="#none" class="btn small btn_lgreen w80">템플릿 선택</a>
+									</td>
+									<td>
+										<a href="#none" class="btn small btn_light">수정</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<!-- 페이징 -->
+					<div class="paging mt32">
+						<a href="javascript:void(0);" class="pprev"><img src="../../images/page_pprev.svg" alt="처음"></a> 
+						<a href="javascript:void(0);" class="prev"><img src="../../images/page_prev.svg" alt="이전"></a> 
+						<a href="javascript:void(0);" class="on">1 </a>
+						<a href="javascript:void(0);">2</a>
+						<a href="javascript:void(0);">3</a>
+						<a href="javascript:void(0);">4</a>
+						<a href="javascript:void(0);">5</a>
+						<a href="javascript:void(0);">6</a>
+						<a href="javascript:void(0);">7</a>
+						<a href="javascript:void(0);">8</a>
+						<a href="javascript:void(0);">9</a>
+						<a href="javascript:void(0);">10</a>
+						<a href="javascript:void(0);" class="next"><img src="../../images/page_next.svg" alt="다음"></a>
+						<a href="javascript:void(0);" class="nnext"><img src="../../images/page_nnext.svg" alt="끝"></a>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		/* window popup */
+		function openPop1(){
+			var popup1 = window.open('pop_등록하기.html', 'pop_등록하기', 'width=460px,height=494px');
+		}
+		function openPop2(){
+			var popup2 = window.open('pop_수정하기.html', 'pop_수정하기', 'width=460px,height=493px');
+		}
+		function openPop3(){
+			var popup3 = window.open('pop_템플릿선택.html', 'pop_템플릿선택', 'width=1100px,height=800px');
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,586 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+	<head> 
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>시스템관리-코드관리</title>
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css">
+<!-- <link rel="stylesheet" href="../../css/webfonts/fontawesome.min.css"/> -->
+<link rel="stylesheet" href="../../css/style.min.css">
+
+<script type="text/javascript" src="../../js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/admin.js"></script> 
+<script type="text/javascript" src="../../js/swiper.min.js"></script> 
+	</head>	
+	<body>	 
+	<div id="wrap">
+		<!-- 상단 공통 영역 -->
+		<div class="header-wrap">
+	<div class="header">
+		<div class="top">
+			<div class="logo justify_start">
+				<h1><img src="../../images/logo.svg" alt="천재교육" /></h1>
+				<select class="select_box w140 ml15">
+					<option value="">계열사 선택</option>
+					<option value="">천재교육</option>
+					<option value="">천재교과서</option>
+				</select>
+			</div>
+			<div class="justify_between">
+				<select class="select_box w120 mr10">
+					<option value="">문항통합관리자</option>
+					<option value="">관리자1</option>
+					<option value="">관리자2</option>
+				</select>
+				<a href="#none" class="belong">천재교육</a>
+				<a href="#none" class="name">홍길동(Hong)</a>
+				
+				<a href="#none" class="btn small btn_light w64">로그아웃</a>
+			</div>
+		</div>
+		<nav class="global_nav">
+			<ul class="menu">
+				<li><a href="#none" class="on">HOME</a></li>
+				<li><a href="#none">문항 관리</a></li>
+				<li><a href="#none">시험지 관리</a></li>
+				<li><a href="#none">서비스 관리</a></li>
+				<li><a href="#none">출처 관리</a></li>
+				<li><a href="#none">통계 관리</a></li>
+				<li><a href="#none">시스템 관리</a></li>
+				<li><a href="#none">데이터 관리</a></li>
+			</ul>
+		</nav>
+	</div>
+</div>
+		<div class="container">
+			<div class="local_nav">
+				<ul class="menu">
+					<li><a href="#none">과목관리</a></li>
+					<li><a href="#none">단원관리</a></li>
+					<li><a href="#none" class="on">코드관리</a></li>
+					<li><a href="#none">평가속성관리</a></li>
+					<li><a href="#none">관리자관리</a></li>
+					<li><a href="#none">계열사관리</a></li>
+				</ul>
+			</div>
+
+			<!-- 컨텐츠 영역 -->
+			<div class="contents">
+				<h2 class="section_tit pt00">코드 관리</h2>
+
+				<div class="justify_start_top">					
+                    <div>               
+                        <!-- 네비게이션 영역 -->
+                        <div class="navigation">
+                            <!-- 메뉴영역 -->
+                            <div class="nav">
+                                <ul class="step1">
+                                    <li>
+                                        <input type="checkbox" id="node1">
+                                        <label class="tit" for="node1">문항속성코드</label>
+                                        <ul class="sub">
+                                            <li class="on">
+                                                <a href="#none">- 문제형태</a>
+                                            </li>
+                                            <li>
+                                                <a href="#none">- 문제난이도</a>
+                                            </li>
+                                            <li>
+												<a href="#none">- 문제상태</a>
+                                            </li>
+                                            <li>
+												<a href="#none">- 빈출도</a>
+                                            </li>
+                                            <li>
+												<a href="#none">- 문항형태</a>
+                                            </li>
+                                            <li>
+                                                <a href="#none">- 문제유형</a>
+                                            </li>
+                                            <li>
+                                                <a href="#none">- 문항용도</a>
+                                            </li>
+                                            <li>
+                                                <a href="#none">- 사용영역</a>
+                                            </li>
+                                            <li>
+                                                <a href="#none">- 내용형태</a>
+                                            </li>                                           
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="node2">
+                                        <label class="tit" for="node2">분석속성코드</label>
+                                        <ul class="sub">
+                                            <li>
+                                                <a href="#none">- 교육과정</a>
+                                            </li>
+                                            <li>
+                                                <a href="#none">- 학교급(초중고)구분</a>
+                                            </li>
+                                            <li>
+												<a href="#none">- 학년</a>
+                                            </li>
+                                            <li>
+                                                <a href="#none">- 학기</a>
+                                            </li>
+                                            <li>
+												<a href="#none">- 영역</a>
+                                            </li>
+                                           
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="node3">
+                                        <label class="tit" for="node3">출처코드</label>
+                                        <ul class="sub">
+                                            <li>
+                                                <a href="#none">- 일반출처</a>
+                                            </li>
+                                            <li>
+                                                <a href="#none">- 기타출처</a>
+                                            </li>
+                                            <li>
+                                                <a href="#none">- 기출출처</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- // 네비게이션 영역 -->
+                    </div>
+
+					<!-- right section -->
+					<div class="ml08">
+						<!-- 검색조건 -->
+						<div class="search_box_wrap mb20">
+							<div class="search_box justify_between">
+								<div class="terms justify_start">
+									<span>검색조건</span>
+									<input type="text" class="w160 placeholder_black" placeholder="코드명">
+								</div>
+	
+								<div class="btn_wrap justify_start">
+									<a class="btn btn_green" href="#none">검색</a>
+									<a class="btn btn_gray ml08" href="#none">초기화</a>
+								</div>
+							</div>
+						</div>
+						<!-- 검색조건 -->
+
+						<!-- 테이블상단 -->
+						<div class="justify_between mb08">
+                            <p class="total sm">총 <span>000</span>개</p>
+							
+							<div class="btn_wrap justify_start">
+								<a class="btn btn_green outline" href="#none">등록</a>
+								<a class="btn btn_gray outline ml08" href="#none">삭제</a>
+							</div>
+						</div>
+						<!-- //테이블상단 -->
+
+						<!-- 테이블 -->
+						<div class="tbl_scroll_box mb135" style="max-height: 560px;">
+							<table class="tbl_list">
+								<caption></caption>
+								<colgroup>
+									<col width="6%">
+									<col width="6%">
+									<col width="8%">
+									<col width="8%">
+									<col />
+									<col width="13%">
+								</colgroup>
+								<thead>
+									<tr>
+										<th class="first">이동</th>
+										<th>선택</th>
+										<th>노출순서</th>
+										<th>코드ID</th>
+										<th>하위 코드명</th>
+										<th>사용여부</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="first">
+											<a href="#none" class="drag"><img src="../../images/ic_drag.png" alt="드래그"></a>
+										</td>
+										<td>
+                                            <div class="check_box">
+                                                <input type="checkbox" id="check1">
+                                                <label for="check1" class="pl16"></label>
+                                            </div>
+                                        </td>
+                                        <td>1</td>
+										<td>50</td>
+										<td class="left"><span class="t_underline">5지 선택</span></td>
+                                        <td>
+											<!-- 사용여부 버튼 -->
+											<div class="btn_use_toggle">
+												<input type="checkbox" class="cb_value" />
+												<span class="btn_round"></span>                                                
+												<span class="text_use">사용</span>
+											</div>
+										</td>
+									</tr>                                
+									<tr>
+										<td class="first">
+											<a href="#none" class="drag"><img src="../../images/ic_drag.png" alt="드래그"></a>
+										</td>
+										<td>
+                                            <div class="check_box">
+                                                <input type="checkbox" id="check2">
+                                                <label for="check2" class="pl16"></label>
+                                            </div>
+                                        </td>
+                                        <td>2</td>
+										<td>50</td>
+										<td class="left"><span class="t_underline">4지 선택</span></td>
+                                        <td>
+											<!-- 사용여부 버튼 -->
+											<div class="btn_use_toggle inactive"><!-- 미사용시 .inactive -->
+												<input type="checkbox" class="cb_value" />
+												<span class="btn_round"></span>                                                
+												<span class="text_use off">미사용</span> <!-- 미사용시 .off -->
+											</div>
+										</td>
+									</tr>                                
+									<tr>
+										<td class="first">
+											<a href="#none" class="drag"><img src="../../images/ic_drag.png" alt="드래그"></a>
+										</td>
+										<td>
+                                            <div class="check_box">
+                                                <input type="checkbox" id="check3">
+                                                <label for="check3" class="pl16"></label>
+                                            </div>
+                                        </td>
+                                        <td>3</td>
+										<td>50</td>
+										<td class="left"><span class="t_underline">3지 선택</span></td>
+                                        <td>
+											<!-- 사용여부 버튼 -->
+											<div class="btn_use_toggle inactive"><!-- 미사용시 .active -->
+												<input type="checkbox" class="cb_value" />
+												<span class="btn_round"></span>                                                
+												<span class="text_use off">미사용</span> <!-- 미사용시 .off -->
+											</div>
+										</td>
+									</tr>                                
+									<tr>
+										<td class="first">
+											<a href="#none" class="drag"><img src="../../images/ic_drag.png" alt="드래그"></a>
+										</td>
+										<td>
+                                            <div class="check_box">
+                                                <input type="checkbox" id="check4">
+                                                <label for="check4" class="pl16"></label>
+                                            </div>
+                                        </td>
+                                        <td>4</td>
+										<td>50</td>
+										<td class="left"><span class="t_underline">2지 선택</span></td>
+                                        <td>
+											<!-- 사용여부 버튼 -->
+											<div class="btn_use_toggle inactive"><!-- 미사용시 .inactive -->
+												<input type="checkbox" class="cb_value" />
+												<span class="btn_round"></span>                                                
+												<span class="text_use off">미사용</span> <!-- 미사용시 .off -->
+											</div>
+										</td>
+									</tr>                                
+									<tr>
+										<td class="first">
+											<a href="#none" class="drag"><img src="../../images/ic_drag.png" alt="드래그"></a>
+										</td>
+										<td>
+                                            <div class="check_box">
+                                                <input type="checkbox" id="check5">
+                                                <label for="check5" class="pl16"></label>
+                                            </div>
+                                        </td>
+                                        <td>5</td>
+										<td>10</td>
+										<td class="left"><span class="t_underline">자유 선지형</span></td>
+                                        <td>
+											<!-- 사용여부 버튼 -->
+											<div class="btn_use_toggle inactive"><!-- 미사용시 .inactive -->
+												<input type="checkbox" class="cb_value" />
+												<span class="btn_round"></span>                                                
+												<span class="text_use off">미사용</span> <!-- 미사용시 .off -->
+											</div>
+										</td>
+									</tr>                                
+									<tr>
+										<td class="first">
+											<a href="#none" class="drag"><img src="../../images/ic_drag.png" alt="드래그"></a>
+										</td>
+										<td>
+                                            <div class="check_box">
+                                                <input type="checkbox" id="check6">
+                                                <label for="check6" class="pl16"></label>
+                                            </div>
+                                        </td>
+                                        <td>6</td>
+										<td>60</td>
+										<td class="left"><span class="t_underline">단답 유순형</span></td>
+                                        <td>
+											<!-- 사용여부 버튼 -->
+											<div class="btn_use_toggle inactive"><!-- 미사용시 .inactive -->
+												<input type="checkbox" class="cb_value" />
+												<span class="btn_round"></span>                                                
+												<span class="text_use off">미사용</span> <!-- 미사용시 .off -->
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="first">
+											<a href="#none" class="drag"><img src="../../images/ic_drag.png" alt="드래그"></a>
+										</td>
+										<td>
+                                            <div class="check_box">
+                                                <input type="checkbox" id="check7">
+                                                <label for="check7" class="pl16"></label>
+                                            </div>
+                                        </td>
+                                        <td>7</td>
+										<td>61</td>
+										<td class="left"><span class="t_underline">단답 무순형</span></td>
+                                        <td>
+											<!-- 사용여부 버튼 -->
+											<div class="btn_use_toggle inactive"><!-- 미사용시 .inactive -->
+												<input type="checkbox" class="cb_value" />
+												<span class="btn_round"></span>                                                
+												<span class="text_use off">미사용</span> <!-- 미사용시 .off -->
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="first">
+											<a href="#none" class="drag"><img src="../../images/ic_drag.png" alt="드래그"></a>
+										</td>
+										<td>
+                                            <div class="check_box">
+                                                <input type="checkbox" id="check8">
+                                                <label for="check8" class="pl16"></label>
+                                            </div>
+                                        </td>
+                                        <td>8</td>
+										<td>62</td>
+										<td class="left"><span class="t_underline">단답 묶음형</span></td>
+                                        <td>
+											<!-- 사용여부 버튼 -->
+											<div class="btn_use_toggle inactive"><!-- 미사용시 .inactive -->
+												<input type="checkbox" class="cb_value" />
+												<span class="btn_round"></span>                                                
+												<span class="text_use off">미사용</span> <!-- 미사용시 .off -->
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="first">
+											<a href="#none" class="drag"><img src="../../images/ic_drag.png" alt="드래그"></a>
+										</td>
+										<td>
+                                            <div class="check_box">
+                                                <input type="checkbox" id="check9">
+                                                <label for="check9" class="pl16"></label>
+                                            </div>
+                                        </td>
+                                        <td>9</td>
+										<td>70</td>
+										<td class="left"><span class="t_underline">논술형</span></td>
+                                        <td>
+											<!-- 사용여부 버튼 -->
+											<div class="btn_use_toggle inactive"><!-- 미사용시 .inactive -->
+												<input type="checkbox" class="cb_value" />
+												<span class="btn_round"></span>                                                
+												<span class="text_use off">미사용</span> <!-- 미사용시 .off -->
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="first">
+											<a href="#none" class="drag"><img src="../../images/ic_drag.png" alt="드래그"></a>
+										</td>
+										<td>
+                                            <div class="check_box">
+                                                <input type="checkbox" id="check10">
+                                                <label for="check10" class="pl16"></label>
+                                            </div>
+                                        </td>
+                                        <td>10</td>
+										<td>88</td>
+										<td class="left"><span class="t_underline">선그리기형</span></td>
+                                        <td>
+											<!-- 사용여부 버튼 -->
+											<div class="btn_use_toggle inactive"><!-- 미사용시 .inactive -->
+												<input type="checkbox" class="cb_value" />
+												<span class="btn_round"></span>                                                
+												<span class="text_use off">미사용</span> <!-- 미사용시 .off -->
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="first">
+											<a href="#none" class="drag"><img src="../../images/ic_drag.png" alt="드래그"></a>
+										</td>
+										<td>
+                                            <div class="check_box">
+                                                <input type="checkbox" id="check11">
+                                                <label for="check11" class="pl16"></label>
+                                            </div>
+                                        </td>
+                                        <td>11</td>
+										<td>87</td>
+										<td class="left"><span class="t_underline">영역 선택형</span></td>
+                                        <td>
+											<!-- 사용여부 버튼 -->
+											<div class="btn_use_toggle inactive"><!-- 미사용시 .inactive -->
+												<input type="checkbox" class="cb_value" />
+												<span class="btn_round"></span>                                                
+												<span class="text_use off">미사용</span> <!-- 미사용시 .off -->
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="first">
+											<a href="#none" class="drag"><img src="../../images/ic_drag.png" alt="드래그"></a>
+										</td>
+										<td>
+                                            <div class="check_box">
+                                                <input type="checkbox" id="check12">
+                                                <label for="check12" class="pl16"></label>
+                                            </div>
+                                        </td>
+                                        <td>12</td>
+										<td>86</td>
+										<td class="left"><span class="t_underline">드래그 드롭</span></td>
+                                        <td>
+											<!-- 사용여부 버튼 -->
+											<div class="btn_use_toggle inactive"><!-- 미사용시 .inactive -->
+												<input type="checkbox" class="cb_value" />
+												<span class="btn_round"></span>                                                
+												<span class="text_use off">미사용</span> <!-- 미사용시 .off -->
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="first">
+											<a href="#none" class="drag"><img src="../../images/ic_drag.png" alt="드래그"></a>
+										</td>
+										<td>
+                                            <div class="check_box">
+                                                <input type="checkbox" id="check13">
+                                                <label for="check13" class="pl16"></label>
+                                            </div>
+                                        </td>
+                                        <td>13</td>
+										<td>85</td>
+										<td class="left"><span class="t_underline">서술형</span></td>
+                                        <td>
+											<!-- 사용여부 버튼 -->
+											<div class="btn_use_toggle inactive"><!-- 미사용시 .inactive -->
+												<input type="checkbox" class="cb_value" />
+												<span class="btn_round"></span>                                                
+												<span class="text_use off">미사용</span> <!-- 미사용시 .off -->
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="first">
+											<a href="#none" class="drag"><img src="../../images/ic_drag.png" alt="드래그"></a>
+										</td>
+										<td>
+                                            <div class="check_box">
+                                                <input type="checkbox" id="check14">
+                                                <label for="check14" class="pl16"></label>
+                                            </div>
+                                        </td>
+                                        <td>14</td>
+										<td>84</td>
+										<td class="left"><span class="t_underline">객관식 세트형</span></td>
+                                        <td>
+											<!-- 사용여부 버튼 -->
+											<div class="btn_use_toggle inactive"><!-- 미사용시 .inactive -->
+												<input type="checkbox" class="cb_value" />
+												<span class="btn_round"></span>                                                
+												<span class="text_use off">미사용</span> <!-- 미사용시 .off -->
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="first">
+											<a href="#none" class="drag"><img src="../../images/ic_drag.png" alt="드래그"></a>
+										</td>
+										<td>
+                                            <div class="check_box">
+                                                <input type="checkbox" id="check15">
+                                                <label for="check15" class="pl16"></label>
+                                            </div>
+                                        </td>
+                                        <td>15</td>
+										<td>99</td>
+										<td class="left"><span class="t_underline">기타</span></td>
+                                        <td>
+											<!-- 사용여부 버튼 -->
+											<div class="btn_use_toggle inactive"><!-- 미사용시 .inactive -->
+												<input type="checkbox" class="cb_value" />
+												<span class="btn_round"></span>                                                
+												<span class="text_use off">미사용</span> <!-- 미사용시 .off -->
+											</div>
+										</td>
+									</tr>
+                                    <tr>
+										<td class="first">-</td>
+                                        <td>
+                                            <div class="check_box">
+                                                <input type="checkbox" id="check16">
+                                                <label for="check16" class="pl16"></label>
+                                            </div>
+                                        </td>
+                                        <td>-</td>
+                                        <td>-</td>
+										<td>
+											<input type="text" class="w100p small border_radius_0" placeholder="신규 코드명">
+										</td>
+										<td><a href="#none" class="btn btn_gray small">저장</a></td>
+									</tr>  
+								</tbody>
+							</table>
+						</div>
+						<!-- // 테이블 -->
+					</div>
+					<!-- // right section -->
+				</div>			
+			</div>
+		</div>
+	</div>
+
+    <script>
+        /* window popup */
+		function openPop(){
+			var popup = window.open('pop_계열사선정.html', '계열사 선정', 'width=600px,height=340px');
+		}
+
+        $(function(){
+			//사용여부 버튼 on/off
+			$('.cb_value').click(function() {
+				var btnParent = $(this).parent('.btn_use_toggle');
+				$(this).siblings(".text_use").css("opacity", 0);
+
+				if(!$(btnParent).hasClass("inactive")){
+					$(btnParent).addClass('inactive');
+					$(this).siblings(".text_use").addClass("off").text("미사용").animate({opacity: 1}, 500);
+				}else {
+					$(btnParent).removeClass('inactive');
+					$(this).siblings(".text_use").removeClass("off").text("사용").animate({opacity: 1}, 500);;
+				}
+			});
+        });
+    </script>
+</body>
+</html>

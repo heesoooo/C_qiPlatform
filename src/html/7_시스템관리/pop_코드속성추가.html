@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+	<head> 
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>코드 속성 추가</title>
+		@@include('../include/inc_html_head.html')
+	</head>
+<body style="background-color: #ffffff;">
+    <div class="window_pop"> 
+        <div class="modal_tit">
+            <h2 class="title mb30">코드 속성 추가</h2>
+        </div>
+        <div class="tbl_pop_wrap">
+            <table class="tbl_view">
+                <caption></caption>
+                <colgroup>
+                    <col width="22%">
+                    <col>
+                </colgroup>
+                <tbody>
+                    <thead>
+                        <tr>
+                            <th>구분</th>
+                            <th>분류명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="center">그룹 분류</td>
+                            <td>
+                                <div class="radio_box">
+                                    <input type="radio" id="gr1" name="group" value="" checked=""><label for="gr1" class="mr10"> 문항속성코드</label>
+                                    <input type="radio" id="gr2" name="group" value=""><label for="gr2" class="mr10"> 분석속성코드</label>
+                                    <input type="radio" id="gr3" name="group" value=""><label for="gr3" class="mr10"> 출처코드</label>
+                                    <input type="radio" id="gr4" name="group" value=""><label for="gr4" class="mr10"> 시험지속성코드</label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="center">상위 코드명</td>
+                            <td>
+                                <input type="text" placeholder="상위 코드명" class="w300">
+                            </td>
+                        </tr>
+                    </tbody>
+                </tbody>
+            </table>
+        </div>
+        <div class="mt25 justify_center">
+            <a class="btn btn_green large" href="#none">저장</a>
+            <a class="close btn btn_gray outline large ml08" href="#none" onClick="self.close();">취소</a>
+        </div>
+    </div>
+    <script>
+
+    </script>
+</body>
+</html>

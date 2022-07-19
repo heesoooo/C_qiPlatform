@@ -1,0 +1,1039 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>문항등록-문항속성</title>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css">
+<!-- <link rel="stylesheet" href="../../css/webfonts/fontawesome.min.css"/> -->
+<link rel="stylesheet" href="../../css/style.min.css">
+
+<script type="text/javascript" src="../../js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/admin.js"></script> 
+<script type="text/javascript" src="../../js/swiper.min.js"></script> 
+</head>
+<body style="background-color: #fff;">
+	<!-- 문항등록 - 문항속성 popup -->
+	<div class="window_pop pop_question_regist">
+
+		<div class="justify_between mb30">
+			<div class="paging_id justify_start">
+				<a href="#none" class="prev"></a>
+				<label for="examId">문항ID</label>
+				<input type="text" placeholder="000000" class="placeholder_black" id="examId">
+				<a href="#none" class="next"></a>
+			</div>
+
+			<div class="justify_start">
+				<div class="radio_box exam_type_box">
+					<span class="mr20">문항타입</span>
+
+					<input type="radio" id="exam_type1" name="examType">
+					<label for="exam_type1" class="mr15">원문항</label>
+
+					<input type="radio" id="exam_type2" name="examType">
+					<label for="exam_type2" class="mr15">변형문항</label>
+
+					<input type="radio" id="exam_type3" name="examType">
+					<label for="exam_type3">쌍둥이 문항</label>
+				</div>
+				
+				<div class="btn_wrap ml08">
+					<!-- 수정시 추가 --
+					<a href="#none" class="btn btn_gray large w100">내 폴더</a>
+					<a href="#none" class="btn btn_green outline large w160">다른 이름으로 저장</a>
+					!-- //수정시 추가 -->				
+					<a href="#none" class="btn btn_green large w100">저장하기</a>
+					<a href="#none" class="btn btn_gray large">목록</a>
+					<a href="#none" class="btn btn_gray outline large">닫기</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="justify_between_start">
+			<div class="edit_area" style="height:998px;background-color: rgba(255,0,15,.1);">
+				에디터 영역
+			</div>
+			<div class="tabmenu ml10">
+				<ul>
+					<li id="tab1" class="tab_btn">
+						<input type="radio" checked name="tabmenu" id="tmenu1" class="tab">
+						<label class="label" for="tmenu1">문항속성</label>
+						<div class="tab_con">
+							<!-- 선다형 -->
+							<div class="con_sec">
+								<h4>지문속성 (선다형)</h4> <!-- 개발작업시 타이틀에 (선다형) 제거해주세요 -->
+								<div class="justify_start">
+									<span class="sel_tit">지문ID</span>
+									<input type="text" style="width:194px">
+									<a href="#none" class="btn btn_gray ml05" onclick="openPop3()">검색</a>
+								</div>
+								<div class="justify_start mt08">
+									<span class="sel_tit">키워드</span>
+									<div class="w100p">
+										<input type="text" class="w100p">
+									</div>								
+								</div>								
+								<div class="justify_start mt08">
+									<span class="sel_tit">공유여부</span>
+									<select class="select_box">
+										<option value="">공유불가</option>
+									</select>
+								</div>
+								<p class="keyword_txt right mt10">
+									* 기존 지문을 사용할 경우, 검색 후 선택해주세요.<br>
+									* 키워드가 여러 개일 경우 ‘,’로 표기
+								</p>
+							</div>
+							<!-- //선다형 -->
+
+							<!-- 단답형 -->
+							<div class="con_sec">
+								<h4>지문속성 (단답형)</h4> <!-- 개발작업시 타이틀에 (단답형) 제거해주세요 -->
+								<div class="justify_start">
+									<span class="sel_tit">지문ID</span>
+									<input type="text" style="width:194px" disabled="disabled">
+									<a href="#none" class="btn btn_gray ml05">검색</a>
+								</div>
+								<div class="justify_start_top mt08">
+									<span class="sel_tit mt08">키워드</span>
+									<div class="w100p">
+										<input type="text" class="w100p" disabled="disabled">
+									</div>								
+								</div>
+								<div class="justify_between mt08">
+									<span class="sel_tit">공유여부</span>
+									<select class="select_box" disabled>
+										<option value="">공유불가</option>
+									</select>
+								</div>
+								<p class="keyword_txt right mt10">
+									* 기존 지문을 사용할 경우, 검색 후 선택해주세요.<br>
+									* 키워드가 여러 개일 경우 ‘,’로 표기
+								</p>
+							</div>
+							<!-- //단답형 -->
+
+							<div class="con_sec">
+								<h4>문항속성</h4>							
+								<div class="justify_start_top">
+									<span class="sel_tit">문제형태<br>지정</span>
+									<div>
+										<select class="select_box">
+											<option value="">5지선택</option>
+										</select>
+										<div class="justify_between mt05">
+											<input type="text" style="width: 194px">
+											<a href="#none" class="btn btn_gray ml05" onclick="openPop()">형판 선택</a>
+										</div>
+									</div>
+								</div>
+								<div class="justify_between mt08">
+									<span class="sel_tit">난이도</span>
+									<select class="select_box">
+										<option value="">최하</option>
+									</select>
+								</div>
+								<div class="justify_between mt08">
+									<span class="sel_tit">문제상태</span>
+									<select class="select_box">
+										<option value="">등록</option>
+									</select>
+								</div>
+								<div class="justify_between mt08">
+									<span class="sel_tit">빈출도</span>
+									<select class="select_box">
+										<option value="">1등급</option>
+									</select>
+								</div>
+								<div class="justify_between mt08">
+									<span class="sel_tit">문항형태</span>
+									<select class="select_box">
+										<option value="">일반</option>
+									</select>
+								</div>
+								<div class="justify_between mt08">
+									<span class="sel_tit">객체구분</span>
+									<select class="select_box">
+										<option value="">이미지</option>
+									</select>
+								</div>
+								<div class="justify_between mt08">
+									<span class="sel_tit">문제유형</span>
+									<select class="select_box">
+										<option value="">정답형</option>
+									</select>
+								</div>
+								<div class="justify_between mt08">
+									<span class="sel_tit">문항용도</span>
+									<select class="select_box">
+										<option value="">개념 TEST</option>
+									</select>
+								</div>
+								<div class="justify_between mt08">
+									<span class="sel_tit">사용영역</span>
+									<select class="select_box">
+										<option value="">기출문제</option>
+									</select>
+								</div>
+								<div class="justify_between mt08">
+									<span class="sel_tit">내용형태</span>
+									<select class="select_box">
+										<option value="">단일</option>
+									</select>
+								</div>
+								<div class="justify_start mt08">
+									<span class="sel_tit">키워드</span>
+									<input type="text" class="w100p">
+								</div>
+								<div class="justify_start mt08">
+									<span class="sel_tit">공유여부</span>
+									<select class="select_box">
+										<option value="">공유불가</option>
+									</select>
+								</div>
+							</div>
+							
+							<!-- 선다형 -->
+							<div class="con_sec">
+								<div class="justify_between_start">
+									<h4>정답 (선다형)</h4> <!-- 개발작업시 타이틀에 (선다형) 제거해주세요 -->
+									<a href="#none" class="btn btn_green btn_plus">
+										<img src="../../images/ic_white_plus.png" alt="">
+									</a>
+								</div>
+								<table class="tbl_list correct">
+									<caption></caption>
+									<colgroup>
+										<col style="width: 51px">
+										<col />
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col"class="first">No</th>
+											<th scope="col">정답</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="first">1</td>
+											<td>
+												<div class="justify_between">
+													<input type="text" class="w220 placeholder_black" placeholder="③">
+													<a href="#none" class="btn btn_gray outline btn_del"><img src="../../images/ic_gray_delete.png" alt=""></a>
+												</div>
+ 											</td>
+										</tr>
+										<tr>
+											<td class="first">1</td>
+											<td>
+												<div class="justify_start">
+													<input type="text" class="w220 placeholder_black" placeholder="① , ③">
+												</div>
+ 											</td>
+										</tr>	
+									</tbody>
+								</table>
+								<p class="mt05 keyword_txt right">* 정답이 여러 개일 경우 ‘,’로 표기</p>
+							</div>
+							<!-- //선다형 -->
+
+							<!-- 단답형 -->
+							<div class="con_sec">
+								<div class="justify_between_start">
+									<h4>정답 (단답형)</h4>	<!-- 개발작업시 타이틀에 (단답형) 제거해주세요 -->						
+									<a href="#none" class="btn btn_green btn_plus">
+										<img src="../../images/ic_white_plus.png" alt="">
+									</a>
+								</div>
+								<table class="tbl_list correct">
+									<caption></caption>
+									<colgroup>
+										<col style="width: 51px">
+										<col />
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col"class="first">No</th>
+											<th scope="col">정답</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="first" rowspan="2">1</td>
+											<td>
+												<div class="justify_start">
+													<input type="text" class="w165 placeholder_black" placeholder="￦(56+14π￦)">
+													<a href="#none" class="btn btn_gray outline ml04 btn_latex ">Latex</a>
+													<a href="#none" class="btn btn_gray outline btn_del ml04"><img src="../../images/ic_gray_delete.png" alt="삭제"></a>
+												</div>
+ 											</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="justify_start">
+													<input type="text" class="w165 placeholder_black">
+													<a href="#none" class="btn btn_gray outline ml04 btn_latex">Latex</a>
+													<a href="#none" class="btn btn_green outline btn_add ml04"><img src="../../images/ic_green_plus.png" alt="추가"></a>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td class="first">범례</td>
+											<td>
+												<div class="justify_start">
+													<input type="text" class="w165 placeholder_black">
+												</div>
+ 											</td>
+										</tr>
+										<tr>
+											<td class="first" rowspan="2">옵션</td>
+											<td  class="left">
+												<div class="check_box">
+													<input type="checkbox" id="opt1">
+													<label for="opt1">대소구분</label>
+
+													<input type="checkbox" id="opt2">
+													<label for="opt2" class="ml15">공백무시</label>
+												</div>
+ 											</td>
+										</tr>
+										<tr>
+											<td class="left">
+												<div class="check_box">
+													<input type="checkbox" id="opt3">
+													<label for="opt3">글자수</label>
+
+													<input type="text" id="opt4" class="w60 ml15">
+													<label for="opt4">제한</label>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td class="first" rowspan="2">1</td>
+											<td>
+												<div class="justify_start">
+													<input type="text" class="w165 placeholder_black" placeholder="￦(56+14π￦)">
+													<a href="#none" class="btn btn_gray outline ml04 btn_latex ">Latex</a>
+													<a href="#none" class="btn btn_gray outline btn_del ml04"><img src="../../images/ic_gray_delete.png" alt="삭제"></a>
+												</div>
+ 											</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="justify_start">
+													<input type="text" class="w165 placeholder_black">
+													<a href="#none" class="btn btn_gray outline ml04 btn_latex">Latex</a>
+													<a href="#none" class="btn btn_green outline btn_add ml04"><img src="../../images/ic_green_plus.png" alt="추가"></a>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td class="first">범례</td>
+											<td>
+												<div class="justify_start">
+													<input type="text" class="w165 placeholder_black">
+												</div>
+ 											</td>
+										</tr>
+										<tr>
+											<td class="first" rowspan="2">옵션</td>
+											<td  class="left">
+												<div class="check_box">
+													<input type="checkbox" id="opt5">
+													<label for="opt5">대소구분</label>
+
+													<input type="checkbox" id="opt6">
+													<label for="opt6" class="ml15">공백무시</label>
+												</div>
+ 											</td>
+										</tr>
+										<tr>
+											<td class="left">
+												<div class="check_box">
+													<input type="checkbox" id="opt7">
+													<label for="opt7">글자수</label>
+
+													<input type="text" id="opt8" class="w60 ml15">
+													<label for="opt8">제한</label>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- //단답형 -->
+						</div>
+					</li>
+					<li id="tab2" class="tab_btn">
+						<input type="radio" name="tabmenu" id="tmenu2" class="tab">
+						<label class="label" for="tmenu2">분석속성</label>
+						<div class="tab_con">
+							<div class="con_sec">
+								<div class="justify_between_start">
+									<h4 class="justify_start">2015개정 <span class="bar"></span> <span>2009 개정<i class="triangle"></i> </span></h4>
+									<a href="#none" class="btn btn_green btn_plus">
+										<img src="../../images/ic_white_plus.png" alt="">
+									</a>
+								</div>
+								<div class="justify_between mt08">
+									<span class="sel_tit">교육과정</span>
+									<select class="select_box">
+										<option value="">2015개정 교육과정</option>
+									</select>
+								</div>
+								<div class="justify_between mt08">
+									<span class="sel_tit">초중고<br>구분</span>
+									<select class="select_box">
+										<option value="">초등</option>
+									</select>
+								</div>
+								<div class="justify_between mt08">
+									<span class="sel_tit">영역</span>
+									<select class="select_box">
+										<option value="">전체</option>
+									</select>
+								</div>
+								<div class="justify_between mt08">
+									<span class="sel_tit">과목</span>
+									<select class="select_box">
+										<option value="">전체</option>
+									</select>
+								</div>
+								<div class="justify_between mt08">
+									<span class="sel_tit">학년</span>
+									<select class="select_box">
+										<option value="">초1</option>
+									</select>
+								</div>
+								<div class="justify_between mt08">
+									<span class="sel_tit">학기</span>
+									<select class="select_box">
+										<option value="">1학기</option>
+									</select>
+								</div>
+								<div class="justify_between mt08">
+									<span class="sel_tit">대단원</span>
+									<select class="select_box">
+										<option value="">전체</option>
+									</select>
+								</div>
+								<div class="justify_between mt08">
+									<span class="sel_tit">중단원</span>
+									<select class="select_box">
+										<option value="">전체</option>
+									</select>
+								</div>
+								<div class="justify_between mt08">
+									<span class="sel_tit">소단원</span>
+									<select class="select_box">
+										<option value="">전체</option>
+									</select>
+								</div>
+								<div class="justify_between mt08">
+									<span class="sel_tit">토픽</span>
+									<select class="select_box">
+										<option value="">전체</option>
+									</select>
+								</div>
+								<div class="justify_between mt08">
+									<span class="sel_tit">행동영역</span>
+									<select class="select_box">
+										<option value="">전체</option>
+									</select>
+								</div>
+								<div class="justify_between mt08">
+									<span class="sel_tit">내용영역</span>
+									<select class="select_box">
+										<option value="">전체</option>
+									</select>
+								</div>
+
+								<div class="right mt10">
+									<a href="#none" class="btn btn_gray w100">분석 속성 삭제</a>
+								</div>
+							</div>
+
+							<div class="con_sec">
+								<h4>History</h4>							
+								<table class="tbl_list">
+									<caption></caption>
+									<colgroup>
+										<col style="width: 20%">
+										<col style="width: 60%">
+										<col style="width: 20%">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col"class="first">이력정보</th>
+											<th scope="col">일시</th>
+											<th scope="col">작업자</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><a class="t_link" href="#none">00000</a></td>
+											<td>YYYY.MM.DD   00:00:00</td>
+											<td>홍길동</td>
+										</tr>
+										<tr>
+											<td><a class="t_link" href="#none">00000</a></td>
+											<td>YYYY.MM.DD   00:00:00</td>
+											<td>홍길동</td>
+										</tr>
+										<tr>
+											<td><a class="t_link" href="#none">00000</a></td>
+											<td>YYYY.MM.DD   00:00:00</td>
+											<td>홍길동</td>
+										</tr>										
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</li>
+					<li id="tab3" class="tab_btn">
+						<input type="radio" name="tabmenu" id="tmenu3" class="tab">
+						<label class="label" for="tmenu3">출처</label>
+						<div class="tab_con">
+							<div class="con_sec">
+								<h4>문항속성</h4>		
+								<div class="justify_between mt08">
+									<span class="sel_tit lg">*회사 구분</span>
+									<select class="select_box">
+										<option value="">천재교육</option>
+									</select>
+								</div>
+								<div class="justify_between mt08">
+									<span class="sel_tit lg">사업단<br>구분</span>
+									<select class="select_box">
+										<option value="">e러닝</option>
+									</select>
+								</div>
+								<div class="justify_between mt08">
+									<span class="sel_tit lg">*출제연도</span>
+									<select class="select_box">
+										<option value="">2022</option>
+									</select>
+								</div>
+								<div class="mt08">
+									<div class="justify_between">
+										<span class="sel_tit lg">출처</span>
+										<div class="justify_between mt05">
+											<input type="text" style="width: 194px">
+											<a href="#none" class="btn btn_gray ml05" onclick="openPop2()">검색</a>
+										</div>
+									</div>
+									<p class="keyword_txt right mt12">* 키워드가 여러 개일 경우 ‘,’로 표기</p>
+								</div>
+							</div>
+							<div class="con_sec">
+								<div class="justify_between_start">
+									<h4 class="justify_start">원본 이미지</h4>
+									<a href="#none" class="btn btn_green btn_plus">
+										<img src="../../images/ic_white_plus.png" alt="">
+									</a>
+								</div>
+								<div class="justify_start mt08">
+									<span class="sel_tit lg">원본<br>이미지 (AI)</span>
+									<div class="justify_between w100p">
+										<span class="file_name">이미지.ai <a href="#none" class="ml08"><img src="../../images/ic_gray_delete.png" alt="삭제"></a></span>
+		
+										<input type="file" id="inputFile" class="input_file_button">
+										<label for="inputFile" class="ml04">검색</label>
+									</div>
+								</div>
+								<div class="justify_start_top mt08">
+									<span class="sel_tit lg mt08">키워드</span>
+									<div class="w100p">
+										<input type="text" class="w100p">
+										<p class="keyword_txt right mt10">
+											* 키워드가 여러 개일 경우 ‘,’로 표기
+										</p>
+									</div>
+								</div>							
+							</div>
+							<div class="con_sec">
+								<div class="justify_between_start">
+									<h4 class="justify_start">첨부파일</h4>
+									<a href="#none" class="btn btn_green btn_plus">
+										<img src="../../images/ic_white_plus.png" alt="">
+									</a>
+								</div>
+								<div class="justify_start_top mt08">
+									<span class="sel_tit lg mt08">첨부파일</span>
+									<div class="w100p">
+										<div class="justify_between">
+											<span class="file_name">파일명.hwp <a href="#none" class="ml08"><img src="../../images/ic_gray_delete.png" alt="삭제"></a></span>
+											<input type="file" id="inputFile2" class="input_file_button">
+											<label for="inputFile2" class="ml04">검색</label>
+										</div>
+										<div class="justify_between mt04">
+											<span class="file_name">파일명.hwp <a href="#none" class="ml08"><img src="../../images/ic_gray_delete.png" alt="삭제"></a></span>
+											<input type="file" id="inputFile3" class="input_file_button">
+											<label for="inputFile3" class="ml04">검색</label>
+										</div>
+									</div>
+								</div>												
+							</div>
+							<div class="con_sec">
+								<h4>서비스 변형문항 정보</h4>							
+								<table class="tbl_list">
+									<caption></caption>
+									<colgroup>
+										<col style="width: 25%">
+										<col style="width: 20%">
+										<col style="width: 35%">
+										<col style="width: 20%">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col"class="first">계열사</th>
+											<th scope="col">문항ID</th>
+											<th scope="col">일시</th>
+											<th scope="col">작업자</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td scope="row">천재교육</td>
+											<td><a class="t_link" href="#none">00000</a></td>
+											<td>YYYY.MM.DD   00:00:00</td>
+											<td>홍길동</td>
+										</tr>
+										<tr>
+											<td scope="row">천재교육</td>
+											<td><a class="t_link" href="#none">00000</a></td>
+											<td>YYYY.MM.DD   00:00:00</td>
+											<td>홍길동</td>
+										</tr>																		
+									</tbody>
+								</table>
+							</div>
+							<div class="con_sec">
+								<h4>인덱스 정보</h4>							
+								<table class="tbl_list">
+									<caption></caption>
+									<colgroup>
+										<col style="width: 15%">
+										<col style="width: 20%">
+										<col style="width: 30%">
+										<col style="width: 35%">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col"class="first">계열사</th>
+											<th scope="col">서비스</th>
+											<th scope="col">상위인덱스</th>
+											<th scope="col">하위인덱스</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td scope="row">천재교육</td>
+											<td>E해법수학</td>
+											<td>AI 맞춤학습</td>
+											<td>스마트 맞춤학습</td>
+										</tr>
+										<tr>
+											<td scope="row">천재교육</td>
+											<td>E해법수학</td>
+											<td>AI 맞춤학습</td>
+											<td>스마트 맞춤학습</td>
+										</tr>																	
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</li>
+					<li id="tab4" class="tab_btn">
+						<input type="radio" name="tabmenu" id="tmenu4" class="tab">
+						<label class="label" for="tmenu4">중복문항</label>
+
+						<div class="tab_con p00 pt20 pl20 pb20">
+							<div class="con_sec view_question_box mb00">
+
+								<div class="view_ques_tab">
+									<a href="#view_tab01" class="active">검색결과</a>
+									<a href="#view_tab02">저장된 중복문제</a>
+								</div>
+
+								<!-- 검색결과 -->
+								<div class="tab_content" id="view_tab01" style="display: block;">
+									<select class="select_box w120 mb25">
+										<option value="">중복도순</option>
+									</select>
+
+									<div class="scroll_box similar_question_box mb30" style="height:823px">
+										<dl>
+											<dt class="check_box justify_start">
+												<span>
+													<input type="checkbox" id="lst01">
+													<label for="lst01">천재교육</label>
+												</span>
+												<span class="bar"></span>
+												<span class="percent">유사도 00%</span>
+												<strong class="ques_id ml15">문항ID <span>000000</span></strong>
+											</dt>
+											<dd>
+												문제 영역
+											</dd>
+										</dl>
+										<dl>
+											<dt class="check_box justify_start">
+												<span>
+													<input type="checkbox" id="lst02">
+													<label for="lst02">천재교육</label>
+												</span>
+												<span class="bar"></span>
+												<span class="percent">유사도 00%</span>
+												<strong class="ques_id ml15">문항ID <span>000000</span></strong>
+											</dt>
+											<dd>
+												문제 영역
+											</dd>
+										</dl>
+										<dl>
+											<dt class="check_box justify_start">
+												<span>
+													<input type="checkbox" id="lst03">
+													<label for="lst03">천재교육</label>
+												</span>
+												<span class="bar"></span>
+												<span class="percent">유사도 00%</span>
+												<strong class="ques_id ml15">문항ID <span>000000</span></strong>
+											</dt>
+											<dd>
+												문제 영역
+											</dd>
+										</dl>
+										<dl>
+											<dt class="check_box justify_start">
+												<span>
+													<input type="checkbox" id="lst04">
+													<label for="lst04">천재교육</label>
+												</span>
+												<span class="bar"></span>
+												<span class="percent">유사도 00%</span>
+												<strong class="ques_id ml15">문항ID <span>000000</span></strong>
+											</dt>
+											<dd>
+												문제 영역
+											</dd>
+										</dl>
+										<dl>
+											<dt class="check_box justify_start">
+												<span>
+													<input type="checkbox" id="lst05">
+													<label for="lst05">천재교육</label>
+												</span>
+												<span class="bar"></span>
+												<span class="percent">유사도 00%</span>
+												<strong class="ques_id ml15">문항ID <span>000000</span></strong>
+											</dt>
+											<dd>
+												문제 영역
+											</dd>
+										</dl>
+										<dl>
+											<dt class="check_box justify_start">
+												<span>
+													<input type="checkbox" id="lst06">
+													<label for="lst06">천재교육</label>
+												</span>
+												<span class="bar"></span>
+												<span class="percent">유사도 00%</span>
+												<strong class="ques_id ml15">문항ID <span>000000</span></strong>
+											</dt>
+											<dd>
+												문제 영역
+											</dd>
+										</dl>
+										<dl>
+											<dt class="check_box justify_start">
+												<span>
+													<input type="checkbox" id="lst07">
+													<label for="lst07">천재교육</label>
+												</span>
+												<span class="bar"></span>
+												<span class="percent">유사도 00%</span>
+												<strong class="ques_id ml15">문항ID <span>000000</span></strong>
+											</dt>
+											<dd>
+												문제 영역
+											</dd>
+										</dl>
+										<dl>
+											<dt class="check_box justify_start">
+												<span>
+													<input type="checkbox" id="lst08">
+													<label for="lst08">천재교육</label>
+												</span>
+												<span class="bar"></span>
+												<span class="percent">유사도 00%</span>
+												<strong class="ques_id ml15">문항ID <span>000000</span></strong>
+											</dt>
+											<dd>
+												문제 영역
+											</dd>
+										</dl>
+										<dl>
+											<dt class="check_box justify_start">
+												<span>
+													<input type="checkbox" id="lst09">
+													<label for="lst09">천재교육</label>
+												</span>
+												<span class="bar"></span>
+												<span class="percent">유사도 00%</span>
+												<strong class="ques_id ml15">문항ID <span>000000</span></strong>
+											</dt>
+											<dd>
+												문제 영역
+											</dd>
+										</dl>
+										<dl>
+											<dt class="check_box justify_start">
+												<span>
+													<input type="checkbox" id="lst010">
+													<label for="lst010">천재교육</label>
+												</span>
+												<span class="bar"></span>
+												<span class="percent">유사도 00%</span>
+												<strong class="ques_id ml15">문항ID <span>000000</span></strong>
+											</dt>
+											<dd>
+												문제 영역
+											</dd>
+										</dl>
+									</div>
+
+									<div class="justify_center gray_box">
+										<a href="#none" class="btn btn_green w120">중복 문항 저장</a>
+									</div>
+								</div>
+								<!-- //검색결과 -->
+								<!-- 저장된 중복 문제 -->
+								<div class="tab_content" id="view_tab02">
+									<select class="select_box w120 mb25">
+										<option value="">전체</option>
+									</select>
+									<div class="scroll_box similar_question_box" style="height:823px">
+										<dl>
+											<dt class="check_box justify_between">
+												<div class="justify_start">
+													<span>
+														<input type="checkbox" id="lst001">
+														<label for="lst001">천재교육</label>
+													</span>
+													<span class="bar"></span>
+													<strong class="ques_id">문항ID <span>000000</span></strong>
+												</div>
+												<a href="#none" class="btn_except">제외</a>
+											</dt>
+											<dd>
+												문제 영역
+											</dd>
+										</dl>
+										<dl>
+											<dt class="check_box justify_between">
+												<div class="justify_start">
+													<span>
+														<input type="checkbox" id="lst002">
+														<label for="lst002">천재교육</label>
+													</span>
+													<span class="bar"></span>
+													<strong class="ques_id">문항ID <span>000000</span></strong>
+												</div>
+												<a href="#none" class="btn_except">제외</a>
+											</dt>
+											<dd>
+												문제 영역
+											</dd>
+										</dl>
+										<dl>
+											<dt class="check_box justify_between">
+												<div class="justify_start">
+													<span>
+														<input type="checkbox" id="lst003">
+														<label for="lst003">천재교육</label>
+													</span>
+													<span class="bar"></span>
+													<strong class="ques_id">문항ID <span>000000</span></strong>
+												</div>
+												<a href="#none" class="btn_except">제외</a>
+											</dt>
+											<dd>
+												문제 영역
+											</dd>
+										</dl>
+										<dl>
+											<dt class="check_box justify_between">
+												<div class="justify_start">
+													<span>
+														<input type="checkbox" id="lst004">
+														<label for="lst004">천재교육</label>
+													</span>
+													<span class="bar"></span>
+													<strong class="ques_id">문항ID <span>000000</span></strong>
+												</div>
+												<a href="#none" class="btn_except">제외</a>
+											</dt>
+											<dd>
+												문제 영역
+											</dd>
+										</dl>
+										<dl>
+											<dt class="check_box justify_between">
+												<div class="justify_start">
+													<span>
+														<input type="checkbox" id="lst005">
+														<label for="lst005">천재교육</label>
+													</span>
+													<span class="bar"></span>
+													<strong class="ques_id">문항ID <span>000000</span></strong>
+												</div>
+												<a href="#none" class="btn_except">제외</a>
+											</dt>
+											<dd>
+												문제 영역
+											</dd>
+										</dl>
+										<dl>
+											<dt class="check_box justify_between">
+												<div class="justify_start">
+													<span>
+														<input type="checkbox" id="lst006">
+														<label for="lst006">천재교육</label>
+													</span>
+													<span class="bar"></span>
+													<strong class="ques_id">문항ID <span>000000</span></strong>
+												</div>
+												<a href="#none" class="btn_except">제외</a>
+											</dt>
+											<dd>
+												문제 영역
+											</dd>
+										</dl>
+										<dl>
+											<dt class="check_box justify_between">
+												<div class="justify_start">
+													<span>
+														<input type="checkbox" id="lst007">
+														<label for="lst007">천재교육</label>
+													</span>
+													<span class="bar"></span>
+													<strong class="ques_id">문항ID <span>000000</span></strong>
+												</div>
+												<a href="#none" class="btn_except">제외</a>
+											</dt>
+											<dd>
+												문제 영역
+											</dd>
+										</dl>
+										<dl>
+											<dt class="check_box justify_between">
+												<div class="justify_start">
+													<span>
+														<input type="checkbox" id="lst008">
+														<label for="lst008">천재교육</label>
+													</span>
+													<span class="bar"></span>
+													<strong class="ques_id">문항ID <span>000000</span></strong>
+												</div>
+												<a href="#none" class="btn_except ml15">제외</a>
+											</dt>
+											<dd>
+												문제 영역
+											</dd>
+										</dl>
+										<dl>
+											<dt class="check_box justify_between">
+												<div class="justify_start">
+													<span>
+														<input type="checkbox" id="lst009">
+														<label for="lst009">천재교육</label>
+													</span>
+													<span class="bar"></span>
+													<strong class="ques_id">문항ID <span>000000</span></strong>
+												</div>
+												<a href="#none" class="btn_except">제외</a>
+											</dt>
+											<dd>
+												문제 영역
+											</dd>
+										</dl>
+										<dl>
+											<dt class="check_box justify_between">
+												<div class="justify_start">
+													<span>
+														<input type="checkbox" id="lst010">
+														<label for="lst009">천재교육</label>
+													</span>
+													<span class="bar"></span>
+													<strong class="ques_id">문항ID <span>000000</span></strong>
+												</div>
+												<a href="#none" class="btn_except">제외</a>
+											</dt>
+											<dd>
+												문제 영역
+											</dd>
+										</dl>
+										<dl>
+											<dt class="check_box justify_between">
+												<div class="justify_start">
+													<span>
+														<input type="checkbox" id="lst011">
+														<label for="lst009">천재교육</label>
+													</span>
+													<span class="bar"></span>
+													<strong class="ques_id">문항ID <span>000000</span></strong>
+												</div>
+												<a href="#none" class="btn_except">제외</a>
+											</dt>
+											<dd>
+												문제 영역
+											</dd>
+										</dl>
+									</div>
+								</div>
+								<!-- //저장된 중복 문제 -->								
+							</div>
+							
+						</div>						
+					</li>
+				</ul>
+			</div>			
+		</div>
+	</div>
+	<!-- //문항등록 - 문항속성 popup -->
+
+	<script>
+		/* window popup */
+		function openPop(){
+			var popup = window.open('pop_형판선택.html', 'pop_형판선택', 'width=620px,height=1100px');
+		}
+		function openPop2(){
+			var popup2 = window.open('pop_출처검색.html', 'pop_출처검색', 'width=1100px,height=823px');
+		}
+		function openPop3(){
+			var popup3 = window.open('pop_지문검색.html', 'pop_지문검색', 'width=900px,height=791px');
+		}
+		
+		// 중복문항 탭
+		$(function(){
+			$(".view_question_box .tab_content").hide();
+			$(".view_question_box .tab_content").eq(0).show();
+			$(".view_ques_tab a").on("click", function(e){
+				e.preventDefault();
+				$(this).addClass("active").siblings().removeClass("active");
+
+				$(".view_question_box .tab_content").hide();
+
+				var target = $(this).attr("href");
+				$(target).fadeIn(200);
+			});
+		});
+	</script>
+</body>
+
+</html>

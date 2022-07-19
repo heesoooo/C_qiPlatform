@@ -1,0 +1,1004 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+	<head> 
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>문항통합플랫폼</title>
+		@@include('../include/inc_html_head.html')
+	</head>
+	
+	<body>
+	 
+	<div id="wrap">
+		<!-- 상단 공통 영역 -->
+		@@include('../include/inc_header.html')
+		<div class="container">
+			<div class="local_nav">
+				<ul class="menu">
+					<li><a href="#none">문항 삽화 이미지 관리</a></li>
+					<li><a href="#none" class="on">미디어 파일 관리</a></li>
+					<li><a href="#none">출처 관리</a></li>
+				</ul>
+			</div>
+
+			<!-- 컨텐츠 영역 -->
+			<div class="contents">
+				<h2 class="section_tit pt00">미디어 파일 관리</h2>
+				<div class="justify_between_start mb40">
+
+					<!-- 검색조건 -->
+					<div class="search_box_wrap">
+						<div class="search_box justify_between">
+							<div class="terms justify_start">
+								<span>검색조건</span>
+								<select class="select_box w100 mr05">
+									<option value="">미디어구분</option>
+									<option value="">선택1</option>
+								</select>
+								<select class="select_box w100 mr05">
+									<option value="">문항ID</option>
+									<option value="">문항ID</option>
+								</select>
+								<div class="ic_filter_wrap">
+									<a href="#none" class="ic ic_filter mr10">
+										<img src="../../images/ic_filter.png" alt="필터">
+									</a>
+									<!-- 전체 범위 입력 박스 -->
+									<span class="filter_box">
+										<p class="mb10"><strong>전체범위</strong></p>
+										<span class="justify_start mb10">
+											<em class="w80">특정범위</em>
+											<span class="w180 justify_between">
+												<input type="text" class="w80">
+												~
+												<input type="text" class="w80">
+											</span>
+										</span>
+										<span class="justify_start_top">											
+											<em class="w80">특정번호</em>
+											<span>
+												<textarea class="text_area w180"></textarea>
+											</span>
+										</span>
+										<div class="justify_center mt15">
+											<a href="#none" class="btn btn_gray">검색</a>
+											<a href="#none" class="btn btn_gray outline ml05 close">닫기</a>
+										</div>
+									</span>
+									<!-- //전체 범위 입력 박스 -->
+								</div>
+								<input type="text" placeholder="키워드" class="w160 placeholder_black">
+							</div>
+							<div class="btn_wrap justify_start">
+								<a class="btn btn_green w60" href="#none">검색</a>
+								<a class="btn btn_gray w60 ml08" href="#none">초기화</a>
+								<a class="btn_search_toggle ml08" href="#none">열기</a>
+							</div>
+						</div>
+						
+						<!-- search_toggle_box -->
+                        <div class="search_toggle_box" style="display: none;">
+                            <div class="search_box input_line justify_between">
+                                <div class="terms justify_between_start">
+                                    <span>학교급</span>
+                                    <div class="chk_list">
+                                        <select class="select_box w100 mr05">
+                                            <option value="">선택</option>
+                                            <option value="">학교급</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="search_box justify_between">
+                                <div class="terms justify_between_start">
+                                    <span>학년</span>
+                                    <!-- D: 학교급 중등 선택시 노출  -->
+                                    <!-- <div class="chk_list">
+                                        <div>
+                                            <span class="check_box mr15">
+                                                <input type="checkbox" id="grade0">
+                                                <label for="grade0">전체</label>
+                                            </span>
+                                            <span class="check_box mr15">
+                                                <input type="checkbox" id="grade1" checked>
+                                                <label for="grade1">중1</label>
+                                            </span>
+                                            <span class="check_box mr15">
+                                                <input type="checkbox" id="grade2">
+                                                <label for="grade2">중2</label>
+                                            </span>
+                                            <span class="check_box mr15">
+                                                <input type="checkbox" id="grade3">
+                                                <label for="grade3">중3</label>
+                                            </span>
+                                        </div>
+                                    </div> -->
+                                    <p class="p_text col_light_gray">학교급을 선택해 주세요.</p>
+                                </div>
+                            </div>
+                    
+                            <div class="search_box input_line justify_between">
+                                <div class="terms justify_start_top">
+                                    <span>영역</span>
+                                    <div class="chk_list">
+                                        <select class="select_box w100 mr05">
+                                            <option value="">선택</option>
+                                            <option value="">영역</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="search_box justify_between">
+                                <div class="terms justify_between_start">
+                                    <span>과목</span>
+                                    <!-- D: 과목 선택시 노출  -->
+                                    <!-- <div class="chk_list">
+                                        <div>
+                                            <span class="check_box mr15">
+                                                <input type="checkbox" id="subject00">
+                                                <label for="subject00">전체</label>
+                                            </span>
+                                            <span class="check_box mr15">
+                                                <input type="checkbox" id="sci1-1" checked>
+                                                <label for="sci1-1">영어1-1</label> 
+                                            </span>
+                                            <span class="check_box mr15">
+                                                <input type="checkbox" id="sci1-2" checked>
+                                                <label for="sci1-2">영어1-2 1</label>
+                                            </span>
+                                            <span class="check_box mr15">
+                                                <input type="checkbox" id="sci2-1">
+                                                <label for="sci2-1">천재영어 1학년 1학기</label>
+                                            </span>
+                                            <span class="check_box mr15">
+                                                <input type="checkbox" id="sci2-2">
+                                                <label for="sci2-2">천재영어 1학년 2학기</label>
+                                            </span>
+                                        </div>
+                                        <div class="mt05">
+                                            <span class="check_box mr15">
+                                                <input type="checkbox" id="sci2-1">
+                                                <label for="sci2-1">천재영어 김진완 1학년 1학기</label>
+                                            </span>
+                                            <span class="check_box mr15">
+                                                <input type="checkbox" id="sci2-2">
+                                                <label for="sci2-2">천재영어 김진완 1학년 2학기</label>
+                                            </span>
+                                        </div>
+                                    </div> -->
+                                    <p class="p_text col_light_gray">과목을 선택해 주세요.</p>
+                                </div>
+                            </div>
+                            <div class="search_box justify_between">
+                                <div class="terms justify_between_start">
+                                    <span>대단원</span>
+                                    <p class="p_text col_light_gray">대단원을 선택해주세요.</p>
+                                </div>
+                            </div>
+                            <div class="search_box justify_between">
+                                <div class="terms justify_between_start">
+                                    <span>중단원</span>
+                                    <p class="p_text col_light_gray">중단원을 선택해주세요.</p>
+                                </div>
+                            </div>
+                            <div class="search_box justify_between">
+                                <div class="terms justify_between_start">
+                                    <span>소단원</span>
+                                    <p class="p_text col_light_gray">소단원을 선택해주세요.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--// search_toggle_box -->
+					</div>
+					<!-- //검색조건 -->
+				</div>
+
+				<section class="justify_between_start">
+					<!-- 네비게이션 영역 -->
+                    <div class="tab_navigation">
+                        <!-- tab -->
+                        <div class="nav_tabmenu pt10">
+                            <ul class="justify_between">
+                                <li class="active">
+                                    <a href="#tab00">전체</a>
+                                </li>
+                                <li>
+                                    <a href="#tab01">유아</a>
+                                </li>
+                                <li>
+                                    <a href="#tab02">초등</a>
+                                </li>
+                                <li>
+                                    <a href="#tab03">중등</a>
+                                </li>
+                                <li>
+                                    <a href="#tab04">고등</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- //tab -->
+                        <div class="navigation" id="tab00" style="min-height: 700px;">
+                            <!-- 메뉴영역 -->
+                            <div class="nav">
+                                <ul class="step1">
+									<li>
+										<input type="checkbox" id="node1">
+										<label class="tit" for="node1">1학년</label>
+										<ul class="step2">
+											<li>
+												<input type="checkbox" id="node1_1">
+												<label class="tit" for="node1_1">국어(영역)</label>
+												<ul class="step3">
+													<li>
+														<input type="checkbox" id="node1_1_1">
+														<label class="tit" for="node1_1_1">국어(과목)</label>
+													</li>
+													<li>
+														<input type="checkbox" id="node1_1_2">
+														<label class="tit" for="node1_1_2">국어 종합(과목)</label>
+													</li>
+												</ul>
+											</li>
+											<li>
+												<input type="checkbox" id="node1_2">
+												<label class="tit" for="node1_2">수학(영역)</label>
+                                                <ul class="step3">
+													<li>
+														<input type="checkbox" id="node1_2_1">
+														<label class="tit" for="node1_2_1">수학(과목)</label>
+													</li>
+												</ul>
+											</li>
+											<li>
+												<input type="checkbox" id="node1_3">
+												<label class="tit" for="node1_3">영어</label>
+											</li>
+											<li>
+												<input type="checkbox" id="node1_4">
+												<label class="tit" for="node1_4">사회</label>
+											</li>
+											<li>
+												<input type="checkbox" id="node1_5">
+												<label class="tit" for="node1_5">과학</label>
+											</li>
+										</ul>
+									</li>
+								</ul>
+                            </div>
+                        </div>	
+                        <div class="navigation" id="tab01" style="min-height: 700px;">
+                            <!-- 메뉴영역 -->
+                            <div class="nav">
+                                <ul class="step1">
+                                    <li>
+                                        <input type="checkbox" id="node1">
+                                        <label class="tit" for="node1">1학년</label>
+                                        <ul class="step2">
+                                            <li>
+                                                <input type="checkbox" id="node1_2">
+                                                <label class="tit" for="node1_2">국어(영역)</label>
+                                                <ul class="step3">
+                                                    <li>
+                                                        <input type="checkbox" id="node1_3">
+                                                        <label class="tit" for="node1_3">국어(과목)</label>
+                                                        <ul class="step4">
+                                                            <li>
+                                                                <input type="checkbox" id="node1_4">
+                                                                <label class="tit" for="node1_4">즐거운 마음으로(대단원)</label>
+                                                                <ul class="step5">
+                                                                    <li>
+                                                                        <input type="checkbox" id="node1_5">
+                                                                        <label class="tit" for="node1_5">즐거운 마음으로(중단원)</label>
+                                                                        <ul class="step6">
+                                                                            <li>
+                                                                                <input type="checkbox" id="node1_6">
+                                                                                <label class="tit" for="node1_6">1. 즐거운 마음으로(소단원)</label>
+                                                                                <ul class="sub">
+                                                                                    <!-- D:// 활성화 메뉴 class="on" -->
+                                                                                    <li class="on"><a href="#none">- 8~10(토픽)</a></li>
+                                                                                    <li><a href="#none">- 11~13(토픽)</a></li>
+                                                                                    <li><a href="#none">- 14~15(토픽)</a></li>
+                                                                                </ul>
+                                                                            </li>
+                                                                            <li>
+                                                                                <input type="checkbox" id="node1_6_2">
+                                                                                <label class="tit" for="node1_6_2">2. 재미있는 낱자</label>
+                                                                                <ul class="sub">
+                                                                                    <li><a href="#none">1. 순환마디와 순환소수의 표현 순환소수의 표현</a></li>
+                                                                                    <li><a href="#none">2. 분수를 순환소수로 고치기 분수를 순환소수로 고치기</a></li>
+                                                                                    <li><a href="#none">3. 소수점 아래 n번째 자릿수 구하기 소수점 아래 n번째 자릿수 구하기</a></li>
+                                                                                </ul>
+                                                                            </li>
+                                                                            <li>
+                                                                                <input type="checkbox" id="node1_6_3">
+                                                                                <label class="tit" for="node1_6_3">3, 글자를 만들어요</label>
+                                                                            </li>
+                                                                            <li>
+                                                                                <input type="checkbox" id="node1_6_4">
+                                                                                <label class="tit" for="node1_6_4">4. 기분을 말해요</label>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="node1_2_1">
+                                                <label class="tit" for="node1_2_1">2. 유리수와 순환소수의 관계</label>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="node2">
+                                        <label class="tit" for="node2">2. 문자와 식</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>	
+                        <div class="navigation" id="tab02" style="min-height: 700px;">
+                            초등
+                        </div>	
+                        <div class="navigation" id="tab03" style="min-height: 700px;">
+                            중등
+                        </div>	
+                        <div class="navigation" id="tab04" style="min-height: 700px;">
+                            고등
+                        </div>
+                    </div>
+                    <!-- 네비게이션 영역 -->
+										
+					<div class="ml08 w100p">
+                        <div class="terms justify_between mb10">
+                            <div class="justify_start">
+                                <p class="total sm mr10">총 <span>100,000개</span></p>
+                                <select class="select_box w140">
+                                    <option value="">100개 보기</option>
+                                    <option value="">200개 보기</option>
+                                    <option value="">300개 보기</option>																
+                                    <option value="">400개 보기</option>																
+                                </select>
+                            </div>
+                            <div>
+                                <a class="btn btn_gray outline w80" href="#none">전체 선택</a>
+                                <a class="btn btn_gray w80 ml04" href="#none">다운로드</a>
+                            </div>
+                        </div>
+                        <!-- 미디어 목록 -->
+                        <div class="tbl_scroll_box" style="max-height: 700px;">
+                            <table class="tbl_list">
+                                <caption></caption>
+                                <colgroup>
+                                    <col width="6%">
+                                    <col width="7%">
+                                    <col width="10%">
+                                    <col width="10%">
+                                    <col width="8%">
+                                    <col width="8%">
+                                    <col width="8%">
+                                    <col width="9%">
+                                    <col />
+                                    <col width="10%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col" class="first">
+                                            <div class="check_box">
+                                                <input type="checkbox" id="check0">
+                                                <label for="check0" class="pl16"></label>
+                                            </div>
+                                        </th>
+                                        <th scope="col">번호</th>
+                                        <th scope="col">미디어<br>ID</th>
+                                        <th scope="col">미디어<br>구분</th>
+                                        <th scope="col">학교급</th>
+                                        <th scope="col">학년</th>
+                                        <th scope="col">영역</th>
+                                        <th scope="col">과목</th>
+                                        <th scope="col">파일명</th>
+                                        <th scope="col">미리재생</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="first">
+                                            <div class="check_box">
+                                                <input type="checkbox" id="check30">
+                                                <label for="check30" class="pl16"></label>
+                                            </div>
+                                        </td>
+                                        <td>30</td>
+                                        <td>0000</td>
+                                        <td>오디오</td>
+                                        <td>중등</td>
+                                        <td>중1</td>
+                                        <td>영어</td>
+                                        <td>영어2-2</td>
+                                        <td>문항ID_음원파일이름...mp3</td>
+                                        <td>
+                                            <a href="#none">
+                                                <img src="../../images/ic_mp4.png" alt="mp4">
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="first">
+                                            <div class="check_box">
+                                                <input type="checkbox" id="check29">
+                                                <label for="check29" class="pl16"></label>
+                                            </div>
+                                        </td>
+                                        <td>29</td>
+                                        <td>0000</td>
+                                        <td>오디오</td>
+                                        <td>중등</td>
+                                        <td>중1</td>
+                                        <td>영어</td>
+                                        <td>영어2-2</td>
+                                        <td>문항ID_음원파일이름...mp3</td>
+                                        <td>
+                                            <a href="#none">
+                                                <img src="../../images/ic_mp3.png" alt="mp3">
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="first">
+                                            <div class="check_box">
+                                                <input type="checkbox" id="check28">
+                                                <label for="check28" class="pl16"></label>
+                                            </div>
+                                        </td>
+                                        <td>28</td>
+                                        <td>0000</td>
+                                        <td>비디오</td>
+                                        <td>중등</td>
+                                        <td>중1</td>
+                                        <td>영어</td>
+                                        <td>영어2-2</td>
+                                        <td>문항ID_음원파일이름...mp3</td>
+                                        <td>
+                                            <a href="#none">
+                                                <img src="../../images/ic_mp4.png" alt="mp4">
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="first">
+                                            <div class="check_box">
+                                                <input type="checkbox" id="check27">
+                                                <label for="check27" class="pl16"></label>
+                                            </div>
+                                        </td>
+                                        <td>27</td>
+                                        <td>0000</td>
+                                        <td>비디오</td>
+                                        <td>중등</td>
+                                        <td>중1</td>
+                                        <td>영어</td>
+                                        <td>영어2-2</td>
+                                        <td>문항ID_음원파일이름...mp3</td>
+                                        <td>
+                                            <a href="#none">
+                                                <img src="../../images/ic_mp4.png" alt="mp4">
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="first">
+                                            <div class="check_box">
+                                                <input type="checkbox" id="check26">
+                                                <label for="check26" class="pl16"></label>
+                                            </div>
+                                        </td>
+                                        <td>26</td>
+                                        <td>0000</td>
+                                        <td>오디오</td>
+                                        <td>중등</td>
+                                        <td>중1</td>
+                                        <td>영어</td>
+                                        <td>영어2-2</td>
+                                        <td>문항ID_음원파일이름...mp3</td>
+                                        <td>
+                                            <a href="#none">
+                                                <img src="../../images/ic_mp3.png" alt="mp3">
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="first">
+                                            <div class="check_box">
+                                                <input type="checkbox" id="check25">
+                                                <label for="check25" class="pl16"></label>
+                                            </div>
+                                        </td>
+                                        <td>25</td>
+                                        <td>0000</td>
+                                        <td>오디오</td>
+                                        <td>중등</td>
+                                        <td>중1</td>
+                                        <td>영어</td>
+                                        <td>영어2-2</td>
+                                        <td>문항ID_음원파일이름...mp3</td>
+                                        <td>
+                                            <a href="#none">
+                                                <img src="../../images/ic_mp3.png" alt="mp3">
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="first">
+                                            <div class="check_box">
+                                                <input type="checkbox" id="check24">
+                                                <label for="check24" class="pl16"></label>
+                                            </div>
+                                        </td>
+                                        <td>24</td>
+                                        <td>0000</td>
+                                        <td>오디오</td>
+                                        <td>중등</td>
+                                        <td>중1</td>
+                                        <td>영어</td>
+                                        <td>영어2-2</td>
+                                        <td>문항ID_음원파일이름...mp3</td>
+                                        <td>
+                                            <a href="#none">
+                                                <img src="../../images/ic_mp3.png" alt="mp3">
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="first">
+                                            <div class="check_box">
+                                                <input type="checkbox" id="check23">
+                                                <label for="check23" class="pl16"></label>
+                                            </div>
+                                        </td>
+                                        <td>23</td>
+                                        <td>0000</td>
+                                        <td>오디오</td>
+                                        <td>중등</td>
+                                        <td>중1</td>
+                                        <td>영어</td>
+                                        <td>영어2-2</td>
+                                        <td>문항ID_음원파일이름...mp3</td>
+                                        <td>
+                                            <a href="#none">
+                                                <img src="../../images/ic_mp3.png" alt="mp3">
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="first">
+                                            <div class="check_box">
+                                                <input type="checkbox" id="check22">
+                                                <label for="check22" class="pl16"></label>
+                                            </div>
+                                        </td>
+                                        <td>22</td>
+                                        <td>0000</td>
+                                        <td>오디오</td>
+                                        <td>중등</td>
+                                        <td>중1</td>
+                                        <td>영어</td>
+                                        <td>영어2-2</td>
+                                        <td>문항ID_음원파일이름...mp3</td>
+                                        <td>
+                                            <a href="#none">
+                                                <img src="../../images/ic_mp3.png" alt="mp3">
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="first">
+                                            <div class="check_box">
+                                                <input type="checkbox" id="check21">
+                                                <label for="check21" class="pl16"></label>
+                                            </div>
+                                        </td>
+                                        <td>21</td>
+                                        <td>0000</td>
+                                        <td>오디오</td>
+                                        <td>중등</td>
+                                        <td>중1</td>
+                                        <td>영어</td>
+                                        <td>영어2-2</td>
+                                        <td>문항ID_음원파일이름...mp3</td>
+                                        <td>
+                                            <a href="#none">
+                                                <img src="../../images/ic_mp3.png" alt="mp3">
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="first">
+                                            <div class="check_box">
+                                                <input type="checkbox" id="check20">
+                                                <label for="check20" class="pl16"></label>
+                                            </div>
+                                        </td>
+                                        <td>20</td>
+                                        <td>0000</td>
+                                        <td>오디오</td>
+                                        <td>중등</td>
+                                        <td>중1</td>
+                                        <td>영어</td>
+                                        <td>영어2-2</td>
+                                        <td>문항ID_음원파일이름...mp3</td>
+                                        <td>
+                                            <a href="#none">
+                                                <img src="../../images/ic_mp3.png" alt="mp3">
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="first">
+                                            <div class="check_box">
+                                                <input type="checkbox" id="check19">
+                                                <label for="check19" class="pl16"></label>
+                                            </div>
+                                        </td>
+                                        <td>19</td>
+                                        <td>0000</td>
+                                        <td>오디오</td>
+                                        <td>중등</td>
+                                        <td>중1</td>
+                                        <td>영어</td>
+                                        <td>영어2-2</td>
+                                        <td>문항ID_음원파일이름...mp3</td>
+                                        <td>
+                                            <a href="#none">
+                                                <img src="../../images/ic_mp3.png" alt="mp3">
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="first">
+                                            <div class="check_box">
+                                                <input type="checkbox" id="check18">
+                                                <label for="check18" class="pl16"></label>
+                                            </div>
+                                        </td>
+                                        <td>18</td>
+                                        <td>0000</td>
+                                        <td>오디오</td>
+                                        <td>중등</td>
+                                        <td>중1</td>
+                                        <td>영어</td>
+                                        <td>영어2-2</td>
+                                        <td>문항ID_음원파일이름...mp3</td>
+                                        <td>
+                                            <a href="#none">
+                                                <img src="../../images/ic_mp3.png" alt="mp3">
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="first">
+                                            <div class="check_box">
+                                                <input type="checkbox" id="check17">
+                                                <label for="check17" class="pl16"></label>
+                                            </div>
+                                        </td>
+                                        <td>17</td>
+                                        <td>0000</td>
+                                        <td>오디오</td>
+                                        <td>중등</td>
+                                        <td>중1</td>
+                                        <td>영어</td>
+                                        <td>영어2-2</td>
+                                        <td>문항ID_음원파일이름...mp3</td>
+                                        <td>
+                                            <a href="#none">
+                                                <img src="../../images/ic_mp3.png" alt="mp3">
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="first">
+                                            <div class="check_box">
+                                                <input type="checkbox" id="check16">
+                                                <label for="check16" class="pl16"></label>
+                                            </div>
+                                        </td>
+                                        <td>16</td>
+                                        <td>0000</td>
+                                        <td>오디오</td>
+                                        <td>중등</td>
+                                        <td>중1</td>
+                                        <td>영어</td>
+                                        <td>영어2-2</td>
+                                        <td>문항ID_음원파일이름...mp3</td>
+                                        <td>
+                                            <a href="#none">
+                                                <img src="../../images/ic_mp3.png" alt="mp3">
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="first">
+                                            <div class="check_box">
+                                                <input type="checkbox" id="check15">
+                                                <label for="check15" class="pl16"></label>
+                                            </div>
+                                        </td>
+                                        <td>15</td>
+                                        <td>0000</td>
+                                        <td>오디오</td>
+                                        <td>중등</td>
+                                        <td>중1</td>
+                                        <td>영어</td>
+                                        <td>영어2-2</td>
+                                        <td>문항ID_음원파일이름...mp3</td>
+                                        <td>
+                                            <a href="#none">
+                                                <img src="../../images/ic_mp3.png" alt="mp3">
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="first">
+                                            <div class="check_box">
+                                                <input type="checkbox" id="check14">
+                                                <label for="check14" class="pl16"></label>
+                                            </div>
+                                        </td>
+                                        <td>14</td>
+                                        <td>0000</td>
+                                        <td>오디오</td>
+                                        <td>중등</td>
+                                        <td>중1</td>
+                                        <td>영어</td>
+                                        <td>영어2-2</td>
+                                        <td>문항ID_음원파일이름...mp3</td>
+                                        <td>
+                                            <a href="#none">
+                                                <img src="../../images/ic_mp3.png" alt="mp3">
+                                            </a>
+                                        </td>
+                                    <tr>
+                                        <td class="first">
+                                            <div class="check_box">
+                                                <input type="checkbox" id="check13">
+                                                <label for="check13" class="pl16"></label>
+                                            </div>
+                                        </td>
+                                        <td>13</td>
+                                        <td>0000</td>
+                                        <td>오디오</td>
+                                        <td>중등</td>
+                                        <td>중1</td>
+                                        <td>영어</td>
+                                        <td>영어2-2</td>
+                                        <td>문항ID_음원파일이름...mp3</td>
+                                        <td>
+                                            <a href="#none">
+                                                <img src="../../images/ic_mp3.png" alt="mp3">
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="first">
+                                            <div class="check_box">
+                                                <input type="checkbox" id="check12">
+                                                <label for="check12" class="pl16"></label>
+                                            </div>
+                                        </td>
+                                        <td>12</td>
+                                        <td>0000</td>
+                                        <td>오디오</td>
+                                        <td>중등</td>
+                                        <td>중1</td>
+                                        <td>영어</td>
+                                        <td>영어2-2</td>
+                                        <td>문항ID_음원파일이름...mp3</td>
+                                        <td>
+                                            <a href="#none">
+                                                <img src="../../images/ic_mp3.png" alt="mp3">
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="first">
+                                            <div class="check_box">
+                                                <input type="checkbox" id="check11">
+                                                <label for="check11" class="pl16"></label>
+                                            </div>
+                                        </td>
+                                        <td>11</td>
+                                        <td>0000</td>
+                                        <td>오디오</td>
+                                        <td>중등</td>
+                                        <td>중1</td>
+                                        <td>영어</td>
+                                        <td>영어2-2</td>
+                                        <td>문항ID_음원파일이름...mp3</td>
+                                        <td>
+                                            <a href="#none">
+                                                <img src="../../images/ic_mp3.png" alt="mp3">
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="first">
+                                            <div class="check_box">
+                                                <input type="checkbox" id="check11">
+                                                <label for="check11" class="pl16"></label>
+                                            </div>
+                                        </td>
+                                        <td>10</td>
+                                        <td>0000</td>
+                                        <td>오디오</td>
+                                        <td>중등</td>
+                                        <td>중1</td>
+                                        <td>영어</td>
+                                        <td>영어2-2</td>
+                                        <td>문항ID_음원파일이름...mp3</td>
+                                        <td>
+                                            <a href="#none">
+                                                <img src="../../images/ic_mp3.png" alt="mp3">
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="first">
+                                            <div class="check_box">
+                                                <input type="checkbox" id="check11">
+                                                <label for="check11" class="pl16"></label>
+                                            </div>
+                                        </td>
+                                        <td>9</td>
+                                        <td>0000</td>
+                                        <td>오디오</td>
+                                        <td>중등</td>
+                                        <td>중1</td>
+                                        <td>영어</td>
+                                        <td>영어2-2</td>
+                                        <td>문항ID_음원파일이름...mp3</td>
+                                        <td>
+                                            <a href="#none">
+                                                <img src="../../images/ic_mp3.png" alt="mp3">
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //미디어 목록 -->
+					</div>
+
+                    <div class="ml08 tbl_img_info">
+                        <h3 class="title mb10">미디어 파일 정보</h3>
+                        <table class="tbl_view" style="max-width: 285px; min-width:285px; height:658px">
+                            <caption></caption>
+                            <colgroup>
+                                <col width="30%">
+                                <col />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>소속</th>
+                                    <td>계열사 A</td>
+                                </tr>
+                                    <th>원문항ID</th>
+                                    <td><a class="t_link" href="#none" onclick="openPop()">00000</a></td>
+                                </tr>
+                                <tr>
+                                    <th>미디어ID</th>
+                                    <td>000</td>
+                                </tr>
+                                <tr>
+                                    <th>미디어 구분</th>
+                                    <td>오디오</td>
+                                </tr>
+                                <tr>
+                                    <th>학교급</th>
+                                    <td>중등</td>
+                                </tr>
+                                <tr>
+                                    <th>학년</th>
+                                    <td>1학년</td>
+                                </tr>
+                                <tr>
+                                    <th>영역</th>
+                                    <td>영어</td>
+                                </tr>
+                                <tr>
+                                    <th>과목</th>
+                                    <td>영어 1-1</td>
+                                </tr>
+                                <tr>
+                                    <th rowspan="3">단원 정보</th>
+                                    <td>대단원 정보</td>
+                                </tr>
+                                <tr>
+                                    <td>중단원 정보</td>
+                                </tr>
+
+
+                                <tr>
+                                    <td>소단원 정보</td>
+                                </tr>
+                                <tr>
+                                    <th>미디어<br>키워드</th>
+                                    <!-- <td>영어 1번 문항</td> -->
+                                    <!-- 목록 수정 -->
+                                    <td><input type="text" placeholder="키워드" class="w160 placeholder_black"></td>
+                                </tr>
+                                <tr class="file_name">
+                                    <th>파일명</th>
+									<td class="file_name">
+                                        <a href="#none" class="btn btn_gray small w80">파일첨부</a>
+										<a href="#none" class="t_link f_name mt10">문항ID 음원 파일명.mp3</a>
+									</td>
+                                </tr>
+                                <tr class="last">
+                                    <th>동일 이미지<br>사용 문항ID </th>
+                                    <td>
+                                        <a class="t_link" href="#none">00000</a>
+                                        <a class="t_link" href="#none">00000</a>
+                                        <a class="t_link" href="#none">00000</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="justify_end mt10">
+                            <a href="#noen" class="btn btn_gray">수정</a>
+                            <!-- 목록 수정 -->
+                            <!-- <a href="#noen" class="btn btn_green">등록</a> -->
+                        </div>
+                    </div>
+
+				</section>
+				
+				<!-- 페이징 -->
+				<div class="paging mt32">
+					<a href="javascript:void(0);" class="pprev"><img src="../../images/page_pprev.svg" alt="처음"></a> 
+					<a href="javascript:void(0);" class="prev"><img src="../../images/page_prev.svg" alt="이전"></a> 
+					<a href="javascript:void(0);" class="on">1 </a>
+					<a href="javascript:void(0);">2</a>
+					<a href="javascript:void(0);">3</a>
+					<a href="javascript:void(0);">4</a>
+					<a href="javascript:void(0);">...</a>
+					<a href="javascript:void(0);">37</a>
+					<a href="javascript:void(0);">38</a>
+					<a href="javascript:void(0);">39</a>
+					<a href="javascript:void(0);">40</a>
+					<a href="javascript:void(0);" class="next"><img src="../../images/page_next.svg" alt="다음"></a>
+					<a href="javascript:void(0);" class="nnext"><img src="../../images/page_nnext.svg" alt="끝"></a>
+				</div>
+				<!-- //페이징 -->
+
+			</div>
+		</div>
+	</div>
+
+	<!-- script -->
+	<script>
+		$(function(){
+             // tab nav
+			$(".navigation").hide();
+			$(".navigation").eq(0).show();
+			$(".nav_tabmenu li a").on("click", function(e){
+				e.preventDefault();
+				$(this).parent().addClass("active").siblings().removeClass("active");
+
+				$(".navigation").hide();
+
+				var target = $(this).attr("href");
+				$(target).fadeIn(200);
+			});
+		})
+
+		/* window popup */
+		function openPop(){
+			var popup1 = window.open('pop_문항미리보기.html', '문항미리보기', 'width=900px,height=873px');
+		}
+
+	</script>
+	<!-- //script -->
+</body>
+</html>

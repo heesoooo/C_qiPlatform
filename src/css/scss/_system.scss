@@ -1,0 +1,186 @@
+@charset "utf-8"; 
+@import "_mixin";
+
+/* 권한관리 메뉴 */
+.access_name {
+	& .tit{
+		display: inline-block; 
+		height: 32px; 
+		line-height: 32px;
+		margin-bottom: 4px; 
+		padding-left: 25px;
+		color:#000000;
+		font-size: 14px; 
+		font-weight: 500; 
+		letter-spacing: -0.8px;
+		cursor: pointer;
+		&.on {
+			display: block;
+			background-color: #defbe6;
+		}
+	}
+}
+
+/* 권한관리 */
+.access_list_wrap {
+	position: relative; 
+	width: 100%;
+	overflow-y: auto;
+	font-size: 14px;
+	color: #000000;
+	background-color: #ffffff; 
+	border: 1px solid #cccccc; 
+    & .access_list_top { 
+        background-color: #eeeeee;
+        height: 32px;
+		line-height: 32px;
+		text-align: center;
+		& .tit { width: 80%; border-right: 1px solid #cccccc;}
+		& .check { width: 20%;}
+    }
+	& .nav { 
+		font-size: 14px; 
+		letter-spacing: -0.84px;
+		& ul {
+			&.step1 > li > .tit { background-color: #c0f4cf; color: $primaryColor;}
+            &.step3 > li > p { background-color: #f4f4f4;}
+			
+			& li {
+                border-top: 1px solid #ccc;
+                line-height: 30px;
+                color: $black;
+				clear: left;
+				& p { 
+					width: 80%;
+					float: left;
+					padding: 0 20px;
+					border-right: 1px solid #cccccc;
+				}
+				& .tit{
+					@include flex(space-between,center);
+					float: left;
+					width: 80%;
+					padding: 0 20px;
+					font-size: 14px; 
+					color:#000000;
+					height: 32px; 
+					line-height: 32px;
+					border-right: 1px solid #cccccc;
+					cursor: pointer;
+					&:after{
+						content:"";
+						display:inline-block; 
+						width:16px;
+						height:16px;
+						background-image: url('../images/ic_up.svg'); 
+						background-repeat: no-repeat; 
+						
+					}
+				}
+				& input{
+					&[type="checkbox"] { display: none;}
+					&[type="checkbox"]:checked~ul { display: none;}
+					&[type="checkbox"]:checked+label:after{ 
+						content:'' ;
+						display:inline-block;
+						width:16px;
+						height:16px; 
+						background-image: url('../images/ic_up.svg'); 
+						background-repeat: no-repeat; 
+						background-position-y: -1px;
+						transform: rotate(180deg); 
+					}
+				}
+				& .check_box {
+					float:right;
+					width:20%;
+					text-align: center;
+					& input {
+						&[type="checkbox"]:checked+label:after {
+							display: none;
+						}
+					}
+				}
+
+
+				// & .sel_box {
+				// 	display: inline-block;
+				// 	vertical-align: middle;
+				// }
+
+				// & .sel_box {
+				// 	& .check_box {
+				// 		& [type="checkbox"]:checked+label:after {
+				// 			display: none;
+				// 		}
+				// 	}
+				// }
+			}
+		}
+	}
+}
+
+
+// .sel_question {
+// 	min-width: 383px;
+// 	border: 1px solid #ccc;
+// 	overflow-y: scroll;
+
+// 	& .navigation {
+// 		min-width: 363px;
+// 		min-height: 420px;
+// 		border: 0;
+// 		& .nav {
+// 			& ul {
+// 				& li {
+// 					& label {
+// 						&.tit {
+// 							max-width: 300px;
+// 							vertical-align: middle;
+// 							@extend .ellipsis;
+// 						}
+// 					}
+	
+// 					& .sel_subject_box {
+// 						display: inline-block;
+// 						vertical-align: middle;
+// 					}
+	
+// 					& .sel_subject_box {
+// 						& .check_box {
+// 							& label {
+// 								&::before {
+// 									content: none !important;
+// 								}
+// 							}
+// 						}
+// 					}
+// 					& .ques_count {
+// 						float: right;
+// 						padding-right: 20px;
+// 						height: 32px;
+// 						line-height: 32px;
+// 						font-size: 14px;
+// 						color: $black;
+// 					}
+// 					& .sub li{ 
+// 						& a {
+// 							display: inline-block;
+// 							vertical-align: middle;
+// 							padding-right: 0 !important;
+		
+// 							+ .sel_subject_box{
+// 								margin-top:2px;
+// 								+ .ques_count {
+// 									height: 20px;
+// 									line-height: 20px;
+// 								}
+// 							}
+// 						}
+// 					}
+// 				}
+// 			}
+// 		}		
+// 	}
+// }
+

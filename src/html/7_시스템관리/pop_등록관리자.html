@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+	<head> 
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>등록관리자</title>
+		@@include('../include/inc_html_head.html')
+	</head>
+<body style="background-color: #ffffff;">
+    <div class="window_pop"> 
+        <div class="modal_tit">
+            <h2 class="title mb30">등록관리자</h2>
+        </div>
+        <!-- 검색조건 -->
+        <div class="search_box_wrap mb20">
+            <div class="search_box justify_between">
+                <div class="terms justify_start">
+                    <span>검색조건</span>
+                    <select class="select_box w100 mr05">
+                        <option value="">권한</option>
+                        <option value="">선택1</option>
+                        <option value="">선택2</option>
+                    </select>
+                    <select class="select_box w100 mr05">
+                        <option value="">사용여부</option>
+                        <option value="">선택1</option>
+                        <option value="">선택2</option>
+                    </select>
+                    <input type="text" class="w160 placeholder_black" placeholder="아이디/이름">
+                </div>
+                <div class="btn_wrap justify_start">
+                    <a class="btn btn_green" href="#none">검색</a>
+                    <a class="btn btn_gray ml08" href="#none">초기화</a>
+                </div>
+            </div>
+        </div>
+        <!-- 검색조건 -->
+        <!-- 테이블상단 -->
+        <div class="justify_start mb08">
+            <p class="total sm">총 <span>000</span>명</p>
+        </div>
+        <!-- //테이블상단 -->
+
+        <!-- 테이블 -->
+        <div>
+            <table class="tbl_list">
+                <caption></caption>
+                <colgroup>
+                    <col style="width:6%">
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col style="width:15%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col"class="first">번호</th>
+                        <th scope="col">권한</th>
+                        <th scope="col">부서명</th>
+                        <th scope="col">아이디</th>
+                        <th scope="col">이름</th>
+                        <th scope="col">사용여부</th>
+                        <th scope="col">등록일</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="first">5</td>
+                        <td>시스템 관리자</td>
+                        <td>디지털사업본부 000팀</td>
+                        <td>hong</td>
+                        <td>홍길동</td>
+                        <td>사용</td>
+                        <td>2022.02.14</td>
+                    </tr>
+                    <tr>
+                        <td class="first">4</td>
+                        <td>시스템 관리자</td>
+                        <td>디지털사업본부 000팀</td>
+                        <td>hong</td>
+                        <td>홍길동</td>
+                        <td>사용</td>
+                        <td>2022.02.14</td>
+                    </tr>
+                    <tr>
+                        <td class="first">3</td>
+                        <td>시스템 관리자</td>
+                        <td>디지털사업본부 000팀</td>
+                        <td>hong</td>
+                        <td>홍길동</td>
+                        <td>사용</td>
+                        <td>2022.02.14</td>
+                    </tr>
+                    <tr>
+                        <td class="first">2</td>
+                        <td>시스템 관리자</td>
+                        <td>디지털사업본부 000팀</td>
+                        <td>hong</td>
+                        <td>홍길동</td>
+                        <td>사용</td>
+                        <td>2022.02.14</td>
+                    </tr>
+                    <tr>
+                        <td class="first">1</td>
+                        <td>시스템 관리자</td>
+                        <td>디지털사업본부 000팀</td>
+                        <td>hong</td>
+                        <td>홍길동</td>
+                        <td>사용</td>
+                        <td>2022.02.14</td>
+                    </tr>          
+                </tbody>
+            </table>
+            <!-- // 테이블 -->
+
+            <!-- 페이징 -->
+            <div class="paging mt32 mb25">
+                <a href="javascript:void(0);" class="pprev"><img src="../../images/page_pprev.svg" alt="처음"></a> 
+                <a href="javascript:void(0);" class="prev"><img src="../../images/page_prev.svg" alt="이전"></a> 
+                <a href="javascript:void(0);" class="on">1 </a>
+                <a href="javascript:void(0);">2</a>
+                <a href="javascript:void(0);">3</a>
+                <a href="javascript:void(0);">4</a>
+                <a href="javascript:void(0);">...</a>
+                <a href="javascript:void(0);">37</a>
+                <a href="javascript:void(0);">38</a>
+                <a href="javascript:void(0);">39</a>
+                <a href="javascript:void(0);">40</a>
+                <a href="javascript:void(0);" class="next"><img src="../../images/page_next.svg" alt="다음"></a>
+                <a href="javascript:void(0);" class="nnext"><img src="../../images/page_nnext.svg" alt="끝"></a>
+            </div>
+        </div>
+        
+        <div class="mt25 justify_center">
+            <a class="close btn btn_gray outline large ml08" href="#none" onClick="self.close();">닫기</a>
+        </div>
+    </div>
+    <script>
+
+    </script>
+</body>
+</html>

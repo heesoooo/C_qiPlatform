@@ -1,0 +1,349 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+	<head> 
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>시스템관리-평가속성관리</title>
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css">
+<!-- <link rel="stylesheet" href="../../css/webfonts/fontawesome.min.css"/> -->
+<link rel="stylesheet" href="../../css/style.min.css">
+
+<script type="text/javascript" src="../../js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/admin.js"></script> 
+<script type="text/javascript" src="../../js/swiper.min.js"></script> 
+	</head>	
+	<body>	 
+	<div id="wrap">
+		<!-- 상단 공통 영역 -->
+		<div class="header-wrap">
+	<div class="header">
+		<div class="top">
+			<div class="logo justify_start">
+				<h1><img src="../../images/logo.svg" alt="천재교육" /></h1>
+				<select class="select_box w140 ml15">
+					<option value="">계열사 선택</option>
+					<option value="">천재교육</option>
+					<option value="">천재교과서</option>
+				</select>
+			</div>
+			<div class="justify_between">
+				<select class="select_box w120 mr10">
+					<option value="">문항통합관리자</option>
+					<option value="">관리자1</option>
+					<option value="">관리자2</option>
+				</select>
+				<a href="#none" class="belong">천재교육</a>
+				<a href="#none" class="name">홍길동(Hong)</a>
+				
+				<a href="#none" class="btn small btn_light w64">로그아웃</a>
+			</div>
+		</div>
+		<nav class="global_nav">
+			<ul class="menu">
+				<li><a href="#none" class="on">HOME</a></li>
+				<li><a href="#none">문항 관리</a></li>
+				<li><a href="#none">시험지 관리</a></li>
+				<li><a href="#none">서비스 관리</a></li>
+				<li><a href="#none">출처 관리</a></li>
+				<li><a href="#none">통계 관리</a></li>
+				<li><a href="#none">시스템 관리</a></li>
+				<li><a href="#none">데이터 관리</a></li>
+			</ul>
+		</nav>
+	</div>
+</div>
+		<div class="container">
+			<div class="local_nav">
+				<ul class="menu">
+					<li><a href="#none">코드관리</a></li>
+					<li><a href="#none">과목관리</a></li>
+					<li><a href="#none">단원관리</a></li>
+					<li><a href="#none" class="on">평가속성관리</a></li>
+					<li><a href="#none">관리자관리</a></li>
+					<li><a href="#none">계열사관리</a></li>
+				</ul>
+			</div>
+
+			<!-- 컨텐츠 영역 -->
+			<div class="contents">
+				<h2 class="section_tit pt00">평가 속성 관리</h2>
+
+				<div class="justify_start_top">					
+					<!-- 네비게이션 영역 -->
+					<div class="navigation" style="max-height: 609px;">
+						<!-- 메뉴영역 -->
+						<div class="nav">
+							<ul class="step1">
+								<li>
+									<input type="checkbox" id="node1">
+									<label class="tit" for="node1">즐거운 마음으로 (대단원)</label>
+									<ul class="step2">
+										<li>
+											<input type="checkbox" id="node1_2">
+											<label class="tit" for="node1_2">즐거운 마음으로 (중단원)</label>
+											<ul class="step3">
+												<li>
+													<input type="checkbox" id="node1_3">
+													<label class="tit" for="node1_3">즐거운 마음으로 (소단원)</label>
+													<ul class="step4">
+														<li>
+															<input type="checkbox" id="node1_6">
+															<label class="tit" for="node1_6">1. 즐거운 마음으로(소단원)</label>
+															<ul class="sub">
+																<!-- D:// 활성화 메뉴 class="on" -->
+																<li class="on"><a href="#none">- 8~10(토픽)</a></li>
+																<li><a href="#none">- 11~13(토픽)</a></li>
+																<li><a href="#none">- 14~15(토픽)</a></li>
+															</ul>
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<input type="checkbox" id="node1_2_2">
+											<label class="tit" for="node1_2_2">2. 재미있는 낱자</label>
+										</li>
+										<li>
+											<input type="checkbox" id="node1_2_3">
+											<label class="tit" for="node1_2_3">3. 글자를 만들어요</label>
+										</li>
+										<li>
+											<input type="checkbox" id="node1_2_4">
+											<label class="tit" for="node1_2_4">4. 기분을 말해요</label>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- // 네비게이션 영역 -->
+
+					<!-- right section -->
+					<div class="ml08">
+						<!-- 검색조건 -->
+						<div class="search_box_wrap mb20">
+							<div class="search_box justify_between">
+								<div class="terms justify_start">
+									<span>검색조건</span>
+									<select class="select_box w100">
+										<option value="교육과정">교육과정</option>
+									</select>
+									<select class="select_box w100 ml04">
+										<option value="학교급">학교급</option>
+									</select>
+									<select class="select_box w100 ml04">
+										<option value="학년">학년</option>
+									</select>
+									<select class="select_box w100 ml04">
+										<option value="영역">영역</option>
+									</select>
+									<input type="text" class="w160 placeholder_black ml04" placeholder="코드명">
+								</div>
+	
+								<div class="btn_wrap justify_start">
+									<a class="btn btn_green" href="#none">검색</a>
+									<a class="btn btn_gray ml08" href="#none">초기화</a>
+								</div>
+							</div>
+						</div>
+						<!-- 검색조건 -->
+
+						<!-- 테이블상단 -->
+						<div class="justify_between mb08">
+							<p class="total sm">총 <span>000</span>개</p>
+							
+							<div class="btn_wrap justify_start">
+								<a class="btn btn_green outline" href="#none">등록</a>
+								<a class="btn btn_gray outline ml08" href="#none">삭제</a>
+							</div>
+						</div>
+						<!-- //테이블상단 -->
+
+						<!-- 테이블 -->
+						<div class="tbl_scroll_box mb135" style="max-height: 530px;">
+							<table class="tbl_list">
+								<caption></caption>
+								<colgroup>
+									<col style="width:6%">
+									<col style="width:6%">
+									<col style="width:8%">
+									<col style="width:8%">
+									<col style="width:8%">
+									<col style="width:8%">
+									<col style="width:8%">
+									<col>
+									<col style="width:10%">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col"class="first">이동</th>
+										<th scope="col">선택</th>
+										<th scope="col">노출순서</th>
+										<th scope="col">학년</th>
+										<th scope="col">영역</th>
+										<th scope="col">과목</th>
+										<th scope="col">평가속성ID</th>
+										<th scope="col">평가속성명</th>
+										<th scope="col">사용여부</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="first">
+											<a href="#none" class="drag"><img src="../../images/ic_drag.png" alt="드래그"></a>
+										</td>
+										<td>
+											<div class="check_box">
+												<input type="checkbox" id="check1">
+												<label for="check1" class="pl16"></label>
+											</div>
+										</td>
+										<td>1</td>
+										<td><span class="t_underline">1~2학년</span></td>
+										<td><span class="t_underline">수학</span></td>
+										<td><span class="t_underline">수학</span></td>
+										<td>310</td>
+										<td class="left"><span class="t_underline">수와 연산</span></td>
+										<td>
+											<!-- 사용여부 버튼 -->
+											<div class="btn_use_toggle inactive"> <!-- 미사용시 .inactive -->
+												<input type="checkbox" class="cb_value" />
+												<span class="btn_round"></span>                                                
+												<span class="text_use off">미사용</span><!-- 미사용시 .off -->
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="first">
+											<a href="#none" class="drag"><img src="../../images/ic_drag.png" alt="드래그"></a>
+										</td>
+										<td>
+											<div class="check_box">
+												<input type="checkbox" id="check2">
+												<label for="check2" class="pl16"></label>
+											</div>
+										</td>
+										<td>2</td>
+										<td><span class="t_underline">3~6학년</span></td>
+										<td><span class="t_underline">수학</span></td>
+										<td><span class="t_underline">수학</span></td>
+										<td>310</td>
+										<td class="left"><span class="t_underline">수와 연산</span></td>
+										<td>
+											<!-- 사용여부 버튼 -->
+											<div class="btn_use_toggle inactive"> <!-- 미사용시 .inactive -->
+												<input type="checkbox" class="cb_value" />
+												<span class="btn_round"></span>                                                
+												<span class="text_use off">미사용</span><!-- 미사용시 .off -->
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="first">
+											<a href="#none" class="drag"><img src="../../images/ic_drag.png" alt="드래그"></a>
+										</td>
+										<td>
+											<div class="check_box">
+												<input type="checkbox" id="check3">
+												<label for="check3" class="pl16"></label>
+											</div>
+										</td>
+										<td>3</td>
+										<td><span class="t_underline">초등</span></td>
+										<td><span class="t_underline">수학</span></td>
+										<td><span class="t_underline">수학</span></td>
+										<td>310</td>
+										<td class="left"><span class="t_underline">수와 연산</span></td>
+										<td>
+											<!-- 사용여부 버튼 -->
+											<div class="btn_use_toggle inactive"> <!-- 미사용시 .inactive -->
+												<input type="checkbox" class="cb_value" />
+												<span class="btn_round"></span>                                                
+												<span class="text_use off">미사용</span><!-- 미사용시 .off -->
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="first">
+											<a href="#none" class="drag"><img src="../../images/ic_drag.png" alt="드래그"></a>
+										</td>
+										<td>
+											<div class="check_box">
+												<input type="checkbox" id="check4">
+												<label for="check4" class="pl16"></label>
+											</div>
+										</td>
+										<td>4</td>
+										<td><span class="t_underline">초등</span></td>
+										<td><span class="t_underline">수학</span></td>
+										<td><span class="t_underline">수학</span></td>
+										<td>310</td>
+										<td class="left"><span class="t_underline">수와 연산</span></td>
+										<td>
+											<!-- 사용여부 버튼 -->
+											<div class="btn_use_toggle inactive"> <!-- 미사용시 .inactive -->
+												<input type="checkbox" class="cb_value" />
+												<span class="btn_round"></span>                                                
+												<span class="text_use off">미사용</span><!-- 미사용시 .off -->
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="first">-</td>
+										<td>-</td>
+										<td>-</td>
+										<td>
+											<select class="small w100p">
+												<option value="선택">선택</option>
+											</select>
+										</td>
+										<td>
+											<select class="small w100p">
+												<option value="선택">선택</option>
+											</select>
+										</td>
+										<td>
+											<select class="small w100p">
+												<option value="선택">선택</option>
+											</select>
+										</td>
+										<td>-</td>
+										<td>
+											<input type="text" class="w100p small border_radius_0" placeholder="신규 평가속성명">
+										</td>
+										<td>
+											<a href="#none" class="btn btn_lgreen small">저장</a>
+										</td>
+									</tr>                                    
+								</tbody>
+							</table>
+						</div>
+						<!-- // 테이블 -->
+					</div>
+					<!-- // right section -->
+				</div>			
+			</div>
+		</div>
+	</div>
+
+	<script>
+		$(function(){
+			//사용여부 버튼 on/off
+			$('.cb_value').click(function() {
+				var btnParent = $(this).parent('.btn_use_toggle');
+				$(this).siblings(".text_use").css("opacity", 0);
+
+				if(!$(btnParent).hasClass("inactive")){
+					$(btnParent).addClass('inactive');
+					$(this).siblings(".text_use").addClass("off").text("미사용").animate({opacity: 1}, 500);
+				}else {
+					$(btnParent).removeClass('inactive');
+					$(this).siblings(".text_use").removeClass("off").text("사용").animate({opacity: 1}, 500);;
+				}
+			});
+		});
+	</script>
+</body>
+</html>

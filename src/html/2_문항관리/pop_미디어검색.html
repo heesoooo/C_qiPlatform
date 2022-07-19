@@ -1,0 +1,492 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>문항등록-미디어검색</title>
+	@@include('../include/inc_html_head.html')
+</head>
+<body style="background-color: #fff;">
+	<!-- 문항등록 - 미디어검색 popup -->
+	<div class="window_pop pop_search_media">
+		<h2 class="title mb30">미디어 검색</h2>
+
+		<div class="tabmenu">
+			<ul>
+				<li id="tab1" class="tab_btn w140">
+					<input type="radio" checked name="tabmenu" id="tmenu1" class="tab">
+					<label class="label tlabel1" for="tmenu1">PC에서 업로드</label>
+					<div class="tab_con w100p">
+						<table class="tbl_view">
+							<caption></caption>
+							<colgroup>
+								<col style="width:30%">
+								<col style="width:70%">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">미디어 파일 업로드</th>
+									<td>
+										<div class="justify_between">
+											<span class="file_name">asdfafsasdf.mp4</span>
+			
+											<input type="file" id="inputFile" class="input_file_button">
+											<label for="inputFile">검색</label>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="right mt12 summary">* 1G 이하의 avi, mp3, mp4 파일만 등록할 수 있습니다.</div>
+						
+						<div class="btn_wrap justify_center mt30">
+							<a href="#none" class="btn btn_green large">등록</a>
+							<a href="#none" class="btn btn_gray outline large ml05" onclick="self.close();">닫기</a>
+						</div>
+					</div>
+				</li>
+				<li id="tab2" class="tab_btn w140">
+					<input type="radio" name="tabmenu" id="tmenu2" class="tab">
+					<label class="label tlabel2" for="tmenu2">미디어 검색</label>
+					<div class="tab_con">
+						<div class="search_box mb20">
+							<div class="justify_between_start">
+								<div class="justify_start_top">
+									<h4 class="mr30 mt05">검색 조건</h4>
+									<div>
+										<div class="justify_start mb10">
+											
+											<div class="terms mr05">
+												<select class="select_box w100">
+													<option value="">학교급</option>
+												</select>
+											</div>
+											<div class="terms mr05">
+												<select class="select_box w100">
+													<option value="">학년</option>														
+												</select>
+											</div>
+											<div class="terms mr05">
+												<select class="select_box w100">
+													<option value="">영역</option>														
+												</select>
+											</div>
+											<div class="terms mr05">
+												<select class="select_box w100">
+													<option value="">과목</option>										
+												</select>
+											</div>
+										</div>
+										<div class="justify_start">
+											<div class="terms mr05">
+												<select class="select_box w120">
+													<option value="">미디어 구분</option>
+												</select>
+											</div>
+											<div class="terms mr05">
+												<select class="select_box w100">
+													<option value="">전체</option>										
+												</select>
+											</div>
+											<div class="terms mr05">
+												<input type="text" placeholder="검색어" class="placeholder_black w200">
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								<div class="btn_wrap">
+									<a class="btn btn_green" href="#none">검색</a>
+									<a class="btn btn_gray" href="#none">초기화</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="justify_start terms mb08">
+							<p class="total sm mr10">총 <span>00개</span></p>
+							<select class="select_box w140">
+								<option value="">10개 보기</option>
+								<option value="">20개 보기</option>
+								<option value="">30개 보기</option>																
+								<option value="">40개 보기</option>																
+							</select>
+						</div>
+						
+						<!-- 테이블 -->
+						<div class="tbl_scroll_box" style="height: 430px">
+							<table class="tbl_list">
+								<caption></caption>
+								<colgroup>
+									<col style="width: 4%">
+									<col style="width: 5%">
+									<col style="width: 10%">
+									<col style="width: 10%">
+									<col style="width: 8%">
+									<col style="width: 5%">
+									<col style="width: 5%">
+									<col style="width: 10%">
+									<col style="width: 33%">
+									<col style="width: 10%">
+									<col />
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col" class="first">
+											<div class="check_box">
+												<input type="checkbox" id="check1">
+												<label for="check1" class="pl16"></label>
+											</div>
+										</th>
+										<th scope="col">번호</th>
+										<th scope="col">미디어 ID</th>
+										<th scope="col">미디어 구분</th>
+										<th scope="col">학교급</th>
+										<th scope="col">학년</th>
+										<th scope="col">영역</th>
+										<th scope="col">과목</th>
+										<th scope="col">파일명</th>
+										<th scope="col">미리재생</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="first">
+											<div class="check_box">
+												<input type="checkbox" id="check2">
+												<label for="check2" class="pl16"></label>
+											</div>
+										</td>
+										<td>1</td>
+										<td>000</td>
+										<td>동영상</td>
+										<td>중등</td>
+										<td>중1</td>
+										<td>수학</td>
+										<td>영어 1-1</td>
+										<td class="left">문항ID_동영상파일명.mp4</td>
+										<td><a href="#none"><img src="../../images/ic_mp3.png" alt=""></a></td>
+									</tr>
+									<tr>
+										<td class="first">
+											<div class="check_box">
+												<input type="checkbox" id="check3">
+												<label for="check3" class="pl16"></label>
+											</div>
+										</td>
+										<td>2</td>
+										<td>000</td>
+										<td>동영상</td>
+										<td>중등</td>
+										<td>중1</td>
+										<td>수학</td>
+										<td>영어 1-1</td>
+										<td class="left">문항ID_동영상파일명.mp4</td>
+										<td><a href="#none"><img src="../../images/ic_mp4.png" alt=""></a></td>
+									</tr>
+									<tr>
+										<td class="first">
+											<div class="check_box">
+												<input type="checkbox" id="check4">
+												<label for="check4" class="pl16"></label>
+											</div>
+										</td>
+										<td>3</td>
+										<td>000</td>
+										<td>동영상</td>
+										<td>중등</td>
+										<td>중1</td>
+										<td>수학</td>
+										<td>영어 1-1</td>
+										<td class="left">문항ID_동영상파일명.mp4</td>
+										<td><a href="#none"><img src="../../images/ic_mp3.png" alt=""></a></td>
+									</tr>
+									<tr>
+										<td class="first">
+											<div class="check_box">
+												<input type="checkbox" id="check5">
+												<label for="check5" class="pl16"></label>
+											</div>
+										</td>
+										<td>4</td>
+										<td>000</td>
+										<td>동영상</td>
+										<td>중등</td>
+										<td>중1</td>
+										<td>수학</td>
+										<td>영어 1-1</td>
+										<td class="left">문항ID_동영상파일명.mp4</td>
+										<td><a href="#none"><img src="../../images/ic_mp4.png" alt=""></a></td>
+									</tr>
+									<tr>
+										<td class="first">
+											<div class="check_box">
+												<input type="checkbox" id="check6">
+												<label for="check6" class="pl16"></label>
+											</div>
+										</td>
+										<td>5</td>
+										<td>000</td>
+										<td>동영상</td>
+										<td>중등</td>
+										<td>중1</td>
+										<td>수학</td>
+										<td>영어 1-1</td>
+										<td class="left">문항ID_동영상파일명.mp4</td>
+										<td><a href="#none"><img src="../../images/ic_mp3.png" alt=""></a></td>
+									</tr>
+									<tr>
+										<td class="first">
+											<div class="check_box">
+												<input type="checkbox" id="check7">
+												<label for="check7" class="pl16"></label>
+											</div>
+										</td>
+										<td>6</td>
+										<td>000</td>
+										<td>동영상</td>
+										<td>중등</td>
+										<td>중1</td>
+										<td>수학</td>
+										<td>영어 1-1</td>
+										<td class="left">문항ID_동영상파일명.mp4</td>
+										<td><a href="#none"><img src="../../images/ic_mp4.png" alt=""></a></td>
+									</tr>
+									<tr>
+										<td class="first">
+											<div class="check_box">
+												<input type="checkbox" id="check8">
+												<label for="check8" class="pl16"></label>
+											</div>
+										</td>
+										<td>7</td>
+										<td>000</td>
+										<td>동영상</td>
+										<td>중등</td>
+										<td>중1</td>
+										<td>수학</td>
+										<td>영어 1-1</td>
+										<td class="left">문항ID_동영상파일명.mp4</td>
+										<td><a href="#none"><img src="../../images/ic_mp3.png" alt=""></a></td>
+									</tr>
+									<tr>
+										<td class="first">
+											<div class="check_box">
+												<input type="checkbox" id="check9">
+												<label for="check9" class="pl16"></label>
+											</div>
+										</td>
+										<td>8</td>
+										<td>000</td>
+										<td>동영상</td>
+										<td>중등</td>
+										<td>중1</td>
+										<td>수학</td>
+										<td>영어 1-1</td>
+										<td class="left">문항ID_동영상파일명.mp4</td>
+										<td><a href="#none"><img src="../../images/ic_mp4.png" alt=""></a></td>
+									</tr>
+									<tr>
+										<td class="first">
+											<div class="check_box">
+												<input type="checkbox" id="check10">
+												<label for="check10" class="pl16"></label>
+											</div>
+										</td>
+										<td>9</td>
+										<td>000</td>
+										<td>동영상</td>
+										<td>중등</td>
+										<td>중1</td>
+										<td>수학</td>
+										<td>영어 1-1</td>
+										<td class="left">문항ID_동영상파일명.mp4</td>
+										<td><a href="#none"><img src="../../images/ic_mp3.png" alt=""></a></td>
+									</tr>
+									<tr>
+										<td class="first">
+											<div class="check_box">
+												<input type="checkbox" id="check11">
+												<label for="check11" class="pl16"></label>
+											</div>
+										</td>
+										<td>10</td>
+										<td>000</td>
+										<td>동영상</td>
+										<td>중등</td>
+										<td>중1</td>
+										<td>수학</td>
+										<td>영어 1-1</td>
+										<td class="left">문항ID_동영상파일명.mp4</td>
+										<td><a href="#none"><img src="../../images/ic_mp4.png" alt=""></a></td>
+									</tr>
+									<tr>
+										<td class="first">
+											<div class="check_box">
+												<input type="checkbox" id="check12">
+												<label for="check12" class="pl16"></label>
+											</div>
+										</td>
+										<td>11</td>
+										<td>000</td>
+										<td>동영상</td>
+										<td>중등</td>
+										<td>중1</td>
+										<td>수학</td>
+										<td>영어 1-1</td>
+										<td class="left">문항ID_동영상파일명.mp4</td>
+										<td><a href="#none"><img src="../../images/ic_mp3.png" alt=""></a></td>
+									</tr>
+									<tr>
+										<td class="first">
+											<div class="check_box">
+												<input type="checkbox" id="check13">
+												<label for="check13" class="pl16"></label>
+											</div>
+										</td>
+										<td>12</td>
+										<td>000</td>
+										<td>동영상</td>
+										<td>중등</td>
+										<td>중1</td>
+										<td>수학</td>
+										<td>영어 1-1</td>
+										<td class="left">문항ID_동영상파일명.mp4</td>
+										<td><a href="#none"><img src="../../images/ic_mp4.png" alt=""></a></td>
+									</tr>
+									<tr>
+										<td class="first">
+											<div class="check_box">
+												<input type="checkbox" id="check14">
+												<label for="check14" class="pl16"></label>
+											</div>
+										</td>
+										<td>13</td>
+										<td>000</td>
+										<td>동영상</td>
+										<td>중등</td>
+										<td>중1</td>
+										<td>수학</td>
+										<td>영어 1-1</td>
+										<td class="left">문항ID_동영상파일명.mp4</td>
+										<td><a href="#none"><img src="../../images/ic_mp3.png" alt=""></a></td>
+									</tr>
+									<tr>
+										<td class="first">
+											<div class="check_box">
+												<input type="checkbox" id="check15">
+												<label for="check15" class="pl16"></label>
+											</div>
+										</td>
+										<td>14</td>
+										<td>000</td>
+										<td>동영상</td>
+										<td>중등</td>
+										<td>중1</td>
+										<td>수학</td>
+										<td>영어 1-1</td>
+										<td class="left">문항ID_동영상파일명.mp4</td>
+										<td><a href="#none"><img src="../../images/ic_mp4.png" alt=""></a></td>
+									</tr>
+									<tr>
+										<td class="first">
+											<div class="check_box">
+												<input type="checkbox" id="check16">
+												<label for="check16" class="pl16"></label>
+											</div>
+										</td>
+										<td>15</td>
+										<td>000</td>
+										<td>동영상</td>
+										<td>중등</td>
+										<td>중1</td>
+										<td>수학</td>
+										<td>영어 1-1</td>
+										<td class="left">문항ID_동영상파일명.mp4</td>
+										<td><a href="#none"><img src="../../images/ic_mp3.png" alt=""></a></td>
+									</tr>
+									<tr>
+										<td class="first">
+											<div class="check_box">
+												<input type="checkbox" id="check17">
+												<label for="check17" class="pl16"></label>
+											</div>
+										</td>
+										<td>16</td>
+										<td>000</td>
+										<td>동영상</td>
+										<td>중등</td>
+										<td>중1</td>
+										<td>수학</td>
+										<td>영어 1-1</td>
+										<td class="left">문항ID_동영상파일명.mp4</td>
+										<td><a href="#none"><img src="../../images/ic_mp4.png" alt=""></a></td>
+									</tr>
+									<tr>
+										<td class="first">
+											<div class="check_box">
+												<input type="checkbox" id="check18">
+												<label for="check18" class="pl16"></label>
+											</div>
+										</td>
+										<td>17</td>
+										<td>000</td>
+										<td>동영상</td>
+										<td>중등</td>
+										<td>중1</td>
+										<td>수학</td>
+										<td>영어 1-1</td>
+										<td class="left">문항ID_동영상파일명.mp4</td>
+										<td><a href="#none"><img src="../../images/ic_mp3.png" alt=""></a></td>
+									</tr>
+									<tr>
+										<td class="first">
+											<div class="check_box">
+												<input type="checkbox" id="check19">
+												<label for="check19" class="pl16"></label>
+											</div>
+										</td>
+										<td>18</td>
+										<td>000</td>
+										<td>동영상</td>
+										<td>중등</td>
+										<td>중1</td>
+										<td>수학</td>
+										<td>영어 1-1</td>
+										<td class="left">문항ID_동영상파일명.mp4</td>
+										<td><a href="#none"><img src="../../images/ic_mp4.png" alt=""></a></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //테이블 -->
+						
+						<!-- 페이징 -->
+						<div class="paging mt32">
+							<a href="javascript:void(0);" class="pprev"><img src="../../images/page_pprev.svg" alt="처음"></a> 
+							<a href="javascript:void(0);" class="prev"><img src="../../images/page_prev.svg" alt="이전"></a> 
+							<a href="javascript:void(0);" class="on">1 </a>
+							<a href="javascript:void(0);">2</a>
+							<a href="javascript:void(0);">3</a>
+							<a href="javascript:void(0);">4</a>
+							<a href="javascript:void(0);">...</a>
+							<a href="javascript:void(0);">37</a>
+							<a href="javascript:void(0);">38</a>
+							<a href="javascript:void(0);">39</a>
+							<a href="javascript:void(0);">40</a>
+							<a href="javascript:void(0);" class="next"><img src="../../images/page_next.svg" alt="다음"></a>
+							<a href="javascript:void(0);" class="nnext"><img src="../../images/page_nnext.svg" alt="끝"></a>
+						</div>
+									
+						<div class="btn_wrap justify_center mt30">
+							<a href="#none" class="btn btn_green large">등록</a>
+							<a href="#none" class="btn btn_gray outline large ml05" onclick="self.close();">닫기</a>
+						</div>
+					</div>
+				</li>
+			</ul>			
+		</div>
+	</div>
+	<!-- //문항등록 - 미디어검색 popup -->
+</body>
+
+</html>

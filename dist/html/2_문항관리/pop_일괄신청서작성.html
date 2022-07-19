@@ -1,0 +1,302 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>문항목록-일괄신청서작성</title>
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css">
+<!-- <link rel="stylesheet" href="../../css/webfonts/fontawesome.min.css"/> -->
+<link rel="stylesheet" href="../../css/style.min.css">
+
+<script type="text/javascript" src="../../js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/admin.js"></script> 
+<script type="text/javascript" src="../../js/swiper.min.js"></script> 
+	</head>
+	
+	<body style="background-color: #fff;">
+		<!-- 일괄 신청서 작성 popup -->
+		<div class="window_pop pop_write_form">
+			<h2 class="title mb30">일괄 신청서 작성</h2>
+
+			<div class="justify_start_top">
+				<!-- 계열사 -->
+				<div class="company_list">
+					<div class="justify_start">
+						<span class="mr30">계열사</span>
+						<div class="terms">
+							<select class="select_box w140">
+								<option value="">천재교육</option>
+								<option value="">천재교과서</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<!-- //계열사 -->
+
+				<!-- 검색조건 -->
+				<div class="search_box mb35">
+					<div class="justify_between_start">
+						<div class="justify_start_top">
+							<h4 class="mr30 mt05">검색 조건</h4>
+							<div>
+								<div class="justify_start mb10">
+									<div class="terms mr10">
+										<p>
+											<input class="w90" type="text" id="from" placeholder="0000.00.00" autocomplete="off"> 
+											<span class="ml05 mr05">~</span>
+											<input class="w90" type="text" id="to" placeholder="0000.00.00" autocomplete="off">
+										</p>
+									</div>
+								</div>
+								<div class="justify_start">
+									<div class="terms mr05">
+										<select class="select_box w100">
+											<option value="">학교급</option>
+										</select>
+									</div>
+									<div class="terms mr05">
+										<select class="select_box w100">
+											<option value="">학년</option>
+										</select>
+									</div>
+									<div class="terms mr05">
+										<select class="select_box w100">
+											<option value="">영역</option>
+										</select>
+									</div>
+									<div class="terms mr05">
+										<select class="select_box w100">
+											<option value="">과목</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="btn_wrap">
+							<a class="btn btn_green" href="#none">검색</a>
+							<a class="btn btn_gray" href="#none">초기화</a>
+						</div>
+					</div>
+				</div>
+				<!-- //검색조건 -->
+			</div>
+
+			<div class="justify_start_top">
+				<div class="sel_question_wrap">
+					<!-- 학교급,문항수 체크 -->
+					<div class="sel_question_tit justify_between">
+						<span>학교급</span>
+						<span>문항수</span>
+					</div>
+
+					<div class="sel_question scroll_box">
+						<div class="navigation">
+							<!-- 메뉴영역 -->
+							<div class="nav">
+								<ul class="step1">
+									<li>
+										<input type="checkbox" id="node1">
+										<label class="tit" for="node1">
+											즐거운 마음으로 (대단원)
+										</label>
+										<!-- 선택박스 -->
+										<span class="sel_subject_box ml05">
+											<div class="check_box">
+												<input type="checkbox" id="sel1">
+												<label for="sel1"></label>
+											</div>
+										</span>
+										<!-- 문항수 -->
+										<span class="ques_count">000</span>
+										<ul class="step2">
+											<li>
+												<input type="checkbox" id="node1_2">
+												<label class="tit" for="node1_2">즐거운 마음으로 (중단원)</label>
+												<!-- 선택박스 -->
+												<span class="sel_subject_box ml05">
+													<div class="check_box">
+														<input type="checkbox" id="sel2">
+														<label for="sel2"></label>
+													</div>
+												</span>
+												<!-- 문항수 -->
+												<span class="ques_count">000</span>
+												<ul class="step3">
+													<li>
+														<input type="checkbox" id="node1_3">
+														<label class="tit" for="node1_3">즐거운 마음으로 (소단원)</label>
+														<!-- 선택박스 -->
+														<span class="sel_subject_box ml05">
+															<div class="check_box">
+																<input type="checkbox" id="sel3">
+																<label for="sel3"></label>
+															</div>
+														</span>
+														<!-- 문항수 -->
+														<span class="ques_count">000</span>
+														<ul class="sub">
+															<!-- D:// 활성화 메뉴 class="on" -->
+															<li class="on">
+																<a href="#none">- 8~10(토픽)</a>
+																<!-- 선택박스 -->
+																<span class="sel_subject_box ml05">
+																	<div class="check_box">
+																		<input type="checkbox" id="sel4">
+																		<label for="sel4"></label>
+																	</div>
+																</span>
+																<!-- 문항수 -->
+																<span class="ques_count">123</span>
+															</li>
+															<li>
+																<a href="#none">- 11~13(토픽)</a>
+																<!-- 선택박스 -->
+																<span class="sel_subject_box ml05">
+																	<div class="check_box">
+																		<input type="checkbox" id="sel5">
+																		<label for="sel5"></label>
+																	</div>
+																</span>
+																<!-- 문항수 -->
+																<span class="ques_count">35244</span>
+															</li>
+															<li>
+																<a href="#none">- 14~15(토픽)</a>
+																<!-- 선택박스 -->
+																<span class="sel_subject_box ml05">
+																	<div class="check_box">
+																		<input type="checkbox" id="sel6">
+																		<label for="sel6"></label>
+																	</div>
+																</span>
+																<!-- 문항수 -->
+																<span class="ques_count">35244</span>
+															</li>																
+														</ul>
+													</li>
+												</ul>
+											</li>
+											<li>
+												<input type="checkbox" id="node1_2_2">
+												<label class="tit" for="node1_2_2">2. 재미있는 낱자</label>
+												<!-- 선택박스 -->
+												<span class="sel_subject_box ml05">
+													<div class="check_box">
+														<input type="checkbox" id="sel8">
+														<label for="sel8"></label>
+													</div>
+												</span>
+												<!-- 문항수 -->
+												<span class="ques_count">123123</span>
+											</li>
+											<li>
+												<input type="checkbox" id="node1_2_3">
+												<label class="tit" for="node1_2_3">3. 글자를 만들어요</label>
+												<!-- 선택박스 -->
+												<span class="sel_subject_box ml05">
+													<div class="check_box">
+														<input type="checkbox" id="sel9">
+														<label for="sel9"></label>
+													</div>
+												</span>
+												<!-- 문항수 -->
+												<span class="ques_count">123123</span>
+											</li>
+											<li>
+												<input type="checkbox" id="node1_2_4">
+												<label class="tit" for="node1_2_4">4. 기분을 말해요</label>
+												<!-- 선택박스 -->
+												<span class="sel_subject_box ml05">
+													<div class="check_box">
+														<input type="checkbox" id="sel10">
+														<label for="sel10"></label>
+													</div>
+												</span>
+												<!-- 문항수 -->
+												<span class="ques_count">123123</span>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- //학교급,문항수 체크 -->
+				</div>
+
+				<!-- 선택한 문항정보 -->
+				<div class="flex_grow ml20">
+					<h4 class="tbl_tit mb10">선택한 문항정보</h4>
+
+					<div class="tbl_scroll_box"  style="max-height:500px">
+						<table class="tbl_list">
+							<caption></caption>
+							<colgroup>
+								<col style="width: 10%">
+								<col style="width: 10%">
+								<col style="width: 10%">
+								<col style="width: 10%">
+								<col />
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col" class="first">학교급</th>
+									<th scope="col">학년</th>
+									<th scope="col">영역</th>
+									<th scope="col">과목</th>
+									<th scope="col">대단원</th>
+									<th scope="col">중단원</th>
+									<th scope="col">소단원</th>
+									<th scope="col">문항수</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="first">초등</td>
+									<td>1학년</td>
+									<td>국어</td>
+									<td>국어</td>
+									<td>대단원명</td>
+									<td>중단원명</td>
+									<td>소단원명</td>
+									<td>0,000개</td>
+								</tr>		
+								<tr>
+									<td class="first">초등</td>
+									<td>1학년</td>
+									<td>국어</td>
+									<td>국어</td>
+									<td>대단원명</td>
+									<td>중단원명</td>
+									<td>소단원명</td>
+									<td>0,000개</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<td colspan="7">총합</td>
+									<td>000개</td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+
+					<p class="summary sm mt12">
+						* 일괄 신청서는 다수의 문항을 신청할 수 있습니다.<br>
+						* 선택한 문항은 소속 계열사 관리자로부터 승인 받은 후 사용할 수 있습니다.
+					</p>
+
+					<div class="justify_center mt30">
+						<a href="#none" class="btn btn_green large w100">신청하기</a>
+						<a href="#none" class="btn btn_gray outline large ml10" onClick="self.close();">닫기</a>
+					</div>
+				</div>
+				<!-- //선택한 문항정보 -->
+			</div>
+		</div>
+		<!-- //일괄 신청서 작성 popup -->
+	</body>
+	
+	</html>

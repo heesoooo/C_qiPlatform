@@ -1,0 +1,426 @@
+@charset "utf-8";
+@import '_mixin';
+@import '_reset';
+@import '_admin';
+@import '_fonts';
+@import '_swiper.min';
+@import '_popup';
+@import '_table';
+@import '_search';
+@import '_home';
+@import '_tab';
+@import '_question';
+@import '_paper';
+@import '_service';
+@import '_system';
+
+
+/* guide */
+.guide_coding {
+	margin: 10px;
+	font-size: 13px;
+	color: $black;;
+	line-height: 1.5;
+}
+.guide_coding_tit{
+	padding-top: 20px;
+	margin-bottom: 20px;
+	font-size: 18px;
+	font-weight: 500;
+	color: $black;
+	letter-spacing: -1px;
+}
+
+/* 폰트 색상 */
+.primary_color {color: $primaryColor !important;}
+.black_color {color: $black !important;}
+
+/* 버튼 */
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 60px;
+	height: 33px;
+	line-height: 1.3;
+	padding-left: 3px;
+	padding-right: 3px;
+	color: white;
+	font-size: 14px;
+	outline: none;
+	border-radius: 4px;
+	font-weight: 200;
+	cursor: pointer;
+	&.small {
+		height: 24px;
+		&.square {
+			min-width: 24px;
+		}
+	}
+	&.medium {
+		height: 28px
+	}
+	&.large {
+		height: 40px;
+		font-size: 16px;
+		font-weight: 700;
+	}
+	&.square {
+		min-width: 32px;
+	}
+	&.btn_green {
+		@include button_color($primaryColor);
+	}
+	&.btn_red {
+		@include button_color($red);
+	}
+	&.btn_gray {
+		@include button_color($gray);
+	}
+	&.btn_light {
+		@include button_color(#d5d5d5);
+		color: #444444;
+		font-weight: 300;
+	}
+	&.btn_lgreen {
+		@include button_color(#c0f4cf);
+		color: $primaryColor;
+		font-weight: 300;
+	}
+	&.btn_lred {
+		@include button_color(#fee6e6);
+		color: $red;
+	}
+}
+
+/* 사용여부 버튼 on/off */
+.btn_use_toggle{
+	width: 70px;
+	height: 24px;
+	border-radius: 15px;
+	display: inline-block;
+	position: relative;
+	background: #C1F4D0;
+	cursor: pointer;
+	-webkit-transition: background-color .40s ease-in-out;
+	-moz-transition: background-color .40s ease-in-out;
+	-o-transition: background-color .40s ease-in-out;
+	transition: background-color .40s ease-in-out;
+	cursor:pointer;
+	&.inactive{
+		background: #D6D6D6;
+		.btn_round{
+			left: 49px;
+		}
+	}
+	& .btn_round{
+		width: 18px;
+		height: 18px;
+		background-color: #fff;
+		border-radius: 50%;
+		display: inline-block;
+		position: absolute;
+		left: 3px; top: 50%;
+		margin-top: -9px;
+		-webkit-transition: all .30s ease-in-out;
+		-moz-transition: all .30s ease-in-out;
+		-o-transition: all .30s ease-in-out;
+		transition: all .30s ease-in-out;
+	}
+	& .cb_value{
+		position: absolute;
+		left:0; right:0;
+		width: 100%; height: 100%;
+		opacity: 0;
+		z-index: 9;
+		cursor:pointer;
+	}
+	& .text_use {
+		margin-top: -1px;
+		position: absolute;
+		top: 50%;
+		left: 29px;
+		transform: translateY(-50%);
+		font-size: 14px;
+		line-height: 1;
+		letter-spacing: -.56px;
+		text-align: center;
+		color: $primaryColor;
+		//transition: all .40s;
+		
+		&.off {
+			left: 8px;
+			color: #777;
+		}
+	}
+}
+
+.inactivate {background-color: #ccc; color: #aaa;}
+
+/* 상단 include */
+.header-wrap { 
+	width: 100%;
+	& .header{
+		min-width: 1200px;
+		background-color: $white;
+		border-bottom: 2px solid #eeeeee;
+		@media (min-width: 1320px) {
+			padding: 0 60px
+		}
+		& .top {
+			@include flex(space-between, center);
+			min-width: 1200px; 
+			margin: 0 auto; 
+			height: 64px;
+			line-height: 16px; 
+			& select.select_box {
+				line-height: 22px;
+				font-size: 13px;
+			}
+			& .logo {
+				& h1 img {
+					width: 100px;
+				}
+				& select.select_box {
+					line-height: 24px;
+					background-color: #eeeeee;
+					border: none;
+				}
+			}
+			& .name {
+				font-size: 13px; 
+				color: #555555;
+				padding-left: 2px;
+				margin-right: 12px
+			}
+		}
+		& .global_nav {
+			position: relative;
+			& ul.menu {
+				@include flex(space-between, center);
+				min-width: 1200px;  
+				height: 56px;
+				margin: 0 auto;
+				& li { flex-grow: 1;}
+				& li a {
+					display: block; 
+					min-width: 150px; 
+					text-align: center; 
+					font-size: 16px; 
+					color: #999999; 
+					line-height: 56px;
+					&.on {
+						border-bottom: 2px solid $black; 
+						line-height: 57px; color: $black; 
+						font-weight: 600;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* 상단 */
+.local_nav {
+	& ul.menu {
+		@include flex;
+		min-width: 1200px;  
+		height: 60px; 
+		margin: 20px auto 40px;
+		& li {
+			flex-grow: 1;
+			&:first-child a { border-radius: 4px 0 0 4px;}
+			&:last-child a { border-radius: 0 4px 4px 0;}
+			& a {
+				display: block;
+				text-align: center; 
+				font-size: 18px; 
+				color: $black; 
+				line-height: 60px;
+				font-weight: 300;
+				background-color: #eeeeee;
+				&.on {
+					color: $white;
+					font-weight: 700;
+					background-color: $primaryColor;
+				}
+			}
+		}
+	}
+}
+
+/* navigation */
+.navigation {
+	position: relative; 
+	min-width: 315px; 
+	max-width: 315px;
+	min-height:609px; 
+	overflow-y: auto;
+	background-color: #ffffff; 
+	padding: 12px 0; 
+	border: 1px solid #cccccc; 
+	border-radius: 4px;
+	& .nav { 
+		font-size: 14px; 
+		letter-spacing: -0.84px;
+		& ul {
+			&.step1 > li { margin-bottom: 3px;}
+			&.step1 > li .tit { padding-left: 12px;}
+			&.step2 > li .tit { padding-left: 32px;}
+			&.step3 > li .tit { padding-left: 52px;}
+			&.step4 > li .tit { padding-left: 72px;}
+			&.step5 > li .tit { padding-left: 92px;}
+			&.step6 > li .tit { padding-left: 112px;}
+
+			&.step2 li .sub li a { padding-left: 52px;}
+			&.step3 li .sub li a { padding-left: 72px;}
+			&.step4 li .sub li a { padding-left: 92px;}
+			&.step5 li .sub li a { padding-left: 112px;}
+			&.step6 li .sub li a { padding-left: 132px;}
+			
+			& li {
+				& a { 
+					display: inline-block; 
+					line-height: 20px;
+					color: $black;
+				}
+				& .tit{
+					display: inline-block; 
+					font-size: 14px; 
+					font-weight: 500; 
+					color:#000000;
+					height: 32px; 
+					line-height: 32px; 
+					//width: 100%; 
+					margin-bottom: 4px; 
+					cursor: pointer;
+					&:before{
+						content:"";
+						display:inline-block; 
+						width:16px;
+						height:16px;
+						background-image: url('../images/ic_drop.svg'); 
+						background-repeat: no-repeat; 
+						background-position-y: 2px;
+					}
+					&.on {
+						display: block;
+						background-color: #defbe6;
+					}
+				}
+				& input{
+					&[type="checkbox"] { display: none;}
+					&[type="checkbox"]:checked~ul { display: none;}
+					&[type="checkbox"]:checked+label:before{ 
+						content:'' ;
+						display:inline-block;
+						width:16px;
+						height:16px; 
+						background-image: url('../images/ic_drop.svg'); 
+						background-repeat: no-repeat; 
+						transform: rotate(270deg); 
+						background-position-x: -2px;
+					}
+				}
+				& .sub { margin-top: -5px;}
+				& .sub li{ 
+					padding: 4px 0;
+					&.on a { color:$primaryColor;}
+					&.on { background-color: #defbe6;}
+					//&:hover a { color:$primaryColor;}
+					& a { padding-left: 32px; padding-right: 12px;}
+					&:last-child { padding-bottom: 10px;}
+				}
+			}
+		}
+	}
+}
+
+// navigation 변경타입
+.sel_question_wrap {
+	& .sel_question_tit {
+		border: 1px solid #ccc;
+		border-bottom: 0;
+		border-radius: 4px 4px 0 0;
+		background-color: #eee;;
+		& span {
+			height: 32px;
+			line-height: 32px;
+			padding: 0 40px;
+			font-size: 14px;
+			letter-spacing: -.56px;
+			text-align: center;
+			color: $black;
+
+			&:first-child {
+				width: 65%;
+				text-align: center;
+				padding: 0;
+			}
+		}
+	}
+}
+.sel_question {
+	min-width: 383px;
+	border: 1px solid #ccc;
+	overflow-y: scroll;
+
+	& .navigation {
+		min-width: 363px;
+		min-height: 420px;
+		border: 0;
+		& .nav {
+			& ul {
+				& li {
+					& label {
+						&.tit {
+							max-width: 300px;
+							vertical-align: middle;
+							@extend .ellipsis;
+						}
+					}
+	
+					& .sel_subject_box {
+						display: inline-block;
+						vertical-align: middle;
+					}
+	
+					& .sel_subject_box {
+						& .check_box {
+							& label {
+								&::before {
+									content: none !important;
+								}
+							}
+						}
+					}
+					& .ques_count {
+						float: right;
+						padding-right: 20px;
+						height: 32px;
+						line-height: 32px;
+						font-size: 14px;
+						color: $black;
+						width: 60px;
+						text-align: center;
+					}
+					& .sub li{ 
+						& a {
+							display: inline-block;
+							vertical-align: middle;
+							padding-right: 0 !important;
+		
+							+ .sel_subject_box{
+								margin-top:2px;
+								+ .ques_count {
+									height: 20px;
+									line-height: 20px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}		
+	}
+}

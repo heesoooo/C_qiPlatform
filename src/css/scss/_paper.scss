@@ -1,0 +1,104 @@
+@charset "utf-8"; 
+@import "_mixin";
+
+
+.drag {
+    cursor: grab;
+}
+.zoom {
+    @include flex;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.paging_id {
+    & .prev,
+    & .next {
+        display: block;
+        padding: 6px 15px;
+    }
+    & .paper_name {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 550px;
+        padding: 0 10px;
+        line-height: 30px;
+        background-color: $white;
+        font-size: 20px;
+        color: $black;
+        border: 1px solid #cccccc;
+    }
+    & label {
+        margin-right: 7px;
+        font-size: 20px;
+        font-weight: bold;
+        color: $black;
+    }
+}
+
+.view_paper_box {
+    @include box;
+    padding: 20px;
+    color: $black;
+    font-size: 14px;
+    & li {
+        line-height: 32px;
+    }
+    & .title {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+    & h4 {
+        width: 72px;
+        
+    }
+    & .paper_name {
+        border: 1px solid #cccccc;
+        padding-left: 10px;
+        background-color: $white;
+    }
+}
+
+.quesiton_item_area {
+    width: 100%;
+    padding: 15px 6px 40px;
+    &.bt { border-top: 1px solid #cccccc;}
+    & .quesiton_item {
+        width: 100%;
+        padding: 0 15px;
+        & .q_detail {
+            & p {
+                font-size: 14px;
+                color: $black;
+                line-height: 22px;
+            }
+        }
+        & .score {
+            border: 1px solid $primaryColor;
+            border-radius: 4px;
+            line-height: 32px;
+            & .tit { 
+                display: inline-block;
+                background-color: $primaryColor;
+                color: $white;
+            }
+            & .num { 
+                float: right;
+                padding: 0 12px;
+                color: $black;
+                font-size: 14px;
+            }
+        }
+        & .mark {
+            
+        }
+    }
+}
+
+.search_item_wrap {
+    width: 100%;
+    padding: 20px 15px;
+}

@@ -1,0 +1,249 @@
+@charset "utf-8"; 
+@import "_mixin";
+
+/* 게시판 뷰 - notice */
+.tbl_view {
+    width:100%;
+    table-layout:fixed;
+    border:1px solid #ccc; 
+    background: #ffffff;
+    & th, 
+    & td {
+        border-bottom:1px solid #ccc;
+        border-left:1px solid #ccc; 
+        padding: 10px; 
+        color: $black;
+    }
+    & th { 
+        font-weight:400;
+        background:#f0f0f0; 
+    }
+    & thead th.title {
+        padding:10px 20px;
+        text-align:left;
+        font-size:15px;
+        line-height:17px;
+        color:#333;
+    }
+    & .msg_text_area { 
+        height: 400px;
+        & textarea { 
+            width: 100%; 
+            height: 100%; 
+            min-height: 300px;
+        }
+        & .msg_case {
+            min-height:400px; 
+            max-height: 500px; 
+            overflow-y: auto; 
+            line-height: 18px;
+        }
+    }
+    /* 첨부파일*/
+    & .attached {
+        display: inline-block;
+        border-bottom: 1px solid $primaryColor;
+        margin-bottom: 1px;
+        color: $primaryColor;
+    }
+    & .delete {
+        cursor: pointer;
+    }
+    & .t_link{
+        text-decoration: underline;
+        display: block;
+        color: $primaryColor;
+    }   
+}
+
+
+/* 게시판 리스트 */
+.tbl_list{
+    width:100%;
+    table-layout:fixed;
+    border:1px solid #ccc;
+    & .drag {cursor: grab}
+    & thead th.first, 
+    & tbody td.first{border-left:0;}
+    & thead {
+        & th {
+            height: 32px; 
+            border-left:1px solid #ccc; 
+            border-top:1px solid #ccc; 
+            color:$black; 
+            background:#eeeeee; 
+            text-align:center; 
+            font-weight: 400;
+            &.bt{border-top:1px solid #ccc;}
+        }
+    }
+    & tbody {
+        & th { 
+            font-weight: normal;
+            color: $black;
+            background:#eeeeee; 
+            border-bottom: 1px solid #cccccc;
+             &.bt{border-top:1px solid #ccc;}
+        }
+        & td {
+            padding:5px 8px; 
+            height: 32px; 
+            border-top:1px solid #ccc; 
+            color: #000000; 
+            border-left:1px solid #ccc;
+            color:$black;
+            text-align:center;
+            line-height:18px; 
+            background-color: #ffffff;
+            &.first a{color:#333;}
+        }
+    }
+    & tfoot {
+        & tr { 
+            height: 30px;
+            background: #eeeeee; 
+            border-top:1px solid #ccc; 
+            & td { 
+                font-size: 14px; 
+                font-weight: 600; 
+                color: #000000; 
+                border-top:1px solid #ccc; 
+                border-left: 1px solid #ccc; 
+                padding: 0 8px;
+            }
+        }
+    } 
+
+    & input.tbl_in { 
+        max-width: 100%; 
+        border: 0; 
+        padding-left: 0; 
+        height: 20px; 
+        text-align: center;
+        &:focus { outline: 0;}
+        &::placeholder { 
+            text-align: center; 
+            color: #888888; 
+        }
+    }
+    & td.point { background-color: #fffce5}
+    & .t_link{
+        text-decoration: underline;
+        display: block;
+        color: $primaryColor;
+    }
+    & .attach { cursor: pointer;}
+
+    /* 배점 넣기 */
+    &.score_input {
+        & input {
+            width: 40px;
+            height: 24px;
+        }
+    }
+}
+
+
+/* 테이블 스크롤 */
+.tbl_scroll_box {
+    display: block;
+    overflow-y: scroll;
+    border: 1px solid #cccccc;
+    background-color: $white;
+    & .tbl_list { 
+        border: 0; 
+        border-right: 1px solid #cccccc;
+        & tbody td { padding: 5px 7px;}
+
+    }
+    & .tbl_view { border: 0; border-right: 1px solid #cccccc;}
+
+    & thead th { 
+        border-top: 0; 
+        &.bottom {
+            border-bottom: 1px solid #ccc;
+        }
+    }
+    & tr:hover td {
+        background-color: #ffffe7;
+    }
+}
+
+/* 공지사항 - 게시글 정보 */
+.tbl_info_box {
+    &.tbl_view{ 
+        border-collapse: separate;
+        border: 1px solid #cccccc;
+        border-radius: 4px;
+        border-bottom: none;
+    }
+    &.tbl_view th,
+    &.tbl_view td {
+        border-left: 0;
+    }
+}
+
+/* 문항 삽화 이미지 정보 */
+.tbl_img_info {
+    & .title {
+        font-size: 20px;
+        font-weight: 600;
+        color: $black;
+        letter-spacing: -0.8px;
+        line-height: 32px;
+    }
+    & .tbl_view{ 
+        border-collapse: separate;
+        border: 1px solid #cccccc;
+        border-radius: 4px;
+        border-bottom: none;
+        & th { 
+            color: #777777;
+            font-weight: 300;
+            border-left: 0;
+            padding: 7px;
+            background-color: #f5f5f5;
+        }
+        & td {
+            border-left: 1px solid #cccccc;
+            padding: 7px;
+        }
+        & .last {
+            & th,
+            & td {
+                vertical-align: top;
+            }
+            
+        }
+
+        & .file_name {
+            & .f_name {
+                width: 100%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            & .f_info {
+                font-size: 12px;
+                color: #777777;
+                letter-spacing: -0.5px;
+                margin: 8px 0;
+            }
+        }
+    }
+}
+
+/* 출처관리 - History */
+.history_box {
+    &.tbl_view{ 
+        border-collapse: separate;
+        border: 1px solid #cccccc;
+        border-radius: 4px;
+        border-bottom: none;
+    }
+    &.tbl_view th,
+    &.tbl_view td {
+        border-left: 0;
+        padding: 22px 23px;
+    }
+}

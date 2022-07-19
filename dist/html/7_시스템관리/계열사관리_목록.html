@@ -1,0 +1,283 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+	<head> 
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>시스템관리-계열사관리</title>
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css">
+<!-- <link rel="stylesheet" href="../../css/webfonts/fontawesome.min.css"/> -->
+<link rel="stylesheet" href="../../css/style.min.css">
+
+<script type="text/javascript" src="../../js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/admin.js"></script> 
+<script type="text/javascript" src="../../js/swiper.min.js"></script> 
+	</head>	
+	<body>	 
+	<div id="wrap">
+		<!-- 상단 공통 영역 -->
+		<div class="header-wrap">
+	<div class="header">
+		<div class="top">
+			<div class="logo justify_start">
+				<h1><img src="../../images/logo.svg" alt="천재교육" /></h1>
+				<select class="select_box w140 ml15">
+					<option value="">계열사 선택</option>
+					<option value="">천재교육</option>
+					<option value="">천재교과서</option>
+				</select>
+			</div>
+			<div class="justify_between">
+				<select class="select_box w120 mr10">
+					<option value="">문항통합관리자</option>
+					<option value="">관리자1</option>
+					<option value="">관리자2</option>
+				</select>
+				<a href="#none" class="belong">천재교육</a>
+				<a href="#none" class="name">홍길동(Hong)</a>
+				
+				<a href="#none" class="btn small btn_light w64">로그아웃</a>
+			</div>
+		</div>
+		<nav class="global_nav">
+			<ul class="menu">
+				<li><a href="#none" class="on">HOME</a></li>
+				<li><a href="#none">문항 관리</a></li>
+				<li><a href="#none">시험지 관리</a></li>
+				<li><a href="#none">서비스 관리</a></li>
+				<li><a href="#none">출처 관리</a></li>
+				<li><a href="#none">통계 관리</a></li>
+				<li><a href="#none">시스템 관리</a></li>
+				<li><a href="#none">데이터 관리</a></li>
+			</ul>
+		</nav>
+	</div>
+</div>
+		<div class="container">
+			<div class="local_nav">
+				<ul class="menu">
+					<li><a href="#none">코드관리</a></li>
+					<li><a href="#none">과목관리</a></li>
+					<li><a href="#none">단원관리</a></li>
+					<li><a href="#none">평가속성관리</a></li>
+					<li><a href="#none">관리자관리</a></li>
+					<li><a href="#none" class="on">계열사관리</a></li>
+				</ul>
+			</div>
+
+			<!-- 컨텐츠 영역 -->
+			<div class="contents">
+				<h2 class="section_tit pt00">계열사 관리</h2>
+                <!-- 검색조건 -->
+                <div class="search_box_wrap mb20">
+                    <div class="search_box justify_between">
+                        <div class="terms justify_start">
+                            <span>검색조건</span>
+                            <input type="text" class="w160 placeholder_black" placeholder="계열사명">
+                        </div>
+
+                        <div class="btn_wrap justify_start">
+                            <a class="btn btn_green" href="#none">검색</a>
+                            <a class="btn btn_gray ml08" href="#none">초기화</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 검색조건 -->
+
+                <!-- 테이블상단 -->
+                <div class="justify_between mb08">
+                    <p class="total sm">총 <span>000</span>개</p>							
+                    <div class="btn_wrap justify_start">
+                        <a class="btn btn_green outline ml05" href="#none">등록</a>
+                    </div>
+                </div>
+                <!-- //테이블상단 -->
+
+                <!-- 테이블 -->
+                <div class="tbl_scroll_box" style="max-height: 600px">
+                    <table class="tbl_list">
+                        <caption></caption>
+                        <colgroup>
+                            <col style="width:5%">
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col style="width:15%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col"class="first">번호</th>
+                                <th scope="col">계열사ID</th>
+                                <th scope="col">계열사명</th>
+                                <th scope="col">등록 서비스</th>
+                                <th scope="col">등록 관리자</th>
+                                <th scope="col">사용여부</th>
+                                <th scope="col">관리</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="first">1</td>
+                                <td>000</td>
+                                <td><span class="t_underline">천재교육</span></td>
+                                <td>00</td>
+                                <td>00</td>
+                                <td>
+                                    <!-- 사용여부 버튼 -->
+                                    <div class="btn_use_toggle">
+                                        <input type="checkbox" class="cb_value" />
+                                        <span class="btn_round"></span>                                                
+                                        <span class="text_use">사용</span>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <a href="#none" class="btn btn_lgreen small">저장</a>
+                                    <a href="#none" class="btn btn_lred small">삭제</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="first">2</td>
+                                <td>000</td>
+                                <td><span class="t_underline">T셀파</span></td>
+                                <td>00</td>
+                                <td>00</td>
+                                <td>
+                                    <!-- 사용여부 버튼 -->
+                                    <div class="btn_use_toggle inactive"><!-- 미사용시 .inactive -->
+                                        <input type="checkbox" class="cb_value" />
+                                        <span class="btn_round"></span>                                                
+                                        <span class="text_use off">미사용</span> <!-- 미사용시 .off -->
+                                    </div>
+                                </td>
+                                <td>
+                                    <a href="#none" class="btn btn_lgreen small">저장</a>
+                                    <a href="#none" class="btn btn_lred small">삭제</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="first">3</td>
+                                <td>000</td>
+                                <td><span class="t_underline">해법에듀</span></td>
+                                <td>00</td>
+                                <td>00</td>
+                                <td>
+                                    <!-- 사용여부 버튼 -->
+                                    <div class="btn_use_toggle inactive"><!-- 미사용시 .inactive -->
+                                        <input type="checkbox" class="cb_value" />
+                                        <span class="btn_round"></span>                                                
+                                        <span class="text_use off">미사용</span> <!-- 미사용시 .off -->
+                                    </div>
+                                </td>
+                                <td>
+                                    <a href="#none" class="btn btn_lgreen small">저장</a>
+                                    <a href="#none" class="btn btn_lred small">삭제</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="first">4</td>
+                                <td>000</td>
+                                <td><span class="t_underline">닥터매쓰</span></td>
+                                <td>00</td>
+                                <td>00</td>
+                                <td>
+                                    <!-- 사용여부 버튼 -->
+                                    <div class="btn_use_toggle inactive"><!-- 미사용시 .inactive -->
+                                        <input type="checkbox" class="cb_value" />
+                                        <span class="btn_round"></span>                                                
+                                        <span class="text_use off">미사용</span> <!-- 미사용시 .off -->
+                                    </div>
+                                </td>
+                                <td>
+                                    <a href="#none" class="btn btn_lgreen small">저장</a>
+                                    <a href="#none" class="btn btn_lred small">삭제</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="first">5</td>
+                                <td>000</td>
+                                <td><span class="t_underline">밀크T 초등</span></td>
+                                <td>00</td>
+                                <td>00</td>
+                                <td>
+                                    <!-- 사용여부 버튼 -->
+                                    <div class="btn_use_toggle inactive"><!-- 미사용시 .inactive -->
+                                        <input type="checkbox" class="cb_value" />
+                                        <span class="btn_round"></span>                                                
+                                        <span class="text_use off">미사용</span> <!-- 미사용시 .off -->
+                                    </div>
+                                </td>
+                                <td>
+                                    <a href="#none" class="btn btn_lgreen small">저장</a>
+                                    <a href="#none" class="btn btn_lred small">삭제</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="first">6</td>
+                                <td>000</td>
+                                <td><span class="t_underline">밀크T 중등</span></td>
+                                <td>00</td>
+                                <td>00</td>
+                                <td>
+                                    <!-- 사용여부 버튼 -->
+                                    <div class="btn_use_toggle inactive"><!-- 미사용시 .inactive -->
+                                        <input type="checkbox" class="cb_value" />
+                                        <span class="btn_round"></span>                                                
+                                        <span class="text_use off">미사용</span> <!-- 미사용시 .off -->
+                                    </div>
+                                </td>
+                                <td>
+                                    <a href="#none" class="btn btn_lgreen small">저장</a>
+                                    <a href="#none" class="btn btn_lred small">삭제</a>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td class="first">-</td>
+                                <td>-</td>
+                                <td>
+                                    <input type="text" class="w100p small border_radius_0" placeholder="계열사명">
+                                </td>
+                                <td>- </td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>
+                                    <a href="#none" class="btn btn_lgreen small">저장</a>
+                                </td>
+                            </tr>                                    
+                        </tbody>
+                    </table>
+                </div>
+                <!-- // 테이블 -->
+	
+			</div>
+		</div>
+	</div>
+
+	<script>
+		$(function(){
+			//사용여부 버튼 on/off
+			$('.cb_value').click(function() {
+				var btnParent = $(this).parent('.btn_use_toggle');
+				$(this).siblings(".text_use").css("opacity", 0);
+
+				if(!$(btnParent).hasClass("inactive")){
+					$(btnParent).addClass('inactive');
+					$(this).siblings(".text_use").addClass("off").text("미사용").animate({opacity: 1}, 500);
+				}else {
+					$(btnParent).removeClass('inactive');
+					$(this).siblings(".text_use").removeClass("off").text("사용").animate({opacity: 1}, 500);;
+				}
+			});
+
+			
+		});
+		/* window popup */
+		function openPop1(){
+			var popup1 = window.open('pop_권한설정.html', 'pop_권한설정', 'width=1100px,height=690px');
+		}
+	</script>
+</body>
+</html>

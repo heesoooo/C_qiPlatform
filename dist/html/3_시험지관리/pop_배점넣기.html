@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+	<head> 
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>배점 넣기</title>
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css">
+<!-- <link rel="stylesheet" href="../../css/webfonts/fontawesome.min.css"/> -->
+<link rel="stylesheet" href="../../css/style.min.css">
+
+<script type="text/javascript" src="../../js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/admin.js"></script> 
+<script type="text/javascript" src="../../js/swiper.min.js"></script> 
+	</head>
+<body style="background-color: #ffffff;">
+	<div class="window_pop">
+		<div class="modal_tit justify_between">
+			<h2 class="title mb30">배점 넣기</h2>
+		</div>
+		<table class="tbl_view tbl_info_box mb20">
+			<caption></caption>
+			<colgroup>
+				<col width="20%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th>배점방식</th>
+					<td>
+						<div class="terms pl05">
+							<div class="radio_box">
+								<input type="radio" id="n1" name="score" value="균등" checked> <label for="n1" class="pl05"> 균등</label>
+								<input type="radio" id="n2" name="score" value="차등" class="ml05"> <label for="n2" class="pl05"> 차등</label>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>만점</th>
+					<td style="padding: 4px 12px 4px 20px;">
+						<input type="text" class="w70" placeholder="000"> 점 기준
+						<a href="#none" class="btn btn_gray w100 fr">배점 생성하기</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<p class="total mb10">총 <span>00</span>문항</p>
+		<div class="tbl_scroll_box" style="max-height:364px;">
+			<table class="tbl_list score_input">
+				<caption></caption>
+				<colgroup>
+					<col width="12%">
+					<col>
+					<col>
+					<col width="15%">
+					<col width="15%">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col" class="first">번호</th>
+						<th scope="col">계열사</th>
+						<th scope="col">문항ID</th>
+						<th scope="col">난이도</th>
+						<th scope="col">배점</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="first">1</td>
+						<td>5지 선택</td>
+						<td>000000</td>
+						<td>상</td>
+						<!-- 차등 선택시 -->
+						<td><input class="center p00" type="text" placeholder="00"></td>
+					</tr>
+					<tr>
+						<td class="first">2</td>
+						<td>5지 선택</td>
+						<td>000000</td>
+						<td>상</td>
+						<!-- 차등 선택시 -->
+						<td><input class="center p00" type="text" placeholder="00"></td>
+					</tr>
+					<tr>
+						<td class="first">3</td>
+						<td>5지 선택</td>
+						<td>000000</td>
+						<td>상</td>
+						<!-- 차등 선택시 -->
+						<td><input class="center p00" type="text" placeholder="00"></td>
+					</tr>
+					<tr>
+						<td class="first">4</td>
+						<td>5지 선택</td>
+						<td>000000</td>
+						<td>상</td>
+						<!-- 차등 선택시 -->
+						<td><input class="center p00" type="text" placeholder="00"></td>
+					</tr>
+					<tr>
+						<td class="first">5</td>
+						<td>5지 선택</td>
+						<td>000000</td>
+						<td>상</td>
+						<!-- 균등 선택시 -->
+						<td>00</td>
+					</tr>
+					<tr>
+						<td class="first">6</td>
+						<td>5지 선택</td>
+						<td>000000</td>
+						<td>상</td>
+						<td>00</td>
+					</tr>
+					<tr>
+						<td class="first">7</td>
+						<td>5지 선택</td>
+						<td>000000</td>
+						<td>상</td>
+						<!-- 균등 선택시 -->
+						<td>00</td>
+					</tr>
+					<tr>
+						<td class="first">8</td>
+						<td>5지 선택</td>
+						<td>000000</td>
+						<td>상</td>
+						<!-- 균등 선택시 -->
+						<td>00</td>
+					</tr>
+					<tr>
+						<td class="first">9</td>
+						<td>5지 선택</td>
+						<td>000000</td>
+						<td>상</td>
+						<td>00</td>
+					</tr>
+					<tr>
+						<td class="first">10</td>
+						<td>5지 선택</td>
+						<td>000000</td>
+						<td>상</td>
+						<td>00</td>
+					</tr>
+					<tr>
+						<td class="first">11</td>
+						<td>5지 선택</td>
+						<td>000000</td>
+						<td>상</td>
+						<td>00</td>
+					</tr>
+					<tr>
+						<td class="first">6</td>
+						<td>5지 선택</td>
+						<td>000000</td>
+						<td>상</td>
+						<td>0</td>
+					</tr>
+					
+				</tbody>
+			</table>
+		</div>
+		<div class="mt30 justify_center">
+			<a class="btn btn_green large w180" href="#none">저장하기</a>
+			<a class="close btn outline btn_gray large ml08" href="#none" onclick="self.close();">닫기</a>
+		</div>
+	</div>
+    <script>
+    </script>
+</body>
+</html>

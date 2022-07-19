@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>문항등록-형판선택</title>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css">
+<!-- <link rel="stylesheet" href="../../css/webfonts/fontawesome.min.css"/> -->
+<link rel="stylesheet" href="../../css/style.min.css">
+
+<script type="text/javascript" src="../../js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/admin.js"></script> 
+<script type="text/javascript" src="../../js/swiper.min.js"></script> 
+</head>
+<body style="background-color: #fff;">
+	<!-- 문항등록 - 형판선택 popup -->
+	<div class="window_pop pop_template_select">
+		<h2 class="title mb30">형판 선택</h2>
+
+		<div class="tabmenu">
+			<ul>
+				<li id="tab1" class="tab_btn">
+					<input type="radio" checked name="tabmenu" id="tmenu1" class="tab">
+					<label class="label tlabel1" for="tmenu1">주관식</label>
+					<div class="tab_con">
+						<ol class="quiz_lst flex_grow">
+							<li>
+								<div class="radio_box">
+									<input id="exam_0101" type="radio" name="quiz01" checked>
+									<label for="exam_01">주관식 입력상자 (선있음)</label>
+									<img src="../../images/quiz01_img01.png" alt="주관식 입력상자 (선있음)">
+								</div>
+							</li>
+							<li>
+								<div class="radio_box">
+									<input id="exam_0102" type="radio" name="quiz01">
+									<label for="exam_0102">주관식 입력상자 (선없음)</label>
+									<img src="../../images/quiz01_img02.png" alt="주관식 입력상자 (선없음)">
+								</div>
+							</li>
+						</ol>
+						<div class="btn_wrap justify_center">
+							<a href="#none" class="btn btn_green large">선택</a>
+							<a href="#none" class="btn btn_gray outline large ml05" onclick="self.close();">닫기</a>
+						</div>
+					</div>
+				</li>
+				<li id="tab2" class="tab_btn">
+					<input type="radio" name="tabmenu" id="tmenu2" class="tab">
+					<label class="label" for="tmenu2">선 그리기</label>
+					<div class="tab_con">
+						<ol class="quiz_lst flex_grow">
+							<li>
+								<div class="radio_box">
+									<input id="exam0201" type="radio" name="quiz02" checked>
+									<label for="exam0201">1단 세로형 선 그리기</label>
+									<img src="../../images/quiz02_img01.png" alt="1단 세로형 선 그리기">
+								</div>
+							</li>
+							<li>
+								<div class="radio_box">
+									<input id="exam0202" type="radio" name="quiz02">
+									<label for="exam0202">1단 가로형 선 그리기</label>
+									<img src="../../images/quiz02_img02.png" alt="1단 가로형 선 그리기">
+								</div>
+							</li>
+							<li>
+								<div class="radio_box">
+									<input id="exam0203" type="radio" name="quiz02">
+									<label for="exam0203">2단 세로형 선 그리기</label>
+									<img src="../../images/quiz02_img03.png" alt="2단 세로형 선 그리기">
+								</div>
+							</li>
+							<li>
+								<div class="radio_box">
+									<input id="exam0204" type="radio" name="quiz02">
+									<label for="exam0204">2단 가로형 선 그리기</label>
+									<img src="../../images/quiz02_img04.png" alt="2단 가로형 선 그리기">
+								</div>
+							</li>
+						</ol>
+						<div class="btn_wrap justify_center">
+							<a href="#none" class="btn btn_green large">선택</a>
+							<a href="#none" class="btn btn_gray outline large ml05" onclick="self.close();">닫기</a>
+						</div>
+					</div>
+				</li>
+				<li id="tab3" class="tab_btn">
+					<input type="radio" name="tabmenu" id="tmenu3" class="tab">
+					<label class="label" for="tmenu3">자유선지형</label>
+					<div class="tab_con">
+						<ol class="quiz_lst flex_grow">
+							<li>
+								<div class="radio_box">
+									<input id="exam0301" type="radio" name="quiz03" checked>
+									<label for="exam0301">자유선지형 – 표1</label>
+									<img src="../../images/quiz03_img01.png" alt="자유선지형 – 표1">
+								</div>
+							</li>
+							<li>
+								<div class="radio_box">
+									<input id="exam0302" type="radio" name="quiz03">
+									<label for="exam0302">자유선지형 – 표2(상단 제목 포함)</label>
+									<img src="../../images/quiz03_img02.png" alt="자유선지형 – 표2(상단 제목 포함)">
+								</div>
+							</li>
+							<li>
+								<div class="radio_box">
+									<input id="exam0303" type="radio" name="quiz03">
+									<label for="exam0303">자유선지형 – 표3</label>
+									<img src="../../images/quiz03_img03.png" alt="자유선지형 – 표3">
+								</div>
+							</li>
+							<li>
+								<div class="radio_box">
+									<input id="exam0304" type="radio" name="quiz03">
+									<label for="exam0304">자유선지형 – 표4</label>
+									<img src="../../images/quiz03_img04.png" alt="자유선지형 – 표4">
+								</div>
+							</li>
+						</ol>
+						<div class="btn_wrap justify_center">
+							<a href="#none" class="btn btn_green large">선택</a>
+							<a href="#none" class="btn btn_gray outline large ml05" onclick="self.close();">닫기</a>
+						</div>
+					</div>
+				</li>
+				<li id="tab4" class="tab_btn">
+					<input type="radio" name="tabmenu" id="tmenu4" class="tab">
+					<label class="label tlabel2" for="tmenu4">기타</label>
+					<div class="tab_con">
+						<ol class="quiz_lst flex_grow">
+							<li>
+								<div class="radio_box">
+									<input id="exam0401" type="radio" name="quiz04" checked>
+									<label for="exam0401">세로 셈1</label>
+									<img src="../../images/quiz04_img01.png" alt="세로 셈1">
+								</div>
+							</li>
+							<li>
+								<div class="radio_box">
+									<input id="exam0402" type="radio" name="quiz04">
+									<label for="exam0402">세로 셈2</label>
+									<img src="../../images/quiz04_img02.png" alt="세로 셈2">
+								</div>
+							</li>
+							<li>
+								<div class="radio_box">
+									<input id="exam0404" type="radio" name="quiz04">
+									<label for="exam0404">&lt;보기&gt; 박스</label>
+									<img src="../../images/quiz04_img04.png" alt="보기 박스">
+								</div>
+							</li>
+							<li>
+								<div class="radio_box">
+									<input id="exam0404" type="radio" name="quiz04">
+									<label for="exam0404">좌측 이미지 삽입</label>
+									<img src="../../images/quiz04_img04.png" alt="좌측 이미지 삽입">
+								</div>
+							</li>
+							<li>
+								<div class="radio_box">
+									<input id="exam0405" type="radio" name="quiz04">
+									<label for="exam0405">우측 이미지 삽입</label>
+									<img src="../../images/quiz04_img04.png" alt="우측 이미지 삽입">
+								</div>
+							</li>
+						</ol>
+						<div class="btn_wrap justify_center">
+							<a href="#none" class="btn btn_green large">선택</a>
+							<a href="#none" class="btn btn_gray outline large ml05" onclick="self.close();">닫기</a>
+						</div>
+					</div>
+				</li>
+			</ul>			
+		</div>
+	</div>
+	<!-- //문항등록 - 형판선택 popup -->
+</body>
+
+</html>

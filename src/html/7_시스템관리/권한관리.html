@@ -1,0 +1,515 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+	<head> 
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>시스템관리-권한관리</title>
+		@@include('../include/inc_html_head.html')
+	</head>	
+	<body>	 
+	<div id="wrap">
+		<!-- 상단 공통 영역 -->
+		@@include('../include/inc_header.html')
+		<div class="container">
+			<div class="local_nav">
+				<ul class="menu">
+					<li><a href="#none">코드관리</a></li>
+					<li><a href="#none">과목관리</a></li>
+					<li><a href="#none">단원관리</a></li>
+					<li><a href="#none">평가속성관리</a></li>
+					<li><a href="#none" class="on">관리자관리</a></li>
+					<li><a href="#none">계열사관리</a></li>
+				</ul>
+			</div>
+
+			<!-- 컨텐츠 영역 -->
+			<div class="contents">
+				<h2 class="section_tit pt00">권한 관리</h2>
+
+				<div class="justify_start_top">
+					<!-- 네비게이션 영역 -->
+					<div class="navigation">
+						<!-- 메뉴영역 -->
+						<div class="access_name">
+							<ul>
+								<li>
+									<a href="#none" class="tit on">- 시스템관리자</a>
+								</li>
+								<li>
+									<a href="#none" class="tit">- 문항통합관리자</a>
+								</li>
+								<li>
+									<a href="#none" class="tit">- 서비스관리자</a>
+								</li>
+								<li>
+									<a href="#none" class="tit">- 문항 등록자</a>
+								</li>
+								<li>
+									<a href="#none" class="tit">- 문항 외부등록자</a>
+								</li>
+								<li>
+									<a href="#none" class="tit">- 문항 검수자</a>
+								</li>
+								<li>
+									<a href="#none" class="tit">- 문항 외부검수자</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- // 네비게이션 영역 -->
+
+					<!-- right section -->
+					<div class="access_list_wrap ml08">
+                        <div class="access_list_top justify_between">
+                            <span class="tit">메뉴명</span>
+                            <span class="check">
+                                <span class="check_box">
+                                    <input type="checkbox" id="a">
+                                    <label for="a"></label>
+                                </span>
+                                제공여부
+                            </span>
+                        </div>
+
+                        <!-- 메뉴영역 -->
+                        <div class="nav">
+                            <ul class="step1">
+                                <li>
+                                    <input type="checkbox" id="node1">
+                                    <label class="tit" for="node1">HOME</label>
+                                    <!-- 선택박스 -->
+                                    <div class="check_box">
+                                        <input type="checkbox" id="access1">
+                                        <label for="access1"></label>
+                                    </div>
+                                    <ul class="step2">
+                                        <li>
+                                            <p>공지사항</p>
+                                            <div class="check_box">
+                                                <input type="checkbox" id="access1-1">
+                                                <label for="access1-1"></label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>작업내역</p>
+                                            <div class="check_box">
+                                                <input type="checkbox" id="access1-2">
+                                                <label for="access1-2"></label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>내 폴더</p>
+                                            <div class="check_box">
+                                                <input type="checkbox" id="access1-3">
+                                                <label for="access1-3"></label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="node2">
+                                    <label class="tit" for="node2">문항 관리</label>
+                                    <!-- 선택박스 -->
+                                    <div class="check_box">
+                                        <input type="checkbox" id="access2">
+                                        <label for="access2"></label>
+                                    </div>
+                                    <ul class="step2">
+                                        <li>
+                                            <p>문항 목록</p>
+                                            <!-- 선택박스 -->
+                                            <div class="check_box">
+                                                <input type="checkbox" id="access2-1">
+                                                <label for="access2-1"></label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="node2_1">
+                                            <label class="tit" for="node2_1">문항 사용 관리</label>
+                                            <!-- 선택박스 -->
+                                            <div class="check_box">
+                                                <input type="checkbox" id="access2-2">
+                                                <label for="access2-2"></label>
+                                            </div>
+                                            <ul class="step3">
+                                                <li>
+                                                    <p>통합문항 검색</p>
+                                                    <!-- 선택박스 -->
+                                                    <div class="check_box">
+                                                        <input type="checkbox" id="access2-1-1">
+                                                        <label for="access2-1-1"></label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <p>문항 사용 신청/승인 관리</p>
+                                                    <div class="check_box">
+                                                        <input type="checkbox" id="access2-1-2">
+                                                        <label for="access2-1-2"></label>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <p>검수 관리</p>
+                                            <!-- 선택박스 -->
+                                            <div class="check_box">
+                                                <input type="checkbox" id="access2-3">
+                                                <label for="access2-3"></label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="node3">
+                                    <label class="tit" for="node3">시험지 관리</label>
+                                    <!-- 선택박스 -->
+                                    <div class="check_box">
+                                        <input type="checkbox" id="access3">
+                                        <label for="access3"></label>
+                                    </div>
+                                    <ul class="step2">
+                                        <li>
+                                            <p>시험지 목록</p>
+                                            <!-- 선택박스 -->
+                                            <div class="check_box">
+                                                <input type="checkbox" id="access3-1">
+                                                <label for="access3-1"></label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="node4">
+                                    <label class="tit" for="node4">서비스 관리</label>
+                                    <!-- 선택박스 -->
+                                    <div class="check_box">
+                                        <input type="checkbox" id="access4">
+                                        <label for="access4"></label>
+                                    </div>
+                                    <ul class="setp2">
+                                        <li>
+                                            <p>서비스별 인덱스 관리</p> 
+                                            <!-- 선택박스 -->
+                                            <div class="check_box">
+                                                <input type="checkbox" id="access4-1">
+                                                <label for="access4-1"></label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>디바이스별 템플릿 관리</p>
+                                            <!-- 선택박스 -->
+                                            <div class="check_box">
+                                                <input type="checkbox" id="access4-2">
+                                                <label for="access4-2"></label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>개념 CODE 관리</p>
+                                            <!-- 선택박스 -->
+                                            <div class="check_box">
+                                                <input type="checkbox" id="access4-3">
+                                                <label for="access4-3"></label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>클러스터링 관리</p>
+                                            <!-- 선택박스 -->
+                                            <div class="check_box">
+                                                <input type="checkbox" id="access4-4">
+                                                <label for="access4-4"></label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>검색데이터 갱신</p>
+                                            <!-- 선택박스 -->
+                                            <div class="check_box">
+                                                <input type="checkbox" id="access4-5">
+                                                <label for="access4-5"></label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="node5">
+                                    <label class="tit" for="node5">출처 관리</label>
+                                    <!-- 선택박스 -->
+                                    <div class="check_box">
+                                        <input type="checkbox" id="access5">
+                                        <label for="access5"></label>
+                                    </div>
+                                    <ul class="step2">
+                                        <li>
+                                            <p>문항 삽화 이미지 관리</p>
+                                            <!-- 선택박스 -->
+                                            <div class="check_box">
+                                                <input type="checkbox" id="access5-1">
+                                                <label for="access5-1"></label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>미디어 파일 관리</p>
+                                            <!-- 선택박스 -->
+                                            <div class="check_box">
+                                                <input type="checkbox" id="access5-2">
+                                                <label for="access5-2"></label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="node5_1">
+                                            <label class="tit" for="node5_1">출처관리</label>
+                                            <!-- 선택박스 -->
+                                            <div class="check_box">
+                                                <input type="checkbox" id="access5-3">
+                                                <label for="access5-3"></label>
+                                            </div>
+                                            <ul class="step3">
+                                                <li>
+                                                    <p>일반출처</p>
+                                                    <!-- 선택박스 -->
+                                                    <div class="check_box">
+                                                        <input type="checkbox" id="access5-3-1">
+                                                        <label for="access5-3-1"></label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <p>기타출처</p>
+                                                    <!-- 선택박스 -->
+                                                    <div class="check_box">
+                                                        <input type="checkbox" id="access5-3-2">
+                                                        <label for="access5-3-2"></label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <p>기출출처</p>
+                                                    <!-- 선택박스 -->
+                                                    <div class="check_box">
+                                                        <input type="checkbox" id="access5-3-3">
+                                                        <label for="access5-3-3"></label>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="node6">
+                                    <label class="tit" for="node6">통계 관리</label>
+                                    <!-- 선택박스 -->
+                                    <div class="check_box">
+                                        <input type="checkbox" id="access6">
+                                        <label for="access6"></label>
+                                    </div>
+
+                                    <ul class="step2">
+                                        <li>
+                                            <input type="checkbox" id="node6_1">
+                                            <label class="tit" for="node6_1">작업내역</label>
+                                            <!-- 선택박스 -->
+                                            <div class="check_box">
+                                                <input type="checkbox" id="access6-1">
+                                                <label for="access6-1"></label>
+                                            </div>
+                                            <ul class="step3">
+                                                <li>
+                                                    <p>사용자별</p>
+                                                    <!-- 선택박스 -->
+                                                    <div class="check_box">
+                                                        <input type="checkbox" id="access6-1-1">
+                                                        <label for="access6-1-1"></label>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="node6_2">
+                                            <label class="tit" for="node6_2">문항통계</label>
+                                            <!-- 선택박스 -->
+                                            <div class="check_box">
+                                                <input type="checkbox" id="access6-2">
+                                                <label for="access6-2"></label>
+                                            </div>
+                                            <ul class="step3">
+                                                <li>
+                                                    <p>등록 문항 통계</p>
+                                                    <!-- 선택박스 -->
+                                                    <div class="check_box">
+                                                        <input type="checkbox" id="access6-2-1">
+                                                        <label for="access6-2-1"></label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <p>단원별 문항 통계</p>
+                                                    <!-- 선택박스 -->
+                                                    <div class="check_box">
+                                                        <input type="checkbox" id="access6-2-2">
+                                                        <label for="access6-2-2"></label>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <p>시험지통계</p>
+                                            <!-- 선택박스 -->
+                                            <div class="check_box">
+                                                <input type="checkbox" id="access6-3">
+                                                <label for="access6-3"></label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>오류신고 관리</p>
+                                            <!-- 선택박스 -->
+                                            <div class="check_box">
+                                                <input type="checkbox" id="access6-4">
+                                                <label for="access6-4"></label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>이용로그</p>
+                                            <!-- 선택박스 -->
+                                            <div class="check_box">
+                                                <input type="checkbox" id="access6-5">
+                                                <label for="access6-5"></label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>학습현황 분석</p>
+                                            <!-- 선택박스 -->
+                                            <div class="check_box">
+                                                <input type="checkbox" id="access6-6">
+                                                <label for="access6-6"></label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>문항별 학습분석</p>
+                                            <!-- 선택박스 -->
+                                            <div class="check_box">
+                                                <input type="checkbox" id="access6-7">
+                                                <label for="access6-7"></label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>속성별 학습분석</p>
+                                            <!-- 선택박스 -->
+                                            <div class="check_box">
+                                                <input type="checkbox" id="access6-8">
+                                                <label for="access6-8"></label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="node7">
+                                    <label class="tit" for="node7">시스템 관리</label>
+                                    <!-- 선택박스 -->
+                                    <div class="check_box">
+                                        <input type="checkbox" id="access7">
+                                        <label for="access7"></label>
+                                    </div>
+
+                                    <ul class="step2">
+                                        <li>
+                                            <p>과목관리</p>
+                                            <!-- 선택박스 -->
+                                            <div class="check_box">
+                                                <input type="checkbox" id="access7-1">
+                                                <label for="access7-1"></label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>단원관리</p>
+                                            <!-- 선택박스 -->
+                                            <div class="check_box">
+                                                <input type="checkbox" id="access7-2">
+                                                <label for="access7-2"></label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>코드관리</p>
+                                            <!-- 선택박스 -->
+                                            <div class="check_box">
+                                                <input type="checkbox" id="access7-3">
+                                                <label for="access7-3"></label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>평가속성관리</p>
+                                            <!-- 선택박스 -->
+                                            <div class="check_box">
+                                                <input type="checkbox" id="access7-4">
+                                                <label for="access7-4"></label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>관리자관리</p>
+                                            <!-- 선택박스 -->
+                                            <div class="check_box">
+                                                <input type="checkbox" id="access7-6">
+                                                <label for="access7-6"></label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>계열사관리</p>
+                                            <!-- 선택박스 -->
+                                            <div class="check_box">
+                                                <input type="checkbox" id="access7-7">
+                                                <label for="access7-7"></label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+					<!-- // right section -->
+				</div>			
+			</div>
+		</div>
+	</div>
+
+	<script>
+		$(function(){
+			//사용여부 버튼 on/off
+			$('.cb_value').click(function() {
+				var btnParent = $(this).parent('.btn_use_toggle');
+				$(this).siblings(".text_use").css("opacity", 0);
+
+				if(!$(btnParent).hasClass("active")){
+					$(btnParent).addClass('active');
+					$(this).siblings(".text_use").addClass("off").text("미사용").animate({opacity: 1}, 500);
+				}else {
+					$(btnParent).removeClass('active');
+					$(this).siblings(".text_use").removeClass("off").text("사용").animate({opacity: 1}, 500);;
+				}
+			});
+
+			// 테이블 내 datepicker
+			var from = $("#from2")
+				.datepicker({
+					defaultDate: "+1d",
+					changeMonth: true,
+					numberOfMonths: 1,
+					dateFormat: 'yy.mm.dd'
+				})
+				.on("change", function () {
+					to.datepicker("option", "minDate", getDate(this));
+				}),
+				to = $("#to2").datepicker({
+					defaultDate: "+1d",
+					changeMonth: true,
+					numberOfMonths: 1,
+					dateFormat: 'yy.mm.dd'
+				})
+				.on("change", function () {
+					from.datepicker("option", "maxDate", getDate(this));
+				});
+		});
+		/* window popup */
+		function openPop1(){
+			var popup1 = window.open('pop_권한설정.html', 'pop_권한설정', 'width=1100px,height=690px');
+		}
+		function openPop2(){
+			var popup2 = window.open('pop_등록관리자.html', '등록관리자', 'width=1100px,height=530px');
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>문항목록-검수지생성</title>
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css">
+<!-- <link rel="stylesheet" href="../../css/webfonts/fontawesome.min.css"/> -->
+<link rel="stylesheet" href="../../css/style.min.css">
+
+<script type="text/javascript" src="../../js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/admin.js"></script> 
+<script type="text/javascript" src="../../js/swiper.min.js"></script> 
+	</head>
+	
+	<body style="background-color: #fff;">
+		<!-- 검수지 생성 popup -->
+		<div class="window_pop pop_create_sheet">
+			<h2 class="title mb30">검수지 생성</h2>
+			
+			<h3 class="s_title">검수 문항 정보
+				<span class="bar"></span><span>중등 > 1학년 > 국어 (영역) > 국어(과목)</span><span class="bar"></span><span>총 000문항</span>
+			</h3>
+
+			<div class="terms justify_start mb20">
+				<h3 class="w100 s_title mb00">검수지명</h3>
+				<input type="text" class="w80p placeholder_black" placeholder="중등 1학년 국어 문항 검수지 (YYYY.MM>DD)">
+			</div>
+
+			<div class="search_box mb20">
+				<div class="justify_between_start">
+					<div class="justify_start_top">
+						<h4 class="mr30 mt05">검색 조건</h4>
+						<div>
+							<div class="justify_start mb10">
+								<div class="terms mr10">
+									<p>
+										<input class="w90" type="text" id="from" placeholder="0000.00.00" autocomplete="off"> 
+										<span class="ml05 mr05">~</span>
+										<input class="w90" type="text" id="to" placeholder="0000.00.00" autocomplete="off">
+									</p>
+								</div>
+								<div class="terms mr05">
+									<select class="select_box w100">
+										<option value="">전체</option>
+										<option value="">중등</option>
+										<option value="">고등</option>																
+									</select>
+								</div>
+								<div class="terms mr05">
+									<select class="select_box w100">
+										<option value="">전체</option>
+										<option value="">1학년</option>
+										<option value="">2학년</option>																
+										<option value="">3학년</option>																
+									</select>
+								</div>
+							</div>
+							<div class="justify_start">
+								<div class="terms mr05">
+									<select class="select_box w100">
+										<option value="">전체</option>
+										<option value="">1학기</option>
+										<option value="">2학기</option>																
+									</select>
+								</div>
+								<div class="terms mr05">
+									<select class="select_box w100">
+										<option value="">전체</option>
+										<option value="">중간고사</option>
+										<option value="">기말고사</option>																
+									</select>
+								</div>
+								<div class="terms mr05">
+									<select class="select_box w100">
+										<option value="">전체</option>
+										<option value="">과목</option>														
+									</select>
+								</div>
+								<div class="terms mr05">
+									<input type="text" placeholder="검색어" class="placeholder_black" style="width:200px;">
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="btn_wrap">
+						<a class="btn btn_green" href="#none">검색</a>
+						<a class="btn btn_gray" href="#none">초기화</a>
+					</div>
+				</div>
+			</div>
+			
+			<table class="tbl_list">
+				<caption></caption>
+				<colgroup>
+					<col style="width: 7%">
+					<col style="width: 12%">
+					<col style="width: 12%">
+					<col style="width: 8%">
+					<col />
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col"class="first">선택</th>
+						<th scope="col">권한</th>
+						<th scope="col">소속</th>
+						<th scope="col">학교급</th>
+						<th scope="col">영역</th>
+						<th scope="col">과목</th>
+						<th scope="col">아이디</th>
+						<th scope="col">이름</th>
+						<th scope="col">최근 배정일</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="first">
+							<div class="radio_box">
+								<input type="radio" id="select01" name="radio_chk01" class="m00">
+								<label for="select01"></label>
+							</div>
+						</td>
+						<td>검수자</td>
+						<td>국어팀</td>
+						<td>중등</td>
+						<td>국어</td>
+						<td>국어</td>
+						<td>hong</td>
+						<td>홍길동</td>
+						<td>2022.00.00</td>
+					</tr>
+					<tr>
+						<td class="first">
+							<div class="radio_box">
+								<input type="radio" id="select02" name="radio_chk01" class="m00">
+								<label for="select02"></label>
+							</div>
+						</td>
+						<td>검수자</td>
+						<td>국어팀</td>
+						<td>중등</td>
+						<td>국어</td>
+						<td>국어</td>
+						<td>hong1</td>
+						<td>홍길동</td>
+						<td>2022.00.00</td>
+					</tr>
+					<tr>
+						<td class="first">
+							<div class="radio_box">
+								<input type="radio" id="select03" name="radio_chk01" class="m00">
+								<label for="select03"></label>
+							</div>
+						</td>
+						<td>검수자</td>
+						<td>국어팀</td>
+						<td>중등</td>
+						<td>사회탐구</td>
+						<td>국어</td>
+						<td>hong2</td>
+						<td>홍길동</td>
+						<td>2022.00.00</td>
+					</tr>
+					<tr>
+						<td class="first">
+							<div class="radio_box">
+								<input type="radio" id="select04" name="radio_chk01" class="m00">
+								<label for="select04"></label>
+							</div>
+						</td>
+						<td>검수자</td>
+						<td>국어팀</td>
+						<td>중등</td>
+						<td>국어</td>
+						<td>국어</td>
+						<td>hong3</td>
+						<td>홍길동</td>
+						<td>2022.00.00</td>
+					</tr>
+					<tr>
+						<td class="first">
+							<div class="radio_box">
+								<input type="radio" id="select05" name="radio_chk01" class="m00">
+								<label for="select05"></label>
+							</div>
+						</td>
+						<td>검수자</td>
+						<td>국어팀</td>
+						<td>중등</td>
+						<td>국어</td>
+						<td>국어</td>
+						<td>hong4</td>
+						<td>홍길동</td>
+						<td>2022.00.00</td>
+					</tr>					
+				</tbody>
+			</table>
+			
+			<!-- 페이징 -->
+			<div class="paging mt32">
+				<a href="javascript:void(0);" class="pprev"><img src="../../images/page_pprev.svg" alt="처음"></a> 
+				<a href="javascript:void(0);" class="prev"><img src="../../images/page_prev.svg" alt="이전"></a> 
+				<a href="javascript:void(0);" class="on">1 </a>
+				<a href="javascript:void(0);">2</a>
+				<a href="javascript:void(0);">3</a>
+				<a href="javascript:void(0);">4</a>
+				<a href="javascript:void(0);">...</a>
+				<a href="javascript:void(0);">37</a>
+				<a href="javascript:void(0);">38</a>
+				<a href="javascript:void(0);">39</a>
+				<a href="javascript:void(0);">40</a>
+				<a href="javascript:void(0);" class="next"><img src="../../images/page_next.svg" alt="다음"></a>
+				<a href="javascript:void(0);" class="nnext"><img src="../../images/page_nnext.svg" alt="끝"></a>
+			</div>
+			
+			<div class="justify_center">
+				<a class="btn btn_green large w180" href="#none">배정하기</a>
+				<a class="close btn btn_gray outline ml08 large" href="#none" onClick="self.close();">취소</a>
+			</div>
+
+		</div>
+		<!-- //검수지 생성 popup -->
+	</body>
+	
+	</html>

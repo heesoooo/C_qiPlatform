@@ -1,0 +1,650 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head> 
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>통계관리-문항별학습분석-목록</title>
+	@@include('../include/inc_html_head.html')
+</head>
+<body>	 
+	<div id="wrap">
+		<!-- 상단 공통 영역 -->
+		@@include('../include/inc_header.html')
+		<div class="container">
+			<div class="local_nav">
+				<ul class="menu">
+					<li><a href="#none">작업내역</a></li>
+					<li><a href="#none">문항통계</a></li>
+					<li><a href="#none">시험지통계</a></li>
+					<li><a href="#none">오류신고 관리</a></li>
+					<li><a href="#none">이용로그</a></li>
+					<li><a href="#none" class="on">학습현황 분석</a></li>
+				</ul>
+			</div>
+
+			<!-- 컨텐츠 영역 -->
+			<div class="contents">
+				<h2 class="section_tit pt00">학습현황 분석</h2>
+
+				<div class="tabmenu">
+					<ul>
+						<li id="tab1" class="tab_btn w160">
+							<input type="radio" checked name="tabmenu" id="tmenu1" class="tab">
+							<label class="tlabel1 label" for="tmenu1">문항별 학습분석</label>
+							<div class="tab_con mt25">
+								<section>
+									<div class="justify_between_start mb40">
+										<!-- 계열사 -->
+										<div class="company_list">
+											<div class="justify_start">
+												<span class="mr30">계열사</span>
+												<div class="terms">
+													<select class="select_box w140">
+														<option value="">천재교육</option>
+														<option value="">천재교과서</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<!-- //계열사 -->
+					
+										<!-- 검색조건 -->
+										<div class="search_box_wrap">
+											<div class="search_box justify_between">
+												<div class="terms justify_start">
+													<span>검색조건</span>
+													<div class="justify_start">
+														<h5 class="black_color mr05">문항ID</h5>
+														<input type="text" placeholder="문항ID입력" class="placeholder_black w160">
+													</div>
+												</div>
+												<div class="btn_wrap justify_start">
+													<a class="btn btn_green" href="#none">검색</a>
+													<a class="btn btn_gray ml08" href="#none">초기화</a>
+													<a class="btn_search_toggle ml08" href="#none">열기</a>
+												</div>
+											</div>
+											
+											<!-- search_toggle_box -->
+											<div class="search_toggle_box">
+												<div class="search_box">
+													<div class="box_list">
+														<div class="terms justify_start">
+															<span>학교급</span>
+															<select class="select_box w100">
+																<option value="선택">선택</option>
+															</select>
+														</div>
+													</div>
+												</div>
+												<div class="search_box">
+													<div class="box_list">
+														<div class="terms justify_start">
+															<span>학년</span>
+															<p class="p_text col_light_gray">학교급을 선택해 주세요.</p>
+														</div>
+													</div>
+												</div>
+												<div class="search_box">
+													<div class="box_list">
+														<div class="terms justify_start">
+															<span>영역</span>
+															<div class="chk_list">
+																<select class="select_box w100">
+																	<option value="선택">선택</option>
+																</select>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="search_box">
+													<div class="box_list">
+														<div class="terms justify_start">
+															<span>과목</span>
+															<p class="p_text col_light_gray">과목을 선택해 주세요.</p>
+														</div>
+													</div>
+												</div>
+												<div class="search_box">
+													<div class="box_list">
+														<div class="terms justify_start">
+															<span>출제 수</span>
+															<p>
+																<input type="text" class="placeholder_black w100" placeholder="숫자입력">
+																<span class="ml05 mr05">~</span>
+																<input type="text" class="placeholder_black w100" placeholder="숫자입력">
+															</p>
+														</div>
+													</div>
+												</div>
+												<div class="search_box">
+													<div class="box_list">
+														<div class="terms justify_start">
+															<span>출제율</span>
+															<p>
+																<input type="text" class="placeholder_black w100" placeholder="숫자입력">
+																<span class="ml05 mr05">~</span>
+																<input type="text" class="placeholder_black w100" placeholder="숫자입력">
+																<span>%</span>
+															</p>
+														</div>
+													</div>
+												</div>
+												<div class="search_box">
+													<div class="box_list">
+														<div class="terms justify_start">
+															<span>정답률</span>
+															<p>
+																<input type="text" class="placeholder_black w100" placeholder="숫자입력">
+																<span class="ml05 mr05">~</span>
+																<input type="text" class="placeholder_black w100" placeholder="숫자입력">
+																<span>%</span>
+															</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- //search_toggle_box -->
+										</div>
+										<!-- //검색조건 -->
+									</div>
+								</section>
+								<section class="section_wrap mt35">
+									<div class="justify_between mb08">
+										<div class="justify_start">
+											<p class="total sm">총 <span>00,000</span>개</p>
+											<select class="select_box w140 ml10">
+												<option value="">30개 보기</option>
+												<option value="">10개 보기</option>
+												<option value="">30개 보기</option>
+												<option value="">50개 보기</option>
+												<option value="">100개 보기</option>
+											</select>
+										</div>
+										
+										<div class="btn_wrap justify_start">
+											<a class="btn btn_gray outline w80" href="#none">전체선택</a>
+											<a class="btn btn_gray ml05 w120" href="#none">엑셀 다운로드</a>
+										</div>
+									</div>
+									<!-- 문항별 학습분석 리스트 -->
+									<div class="tbl_scroll_box" style="max-height: 530px;">
+										<table class="tbl_list">
+											<caption></caption>
+											<colgroup>
+												<col style="width:5%">
+												<col style="width:5%">
+												<col style="width:10%">
+												<col style="width:10%">
+												<col>
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col" class="first">
+														<div class="check_box">
+															<input type="checkbox" id="check0">
+															<label for="check0" class="pl16"></label>
+														</div>
+													</th>
+													<th scope="col">번호</th>
+													<th scope="col">계열사</th>
+													<th scope="col">문항 ID</th>
+													<th scope="col">학교급</th>
+													<th scope="col">학년</th>
+													<th scope="col">영역</th>
+													<th scope="col">과목</th>
+													<th scope="col">출제 수 <a href="#none"><img src="../../images/ic_sort.png" alt="정렬"></a></th>
+													<th scope="col">출제율 <a href="#none"><img src="../../images/ic_sort.png" alt="정렬"></a></th>
+													<th scope="col">정답률 <a href="#none"><img src="../../images/ic_sort.png" alt="정렬"></a></th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td class="first">
+														<div class="check_box">
+															<input type="checkbox" id="check1">
+															<label for="check1" class="pl16"></label>
+														</div>
+													</td>
+													<td>1</td>
+													<td>계열사A</td>
+													<td><a class="t_link primary_color" href="#none">00000</a></td>
+													<td>초등</td>
+													<td>1</td>
+													<td>수학</td>
+													<td>수학1-1</td>
+													<td>111,111</td>
+													<td>85%</td>
+													<td>85%</td>
+												</tr>
+												<tr>
+													<td class="first">
+														<div class="check_box">
+															<input type="checkbox" id="check2">
+															<label for="check2" class="pl16"></label>
+														</div>
+													</td>
+													<td>1</td>
+													<td>계열사A</td>
+													<td><a class="t_link primary_color" href="#none">00000</a></td>
+													<td>초등</td>
+													<td>1</td>
+													<td>수학</td>
+													<td>수학1-1</td>
+													<td>111,111</td>
+													<td>85%</td>
+													<td>85%</td>
+												</tr>
+												<tr>
+													<td class="first">
+														<div class="check_box">
+															<input type="checkbox" id="check3">
+															<label for="check3" class="pl16"></label>
+														</div>
+													</td>
+													<td>1</td>
+													<td>계열사A</td>
+													<td><a class="t_link primary_color" href="#none">00000</a></td>
+													<td>초등</td>
+													<td>1</td>
+													<td>수학</td>
+													<td>수학1-1</td>
+													<td>111,111</td>
+													<td>85%</td>
+													<td>85%</td>
+												</tr>
+												<tr>
+													<td class="first">
+														<div class="check_box">
+															<input type="checkbox" id="check4">
+															<label for="check4" class="pl16"></label>
+														</div>
+													</td>
+													<td>1</td>
+													<td>계열사A</td>
+													<td><a class="t_link primary_color" href="#none">00000</a></td>
+													<td>초등</td>
+													<td>1</td>
+													<td>수학</td>
+													<td>수학1-1</td>
+													<td>111,111</td>
+													<td>85%</td>
+													<td>85%</td>
+												</tr>
+												<tr>
+													<td class="first">
+														<div class="check_box">
+															<input type="checkbox" id="check5">
+															<label for="check5" class="pl16"></label>
+														</div>
+													</td>
+													<td>1</td>
+													<td>계열사A</td>
+													<td><a class="t_link primary_color" href="#none">00000</a></td>
+													<td>초등</td>
+													<td>1</td>
+													<td>수학</td>
+													<td>수학1-1</td>
+													<td>111,111</td>
+													<td>85%</td>
+													<td>85%</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+				
+									<!-- 페이징 -->
+									<div class="paging mt32">
+										<a href="javascript:void(0);" class="pprev"><img src="../../images/page_pprev.svg" alt="처음"></a> 
+										<a href="javascript:void(0);" class="prev"><img src="../../images/page_prev.svg" alt="이전"></a> 
+										<a href="javascript:void(0);" class="on">1 </a>
+										<a href="javascript:void(0);">2</a>
+										<a href="javascript:void(0);">3</a>
+										<a href="javascript:void(0);">4</a>
+										<a href="javascript:void(0);" class="next"><img src="../../images/page_next.svg" alt="다음"></a>
+										<a href="javascript:void(0);" class="nnext"><img src="../../images/page_nnext.svg" alt="끝"></a>
+									</div>
+									<!-- //페이징 -->
+									
+									<!-- 페이징 -->
+									<div class="paging mt32">
+										<a href="javascript:void(0);" class="pprev"><img src="../../images/page_pprev.svg" alt="처음"></a> 
+										<a href="javascript:void(0);" class="prev"><img src="../../images/page_prev.svg" alt="이전"></a> 
+										<a href="javascript:void(0);" class="on">1 </a>
+										<a href="javascript:void(0);">2</a>
+										<a href="javascript:void(0);">3</a>
+										<a href="javascript:void(0);">4</a>
+										<a href="javascript:void(0);">...</a>
+										<a href="javascript:void(0);">37</a>
+										<a href="javascript:void(0);">38</a>
+										<a href="javascript:void(0);">39</a>
+										<a href="javascript:void(0);">40</a>
+										<a href="javascript:void(0);" class="next"><img src="../../images/page_next.svg" alt="다음"></a>
+										<a href="javascript:void(0);" class="nnext"><img src="../../images/page_nnext.svg" alt="끝"></a>
+									</div>
+									<!-- //페이징 -->
+								</section>
+							</div>						
+						</li>
+						<li id="tab2" class="tab_btn w160">
+							<input type="radio" name="tabmenu" id="tmenu2" class="tab">
+							<label class="tlabel2 label" for="tmenu2">속성별 학습분석</label>
+							<div class="tab_con mt35">
+
+								<section>
+									<div class="justify_between_start mb40">
+										<!-- 계열사 -->
+										<div class="company_list">
+											<div class="justify_start">
+												<span class="mr30">계열사</span>
+												<div class="terms">
+													<select class="select_box w140">
+														<option value="">천재교육</option>
+														<option value="">천재교과서</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<!-- //계열사 -->
+					
+										<!-- 검색조건 -->
+										<div class="search_box_wrap">
+											<div class="search_box justify_between">
+												<div class="terms justify_start">
+													<span class="mr20">검색조건</span>
+													<div class="radio_box mt04">
+														<input type="radio" name="searchType" id="type1" checked>
+														<label for="type1" class="mr10">문제형태 별</label>
+
+														<input type="radio" name="searchType" id="type2">
+														<label for="type2" class="mr10">난이도 별</label>
+
+														<input type="radio" name="searchType" id="type3">
+														<label for="type3" class="mr10">문제형태+난이도 별</label>
+
+														<input type="radio" name="searchType" id="type4">
+														<label for="type4" class="mr10">문항용도 별</label>
+													</div>
+												</div>
+												<div class="btn_wrap justify_start">
+													<a class="btn btn_green" href="#none">검색</a>
+													<a class="btn btn_gray ml08" href="#none">초기화</a>
+													<a class="btn_search_toggle ml08" href="#none">열기</a>
+												</div>
+											</div>
+											
+											<!-- search_toggle_box -->
+											<div class="search_toggle_box">
+												<div class="search_box">
+													<div class="box_list">
+														<div class="terms justify_start_top">
+															<span>문제형태</span>
+															<div class="chk_list">
+																<div class="mb08">
+																	<span class="check_box">
+																		<input type="checkbox" id="type1_0">
+																		<label for="type1_0">전체</label>
+																	</span>
+																</div>
+																<div class="mb08">
+																	<span class="check_box mr15">
+																		<input type="checkbox" id="type1_1">
+																		<label for="type1_1">5지 선택</label>
+																	</span>
+																	
+																	<span class="check_box mr15">
+																		<input type="checkbox" id="type1_2">
+																		<label for="type1_2">4지 선택</label>
+																	</span>
+																	<span class="check_box mr15">
+																		<input type="checkbox" id="type1_3">
+																		<label for="type1_3">3지 선택</label>
+																	</span>
+																	<span class="check_box mr15">
+																		<input type="checkbox" id="type1_4">
+																		<label for="type1_4">2지 선택</label>
+																	</span>
+																</div>
+																<div class="mb08">
+																	<span class="check_box mr15">
+																		<input type="checkbox" id="type1_5">
+																		<label for="type1_5">자유 선지형</label>
+																	</span>
+																	<span class="check_box mr15">
+																		<input type="checkbox" id="type1_6">
+																		<label for="type1_6">단답 유순형</label>
+																	</span>
+																	<span class="check_box mr15">
+																		<input type="checkbox" id="type1_7">
+																		<label for="type1_7">단답 무순형</label>
+																	</span>
+																	<span class="check_box mr15">
+																		<input type="checkbox" id="type1_8">
+																		<label for="type1_8">단답 묶음형</label>
+																	</span>
+																</div>
+																<div class="mb08">
+																	<span class="check_box mr15">
+																		<input type="checkbox" id="type1_9">
+																		<label for="type1_9">논술형</label>
+																	</span>
+																	<span class="check_box mr15">
+																		<input type="checkbox" id="type1_10">
+																		<label for="type1_10">선그리기형</label>
+																	</span>
+																	<span class="check_box mr15">
+																		<input type="checkbox" id="type1_11">
+																		<label for="type1_11">영역 선택형</label>
+																	</span>
+																	<span class="check_box mr15">
+																		<input type="checkbox" id="type1_12">
+																		<label for="type1_12">드래그 드롭</label>
+																	</span>
+																</div>
+																<div>
+																	<span class="check_box mr15">
+																		<input type="checkbox" id="type1_13">
+																		<label for="type1_13">서술형</label>
+																	</span>
+																	<span class="check_box mr15">
+																		<input type="checkbox" id="type1_14">
+																		<label for="type1_14">객관식 세트형</label>
+																	</span>
+																	<span class="check_box mr15">
+																		<input type="checkbox" id="type1_15">
+																		<label for="type1_15">기타</label>
+																	</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="search_box">
+													<div class="box_list">
+														<div class="terms justify_start">
+															<span>출제 수</span>
+															<p>
+																<input type="text" class="placeholder_black w100" placeholder="숫자입력">
+																<span class="ml05 mr05">~</span>
+																<input type="text" class="placeholder_black w100" placeholder="숫자입력">
+															</p>
+														</div>
+													</div>
+												</div>
+												<div class="search_box">
+													<div class="box_list">
+														<div class="terms justify_start">
+															<span>출제율</span>
+															<p>
+																<input type="text" class="placeholder_black w100" placeholder="숫자입력">
+																<span class="ml05 mr05">~</span>
+																<input type="text" class="placeholder_black w100" placeholder="숫자입력">
+																<span>%</span>
+															</p>
+														</div>
+													</div>
+												</div>
+												<div class="search_box">
+													<div class="box_list">
+														<div class="terms justify_start">
+															<span>정답률</span>
+															<p>
+																<input type="text" class="placeholder_black w100" placeholder="숫자입력">
+																<span class="ml05 mr05">~</span>
+																<input type="text" class="placeholder_black w100" placeholder="숫자입력">
+																<span>%</span>
+															</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- //search_toggle_box -->
+										</div>
+										<!-- //검색조건 -->
+									</div>
+								</section>
+								
+								<section class="section_wrap mt35">
+									<div class="justify_between mb08">
+										<div class="justify_start">
+											<p class="total sm">총 <span>00,000</span>개</p>
+											<select class="select_box w140 ml10">
+												<option value="">30개 보기</option>
+												<option value="">10개 보기</option>
+												<option value="">30개 보기</option>
+												<option value="">50개 보기</option>
+												<option value="">100개 보기</option>
+											</select>
+										</div>
+										
+										<div class="btn_wrap justify_start">
+											<a class="btn btn_gray outline w80" href="#none">전체선택</a>
+											<a class="btn btn_gray ml05 w120" href="#none">엑셀 다운로드</a>
+										</div>
+									</div>
+									<!-- 속성별 학습분석 리스트 -->
+									<div class="tbl_scroll_box" style="max-height: 530px;">
+										<table class="tbl_list">
+											<caption></caption>
+											<colgroup>
+												<col style="width:5%">
+												<col style="width:5%">
+												<col />
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col" class="first">
+														<div class="check_box">
+															<input type="checkbox" id="check00">
+															<label for="check00" class="pl16"></label>
+														</div>
+													</th>
+													<th scope="col">번호</th>
+													<th scope="col">계열사</th>
+													<th scope="col">문제형태</th>
+													<th scope="col">문항수 <a href="#none"><img src="../../images/ic_sort.png" alt="정렬"></a></th>
+													<th scope="col">출제수 <a href="#none"><img src="../../images/ic_sort.png" alt="정렬"></a></th>
+													<th scope="col">출제율 <a href="#none"><img src="../../images/ic_sort.png" alt="정렬"></a></th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td class="first">
+														<div class="check_box">
+															<input type="checkbox" id="check14">
+															<label for="check14" class="pl16"></label>
+														</div>
+													</td>
+													<td>1</td>
+													<td>계열사A</td>
+													<td>5지 선택</td>
+													<td>111,111</td>
+													<td>111,111</td>
+													<td>85%</td>
+												</tr>
+												<tr>
+													<td class="first">
+														<div class="check_box">
+															<input type="checkbox" id="check24">
+															<label for="check24" class="pl16"></label>
+														</div>
+													</td>
+													<td>1</td>
+													<td>계열사A</td>
+													<td>5지 선택</td>
+													<td>111,111</td>
+													<td>111,111</td>
+													<td>85%</td>
+												</tr>
+												<tr>
+													<td class="first">
+														<div class="check_box">
+															<input type="checkbox" id="check34">
+															<label for="check34" class="pl16"></label>
+														</div>
+													</td>
+													<td>1</td>
+													<td>계열사A</td>
+													<td>5지 선택</td>
+													<td>111,111</td>
+													<td>111,111</td>
+													<td>85%</td>
+												</tr>
+												<tr>
+													<td class="first">
+														<div class="check_box">
+															<input type="checkbox" id="check44">
+															<label for="check44" class="pl16"></label>
+														</div>
+													</td>
+													<td>1</td>
+													<td>계열사A</td>
+													<td>5지 선택</td>
+													<td>111,111</td>
+													<td>111,111</td>
+													<td>85%</td>
+												</tr>												
+											</tbody>
+										</table>
+									</div>
+				
+									<!-- 페이징 -->
+									<div class="paging mt32">
+										<a href="javascript:void(0);" class="pprev"><img src="../../images/page_pprev.svg" alt="처음"></a> 
+										<a href="javascript:void(0);" class="prev"><img src="../../images/page_prev.svg" alt="이전"></a> 
+										<a href="javascript:void(0);" class="on">1 </a>
+										<a href="javascript:void(0);">2</a>
+										<a href="javascript:void(0);">3</a>
+										<a href="javascript:void(0);">4</a>
+										<a href="javascript:void(0);" class="next"><img src="../../images/page_next.svg" alt="다음"></a>
+										<a href="javascript:void(0);" class="nnext"><img src="../../images/page_nnext.svg" alt="끝"></a>
+									</div>
+									<!-- //페이징 -->
+									
+									<!-- 페이징 -->
+									<div class="paging mt32">
+										<a href="javascript:void(0);" class="pprev"><img src="../../images/page_pprev.svg" alt="처음"></a> 
+										<a href="javascript:void(0);" class="prev"><img src="../../images/page_prev.svg" alt="이전"></a> 
+										<a href="javascript:void(0);" class="on">1 </a>
+										<a href="javascript:void(0);">2</a>
+										<a href="javascript:void(0);">3</a>
+										<a href="javascript:void(0);">4</a>
+										<a href="javascript:void(0);">...</a>
+										<a href="javascript:void(0);">37</a>
+										<a href="javascript:void(0);">38</a>
+										<a href="javascript:void(0);">39</a>
+										<a href="javascript:void(0);">40</a>
+										<a href="javascript:void(0);" class="next"><img src="../../images/page_next.svg" alt="다음"></a>
+										<a href="javascript:void(0);" class="nnext"><img src="../../images/page_nnext.svg" alt="끝"></a>
+									</div>
+									<!-- //페이징 -->
+								</section>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

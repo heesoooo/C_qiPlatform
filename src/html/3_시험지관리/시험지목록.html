@@ -1,0 +1,784 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+	<head> 
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>문항통합플랫폼</title>
+		@@include('../include/inc_html_head.html')
+	</head>
+<body>
+	 
+	<div id="wrap">
+		<!-- 상단 공통 영역 -->
+		@@include('../include/inc_header.html')
+		<div class="container">
+
+			<!-- 컨텐츠 영역 -->
+			<div class="contents">
+				<section>
+					<h2 class="section_tit">시험지 목록</h2>
+					<div class="justify_between">
+						<!-- 검색조건 -->
+						<div class="search_box_wrap">
+							<div class="search_box justify_between">
+								<div class="terms justify_start">
+									<span>검색조건</span>
+									<div class="chk_list">
+										<div>
+											<span class="check_box mr15">
+												<input type="checkbox" id="s1">
+												<label for="s1">공개</label>
+											</span>
+											<span class="check_box mr15">
+												<input type="checkbox" id="s2">
+												<label for="s2">대기</label>
+											</span>
+										</div>
+									</div>
+									<select class="select_box w100 mr05">
+										<option value="">시험지ID</option>
+										<option value="">ID</option>
+										<option value="">ID</option>
+									</select>
+									<select class="select_box w100 mr05">
+										<option value="">서비스명</option>
+										<option value="">T셀파</option>
+										<option value="">해법에듀</option>
+										<option value="">밀크T</option>
+									</select>
+									<select class="select_box w100 mr05">
+										<option value="">전체</option>
+										<option value="">시험지명</option>
+										<option value="">작업자</option>
+									</select>
+									<input type="text" class="w160 placeholder_black" placeholder="검색어">
+									<span class="ml10">
+										<input class="w90 underline" type="text" id="from" placeholder="0000.00.00" autocomplete="off"> ~
+										<input class="w90 underline" type="text" id="to" placeholder="0000.00.00" autocomplete="off">
+									</span>
+								</div>
+	
+								<div class="btn_wrap justify_start">
+									<a class="btn btn_green w60 ml05" href="#none">검색</a>
+									<a class="btn btn_gray w60 ml05" href="#none">초기화</a>
+									<a class="btn_search_toggle ml08" href="#none">열기</a>
+								</div>
+							</div>
+							
+							<div class="search_toggle_box">
+								<div class="search_box input_line justify_between">
+									<div class="terms justify_between_start">
+										<span>학교급</span>
+										<div class="chk_list">
+											<select class="select_box w100 mr05">
+												<option value="">선택</option>
+												<option value="">학교급</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="search_box justify_between">
+									<div class="terms justify_start_top">
+										<span>학년</span>
+										<!-- D: 학교급 선택시 노출  -->
+										<!-- <div class="chk_list">
+											<div>
+												<span class="check_box mr15">
+													<input type="checkbox" id="grade0">
+													<label for="grade0">전체</label>
+												</span>
+												<span class="check_box mr15">
+													<input type="checkbox" id="grade1">
+													<label for="grade1">초1</label>
+												</span>
+												<span class="check_box mr15">
+													<input type="checkbox" id="grade2">
+													<label for="grade2">초2</label>
+												</span>
+												<span class="check_box mr15">
+													<input type="checkbox" id="grade3">
+													<label for="grade3">초3</label>
+												</span>
+												<span class="check_box mr15">
+													<input type="checkbox" id="grade4">
+													<label for="grade4">초4</label>
+												</span>
+												<span class="check_box mr15">
+													<input type="checkbox" id="grade5">
+													<label for="grade5">초5</label>
+												</span>
+												<span class="check_box mr15">
+													<input type="checkbox" id="grade6">
+													<label for="grade6">초6</label>
+												</span>
+											</div>
+										</div> -->
+										<p class="p_text col_light_gray">학교급을 선택해 주세요.</p>
+									</div>
+								</div>
+
+								<div class="search_box input_line justify_between">
+									<div class="terms justify_start_top">
+										<span>영역</span>
+										<div class="chk_list">
+											<select class="select_box w100 mr05">
+												<option value="">선택</option>
+												<option value="">영역</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="search_box justify_between">
+									<div class="terms justify_between_start">
+										<span>과목</span>
+										<!-- D: 과목 선택시 노출  -->
+										<!-- <div class="chk_list">
+											<div>
+												<span class="check_box mr15">
+													<input type="checkbox" id="sci1-1">
+													<label for="sci1-1">과학1-1</label>
+												</span>
+												<span class="check_box mr15">
+													<input type="checkbox" id="sci1-2">
+													<label for="sci1-2">과학1-2</label>
+												</span>
+												<span class="check_box mr15">
+													<input type="checkbox" id="sci2-1">
+													<label for="sci2-1">과학2-1</label>
+												</span>
+												<span class="check_box mr15">
+													<input type="checkbox" id="sci2-2">
+													<label for="sci2-2">과학2-2</label>
+												</span>
+											</div>
+										</div> -->
+										<p class="p_text col_light_gray">과목을 선택해 주세요.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //검색조건 -->
+					</div>
+					<!-- 메뉴 박스  -->
+					<ul class="menu_box justify_center_top mt45">
+						<li>
+							<a class="menu_list" onclick="openPop2()" href="#none">
+								<p class="circle"><img src="../../images/ic_menu_download.png" alt="시험지 가져오기"></p>
+								<p class="circle_tit">시험지 가져오기</p>
+							</a>
+						</li>
+						<li>
+							<a class="menu_list" onclick="openPop1()" href="#none">
+								<p class="circle"><img src="../../images/ic_menu_magic.png" alt="출제마법사"></p>
+								<p class="circle_tit">출제 마법사</p>
+							</a>
+						</li>
+						<li>
+							<a class="menu_list" onclick="openPop3()" href="#none">
+								<p class="circle"><img src="../../images/ic_menu_add.png" alt="문항추가"></p>
+								<p class="circle_tit">문항 추가</p>
+							</a>
+						</li>					
+						<li>
+							<a class="menu_list" onclick="openPop4()" href="#none">
+								<p class="circle"><img src="../../images/ic_menu_folder.png" alt="내폴더"></p>
+								<p class="circle_tit">내 폴더</p>
+							</a>
+						</li>					
+					</ul>
+				</section>
+
+				<section class="section_wrap mt35">
+					<div class="justify_between mb10">
+						<div class="justify_start">
+							<p class="total">총 <span>00,000</span>개</p>
+							<div class="terms">
+								<select class="select_box w140 ml10">
+									<option value="">30개 보기</option>
+									<option value="">10개 보기</option>
+									<option value="">30개 보기</option>
+									<option value="">50개 보기</option>
+									<option value="">100개 보기</option>
+								</select>
+							</div>
+						</div>
+						<div>
+							<a href="#none" class="btn btn_gray w120">엑셀 다운로드</a>
+							<a href="#none" class="btn btn_gray ml05 w120" onclick="openPop5()">시험지 다운로드</a>
+							<a href="#none" class="btn btn_gray ml05 outline w80">전체선택</a>
+							<a href="#none" class="btn btn_gray ml05 outline">삭제</a>
+						</div>
+					</div>
+					<!-- 리스트 -->
+					<div class="tbl_scroll_box" style="max-height: 620px;">
+						<table class="tbl_list">
+							<caption></caption>
+							<colgroup>
+								<col width="3%">
+								<col width="4%">
+								<col width="7%">
+								<col width="5%">
+								<col />
+								<col width="4%">
+								<col width="3%">
+								<col />
+								<col />
+								<col />
+								<col width="20%">
+								<col width="4%">
+								<col />
+								<col width="9%">
+								<col width="10%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col" class="first">
+										<div class="check_box">
+											<input type="checkbox" id="check0">
+											<label for="check0" class="pl16"></label>
+										</div>
+									</th>
+									<th scope="col">번호</th>
+									<th scope="col">시험지 ID</th>
+									<th scope="col">서비스명</th>
+									<th scope="col">시험지 구분</th>
+									<th scope="col">학교급</th>
+									<th scope="col">학년</th>
+									<th scope="col">영역</th>
+									<th scope="col">과목</th>
+									<th scope="col">상태</th>
+									<th scope="col">시험지명</th>
+									<th scope="col">문항 수</th>
+									<th scope="col">작업자</th>
+									<th scope="col">등록일자</th>
+									<th scope="col">미리보기</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="first">
+										<div class="check_box">
+											<input type="checkbox" id="check30">
+											<label for="check30" class="pl16"></label>
+										</div>
+									</td>
+									<td>30</td>
+									<td>000000</td>
+									<td>해법</td>
+									<td>단원평가</td>
+									<td>초등</td>
+									<td>1</td>
+									<td>초등국어</td>
+									<td>국어</td>
+									<td>공개</td>
+									<td class="left"><a class="t_link" href="#none">초등1 국어단원평가 </a></td>
+									<td>20</td>
+									<td>이로운</td>
+									<td>2022.02.14</td>
+									<td>
+										<a href="#none" class="btn btn_lgreen small w90" onclick="openPop6()">템플릿 선택</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="first">
+										<div class="check_box">
+											<input type="checkbox" id="check29">
+											<label for="check29" class="pl16"></label>
+										</div>
+									</td>
+									<td>29</td>
+									<td>000000</td>
+									<td>HME</td>
+									<td>중간평가</td>
+									<td>초등</td>
+									<td>1</td>
+									<td>초등국어</td>
+									<td>국어</td>
+									<td>공개</td>
+									<td class="left"><a class="t_link" href="#none">초등1 국어단원평가 </a></td>
+									<td>20</td>
+									<td>이로운</td>
+									<td>2022.02.14</td>
+									<td>
+										<a href="#none" class="btn btn_lgreen small w90" onclick="openPop6()">템플릿 선택</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="first">
+										<div class="check_box">
+											<input type="checkbox" id="check28">
+											<label for="check28" class="pl16"></label>
+										</div>
+									</td>
+									<td>28</td>
+									<td>000000</td>
+									<td>HME</td>
+									<td>기말평가</td>
+									<td>초등</td>
+									<td>1</td>
+									<td>초등국어</td>
+									<td>국어</td>
+									<td>공개</td>
+									<td class="left"><a class="t_link" href="#none">초등1 국어단원평가 </a></td>
+									<td>20</td>
+									<td>이로운</td>
+									<td>2022.02.14</td>
+									<td>
+										<a href="#none" class="btn btn_lgreen small w90" onclick="openPop6()">템플릿 선택</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="first">
+										<div class="check_box">
+											<input type="checkbox" id="check27">
+											<label for="check27" class="pl16"></label>
+										</div>
+									</td>
+									<td>27</td>
+									<td>000000</td>
+									<td>HME</td>
+									<td>수시평가</td>
+									<td>초등</td>
+									<td>1</td>
+									<td>초등국어</td>
+									<td>국어</td>
+									<td>공개</td>
+									<td class="left"><a class="t_link" href="#none">초등1 국어단원평가 </a></td>
+									<td>20</td>
+									<td>이로운</td>
+									<td>2022.02.14</td>
+									<td>
+										<a href="#none" class="btn btn_lgreen small w90" onclick="openPop6()">템플릿 선택</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="first">
+										<div class="check_box">
+											<input type="checkbox" id="check26">
+											<label for="check26" class="pl16"></label>
+										</div>
+									</td>
+									<td>26</td>
+									<td>000000</td>
+									<td>HME</td>
+									<td>중간평가</td>
+									<td>초등</td>
+									<td>1</td>
+									<td>초등국어</td>
+									<td>국어</td>
+									<td>공개</td>
+									<td class="left"><a class="t_link" href="#none">초등1 국어단원평가 </a></td>
+									<td>20</td>
+									<td>이로운</td>
+									<td>2022.02.14</td>
+									<td>
+										<a href="#none" class="btn btn_lgreen small w90" onclick="openPop6()">템플릿 선택</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="first">
+										<div class="check_box">
+											<input type="checkbox" id="check25">
+											<label for="check25" class="pl16"></label>
+										</div>
+									</td>
+									<td>25</td>
+									<td>000000</td>
+									<td>HME</td>
+									<td>중간평가</td>
+									<td>초등</td>
+									<td>1</td>
+									<td>초등국어</td>
+									<td>국어</td>
+									<td>공개</td>
+									<td class="left"><a class="t_link" href="#none">초등1 국어단원평가 </a></td>
+									<td>20</td>
+									<td>이로운</td>
+									<td>2022.02.14</td>
+									<td>
+										<a href="#none" class="btn btn_lgreen small w90" onclick="openPop6()">템플릿 선택</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="first">
+										<div class="check_box">
+											<input type="checkbox" id="check24">
+											<label for="check24" class="pl16"></label>
+										</div>
+									</td>
+									<td>24</td>
+									<td>000000</td>
+									<td>HME</td>
+									<td>중간평가</td>
+									<td>초등</td>
+									<td>1</td>
+									<td>초등국어</td>
+									<td>국어</td>
+									<td>공개</td>
+									<td class="left"><a class="t_link" href="#none">초등1 국어단원평가 </a></td>
+									<td>20</td>
+									<td>이로운</td>
+									<td>2022.02.14</td>
+									<td>
+										<a href="#none" class="btn btn_lgreen small w90" onclick="openPop6()">템플릿 선택</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="first">
+										<div class="check_box">
+											<input type="checkbox" id="check23">
+											<label for="check23" class="pl16"></label>
+										</div>
+									</td>
+									<td>23</td>
+									<td>000000</td>
+									<td>HME</td>
+									<td>중간평가</td>
+									<td>초등</td>
+									<td>1</td>
+									<td>초등국어</td>
+									<td>국어</td>
+									<td>공개</td>
+									<td class="left"><a class="t_link" href="#none">초등1 국어단원평가 </a></td>
+									<td>20</td>
+									<td>이로운</td>
+									<td>2022.02.14</td>
+									<td>
+										<a href="#none" class="btn btn_lgreen small w90" onclick="openPop6()">템플릿 선택</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="first">
+										<div class="check_box">
+											<input type="checkbox" id="check22">
+											<label for="check22" class="pl16"></label>
+										</div>
+									</td>
+									<td>22</td>
+									<td>000000</td>
+									<td>HME</td>
+									<td>중간평가</td>
+									<td>초등</td>
+									<td>1</td>
+									<td>초등국어</td>
+									<td>국어</td>
+									<td>공개</td>
+									<td class="left"><a class="t_link" href="#none">초등1 국어단원평가 </a></td>
+									<td>20</td>
+									<td>이로운</td>
+									<td>2022.02.14</td>
+									<td>
+										<a href="#none" class="btn btn_lgreen small w90" onclick="openPop6()">템플릿 선택</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="first">
+										<div class="check_box">
+											<input type="checkbox" id="check21">
+											<label for="check21" class="pl16"></label>
+										</div>
+									</td>
+									<td>21</td>
+									<td>000000</td>
+									<td>HME</td>
+									<td>중간평가</td>
+									<td>초등</td>
+									<td>1</td>
+									<td>초등국어</td>
+									<td>국어</td>
+									<td>공개</td>
+									<td class="left"><a class="t_link" href="#none">초등1 국어단원평가 </a></td>
+									<td>20</td>
+									<td>이로운</td>
+									<td>2022.02.14</td>
+									<td>
+										<a href="#none" class="btn btn_lgreen small w90" onclick="openPop6()">템플릿 선택</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="first">
+										<div class="check_box">
+											<input type="checkbox" id="check20">
+											<label for="check20" class="pl16"></label>
+										</div>
+									</td>
+									<td>20</td>
+									<td>000000</td>
+									<td>HME</td>
+									<td>중간평가</td>
+									<td>초등</td>
+									<td>1</td>
+									<td>초등국어</td>
+									<td>국어</td>
+									<td>공개</td>
+									<td class="left"><a class="t_link" href="#none">초등1 국어단원평가 </a></td>
+									<td>20</td>
+									<td>이로운</td>
+									<td>2022.02.14</td>
+									<td>
+										<a href="#none" class="btn btn_lgreen small w90" onclick="openPop6()">템플릿 선택</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="first">
+										<div class="check_box">
+											<input type="checkbox" id="check19">
+											<label for="check19" class="pl16"></label>
+										</div>
+									</td>
+									<td>19</td>
+									<td>000000</td>
+									<td>HME</td>
+									<td>중간평가</td>
+									<td>초등</td>
+									<td>1</td>
+									<td>초등국어</td>
+									<td>국어</td>
+									<td>공개</td>
+									<td class="left"><a class="t_link" href="#none">초등1 국어단원평가 </a></td>
+									<td>20</td>
+									<td>이로운</td>
+									<td>2022.02.14</td>
+									<td>
+										<a href="#none" class="btn btn_lgreen small w90" onclick="openPop6()">템플릿 선택</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="first">
+										<div class="check_box">
+											<input type="checkbox" id="check18">
+											<label for="check18" class="pl16"></label>
+										</div>
+									</td>
+									<td>18</td>
+									<td>000000</td>
+									<td>HME</td>
+									<td>중간평가</td>
+									<td>초등</td>
+									<td>1</td>
+									<td>초등국어</td>
+									<td>국어</td>
+									<td>공개</td>
+									<td class="left"><a class="t_link" href="#none">초등1 국어단원평가 </a></td>
+									<td>20</td>
+									<td>이로운</td>
+									<td>2022.02.14</td>
+									<td>
+										<a href="#none" class="btn btn_lgreen small w90" onclick="openPop6()">템플릿 선택</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="first">
+										<div class="check_box">
+											<input type="checkbox" id="check17">
+											<label for="check17" class="pl16"></label>
+										</div>
+									</td>
+									<td>17</td>
+									<td>000000</td>
+									<td>HME</td>
+									<td>중간평가</td>
+									<td>초등</td>
+									<td>1</td>
+									<td>초등국어</td>
+									<td>국어</td>
+									<td>공개</td>
+									<td class="left"><a class="t_link" href="#none">초등1 국어단원평가 </a></td>
+									<td>20</td>
+									<td>이로운</td>
+									<td>2022.02.14</td>
+									<td>
+										<a href="#none" class="btn btn_lgreen small w90" onclick="openPop6()">템플릿 선택</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="first">
+										<div class="check_box">
+											<input type="checkbox" id="check16">
+											<label for="check16" class="pl16"></label>
+										</div>
+									</td>
+									<td>16</td>
+									<td>000000</td>
+									<td>HME</td>
+									<td>중간평가</td>
+									<td>초등</td>
+									<td>1</td>
+									<td>초등국어</td>
+									<td>국어</td>
+									<td>공개</td>
+									<td class="left"><a class="t_link" href="#none">초등1 국어단원평가 </a></td>
+									<td>20</td>
+									<td>이로운</td>
+									<td>2022.02.14</td>
+									<td>
+										<a href="#none" class="btn btn_lgreen small w90" onclick="openPop6()">템플릿 선택</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="first">
+										<div class="check_box">
+											<input type="checkbox" id="check15">
+											<label for="check15" class="pl16"></label>
+										</div>
+									</td>
+									<td>15</td>
+									<td>000000</td>
+									<td>HME</td>
+									<td>중간평가</td>
+									<td>초등</td>
+									<td>1</td>
+									<td>초등국어</td>
+									<td>국어</td>
+									<td>공개</td>
+									<td class="left"><a class="t_link" href="#none">초등1 국어단원평가 </a></td>
+									<td>20</td>
+									<td>이로운</td>
+									<td>2022.02.14</td>
+									<td>
+										<a href="#none" class="btn btn_lgreen small w90" onclick="openPop6()">템플릿 선택</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="first">
+										<div class="check_box">
+											<input type="checkbox" id="check14">
+											<label for="check14" class="pl16"></label>
+										</div>
+									</td>
+									<td>14</td>
+									<td>000000</td>
+									<td>HME</td>
+									<td>중간평가</td>
+									<td>초등</td>
+									<td>1</td>
+									<td>초등국어</td>
+									<td>국어</td>
+									<td>공개</td>
+									<td class="left"><a class="t_link" href="#none">초등1 국어단원평가 </a></td>
+									<td>20</td>
+									<td>이로운</td>
+									<td>2022.02.14</td>
+									<td>
+										<a href="#none" class="btn btn_lgreen small w90" onclick="openPop6()">템플릿 선택</a>
+									</td>
+								<tr>
+									<td class="first">
+										<div class="check_box">
+											<input type="checkbox" id="check13">
+											<label for="check13" class="pl16"></label>
+										</div>
+									</td>
+									<td>13</td>
+									<td>000000</td>
+									<td>HME</td>
+									<td>중간평가</td>
+									<td>초등</td>
+									<td>1</td>
+									<td>초등국어</td>
+									<td>국어</td>
+									<td>공개</td>
+									<td class="left"><a class="t_link" href="#none">초등1 국어단원평가 </a></td>
+									<td>20</td>
+									<td>이로운</td>
+									<td>2022.02.14</td>
+									<td>
+										<a href="#none" class="btn btn_lgreen small w90" onclick="openPop6()">템플릿 선택</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="first">
+										<div class="check_box">
+											<input type="checkbox" id="check12">
+											<label for="check12" class="pl16"></label>
+										</div>
+									</td>
+									<td>12</td>
+									<td>000000</td>
+									<td>HME</td>
+									<td>중간평가</td>
+									<td>초등</td>
+									<td>1</td>
+									<td>초등국어</td>
+									<td>국어</td>
+									<td>공개</td>
+									<td class="left"><a class="t_link" href="#none">초등1 국어단원평가 </a></td>
+									<td>20</td>
+									<td>이로운</td>
+									<td>2022.02.14</td>
+									<td>
+										<a href="#none" class="btn btn_lgreen small w90" onclick="openPop6()">템플릿 선택</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="first">
+										<div class="check_box">
+											<input type="checkbox" id="check11">
+											<label for="check11" class="pl16"></label>
+										</div>
+									</td>
+									<td>11</td>
+									<td>000000</td>
+									<td>HME</td>
+									<td>중간평가</td>
+									<td>초등</td>
+									<td>1</td>
+									<td>초등국어</td>
+									<td>국어</td>
+									<td>공개</td>
+									<td class="left"><a class="t_link" href="#none">초등1 국어단원평가 </a></td>
+									<td>20</td>
+									<td>이로운</td>
+									<td>2022.02.14</td>
+									<td>
+										<a href="#none" class="btn btn_lgreen small w90" onclick="openPop6()">템플릿 선택</a>
+									</td>
+								</tr>
+								
+							</tbody>
+						</table>
+					</div>
+					<!-- 페이징 -->
+					<div class="paging mt32">
+						<a href="javascript:void(0);" class="pprev"><img src="../../images/page_pprev.svg" alt="처음"></a> 
+						<a href="javascript:void(0);" class="prev"><img src="../../images/page_prev.svg" alt="이전"></a> 
+						<a href="javascript:void(0);" class="on">1 </a>
+						<a href="javascript:void(0);">2</a>
+						<a href="javascript:void(0);">3</a>
+						<a href="javascript:void(0);">4</a>
+						<a href="javascript:void(0);">...</a>
+						<a href="javascript:void(0);">37</a>
+						<a href="javascript:void(0);">38</a>
+						<a href="javascript:void(0);">39</a>
+						<a href="javascript:void(0);">40</a>
+						<a href="javascript:void(0);" class="next"><img src="../../images/page_next.svg" alt="다음"></a>
+						<a href="javascript:void(0);" class="nnext"><img src="../../images/page_nnext.svg" alt="끝"></a>
+					</div>
+				</section>
+			</div>
+		</div>
+
+	</div>
+	<script>
+		/* window popup */
+		function openPop1(){
+			var popup = window.open('pop_출제마법사_step1.html', '출제마법사', 'width=900px,height=890px');
+		}
+		function openPop2(){
+			var popup = window.open('pop_가져오기.html', '가져오기', 'width=1100px,height=940px');
+		}
+		function openPop3(){
+			var popup = window.open('pop_문항추가.html', '문항추가', 'width=1100px,height=915px');
+		}
+		function openPop4(){
+			var popup = window.open('pop_내폴더.html', '내폴더', 'width=1100px,height=907px');
+		}
+		function openPop5(){
+			var popup = window.open('pop_다운로드.html', '다운로드', 'width=600px,height=679px');
+		}
+		function openPop6(){
+			var popup = window.open('pop_템플릿선택.html', '템플릿 선택', 'width=1100px,height=900px');
+		}
+	</script>
+</body>
+</html>

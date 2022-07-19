@@ -1,0 +1,411 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+	<head> 
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>문항통합플랫폼</title>
+		@@include('../include/inc_html_head.html')
+	</head>
+<body>
+	 
+	<div id="wrap">
+		<!-- 상단 공통 영역 -->
+		@@include('../include/inc_header.html')
+		<div class="container">
+			<div class="local_nav">
+				<ul class="menu">
+					<li><a href="#none">문항 삽화 이미지 관리</a></li>
+					<li><a href="#none">미디어 파일 관리</a></li>
+					<li><a href="#none" class="on">출처 관리</a></li>
+				</ul>
+			</div>
+
+			<!-- 컨텐츠 영역 -->
+			<div class="contents">
+				<h2 class="page_tit pt00">출처관리</h2>
+				<div class="tabmenu">
+					<ul>
+						<li class="tab_btn">
+							<input type="radio" checked name="tabmenu" id="tmenu1" class="tab">
+							<label class="label" for="tmenu1">일반 출처</label>
+							<div class="tab_con">
+								<h3 class="title mt40">일반 출처 상세</h3>
+								<!-- 일반 출처 - 교재,교과서 리스트  -->
+								<div class="source_list_wrap mt15">
+									<div class="search_box justify_between">
+										<div class="terms justify_between_start">
+											<span>출처명</span>
+											<span>셀파 수학[2021]</span>
+										</div>
+									</div>
+									<div class="search_box justify_between">
+										<div class="terms justify_start_top">
+											<span>출처ID</span>
+											<span>000</span>
+										</div>
+									</div>
+									<div class="search_box justify_between">
+										<div class="terms justify_start">
+											<span>구분</span>
+											<span>교재</span>
+										</div>
+									</div>
+									<div class="search_box justify_between">
+										<div class="terms justify_between_start">
+											<span>년도</span>
+											<span>2021</span>
+										</div>
+									</div>
+									<div class="search_box justify_between">
+										<div class="terms justify_between_start">
+											<span>저자명</span>
+											<span>홍길동</span>
+										</div>
+									</div>
+									<div class="search_box justify_between">
+										<div class="terms justify_between_start">
+											<span>출판사</span>
+											<span>천재교육</span>
+										</div>
+									</div>
+									<div class="search_box justify_between">
+										<div class="terms justify_between_start">
+											<span>학교급</span>
+											<span>중등</span>
+										</div>
+									</div>
+									<div class="search_box justify_between">
+										<div class="terms justify_start_top">
+											<span>학년</span>
+											<span>중1, 중2, 중3</span>
+										</div>
+									</div>
+									<div class="search_box justify_between">
+										<div class="terms justify_start_top">
+											<span>영역</span>
+											<span>수학</span>
+										</div>
+									</div>
+									<div class="search_box justify_between">
+										<div class="terms justify_between_start">
+											<span>과목</span>
+											<span>중1수학, 중2수학, 중3수학</span>
+										</div>
+									</div>
+									<div class="search_box justify_between">
+										<div class="terms justify_start">
+											<span>학기</span>
+											<span>1학기, 2학기</span>
+										</div>
+									</div>
+								</div>
+
+                                <h3 class="title mt20">History</h3>
+								<table class="tbl_view history_box mt15">
+                                    <caption></caption>
+                                    <colgroup>
+                                        <col width="10%">
+                                        <col width="23%">
+                                        <col width="10%">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>최초 등록자</th>
+                                            <td>홍길동</td>
+                                            <th>최초 등록일</th>
+                                            <td>YYYY.MM.DD</td>
+                                        </tr>
+                                        <tr>
+                                            <th>최종 수정자</th>
+                                            <td>홍길동</td>
+                                            <th>최종 수정일</th>
+                                            <td>YYYY.MM.DD</td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                                <!--// 일반 출처 - 교재,교과서 리스트  -->
+
+                                <!-- 일반 출처 - 출판사 리스트 -->
+                                <!-- <div class="source_list_wrap mt15">
+									<div class="search_box justify_between">
+										<div class="terms justify_between_start">
+											<span>출처명</span>
+											<span>좋은 책 신사고(민현식) 평가문제집 [2021]</span>
+										</div>
+									</div>
+									<div class="search_box justify_between">
+										<div class="terms justify_start_top">
+											<span>출처ID</span>
+											<span>000</span>
+										</div>
+									</div>
+									<div class="search_box justify_between">
+										<div class="terms justify_start">
+											<span>구분</span>
+											<span>출판사</span>
+										</div>
+									</div>
+									<div class="search_box justify_between">
+										<div class="terms justify_between_start">
+											<span>년도</span>
+											<span>2021</span>
+										</div>
+									</div>
+									<div class="search_box justify_between">
+										<div class="terms justify_between_start">
+											<span>저자명</span>
+											<span>홍길동</span>
+										</div>
+									</div>
+								</div> 
+							
+								<h3 class="title mt20">History</h3>
+								<table class="tbl_view history_box mt15">
+                                    <caption></caption>
+                                    <colgroup>
+                                        <col width="10%">
+                                        <col width="23%">
+                                        <col width="10%">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>최초 등록자</th>
+                                            <td>홍길동</td>
+                                            <th>최초 등록일</th>
+                                            <td>YYYY.MM.DD</td>
+                                        </tr>
+                                        <tr>
+                                            <th>최종 수정자</th>
+                                            <td>홍길동</td>
+                                            <th>최종 수정일</th>
+                                            <td>YYYY.MM.DD</td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table> -->
+                                <!--// 일반 출처 - 출판사 리스트 -->
+
+								<div class="mt40 justify_center mb60">
+									<a class="btn btn_gray outline large w80" href="#none">목록</a>
+									<a class="btn btn_green large w80 ml15" href="#none">수정</a>
+								</div>
+							</div>
+						</li>
+						<li class="tab_btn">
+							<input type="radio" name="tabmenu" id="tmenu2" class="tab">
+							<label class="label" for="tmenu2">기타 출처</label>
+							<div class="tab_con">
+								<h3 class="title mt40">기타 출처 상세</h3>
+								<!-- 기타 출처 리스트  -->
+								<div class="source_list_wrap mt15">
+									<div class="search_box justify_between">
+										<div class="terms justify_between_start">
+											<span class="w110">출처명</span>
+											<span>김천재</span>
+										</div>
+									</div>
+									<div class="search_box justify_between">
+										<div class="terms justify_start_top">
+											<span class="w110">출처ID</span>
+											<span>000</span>
+										</div>
+									</div>
+									<div class="search_box justify_between">
+										<div class="terms justify_start">
+											<span class="w110">구분</span>
+											<span>밀크T중학강사</span>
+										</div>
+									</div>
+									<div class="search_box justify_between">
+										<div class="terms justify_between_start">
+											<span class="w110">년도</span>
+											<span>2021</span>
+										</div>
+									</div>
+									<div class="search_box justify_between">
+										<div class="terms justify_between_start">
+											<span class="w110">학교급</span>
+											<span>중등</span>
+										</div>
+									</div>
+									<div class="search_box justify_between">
+										<div class="terms justify_between_start">
+											<span class="w110">학년</span>
+											<span>중1, 중2, 중3</span>
+										</div>
+									</div>
+									<div class="search_box justify_between">
+										<div class="terms justify_between_start">
+											<span class="w110">영역</span>
+											<span>영어</span>
+										</div>
+									</div>
+									<div class="search_box justify_between">
+										<div class="terms justify_start_top">
+											<span class="w110">원본 이미지/파일</span>
+											<div>
+												<p class="mb05"><a href="../../images/logo.svg" class="file_down" download>이미지 파일_1.jpg</a></p>
+												<p><a href="../../images/logo.svg" class="file_down" download>원본 파일.ai</a></p>
+											</div>
+										</div>
+									</div>
+									<div class="search_box justify_between">
+										<div class="terms justify_start_top">
+											<span class="w110">URL</span>
+											<span>-</span>
+										</div>
+									</div>
+									<div class="search_box justify_between">
+										<div class="terms justify_start">
+											<span class="w110">비고</span>
+											<span>밀크T중학 강사 김천재 선생님이 제작한 이미지</span>
+										</div>
+									</div>
+								</div>
+
+                                <h3 class="title mt20">History</h3>
+								<table class="tbl_view history_box mt15">
+                                    <caption></caption>
+                                    <colgroup>
+                                        <col width="10%">
+                                        <col width="23%">
+                                        <col width="10%">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>최초 등록자</th>
+                                            <td>홍길동</td>
+                                            <th>최초 등록일</th>
+                                            <td>YYYY.MM.DD</td>
+                                        </tr>
+                                        <tr>
+                                            <th>최종 수정자</th>
+                                            <td>홍길동</td>
+                                            <th>최종 수정일</th>
+                                            <td>YYYY.MM.DD</td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                                <!--// 기타 출처 리스트  -->
+								<div class="mt40 justify_center mb60">
+									<a class="btn btn_gray outline large w80" href="#none">목록</a>
+									<a class="btn btn_green large w80 ml15" href="#none">수정</a>
+								</div>
+							</div>
+						</li>
+						<li class="tab_btn">
+							<input type="radio" name="tabmenu" id="tmenu3" class="tab">
+							<label class="label" for="tmenu3">기출 출처</label>
+							<div class="tab_con">
+								<h3 class="title mt40">기출 출처 상세</h3>
+								<!-- 기출 출처 리스트  -->
+								<div class="source_list_wrap mt15">
+									<div class="search_box justify_between">
+										<div class="terms justify_between_start">
+											<span>출처명</span>
+											<span>2021년 고1 11월 학력평가(경기) 국어</span>
+										</div>
+									</div>
+									<div class="search_box justify_between">
+										<div class="terms justify_start_top">
+											<span>출처ID</span>
+											<span>000</span>
+										</div>
+									</div>
+									<div class="search_box justify_between">
+										<div class="terms justify_start">
+											<span>구분</span>
+											<span>학력평가</span>
+										</div>
+									</div>
+									<div class="search_box justify_between">
+										<div class="terms justify_between_start">
+											<span>기출년도</span>
+											<span>2021</span>
+										</div>
+									</div>
+									<div class="search_box justify_between">
+										<div class="terms justify_between_start">
+											<span>시행처</span>
+											<span>경기도교육청</span>
+										</div>
+									</div>
+									<div class="search_box justify_between">
+										<div class="terms justify_between_start">
+											<span>시행일</span>
+											<span>2021.11.24</span>
+										</div>
+									</div>
+									<div class="search_box justify_between">
+										<div class="terms justify_between_start">
+											<span>학교급</span>
+											<span>고등</span>
+										</div>
+									</div>
+									<div class="search_box justify_between">
+										<div class="terms justify_start_top">
+											<span>학년</span>
+											<span>고1</span>
+										</div>
+									</div>
+									<div class="search_box justify_between">
+										<div class="terms justify_start_top">
+											<span>영역</span>
+											<span>국어</span>
+										</div>
+									</div>
+									<div class="search_box justify_between">
+										<div class="terms justify_between_start">
+											<span>과목</span>
+											<span>국어</span>
+										</div>
+									</div>
+								</div>
+
+                                <h3 class="title mt20">History</h3>
+								<table class="tbl_view history_box mt15">
+                                    <caption></caption>
+                                    <colgroup>
+                                        <col width="10%">
+                                        <col width="23%">
+                                        <col width="10%">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>최초 등록자</th>
+                                            <td>홍길동</td>
+                                            <th>최초 등록일</th>
+                                            <td>YYYY.MM.DD</td>
+                                        </tr>
+                                        <tr>
+                                            <th>최종 수정자</th>
+                                            <td>홍길동</td>
+                                            <th>최종 수정일</th>
+                                            <td>YYYY.MM.DD</td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+								<!--// 기출 출처 리스트  -->
+								<div class="mt40 justify_center mb60">
+									<a class="btn btn_gray outline large w80" href="#none">목록</a>
+									<a class="btn btn_green large w80 ml15" href="#none">수정</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<script>
+	</script>
+</body>
+</html>

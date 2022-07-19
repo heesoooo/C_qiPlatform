@@ -1,0 +1,422 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head> 
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>통계관리-자주 출제되는 문제 - 목록</title>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css">
+<!-- <link rel="stylesheet" href="../../css/webfonts/fontawesome.min.css"/> -->
+<link rel="stylesheet" href="../../css/style.min.css">
+
+<script type="text/javascript" src="../../js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/admin.js"></script> 
+<script type="text/javascript" src="../../js/swiper.min.js"></script> 
+</head>
+<body>
+	<div id="wrap">
+		<!-- 상단 공통 영역 -->
+		<div class="header-wrap">
+	<div class="header">
+		<div class="top">
+			<div class="logo justify_start">
+				<h1><img src="../../images/logo.svg" alt="천재교육" /></h1>
+				<select class="select_box w140 ml15">
+					<option value="">계열사 선택</option>
+					<option value="">천재교육</option>
+					<option value="">천재교과서</option>
+				</select>
+			</div>
+			<div class="justify_between">
+				<select class="select_box w120 mr10">
+					<option value="">문항통합관리자</option>
+					<option value="">관리자1</option>
+					<option value="">관리자2</option>
+				</select>
+				<a href="#none" class="belong">천재교육</a>
+				<a href="#none" class="name">홍길동(Hong)</a>
+				
+				<a href="#none" class="btn small btn_light w64">로그아웃</a>
+			</div>
+		</div>
+		<nav class="global_nav">
+			<ul class="menu">
+				<li><a href="#none" class="on">HOME</a></li>
+				<li><a href="#none">문항 관리</a></li>
+				<li><a href="#none">시험지 관리</a></li>
+				<li><a href="#none">서비스 관리</a></li>
+				<li><a href="#none">출처 관리</a></li>
+				<li><a href="#none">통계 관리</a></li>
+				<li><a href="#none">시스템 관리</a></li>
+				<li><a href="#none">데이터 관리</a></li>
+			</ul>
+		</nav>
+	</div>
+</div>
+		<div class="container">
+			<div class="local_nav">
+				<ul class="menu">
+					<li><a href="#none">작업내역</a></li>
+					<li><a href="#none">문항통계</a></li>
+					<li><a href="#none" class="on">시험지통계</a></li>
+					<li><a href="#none">오류신고 관리</a></li>
+					<li><a href="#none">이용로그</a></li>
+					<li><a href="#none">학습현황 분석</a></li>
+				</ul>
+			</div>
+
+			<!-- 컨텐츠 영역 -->
+			<div class="contents">
+				<section>
+					<h2 class="section_tit pt00">시험지통계</h2>
+					<div class="justify_between_start mb40">
+						<!-- 계열사 -->
+						<div class="company_list">
+							<div class="justify_start">
+								<span class="mr30">계열사</span>
+								<div class="terms">
+									<select class="select_box w140">
+										<option value="">천재교육</option>
+										<option value="">천재교과서</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<!-- //계열사 -->
+	
+						<!-- 검색조건 -->
+						<div class="search_box_wrap">
+							<div class="search_box justify_between">
+								<div class="terms justify_start">
+									<span class="mr20">검색조건</span>
+									<div class="radio_box mt04">
+										<input type="radio" name="searchType" id="type1" checked="checked">
+										<label for="type1" class="mr10">응시현황 통계</label>
+
+										<input type="radio" name="searchType" id="type2">
+										<label for="type2">자주 출제되는 문제</label>
+									</div>									
+									<h5 class="black_color ml40 mr05">문항ID</h5>									
+									<input type="text" placeholder="문항ID 입력" class="w160 placeholder_black">
+								</div>
+								<div class="btn_wrap justify_start">
+									<a class="btn btn_green" href="#none">검색</a>
+									<a class="btn btn_gray ml08" href="#none">초기화</a>
+									<a class="btn_search_toggle ml08" href="#none">열기</a>
+								</div>
+							</div>
+							
+							<!-- search_toggle_box -->
+							<div class="search_toggle_box">
+								<div class="search_box">
+									<div class="box_list">
+										<div class="terms justify_start">
+											<span>문제형태</span>
+											<select class="select_box w200">
+												<option value="문제형태">문제형태</option>
+											</select>
+										</div>
+									</div>
+								</div>
+                                <div class="search_box">
+									<div class="box_list">
+										<div class="terms justify_start">
+											<span>난이도</span>
+											<select class="select_box w100">
+												<option value="난이도">난이도</option>
+											</select>
+										</div>
+									</div>
+								</div>
+                                <div class="search_box">
+									<div class="box_list">
+										<div class="terms justify_start">
+											<span>학교급</span>
+											<select class="select_box w100">
+												<option value="선택">선택</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="search_box">
+									<div class="box_list">
+										<div class="terms justify_start">
+											<span>학년</span>
+											<p class="p_text col_light_gray">학교급을 선택해 주세요.</p>
+										</div>
+									</div>
+								</div>
+								<div class="search_box">
+									<div class="box_list">
+										<div class="terms justify_start">
+											<span>영역</span>
+											<div class="chk_list">
+												<select class="select_box w100">
+													<option value="선택">선택</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="search_box">
+									<div class="box_list">
+										<div class="terms justify_start">
+											<span>과목</span>
+											<p class="p_text col_light_gray">과목을 선택해 주세요.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- //search_toggle_box -->
+						</div>
+						<!-- //검색조건 -->
+					</div>
+				</section>
+
+				<section class="section_wrap mt35">
+					<div class="justify_between mb08">
+						<div class="justify_start">
+							<p class="total sm">총 <span>00,000</span>개</p>
+							<select class="select_box w140 ml10">
+								<option value="">30개 보기</option>
+								<option value="">10개 보기</option>
+								<option value="">30개 보기</option>
+								<option value="">50개 보기</option>
+								<option value="">100개 보기</option>
+							</select>
+						</div>
+						
+						<div class="btn_wrap justify_start">
+							<a class="btn btn_gray outline w80" href="#none">전체 선택</a>
+							<a class="btn btn_gray ml08 w120" href="#none">엑셀 다운로드</a>
+						</div>
+					</div>
+					<!-- 자주출제되는문제 리스트 -->
+					<div class="tbl_scroll_box" style="max-height: 530px;">
+						<table class="tbl_list">
+							<caption></caption>
+							<colgroup>
+								<col style="width:5%">
+								<col style="width:5%">
+								<col style="width:10%">
+								<col style="width:10%">
+								<col />
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col" class="first">
+										<div class="check_box">
+											<input type="checkbox" id="check0">
+											<label for="check0" class="pl16"></label>
+										</div>
+									</th>
+									<th scope="col">번호</th>
+									<th scope="col">계열사</th>
+									<th scope="col">문항ID</th>
+									<th scope="col">학교급</th>
+									<th scope="col">학년</th>
+									<th scope="col">영역</th>
+									<th scope="col">과목</th>
+									<th scope="col">문제형태</th>
+									<th scope="col">난이도</th>
+									<th scope="col">출제 수 <a href="#none"><img src="../../images/ic_sort.png" alt="정렬"></a></th>
+									<th scope="col">출제 율 <a href="#none"><img src="../../images/ic_sort.png" alt="정렬"></a></th>
+									<th scope="col">출제시험지</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="first">
+										<div class="check_box">
+											<input type="checkbox" id="check1">
+											<label for="check1" class="pl16"></label>
+										</div>
+									</td>
+									<td>1</td>
+									<td>계열사A</td>
+									<td><a class="t_link primary_color" href="#none">00000</a></td>
+									<td>초등</td>
+									<td>6</td>
+									<td>수학</td>
+									<td>수학 1-1</td>
+									<td>5지선택</td>
+									<td>상</td>
+									<td>111,111</td>
+									<td>85%</td>
+									<td><a href="#none" class="btn btn_light w80 small" onclick="openPop1()">리스트</a></td>
+								</tr>
+                                <tr>
+									<td class="first">
+										<div class="check_box">
+											<input type="checkbox" id="check2">
+											<label for="check2" class="pl16"></label>
+										</div>
+									</td>
+									<td>1</td>
+									<td>계열사A</td>
+									<td><a class="t_link primary_color" href="#none">00000</a></td>
+									<td>초등</td>
+									<td>6</td>
+									<td>수학</td>
+									<td>수학 1-1</td>
+									<td>5지선택</td>
+									<td>상</td>
+									<td>111,111</td>
+									<td>85%</td>
+									<td><a href="#none" class="btn btn_light w80 small">리스트</a></td>
+								</tr>
+                                <tr>
+									<td class="first">
+										<div class="check_box">
+											<input type="checkbox" id="check3">
+											<label for="check3" class="pl16"></label>
+										</div>
+									</td>
+									<td>1</td>
+									<td>계열사A</td>
+									<td><a class="t_link primary_color" href="#none">00000</a></td>
+									<td>초등</td>
+									<td>6</td>
+									<td>수학</td>
+									<td>수학 1-1</td>
+									<td>5지선택</td>
+									<td>상</td>
+									<td>111,111</td>
+									<td>85%</td>
+									<td><a href="#none" class="btn btn_light w80 small">리스트</a></td>
+								</tr>
+                                <tr>
+									<td class="first">
+										<div class="check_box">
+											<input type="checkbox" id="check4">
+											<label for="check4" class="pl16"></label>
+										</div>
+									</td>
+									<td>1</td>
+									<td>계열사A</td>
+									<td><a class="t_link primary_color" href="#none">00000</a></td>
+									<td>초등</td>
+									<td>6</td>
+									<td>수학</td>
+									<td>수학 1-1</td>
+									<td>5지선택</td>
+									<td>상</td>
+									<td>111,111</td>
+									<td>85%</td>
+									<td><a href="#none" class="btn btn_light w80 small">리스트</a></td>
+								</tr>
+                                <tr>
+									<td class="first">
+										<div class="check_box">
+											<input type="checkbox" id="check5">
+											<label for="check5" class="pl16"></label>
+										</div>
+									</td>
+									<td>1</td>
+									<td>계열사A</td>
+									<td><a class="t_link primary_color" href="#none">00000</a></td>
+									<td>초등</td>
+									<td>6</td>
+									<td>수학</td>
+									<td>수학 1-1</td>
+									<td>5지선택</td>
+									<td>상</td>
+									<td>111,111</td>
+									<td>85%</td>
+									<td><a href="#none" class="btn btn_light w80 small">리스트</a></td>
+								</tr>
+                                <tr>
+									<td class="first">
+										<div class="check_box">
+											<input type="checkbox" id="check6">
+											<label for="check6" class="pl16"></label>
+										</div>
+									</td>
+									<td>1</td>
+									<td>계열사A</td>
+									<td><a class="t_link primary_color" href="#none">00000</a></td>
+									<td>초등</td>
+									<td>6</td>
+									<td>수학</td>
+									<td>수학 1-1</td>
+									<td>5지선택</td>
+									<td>상</td>
+									<td>111,111</td>
+									<td>85%</td>
+									<td><a href="#none" class="btn btn_light w80 small">리스트</a></td>
+								</tr>
+                                <tr>
+									<td class="first">
+										<div class="check_box">
+											<input type="checkbox" id="check7">
+											<label for="check7" class="pl16"></label>
+										</div>
+									</td>
+									<td>1</td>
+									<td>계열사A</td>
+									<td><a class="t_link primary_color" href="#none">00000</a></td>
+									<td>초등</td>
+									<td>6</td>
+									<td>수학</td>
+									<td>수학 1-1</td>
+									<td>5지선택</td>
+									<td>상</td>
+									<td>111,111</td>
+									<td>85%</td>
+									<td><a href="#none" class="btn btn_light w80 small">리스트</a></td>
+								</tr>
+                                <tr>
+									<td class="first">
+										<div class="check_box">
+											<input type="checkbox" id="check8">
+											<label for="check8" class="pl16"></label>
+										</div>
+									</td>
+									<td>1</td>
+									<td>계열사A</td>
+									<td><a class="t_link primary_color" href="#none">00000</a></td>
+									<td>초등</td>
+									<td>6</td>
+									<td>수학</td>
+									<td>수학 1-1</td>
+									<td>5지선택</td>
+									<td>상</td>
+									<td>111,111</td>
+									<td>85%</td>
+									<td><a href="#none" class="btn btn_light w80 small">리스트</a></td>
+								</tr>							
+							</tbody>
+						</table>
+					</div>
+
+					<!-- 페이징 -->
+					<div class="paging mt32">
+						<a href="javascript:void(0);" class="pprev"><img src="../../images/page_pprev.svg" alt="처음"></a> 
+						<a href="javascript:void(0);" class="prev"><img src="../../images/page_prev.svg" alt="이전"></a> 
+						<a href="javascript:void(0);" class="on">1 </a>
+						<a href="javascript:void(0);">2</a>
+						<a href="javascript:void(0);">3</a>
+						<a href="javascript:void(0);">4</a>
+						<a href="javascript:void(0);">5</a>
+						<a href="javascript:void(0);">6</a>
+						<a href="javascript:void(0);">7</a>
+						<a href="javascript:void(0);">8</a>
+						<a href="javascript:void(0);">9</a>
+						<a href="javascript:void(0);">10</a>
+						<a href="javascript:void(0);" class="next"><img src="../../images/page_next.svg" alt="다음"></a>
+						<a href="javascript:void(0);" class="nnext"><img src="../../images/page_nnext.svg" alt="끝"></a>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+	<!-- script -->
+	<script>
+		/* window popup */
+		function openPop1(){
+			var popup1 = window.open('pop_출제시험지리스트.html', 'pop_출제시험지리스트', 'width=1100px,height=952px');
+		}
+	</script>
+	<!-- //script -->
+</body>
+</html>

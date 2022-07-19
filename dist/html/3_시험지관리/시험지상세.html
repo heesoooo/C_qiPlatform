@@ -1,0 +1,1028 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+	<head> 
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>문항통합플랫폼</title>
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css">
+<!-- <link rel="stylesheet" href="../../css/webfonts/fontawesome.min.css"/> -->
+<link rel="stylesheet" href="../../css/style.min.css">
+
+<script type="text/javascript" src="../../js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/admin.js"></script> 
+<script type="text/javascript" src="../../js/swiper.min.js"></script> 
+	</head>
+<body>
+	 
+	<div id="wrap">
+		<!-- 상단 공통 영역 -->
+		<div class="header-wrap">
+	<div class="header">
+		<div class="top">
+			<div class="logo justify_start">
+				<h1><img src="../../images/logo.svg" alt="천재교육" /></h1>
+				<select class="select_box w140 ml15">
+					<option value="">계열사 선택</option>
+					<option value="">천재교육</option>
+					<option value="">천재교과서</option>
+				</select>
+			</div>
+			<div class="justify_between">
+				<select class="select_box w120 mr10">
+					<option value="">문항통합관리자</option>
+					<option value="">관리자1</option>
+					<option value="">관리자2</option>
+				</select>
+				<a href="#none" class="belong">천재교육</a>
+				<a href="#none" class="name">홍길동(Hong)</a>
+				
+				<a href="#none" class="btn small btn_light w64">로그아웃</a>
+			</div>
+		</div>
+		<nav class="global_nav">
+			<ul class="menu">
+				<li><a href="#none" class="on">HOME</a></li>
+				<li><a href="#none">문항 관리</a></li>
+				<li><a href="#none">시험지 관리</a></li>
+				<li><a href="#none">서비스 관리</a></li>
+				<li><a href="#none">출처 관리</a></li>
+				<li><a href="#none">통계 관리</a></li>
+				<li><a href="#none">시스템 관리</a></li>
+				<li><a href="#none">데이터 관리</a></li>
+			</ul>
+		</nav>
+	</div>
+</div>
+		<div class="container">
+
+			<!-- 컨텐츠 영역 -->
+			<div class="contents">
+
+				<section class="section_wrap mt35">
+					<section class="justify_between_start">
+						<div class="w100p">
+							<div class="justify_between mb10">
+								<div class="paging_id justify_start">
+									<a href="#none" class="prev pl00">
+										<img src="../../images/ic_left.png" alt="prev">
+									</a>
+									<label for="examId">시험지ID</label>
+									<p class="paper_name">000000</p>
+									<a href="#none" class="next">
+										<img src="../../images/ic_right.png" alt="next">
+									</a>
+								</div>
+					
+								<div>
+									<a href="#none" class="btn btn_gray outline w80">출제마법사</a>
+									<a href="#none" class="btn btn_green w80 ml05">문항추가</a>
+									<a href="#none" class="btn btn_gray ml05">내폴더</a>
+								</div>
+							</div>
+							<!-- tabmenu 영역 -->
+							<div class="radio_tab radio_box tbl_scroll_box" style="height: 980px;">
+								<ul>
+									<li id="tab1" class="tab_btn">
+										<input type="radio" name="tabmenu" id="tmenu1" class="tab ml15" checked>
+										<label class="label" for="tmenu1">미리보기</label>
+										<div class="tab_con mt15">
+											<ul>
+												<li class="quesiton_item_area justify_center_top bt">
+													<p class="drag pt35"><img src="../../images/ic_drag.png" alt="drag"></p>
+													<div class="quesiton_item">
+														<div class="q_detail right">
+															<p>문항ID 000000 | 문제형태 - 5지 선다형 | 난이도 – 상</p>
+															<p>2015 교육과정 / 중등 / 2학년 / 수학(영역) / 수학(과목) / 대분류 / 중분류 / 소분류 / 토픽</p>
+														</div>
+														<div class="question mt08">
+															문제 영역
+														</div>
+														<div class="justify_between mt08">
+															<p class="score w150">
+																<span class="tit w52 center">배점</span>
+																<span class="num"><strong>0</strong> 점</span>
+															</p>
+															<div>
+																<a href="#none" class="btn btn_gray w80" onclick="openPop()">HTML</a>
+																<a href="#none" class="btn btn_green w80" onclick="openPop2()">유사문항</a>
+																<a href="#none" class="btn btn_gray outline">삭제</a>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li class="quesiton_item_area justify_center_top bt">
+													<p class="drag pt35"><img src="../../images/ic_drag.png" alt="drag"></p>
+													<div class="quesiton_item">
+														<div class="q_detail right">
+															<p>문항ID 000000 | 문제형태 - 5지 선다형 | 난이도 – 상</p>
+															<p>2015 교육과정 / 중등 / 2학년 / 수학(영역) / 수학(과목) / 대분류 / 중분류 / 소분류 / 토픽</p>
+														</div>
+														<div class="question mt08">
+															문제 영역
+														</div>
+														<div class="justify_between mt08">
+															<p class="score w150">
+																<span class="tit w52 center">배점</span>
+																<span class="num"><strong>0</strong> 점</span>
+															</p>
+															<div>
+																<a href="#none" class="btn btn_gray w80">HTML</a>
+																<a href="#none" class="btn btn_green w80">유사문항</a>
+																<a href="#none" class="btn btn_gray outline">삭제</a>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li class="quesiton_item_area justify_center_top bt">
+													<p class="drag pt35"><img src="../../images/ic_drag.png" alt="drag"></p>
+													<div class="quesiton_item">
+														<div class="q_detail right">
+															<p>문항ID 000000 | 문제형태 - 5지 선다형 | 난이도 – 상</p>
+															<p>2015 교육과정 / 중등 / 2학년 / 수학(영역) / 수학(과목) / 대분류 / 중분류 / 소분류 / 토픽</p>
+														</div>
+														<div class="question mt08">
+															문제 영역
+														</div>
+														<div class="justify_between mt08">
+															<p class="score w150">
+																<span class="tit w52 center">배점</span>
+																<span class="num"><strong>0</strong> 점</span>
+															</p>
+															<div>
+																<a href="#none" class="btn btn_gray w80">HTML</a>
+																<a href="#none" class="btn btn_green w80">유사문항</a>
+																<a href="#none" class="btn btn_gray outline">삭제</a>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li class="quesiton_item_area justify_center_top bt">
+													<p class="drag pt35"><img src="../../images/ic_drag.png" alt="drag"></p>
+													<div class="quesiton_item">
+														<div class="q_detail right">
+															<p>문항ID 000000 | 문제형태 - 5지 선다형 | 난이도 – 상</p>
+															<p>2015 교육과정 / 중등 / 2학년 / 수학(영역) / 수학(과목) / 대분류 / 중분류 / 소분류 / 토픽</p>
+														</div>
+														<div class="question mt08">
+															문제 영역
+														</div>
+														<div class="justify_between mt08">
+															<p class="score w150">
+																<span class="tit w52 center">배점</span>
+																<span class="num"><strong>0</strong> 점</span>
+															</p>
+															<div>
+																<a href="#none" class="btn btn_gray w80">HTML</a>
+																<a href="#none" class="btn btn_green w80">유사문항</a>
+																<a href="#none" class="btn btn_gray outline">삭제</a>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li class="quesiton_item_area justify_center_top bt">
+													<p class="drag pt35"><img src="../../images/ic_drag.png" alt="drag"></p>
+													<div class="quesiton_item">
+														<div class="q_detail right">
+															<p>문항ID 000000 | 문제형태 - 5지 선다형 | 난이도 – 상</p>
+															<p>2015 교육과정 / 중등 / 2학년 / 수학(영역) / 수학(과목) / 대분류 / 중분류 / 소분류 / 토픽</p>
+														</div>
+														<div class="question mt08">
+															문제 영역
+														</div>
+														<div class="justify_between mt08">
+															<p class="score w150">
+																<span class="tit w52 center">배점</span>
+																<span class="num"><strong>0</strong> 점</span>
+															</p>
+															<div>
+																<a href="#none" class="btn btn_gray w80">HTML</a>
+																<a href="#none" class="btn btn_green w80">유사문항</a>
+																<a href="#none" class="btn btn_gray outline">삭제</a>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li class="quesiton_item_area justify_center_top bt">
+													<p class="drag pt35"><img src="../../images/ic_drag.png" alt="drag"></p>
+													<div class="quesiton_item">
+														<div class="q_detail right">
+															<p>문항ID 000000 | 문제형태 - 5지 선다형 | 난이도 – 상</p>
+															<p>2015 교육과정 / 중등 / 2학년 / 수학(영역) / 수학(과목) / 대분류 / 중분류 / 소분류 / 토픽</p>
+														</div>
+														<div class="question mt08">
+															문제 영역
+														</div>
+														<div class="justify_between mt08">
+															<p class="score w150">
+																<span class="tit w52 center">배점</span>
+																<span class="num"><strong>0</strong> 점</span>
+															</p>
+															<div>
+																<a href="#none" class="btn btn_gray w80">HTML</a>
+																<a href="#none" class="btn btn_green w80">유사문항</a>
+																<a href="#none" class="btn btn_gray outline">삭제</a>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li class="quesiton_item_area justify_center_top bt">
+													<p class="drag pt35"><img src="../../images/ic_drag.png" alt="drag"></p>
+													<div class="quesiton_item">
+														<div class="q_detail right">
+															<p>문항ID 000000 | 문제형태 - 5지 선다형 | 난이도 – 상</p>
+															<p>2015 교육과정 / 중등 / 2학년 / 수학(영역) / 수학(과목) / 대분류 / 중분류 / 소분류 / 토픽</p>
+														</div>
+														<div class="question mt08">
+															문제 영역
+														</div>
+														<div class="justify_between mt08">
+															<p class="score w150">
+																<span class="tit w52 center">배점</span>
+																<span class="num"><strong>0</strong> 점</span>
+															</p>
+															<div>
+																<a href="#none" class="btn btn_gray w80">HTML</a>
+																<a href="#none" class="btn btn_green w80">유사문항</a>
+																<a href="#none" class="btn btn_gray outline">삭제</a>
+															</div>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li id="tab2" class="tab_btn">
+										<input type="radio" name="tabmenu" id="tmenu2" class="tab ml15">
+										<label class="label" for="tmenu2">문항목록</label>
+										<div class="tab_con mt15">
+											<table class="tbl_list">
+												<caption></caption>
+												<colgroup>
+													<col width="5%">
+													<col width="5%">
+													<col width="6%">
+													<col width="6%">
+													<col />
+													<col />
+													<col width="6%">
+													<col width="10%">
+													<col width="28%">
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col" class="first" style="padding:5px">순서<br>이동</th>
+														<th scope="col">번호</th>
+														<th scope="col">영역</th>
+														<th scope="col">과목</th>
+														<th scope="col">문항 ID</th>
+														<th scope="col">문제형태</th>
+														<th scope="col">난이도</th>
+														<th scope="col">등록일자</th>
+														<th scope="col">편집</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td class="first">
+															<p class="drag">
+																<img src="../../images/ic_drag.png" alt="drag">
+															</p>
+														</td>
+														<td>30</td>
+														<td>국어</td>
+														<td>국어</td>
+														<td><a class="t_link" href="#none">000000</a></td>
+														<td>5가지 선택</td>
+														<td>상</td>
+														<td>2022.02.21</td>
+														<td>
+															<a href="#none" class="btn btn_light small w70">HTML</a>
+															<a href="#none" class="btn btn_lgreen small w70">유사문항</a>
+															<a href="#none" class="btn btn_lred small w70">삭제</a>
+														</td>
+													</tr>
+													<tr>
+														<td class="first">
+															<p class="drag">
+																<img src="../../images/ic_drag.png" alt="drag">
+															</p>
+														</td>
+														<td>29</td>
+														<td>국어</td>
+														<td>국어</td>
+														<td><a class="t_link" href="#none">000000</a></td>
+														<td>5가지 선택</td>
+														<td>상</td>
+														<td>2022.02.21</td>
+														<td>
+															<a href="#none" class="btn btn_light small w70">HTML</a>
+															<a href="#none" class="btn btn_lgreen small w70">유사문항</a>
+															<a href="#none" class="btn btn_lred small w70">삭제</a>
+														</td>
+													</tr>
+													<tr>
+														<td class="first">
+															<p class="drag">
+																<img src="../../images/ic_drag.png" alt="drag">
+															</p>
+														</td>
+														<td>28</td>
+														<td>국어</td>
+														<td>국어</td>
+														<td><a class="t_link" href="#none">000000</a></td>
+														<td>5가지 선택</td>
+														<td>상</td>
+														<td>2022.02.21</td>
+														<td>
+															<a href="#none" class="btn btn_light small w70">HTML</a>
+															<a href="#none" class="btn btn_lgreen small w70">유사문항</a>
+															<a href="#none" class="btn btn_lred small w70">삭제</a>
+														</td>
+													</tr>
+													<tr>
+														<td class="first">
+															<p class="drag">
+																<img src="../../images/ic_drag.png" alt="drag">
+															</p>
+														</td>
+														<td>27</td>
+														<td>국어</td>
+														<td>국어</td>
+														<td><a class="t_link" href="#none">000000</a></td>
+														<td>5가지 선택</td>
+														<td>상</td>
+														<td>2022.02.21</td>
+														<td>
+															<a href="#none" class="btn btn_light small w70">HTML</a>
+															<a href="#none" class="btn btn_lgreen small w70">유사문항</a>
+															<a href="#none" class="btn btn_lred small w70">삭제</a>
+														</td>
+													</tr>
+													<tr>
+														<td class="first">
+															<p class="drag">
+																<img src="../../images/ic_drag.png" alt="drag">
+															</p>
+														</td>
+														<td>26</td>
+														<td>국어</td>
+														<td>국어</td>
+														<td><a class="t_link" href="#none">000000</a></td>
+														<td>5가지 선택</td>
+														<td>상</td>
+														<td>2022.02.21</td>
+														<td>
+															<a href="#none" class="btn btn_light small w70">HTML</a>
+															<a href="#none" class="btn btn_lgreen small w70">유사문항</a>
+															<a href="#none" class="btn btn_lred small w70">삭제</a>
+														</td>
+													</tr>
+													<tr>
+														<td class="first">
+															<p class="drag">
+																<img src="../../images/ic_drag.png" alt="drag">
+															</p>
+														</td>
+														<td>25</td>
+														<td>국어</td>
+														<td>국어</td>
+														<td><a class="t_link" href="#none">000000</a></td>
+														<td>5가지 선택</td>
+														<td>상</td>
+														<td>2022.02.21</td>
+														<td>
+															<a href="#none" class="btn btn_light small w70">HTML</a>
+															<a href="#none" class="btn btn_lgreen small w70">유사문항</a>
+															<a href="#none" class="btn btn_lred small w70">삭제</a>
+														</td>
+													</tr>
+													<tr>
+														<td class="first">
+															<p class="drag">
+																<img src="../../images/ic_drag.png" alt="drag">
+															</p>
+														</td>
+														<td>24</td>
+														<td>국어</td>
+														<td>국어</td>
+														<td><a class="t_link" href="#none">000000</a></td>
+														<td>5가지 선택</td>
+														<td>상</td>
+														<td>2022.02.21</td>
+														<td>
+															<a href="#none" class="btn btn_light small w70">HTML</a>
+															<a href="#none" class="btn btn_lgreen small w70">유사문항</a>
+															<a href="#none" class="btn btn_lred small w70">삭제</a>
+														</td>
+													</tr>
+													<tr>
+														<td class="first">
+															<p class="drag">
+																<img src="../../images/ic_drag.png" alt="drag">
+															</p>
+														</td>
+														<td>23</td>
+														<td>국어</td>
+														<td>국어</td>
+														<td><a class="t_link" href="#none">000000</a></td>
+														<td>5가지 선택</td>
+														<td>상</td>
+														<td>2022.02.21</td>
+														<td>
+															<a href="#none" class="btn btn_light small w70">HTML</a>
+															<a href="#none" class="btn btn_lgreen small w70">유사문항</a>
+															<a href="#none" class="btn btn_lred small w70">삭제</a>
+														</td>
+													</tr>
+													<tr>
+														<td class="first">
+															<p class="drag">
+																<img src="../../images/ic_drag.png" alt="drag">
+															</p>
+														</td>
+														<td>22</td>
+														<td>국어</td>
+														<td>국어</td>
+														<td><a class="t_link" href="#none">000000</a></td>
+														<td>5가지 선택</td>
+														<td>상</td>
+														<td>2022.02.21</td>
+														<td>
+															<a href="#none" class="btn btn_light small w70">HTML</a>
+															<a href="#none" class="btn btn_lgreen small w70">유사문항</a>
+															<a href="#none" class="btn btn_lred small w70">삭제</a>
+														</td>
+													</tr>
+													<tr>
+														<td class="first">
+															<p class="drag">
+																<img src="../../images/ic_drag.png" alt="drag">
+															</p>
+														</td>
+														<td>21</td>
+														<td>국어</td>
+														<td>국어</td>
+														<td><a class="t_link" href="#none">000000</a></td>
+														<td>5가지 선택</td>
+														<td>상</td>
+														<td>2022.02.21</td>
+														<td>
+															<a href="#none" class="btn btn_light small w70">HTML</a>
+															<a href="#none" class="btn btn_lgreen small w70">유사문항</a>
+															<a href="#none" class="btn btn_lred small w70">삭제</a>
+														</td>
+													</tr>
+													<tr>
+														<td class="first">
+															<p class="drag">
+																<img src="../../images/ic_drag.png" alt="drag">
+															</p>
+														</td>
+														<td>20</td>
+														<td>국어</td>
+														<td>국어</td>
+														<td><a class="t_link" href="#none">000000</a></td>
+														<td>5가지 선택</td>
+														<td>상</td>
+														<td>2022.02.21</td>
+														<td>
+															<a href="#none" class="btn btn_light small w70">HTML</a>
+															<a href="#none" class="btn btn_lgreen small w70">유사문항</a>
+															<a href="#none" class="btn btn_lred small w70">삭제</a>
+														</td>
+													</tr>
+													<tr>
+														<td class="first">
+															<p class="drag">
+																<img src="../../images/ic_drag.png" alt="drag">
+															</p>
+														</td>
+														<td>19</td>
+														<td>국어</td>
+														<td>국어</td>
+														<td><a class="t_link" href="#none">000000</a></td>
+														<td>5가지 선택</td>
+														<td>상</td>
+														<td>2022.02.21</td>
+														<td>
+															<a href="#none" class="btn btn_light small w70">HTML</a>
+															<a href="#none" class="btn btn_lgreen small w70">유사문항</a>
+															<a href="#none" class="btn btn_lred small w70">삭제</a>
+														</td>
+													</tr>
+													<tr>
+														<td class="first">
+															<p class="drag">
+																<img src="../../images/ic_drag.png" alt="drag">
+															</p>
+														</td>
+														<td>18</td>
+														<td>국어</td>
+														<td>국어</td>
+														<td><a class="t_link" href="#none">000000</a></td>
+														<td>5가지 선택</td>
+														<td>상</td>
+														<td>2022.02.21</td>
+														<td>
+															<a href="#none" class="btn btn_light small w70">HTML</a>
+															<a href="#none" class="btn btn_lgreen small w70">유사문항</a>
+															<a href="#none" class="btn btn_lred small w70">삭제</a>
+														</td>
+													</tr>
+													<tr>
+														<td class="first">
+															<p class="drag">
+																<img src="../../images/ic_drag.png" alt="drag">
+															</p>
+														</td>
+														<td>17</td>
+														<td>국어</td>
+														<td>국어</td>
+														<td><a class="t_link" href="#none">000000</a></td>
+														<td>5가지 선택</td>
+														<td>상</td>
+														<td>2022.02.21</td>
+														<td>
+															<a href="#none" class="btn btn_light small w70">HTML</a>
+															<a href="#none" class="btn btn_lgreen small w70">유사문항</a>
+															<a href="#none" class="btn btn_lred small w70">삭제</a>
+														</td>
+													</tr>
+													<tr>
+														<td class="first">
+															<p class="drag">
+																<img src="../../images/ic_drag.png" alt="drag">
+															</p>
+														</td>
+														<td>16</td>
+														<td>국어</td>
+														<td>국어</td>
+														<td><a class="t_link" href="#none">000000</a></td>
+														<td>5가지 선택</td>
+														<td>상</td>
+														<td>2022.02.21</td>
+														<td>
+															<a href="#none" class="btn btn_light small w70">HTML</a>
+															<a href="#none" class="btn btn_lgreen small w70">유사문항</a>
+															<a href="#none" class="btn btn_lred small w70">삭제</a>
+														</td>
+													</tr>
+													<tr>
+														<td class="first">
+															<p class="drag">
+																<img src="../../images/ic_drag.png" alt="drag">
+															</p>
+														</td>
+														<td>15</td>
+														<td>국어</td>
+														<td>국어</td>
+														<td><a class="t_link" href="#none">000000</a></td>
+														<td>5가지 선택</td>
+														<td>상</td>
+														<td>2022.02.21</td>
+														<td>
+															<a href="#none" class="btn btn_light small w70">HTML</a>
+															<a href="#none" class="btn btn_lgreen small w70">유사문항</a>
+															<a href="#none" class="btn btn_lred small w70">삭제</a>
+														</td>
+													</tr>
+													<tr>
+														<td class="first">
+															<p class="drag">
+																<img src="../../images/ic_drag.png" alt="drag">
+															</p>
+														</td>
+														<td>14</td>
+														<td>국어</td>
+														<td>국어</td>
+														<td><a class="t_link" href="#none">000000</a></td>
+														<td>5가지 선택</td>
+														<td>상</td>
+														<td>2022.02.21</td>
+														<td>
+															<a href="#none" class="btn btn_light small w70">HTML</a>
+															<a href="#none" class="btn btn_lgreen small w70">유사문항</a>
+															<a href="#none" class="btn btn_lred small w70">삭제</a>
+														</td>
+													</tr>
+													<tr>
+														<td class="first">
+															<p class="drag">
+																<img src="../../images/ic_drag.png" alt="drag">
+															</p>
+														</td>
+														<td>13</td>
+														<td>국어</td>
+														<td>국어</td>
+														<td><a class="t_link" href="#none">000000</a></td>
+														<td>5가지 선택</td>
+														<td>상</td>
+														<td>2022.02.21</td>
+														<td>
+															<a href="#none" class="btn btn_light small w70">HTML</a>
+															<a href="#none" class="btn btn_lgreen small w70">유사문항</a>
+															<a href="#none" class="btn btn_lred small w70">삭제</a>
+														</td>
+													</tr>
+													<tr>
+														<td class="first">
+															<p class="drag">
+																<img src="../../images/ic_drag.png" alt="drag">
+															</p>
+														</td>
+														<td>12</td>
+														<td>국어</td>
+														<td>국어</td>
+														<td><a class="t_link" href="#none">000000</a></td>
+														<td>5가지 선택</td>
+														<td>상</td>
+														<td>2022.02.21</td>
+														<td>
+															<a href="#none" class="btn btn_light small w70">HTML</a>
+															<a href="#none" class="btn btn_lgreen small w70">유사문항</a>
+															<a href="#none" class="btn btn_lred small w70">삭제</a>
+														</td>
+													</tr>
+													<tr>
+														<td class="first">
+															<p class="drag">
+																<img src="../../images/ic_drag.png" alt="drag">
+															</p>
+														</td>
+														<td>11</td>
+														<td>국어</td>
+														<td>국어</td>
+														<td><a class="t_link" href="#none">000000</a></td>
+														<td>5가지 선택</td>
+														<td>상</td>
+														<td>2022.02.21</td>
+														<td>
+															<a href="#none" class="btn btn_light small w70">HTML</a>
+															<a href="#none" class="btn btn_lgreen small w70">유사문항</a>
+															<a href="#none" class="btn btn_lred small w70">삭제</a>
+														</td>
+													</tr>
+													<tr>
+														<td class="first">
+															<p class="drag">
+																<img src="../../images/ic_drag.png" alt="drag">
+															</p>
+														</td>
+														<td>10</td>
+														<td>국어</td>
+														<td>국어</td>
+														<td><a class="t_link" href="#none">000000</a></td>
+														<td>5가지 선택</td>
+														<td>상</td>
+														<td>2022.02.21</td>
+														<td>
+															<a href="#none" class="btn btn_light small w70">HTML</a>
+															<a href="#none" class="btn btn_lgreen small w70">유사문항</a>
+															<a href="#none" class="btn btn_lred small w70">삭제</a>
+														</td>
+													</tr>
+													<tr>
+														<td class="first">
+															<p class="drag">
+																<img src="../../images/ic_drag.png" alt="drag">
+															</p>
+														</td>
+														<td>9</td>
+														<td>국어</td>
+														<td>국어</td>
+														<td><a class="t_link" href="#none">000000</a></td>
+														<td>5가지 선택</td>
+														<td>상</td>
+														<td>2022.02.21</td>
+														<td>
+															<a href="#none" class="btn btn_light small w70">HTML</a>
+															<a href="#none" class="btn btn_lgreen small w70">유사문항</a>
+															<a href="#none" class="btn btn_lred small w70">삭제</a>
+														</td>
+													</tr>
+													<tr>
+														<td class="first">
+															<p class="drag">
+																<img src="../../images/ic_drag.png" alt="drag">
+															</p>
+														</td>
+														<td>8</td>
+														<td>국어</td>
+														<td>국어</td>
+														<td><a class="t_link" href="#none">000000</a></td>
+														<td>5가지 선택</td>
+														<td>상</td>
+														<td>2022.02.21</td>
+														<td>
+															<a href="#none" class="btn btn_light small w70">HTML</a>
+															<a href="#none" class="btn btn_lgreen small w70">유사문항</a>
+															<a href="#none" class="btn btn_lred small w70">삭제</a>
+														</td>
+													</tr>
+													<tr>
+														<td class="first">
+															<p class="drag">
+																<img src="../../images/ic_drag.png" alt="drag">
+															</p>
+														</td>
+														<td>7</td>
+														<td>국어</td>
+														<td>국어</td>
+														<td><a class="t_link" href="#none">000000</a></td>
+														<td>5가지 선택</td>
+														<td>상</td>
+														<td>2022.02.21</td>
+														<td>
+															<a href="#none" class="btn btn_light small w70">HTML</a>
+															<a href="#none" class="btn btn_lgreen small w70">유사문항</a>
+															<a href="#none" class="btn btn_lred small w70">삭제</a>
+														</td>
+													</tr>
+													<tr>
+														<td class="first">
+															<p class="drag">
+																<img src="../../images/ic_drag.png" alt="drag">
+															</p>
+														</td>
+														<td>6</td>
+														<td>국어</td>
+														<td>국어</td>
+														<td><a class="t_link" href="#none">000000</a></td>
+														<td>5가지 선택</td>
+														<td>상</td>
+														<td>2022.02.21</td>
+														<td>
+															<a href="#none" class="btn btn_light small w70">HTML</a>
+															<a href="#none" class="btn btn_lgreen small w70">유사문항</a>
+															<a href="#none" class="btn btn_lred small w70">삭제</a>
+														</td>
+													</tr>
+													<tr>
+														<td class="first">
+															<p class="drag">
+																<img src="../../images/ic_drag.png" alt="drag">
+															</p>
+														</td>
+														<td>5</td>
+														<td>국어</td>
+														<td>국어</td>
+														<td><a class="t_link" href="#none">000000</a></td>
+														<td>5가지 선택</td>
+														<td>상</td>
+														<td>2022.02.21</td>
+														<td>
+															<a href="#none" class="btn btn_light small w70">HTML</a>
+															<a href="#none" class="btn btn_lgreen small w70">유사문항</a>
+															<a href="#none" class="btn btn_lred small w70">삭제</a>
+														</td>
+													</tr>
+													<tr>
+														<td class="first">
+															<p class="drag">
+																<img src="../../images/ic_drag.png" alt="drag">
+															</p>
+														</td>
+														<td>4</td>
+														<td>국어</td>
+														<td>국어</td>
+														<td><a class="t_link" href="#none">000000</a></td>
+														<td>5가지 선택</td>
+														<td>상</td>
+														<td>2022.02.21</td>
+														<td>
+															<a href="#none" class="btn btn_light small w70">HTML</a>
+															<a href="#none" class="btn btn_lgreen small w70">유사문항</a>
+															<a href="#none" class="btn btn_lred small w70">삭제</a>
+														</td>
+													</tr>
+													<tr>
+														<td class="first">
+															<p class="drag">
+																<img src="../../images/ic_drag.png" alt="drag">
+															</p>
+														</td>
+														<td>3</td>
+														<td>국어</td>
+														<td>국어</td>
+														<td><a class="t_link" href="#none">000000</a></td>
+														<td>5가지 선택</td>
+														<td>상</td>
+														<td>2022.02.21</td>
+														<td>
+															<a href="#none" class="btn btn_light small w70">HTML</a>
+															<a href="#none" class="btn btn_lgreen small w70">유사문항</a>
+															<a href="#none" class="btn btn_lred small w70">삭제</a>
+														</td>
+													</tr>
+													<tr>
+														<td class="first">
+															<p class="drag">
+																<img src="../../images/ic_drag.png" alt="drag">
+															</p>
+														</td>
+														<td>2</td>
+														<td>국어</td>
+														<td>국어</td>
+														<td><a class="t_link" href="#none">000000</a></td>
+														<td>5가지 선택</td>
+														<td>상</td>
+														<td>2022.02.21</td>
+														<td>
+															<a href="#none" class="btn btn_light small w70">HTML</a>
+															<a href="#none" class="btn btn_lgreen small w70">유사문항</a>
+															<a href="#none" class="btn btn_lred small w70">삭제</a>
+														</td>
+													</tr>
+													<tr>
+														<td class="first">
+															<p class="drag">
+																<img src="../../images/ic_drag.png" alt="drag">
+															</p>
+														</td>
+														<td>1</td>
+														<td>국어</td>
+														<td>국어</td>
+														<td><a class="t_link" href="#none">000000</a></td>
+														<td>5가지 선택</td>
+														<td>상</td>
+														<td>2022.02.21</td>
+														<td>
+															<a href="#none" class="btn btn_light small w70">HTML</a>
+															<a href="#none" class="btn btn_lgreen small w70">유사문항</a>
+															<a href="#none" class="btn btn_lred small w70">삭제</a>
+														</td>
+													</tr>
+											
+												</tbody>
+											</table>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="ml10">
+							<div class="justify_end mb10">
+								<a href="#none" class="btn btn_green w80">저장하기</a>
+								<a href="#none" class="btn btn_gray outline ml08">목록</a>
+							</div>
+							<div class="view_paper_box" style="min-width:227px; height:980px;">
+								<!-- 정보 입력 -->
+								<h2 class="title">시험지 속성</h2>
+								<ul>
+									<li class="justify_start_top mt04">
+										<h4>시험지ID</h4>
+										<p class="txt">000000</p>
+									</li>
+									<li class="justify_start_top mt04"> 
+										<h4>시험지명</h4>
+										<input type="text" class="w120 placeholder_black" placeholder="시험지명">
+									</li>
+									<li class="justify_start_top mt04">
+										<h4>서비스명</h4>
+										<select class="select_box w95">
+											<option value="">선택</option>
+											<option value="">선택1</option>
+											<option value="">선택2</option>
+										</select>
+									</li>
+									<li class="justify_start_top mt04">
+										<h4>상태</h4>
+										<div class="radio_box">
+											<input type="radio" id="t1" name="template" value="HWP" checked=""><label for="t1"> 대기</label>
+											<input class="ml05" type="radio" id="t2" name="template" value="PDF"><label for="t2"> 공개</label>
+										</div>
+									</li>
+									<li class="justify_start mt04">
+										<h4>구분</h4>
+										<select class="select_box w95">
+											<option value="">선택</option>
+											<option value="">선택1</option>
+											<option value="">선택2</option>
+										</select>
+									</li>
+									<li class="justify_start mt04">
+										<h4>학교급</h4>
+										<select class="select_box w95">
+											<option value="">선택</option>
+											<option value="">선택1</option>
+											<option value="">선택2</option>
+										</select>
+									</li>
+									<li class="justify_start mt04">
+										<h4>대상학년</h4>
+										<select class="select_box w95">
+											<option value="">선택</option>
+											<option value="">선택1</option>
+											<option value="">선택2</option>
+										</select>
+									</li>
+									<li class="justify_start mt04">
+										<h4>평가지 횟수</h4>
+										<select class="select_box w95">
+											<option value="">선택</option>
+											<option value="">선택1</option>
+											<option value="">선택2</option>
+										</select>
+									</li>
+									<li class="justify_start mt04">
+										<h4>카테고리</h4>
+										<select class="select_box w95">
+											<option value="">선택</option>
+											<option value="">선택1</option>
+											<option value="">선택2</option>
+										</select>
+									</li>
+									<li class="justify_start mt04">
+										<h4>과목</h4>
+										<select class="select_box w95">
+											<option value="">선택</option>
+											<option value="">선택1</option>
+											<option value="">선택2</option>
+										</select>
+									</li>
+									<li class="justify_start mt04">
+										<h4>시행년도</h4>
+										<select class="select_box w95">
+											<option value="">선택</option>
+											<option value="">선택1</option>
+											<option value="">선택2</option>
+										</select>
+									</li>
+									<li class="justify_start mt04">
+										<h4>시행월</h4>
+										<select class="select_box w95">
+											<option value="">선택</option>
+											<option value="">선택1</option>
+											<option value="">선택2</option>
+										</select>
+									</li>
+									<li class="justify_start mt04">
+										<h4>대상학기</h4>
+										<select class="select_box w95">
+											<option value="">선택</option>
+											<option value="">선택1</option>
+											<option value="">선택2</option>
+										</select>
+									</li>
+									<li class="justify_start mt04">
+										<h4>특훈</h4>
+										<select class="select_box w95">
+											<option value="">선택</option>
+											<option value="">선택1</option>
+											<option value="">선택2</option>
+										</select>
+									</li>
+									<li class="justify_start mt04">
+										<h4>특훈기간</h4>
+										<select class="select_box w95">
+											<option value="">선택</option>
+											<option value="">선택1</option>
+											<option value="">선택2</option>
+										</select>
+									</li>
+									<li class="justify_start mt04">
+										<h4>배점넣기</h4>
+										<a href="#none" class="btn btn_green w95" onclick="openPop3()">배점넣기</a>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+					</section>
+					<!-- 페이징 -->
+					<div class="paging mt32">
+						<a href="javascript:void(0);" class="pprev"><img src="../../images/page_pprev.svg" alt="처음"></a> 
+						<a href="javascript:void(0);" class="prev"><img src="../../images/page_prev.svg" alt="이전"></a> 
+						<a href="javascript:void(0);" class="on">1 </a>
+						<a href="javascript:void(0);">2</a>
+						<a href="javascript:void(0);">3</a>
+						<a href="javascript:void(0);">4</a>
+						<a href="javascript:void(0);">5</a>
+						<a href="javascript:void(0);">6</a>
+						<a href="javascript:void(0);">7</a>
+						<a href="javascript:void(0);">8</a>
+						<a href="javascript:void(0);">9</a>
+						<a href="javascript:void(0);">10</a>
+						<a href="javascript:void(0);" class="next"><img src="../../images/page_next.svg" alt="다음"></a>
+						<a href="javascript:void(0);" class="nnext"><img src="../../images/page_nnext.svg" alt="끝"></a>
+					</div>
+				</section>
+			</div>
+		</div>
+
+	</div>
+	<script>
+		/* window popup */
+		function openPop(){
+			var popup = window.open('pop_HTML편집하기.html', 'HTML편집하기', 'width=1100px,height=755px');
+		}
+		function openPop2(){
+			var popup = window.open('pop_유사문항검색.html', '유사문항검색', 'width=1100px,height=835px');
+		}
+		function openPop3(){
+			var popup = window.open('pop_배점넣기.html', '배점넣기', 'width=600px,height=670px');
+		}
+	</script>
+</body>
+</html>

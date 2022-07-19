@@ -1,0 +1,375 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>문항목록-출처검색</title>
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css">
+<!-- <link rel="stylesheet" href="../../css/webfonts/fontawesome.min.css"/> -->
+<link rel="stylesheet" href="../../css/style.min.css">
+
+<script type="text/javascript" src="../../js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/admin.js"></script> 
+<script type="text/javascript" src="../../js/swiper.min.js"></script> 
+	</head>
+	
+	<body style="background-color: #fff;">
+		<!-- 출처검색 popup -->
+		<div class="window_pop">
+			<h2 class="title mb30">출처검색</h2>
+			
+			<div class="search_box mb20">
+				<div class="justify_between_start">
+					<div class="justify_start_top">
+						<h4 class="mr30 mt05">검색 조건</h4>
+						<div>
+							<div class="justify_start mb10">
+								<div class="terms mr05">
+									<select class="select_box w100">
+										<option value="">출처구분</option>												
+									</select>
+								</div>
+								<div class="terms mr05">
+									<select class="select_box w100">
+										<option value="">상세구분</option>														
+									</select>
+								</div>
+							</div>
+							<div class="justify_start">
+								<div class="terms mr05">
+									<select class="select_box w100">
+										<option value="">년도</option>
+									</select>
+								</div>
+								<div class="terms mr05">
+									<select class="select_box w100">
+										<option value="">학교급</option>
+									</select>
+								</div>
+								<div class="terms mr05">
+									<select class="select_box w100">
+										<option value="">학년</option>														
+									</select>
+								</div>
+								<div class="terms mr05">
+									<select class="select_box w100">
+										<option value="">영역</option>														
+									</select>
+								</div>
+								<div class="terms mr05">
+									<select class="select_box w100">
+										<option value="">전체</option>										
+									</select>
+								</div>
+								<div class="terms mr05">
+									<input type="text" placeholder="검색어" class="placeholder_black w200">
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="btn_wrap">
+						<a class="btn btn_green" href="#none">검색</a>
+						<a class="btn btn_gray" href="#none">초기화</a>
+					</div>
+				</div>
+			</div>
+			<div class="justify_start mb08">
+				<p class="total sm">총 00개</p>
+				<select class="select_box w140 ml12">
+					<option value="30개 보기">30개 보기</option>
+					<option value="50개 보기">50개 보기</option>
+					<option value="100개 보기">100개 보기</option>
+				</select>
+			</div>
+			<!-- 테이블 -->
+			<div class="tbl_scroll_box" style="height: 430px">
+				<table class="tbl_list">
+					<caption></caption>
+					<colgroup>
+						<col style="width: 4%">
+						<col style="width: 5%">
+						<col style="width: 10%">
+						<col style="width: 5%">
+						<col style="width: 5%">
+						<col style="width: 10%">
+						<col style="width: 5%">
+						<col style="width: 10%">
+						<col style="width: 36%">
+						<col style="width: 10%">
+						<col />
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col"class="first">번호</th>
+							<th scope="col">출처구분</th>
+							<th scope="col">상세구분</th>
+							<th scope="col">년도</th>
+							<th scope="col">학교급</th>
+							<th scope="col">학년</th>
+							<th scope="col">영역</th>
+							<th scope="col">출처ID</th>
+							<th scope="col">출처명</th>
+							<th scope="col">선택</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="first">1</td>
+							<td>일반</td>
+							<td>밀크T 중학 강사</td>
+							<td>2022</td>
+							<td>중등</td>
+							<td>중1, 중2, 중3</td>
+							<td>수학</td>
+							<td>0000</td>
+							<td class="left">좋은책 신사고(민현식) 평가문제집 [2021]</td>
+							<td><a href="#none" class="btn btn_gray small">선택</a></td>
+						</tr>
+						<tr>
+							<td class="first">2</td>
+							<td>일반</td>
+							<td>밀크T 중학 강사</td>
+							<td>2022</td>
+							<td>중등</td>
+							<td>중1, 중2, 중3</td>
+							<td>수학</td>
+							<td>0000</td>
+							<td class="left">좋은책 신사고(민현식) 평가문제집 [2021]</td>
+							<td><a href="#none" class="btn btn_gray small">선택</a></td>
+						</tr>
+						<tr>
+							<td class="first">3</td>
+							<td>일반</td>
+							<td>밀크T 중학 강사</td>
+							<td>2022</td>
+							<td>중등</td>
+							<td>중1, 중2, 중3</td>
+							<td>수학</td>
+							<td>0000</td>
+							<td class="left">좋은책 신사고(민현식) 평가문제집 [2021]</td>
+							<td><a href="#none" class="btn btn_gray small">선택</a></td>
+						</tr>
+						<tr>
+							<td class="first">4</td>
+							<td>일반</td>
+							<td>밀크T 중학 강사</td>
+							<td>2022</td>
+							<td>중등</td>
+							<td>중1, 중2, 중3</td>
+							<td>수학</td>
+							<td>0000</td>
+							<td class="left">좋은책 신사고(민현식) 평가문제집 [2021]</td>
+							<td><a href="#none" class="btn btn_gray small">선택</a></td>
+						</tr>
+						<tr>
+							<td class="first">5</td>
+							<td>일반</td>
+							<td>밀크T 중학 강사</td>
+							<td>2022</td>
+							<td>중등</td>
+							<td>중1, 중2, 중3</td>
+							<td>수학</td>
+							<td>0000</td>
+							<td class="left">좋은책 신사고(민현식) 평가문제집 [2021]</td>
+							<td><a href="#none" class="btn btn_gray small">선택</a></td>
+						</tr>
+						<tr>
+							<td class="first">6</td>
+							<td>일반</td>
+							<td>밀크T 중학 강사</td>
+							<td>2022</td>
+							<td>중등</td>
+							<td>중1, 중2, 중3</td>
+							<td>수학</td>
+							<td>0000</td>
+							<td class="left">좋은책 신사고(민현식) 평가문제집 [2021]</td>
+							<td><a href="#none" class="btn btn_gray small">선택</a></td>
+						</tr>
+						<tr>
+							<td class="first">7</td>
+							<td>일반</td>
+							<td>밀크T 중학 강사</td>
+							<td>2022</td>
+							<td>중등</td>
+							<td>중1, 중2, 중3</td>
+							<td>수학</td>
+							<td>0000</td>
+							<td class="left">좋은책 신사고(민현식) 평가문제집 [2021]</td>
+							<td><a href="#none" class="btn btn_gray small">선택</a></td>
+						</tr>
+						<tr>
+							<td class="first">8</td>
+							<td>일반</td>
+							<td>밀크T 중학 강사</td>
+							<td>2022</td>
+							<td>중등</td>
+							<td>중1, 중2, 중3</td>
+							<td>수학</td>
+							<td>0000</td>
+							<td class="left">좋은책 신사고(민현식) 평가문제집 [2021]</td>
+							<td><a href="#none" class="btn btn_gray small">선택</a></td>
+						</tr>
+						<tr>
+							<td class="first">9</td>
+							<td>일반</td>
+							<td>밀크T 중학 강사</td>
+							<td>2022</td>
+							<td>중등</td>
+							<td>중1, 중2, 중3</td>
+							<td>수학</td>
+							<td>0000</td>
+							<td class="left">좋은책 신사고(민현식) 평가문제집 [2021]</td>
+							<td><a href="#none" class="btn btn_gray small">선택</a></td>
+						</tr>
+						<tr>
+							<td class="first">10</td>
+							<td>일반</td>
+							<td>밀크T 중학 강사</td>
+							<td>2022</td>
+							<td>중등</td>
+							<td>중1, 중2, 중3</td>
+							<td>수학</td>
+							<td>0000</td>
+							<td class="left">좋은책 신사고(민현식) 평가문제집 [2021]</td>
+							<td><a href="#none" class="btn btn_gray small">선택</a></td>
+						</tr>
+						<tr>
+							<td class="first">11</td>
+							<td>일반</td>
+							<td>밀크T 중학 강사</td>
+							<td>2022</td>
+							<td>중등</td>
+							<td>중1, 중2, 중3</td>
+							<td>수학</td>
+							<td>0000</td>
+							<td class="left">좋은책 신사고(민현식) 평가문제집 [2021]</td>
+							<td><a href="#none" class="btn btn_gray small">선택</a></td>
+						</tr>
+						<tr>
+							<td class="first">12</td>
+							<td>일반</td>
+							<td>밀크T 중학 강사</td>
+							<td>2022</td>
+							<td>중등</td>
+							<td>중1, 중2, 중3</td>
+							<td>수학</td>
+							<td>0000</td>
+							<td class="left">좋은책 신사고(민현식) 평가문제집 [2021]</td>
+							<td><a href="#none" class="btn btn_gray small">선택</a></td>
+						</tr>
+						<tr>
+							<td class="first">13</td>
+							<td>일반</td>
+							<td>밀크T 중학 강사</td>
+							<td>2022</td>
+							<td>중등</td>
+							<td>중1, 중2, 중3</td>
+							<td>수학</td>
+							<td>0000</td>
+							<td class="left">좋은책 신사고(민현식) 평가문제집 [2021]</td>
+							<td><a href="#none" class="btn btn_gray small">선택</a></td>
+						</tr>
+						<tr>
+							<td class="first">14</td>
+							<td>일반</td>
+							<td>밀크T 중학 강사</td>
+							<td>2022</td>
+							<td>중등</td>
+							<td>중1, 중2, 중3</td>
+							<td>수학</td>
+							<td>0000</td>
+							<td class="left">좋은책 신사고(민현식) 평가문제집 [2021]</td>
+							<td><a href="#none" class="btn btn_gray small">선택</a></td>
+						</tr>
+						<tr>
+							<td class="first">15</td>
+							<td>일반</td>
+							<td>밀크T 중학 강사</td>
+							<td>2022</td>
+							<td>중등</td>
+							<td>중1, 중2, 중3</td>
+							<td>수학</td>
+							<td>0000</td>
+							<td class="left">좋은책 신사고(민현식) 평가문제집 [2021]</td>
+							<td><a href="#none" class="btn btn_gray small">선택</a></td>
+						</tr>
+						<tr>
+							<td class="first">16</td>
+							<td>일반</td>
+							<td>밀크T 중학 강사</td>
+							<td>2022</td>
+							<td>중등</td>
+							<td>중1, 중2, 중3</td>
+							<td>수학</td>
+							<td>0000</td>
+							<td class="left">좋은책 신사고(민현식) 평가문제집 [2021]</td>
+							<td><a href="#none" class="btn btn_gray small">선택</a></td>
+						</tr>
+						<tr>
+							<td class="first">17</td>
+							<td>일반</td>
+							<td>밀크T 중학 강사</td>
+							<td>2022</td>
+							<td>중등</td>
+							<td>중1, 중2, 중3</td>
+							<td>수학</td>
+							<td>0000</td>
+							<td class="left">좋은책 신사고(민현식) 평가문제집 [2021]</td>
+							<td><a href="#none" class="btn btn_gray small">선택</a></td>
+						</tr>
+						<tr>
+							<td class="first">18</td>
+							<td>일반</td>
+							<td>밀크T 중학 강사</td>
+							<td>2022</td>
+							<td>중등</td>
+							<td>중1, 중2, 중3</td>
+							<td>수학</td>
+							<td>0000</td>
+							<td class="left">좋은책 신사고(민현식) 평가문제집 [2021]</td>
+							<td><a href="#none" class="btn btn_gray small">선택</a></td>
+						</tr>
+						<tr>
+							<td class="first">19</td>
+							<td>일반</td>
+							<td>밀크T 중학 강사</td>
+							<td>2022</td>
+							<td>중등</td>
+							<td>중1, 중2, 중3</td>
+							<td>수학</td>
+							<td>0000</td>
+							<td class="left">좋은책 신사고(민현식) 평가문제집 [2021]</td>
+							<td><a href="#none" class="btn btn_gray small">선택</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- //테이블 -->
+			
+			<!-- 페이징 -->
+			<div class="paging mt32">
+				<a href="javascript:void(0);" class="pprev"><img src="../../images/page_pprev.svg" alt="처음"></a> 
+				<a href="javascript:void(0);" class="prev"><img src="../../images/page_prev.svg" alt="이전"></a> 
+				<a href="javascript:void(0);" class="on">1 </a>
+				<a href="javascript:void(0);">2</a>
+				<a href="javascript:void(0);">3</a>
+				<a href="javascript:void(0);">4</a>
+				<a href="javascript:void(0);">...</a>
+				<a href="javascript:void(0);">37</a>
+				<a href="javascript:void(0);">38</a>
+				<a href="javascript:void(0);">39</a>
+				<a href="javascript:void(0);">40</a>
+				<a href="javascript:void(0);" class="next"><img src="../../images/page_next.svg" alt="다음"></a>
+				<a href="javascript:void(0);" class="nnext"><img src="../../images/page_nnext.svg" alt="끝"></a>
+			</div>
+			
+			<div class="justify_center">
+				<a class="close btn btn_gray outline ml08 large" href="#none" onClick="self.close();">닫기</a>
+			</div>
+
+		</div>
+		<!-- //출처검색 popup -->
+	</body>
+	</html>

@@ -1,0 +1,445 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+	<head> 
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>문항목록-검수관리</title>
+		@@include('../include/inc_html_head.html')
+	</head>
+<body>
+	 
+	<div id="wrap">
+		<!-- 상단 공통 영역 -->
+		@@include('../include/inc_header.html')
+		<div class="container">
+            <div class="local_nav">
+				<ul class="menu">
+					<li><a href="#none">문항 목록</a></li>
+					<li><a href="#none">문항 사용 관리</a></li>
+					<li><a href="#none"  class="on">검수 관리</a></li>
+				</ul>
+			</div>
+
+			<!-- 컨텐츠 영역 -->
+			<div class="contents">
+				<section>
+					<h2 class="section_tit pt00">검수관리</h2>
+					<div class="justify_between">
+						<!-- 검색조건 -->
+						<div class="search_box_wrap">
+							<div class="search_box justify_between">
+								<div class="terms justify_start">
+									<span>검색조건</span>
+									<select class="select_box w100 mr10">
+										<option value="">구분</option>
+									</select>
+                                    <span class="mr10">
+                                        <input class="w90 underline" type="text" id="from" placeholder="0000.00.00" autocomplete="off"> ~
+                                        <input class="w90 underline" type="text" id="to" placeholder="0000.00.00" autocomplete="off">
+                                    </span>
+									<select class="select_box w100 mr05">
+										<option value="">학교급</option>
+									</select>
+									<select class="select_box w100 mr05">
+										<option value="">영역</option>
+									</select>
+                                    <select class="select_box w100 mr05">
+										<option value="">과목</option>
+									</select>
+                                    <select class="select_box w120 mr05">
+										<option value="">검수상태</option>
+									</select>
+									<input type="text" class="w160 placeholder_black" placeholder="검수지명">
+								</div>
+	
+								<div class="btn_wrap justify_start">
+									<a class="btn btn_green w60 ml05" href="#none">검색</a>
+									<a class="btn btn_gray w60 ml05" href="#none">초기화</a>
+								</div>
+							</div>
+						</div>
+						<!-- //검색조건 -->
+					</div>
+				</section>
+
+				<section class="section_wrap mt35">
+                    <div class="justify_start mb08">
+                        <p class="total sm">총 <span>00,000</span>개</p>
+                        <div class="terms">
+                            <select class="select_box w140 ml10">
+                                <option value="">30개 보기</option>
+                                <option value="">10개 보기</option>
+                                <option value="">30개 보기</option>
+                                <option value="">50개 보기</option>
+                                <option value="">100개 보기</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- 작업내역 리스트 -->
+                    <div class="tbl_scroll_box" style="max-height: 620px;">
+                        <table class="tbl_list">
+                            <caption></caption>
+                            <colgroup>
+                                <col width="3%">
+                                <col width="5%">
+                                <col width="14%">
+                                <col width="7%">
+                                <col width="7%">
+                                <col width="7%">
+                                <col width="7%">
+                                <col width="10%">
+                                <col width="13%">
+                                <col width="12%">
+                                <col width="15%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="first">번호</th>
+                                    <th scope="col">검수지ID</th>
+                                    <th scope="col">검수지명</th>
+                                    <th scope="col">학교급</th>
+                                    <th scope="col">영역</th>
+                                    <th scope="col">과목</th>
+                                    <th scope="col">검수 상태</th>
+                                    <th scope="col">배정일</th>
+                                    <th scope="col">작업 현황</th>
+                                    <th scope="col">완료일</th>
+                                    <th scope="col">검수작업</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="first">1</td>
+                                    <td>0000</td>
+                                    <td><a class="t_link" href="#none">국어 검수지</a></td>
+                                    <td>초등</td>
+                                    <td>국어</td>
+                                    <td>국어</td>
+                                    <td>대기</td>
+                                    <td>2022.02.14</td>
+                                    <td>0%    00/000</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>
+                                        <a href="#none" class="btn btn_lgreen small w70">검수하기</a>
+                                        <a href="#none" class="btn btn_light small w70">다운로드</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="first">2</td>
+                                    <td>0000</td>
+                                    <td><a class="t_link" href="#none">국어 검수지</a></td>
+                                    <td>초등</td>
+                                    <td>국어</td>
+                                    <td>국어</td>
+                                    <td>대기</td>
+                                    <td>2022.02.14</td>
+                                    <td>0%    00/000</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>
+                                        <a href="#none" class="btn btn_lgreen small w70">검수하기</a>
+                                        <a href="#none" class="btn btn_light small w70">다운로드</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="first">3</td>
+                                    <td>0000</td>
+                                    <td><a class="t_link" href="#none">국어 검수지</a></td>
+                                    <td>초등</td>
+                                    <td>국어</td>
+                                    <td>국어</td>
+                                    <td>대기</td>
+                                    <td>2022.02.14</td>
+                                    <td>0%    00/000</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>
+                                        <a href="#none" class="btn btn_lgreen small w70">검수하기</a>
+                                        <a href="#none" class="btn btn_light small w70">다운로드</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="first">4</td>
+                                    <td>0000</td>
+                                    <td><a class="t_link" href="#none">국어 검수지</a></td>
+                                    <td>초등</td>
+                                    <td>국어</td>
+                                    <td>국어</td>
+                                    <td>대기</td>
+                                    <td>2022.02.14</td>
+                                    <td>0%    00/000</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>
+                                        <a href="#none" class="btn btn_lgreen small w70">검수하기</a>
+                                        <a href="#none" class="btn btn_light small w70">다운로드</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="first">5</td>
+                                    <td>0000</td>
+                                    <td><a class="t_link" href="#none">국어 검수지</a></td>
+                                    <td>초등</td>
+                                    <td>국어</td>
+                                    <td>국어</td>
+                                    <td>대기</td>
+                                    <td>2022.02.14</td>
+                                    <td>0%    00/000</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>
+                                        <a href="#none" class="btn btn_lgreen small w70">검수하기</a>
+                                        <a href="#none" class="btn btn_light small w70">다운로드</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="first">6</td>
+                                    <td>0000</td>
+                                    <td><a class="t_link" href="#none">국어 검수지</a></td>
+                                    <td>초등</td>
+                                    <td>국어</td>
+                                    <td>국어</td>
+                                    <td>대기</td>
+                                    <td>2022.02.14</td>
+                                    <td>0%    00/000</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>
+                                        <a href="#none" class="btn btn_lgreen small w70">검수하기</a>
+                                        <a href="#none" class="btn btn_light small w70">다운로드</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="first">7</td>
+                                    <td>0000</td>
+                                    <td><a class="t_link" href="#none">국어 검수지</a></td>
+                                    <td>초등</td>
+                                    <td>국어</td>
+                                    <td>국어</td>
+                                    <td>대기</td>
+                                    <td>2022.02.14</td>
+                                    <td>0%    00/000</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>
+                                        <a href="#none" class="btn btn_lgreen small w70">검수하기</a>
+                                        <a href="#none" class="btn btn_light small w70">다운로드</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="first">8</td>
+                                    <td>0000</td>
+                                    <td><a class="t_link" href="#none">국어 검수지</a></td>
+                                    <td>초등</td>
+                                    <td>국어</td>
+                                    <td>국어</td>
+                                    <td>대기</td>
+                                    <td>2022.02.14</td>
+                                    <td>0%    00/000</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>
+                                        <a href="#none" class="btn btn_lgreen small w70">검수하기</a>
+                                        <a href="#none" class="btn btn_light small w70">다운로드</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="first">9</td>
+                                    <td>0000</td>
+                                    <td><a class="t_link" href="#none">국어 검수지</a></td>
+                                    <td>초등</td>
+                                    <td>국어</td>
+                                    <td>국어</td>
+                                    <td>대기</td>
+                                    <td>2022.02.14</td>
+                                    <td>0%    00/000</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>
+                                        <a href="#none" class="btn btn_lgreen small w70">검수하기</a>
+                                        <a href="#none" class="btn btn_light small w70">다운로드</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="first">10</td>
+                                    <td>0000</td>
+                                    <td><a class="t_link" href="#none">국어 검수지</a></td>
+                                    <td>초등</td>
+                                    <td>국어</td>
+                                    <td>국어</td>
+                                    <td>대기</td>
+                                    <td>2022.02.14</td>
+                                    <td>0%    00/000</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>
+                                        <a href="#none" class="btn btn_lgreen small w70">검수하기</a>
+                                        <a href="#none" class="btn btn_light small w70">다운로드</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="first">11</td>
+                                    <td>0000</td>
+                                    <td><a class="t_link" href="#none">국어 검수지</a></td>
+                                    <td>초등</td>
+                                    <td>국어</td>
+                                    <td>국어</td>
+                                    <td>대기</td>
+                                    <td>2022.02.14</td>
+                                    <td>0%    00/000</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>
+                                        <a href="#none" class="btn btn_lgreen small w70">검수하기</a>
+                                        <a href="#none" class="btn btn_light small w70">다운로드</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="first">12</td>
+                                    <td>0000</td>
+                                    <td><a class="t_link" href="#none">국어 검수지</a></td>
+                                    <td>초등</td>
+                                    <td>국어</td>
+                                    <td>국어</td>
+                                    <td>대기</td>
+                                    <td>2022.02.14</td>
+                                    <td>0%    00/000</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>
+                                        <a href="#none" class="btn btn_lgreen small w70">검수하기</a>
+                                        <a href="#none" class="btn btn_light small w70">다운로드</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="first">13</td>
+                                    <td>0000</td>
+                                    <td><a class="t_link" href="#none">국어 검수지</a></td>
+                                    <td>초등</td>
+                                    <td>국어</td>
+                                    <td>국어</td>
+                                    <td>대기</td>
+                                    <td>2022.02.14</td>
+                                    <td>0%    00/000</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>
+                                        <a href="#none" class="btn btn_lgreen small w70">검수하기</a>
+                                        <a href="#none" class="btn btn_light small w70">다운로드</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="first">14</td>
+                                    <td>0000</td>
+                                    <td><a class="t_link" href="#none">국어 검수지</a></td>
+                                    <td>초등</td>
+                                    <td>국어</td>
+                                    <td>국어</td>
+                                    <td>대기</td>
+                                    <td>2022.02.14</td>
+                                    <td>0%    00/000</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>
+                                        <a href="#none" class="btn btn_lgreen small w70">검수하기</a>
+                                        <a href="#none" class="btn btn_light small w70">다운로드</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="first">15</td>
+                                    <td>0000</td>
+                                    <td><a class="t_link" href="#none">국어 검수지</a></td>
+                                    <td>초등</td>
+                                    <td>국어</td>
+                                    <td>국어</td>
+                                    <td>대기</td>
+                                    <td>2022.02.14</td>
+                                    <td>0%    00/000</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>
+                                        <a href="#none" class="btn btn_lgreen small w70">검수하기</a>
+                                        <a href="#none" class="btn btn_light small w70">다운로드</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="first">16</td>
+                                    <td>0000</td>
+                                    <td><a class="t_link" href="#none">국어 검수지</a></td>
+                                    <td>초등</td>
+                                    <td>국어</td>
+                                    <td>국어</td>
+                                    <td>대기</td>
+                                    <td>2022.02.14</td>
+                                    <td>0%    00/000</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>
+                                        <a href="#none" class="btn btn_lgreen small w70">검수하기</a>
+                                        <a href="#none" class="btn btn_light small w70">다운로드</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="first">17</td>
+                                    <td>0000</td>
+                                    <td><a class="t_link" href="#none">국어 검수지</a></td>
+                                    <td>초등</td>
+                                    <td>국어</td>
+                                    <td>국어</td>
+                                    <td>대기</td>
+                                    <td>2022.02.14</td>
+                                    <td>0%    00/000</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>
+                                        <a href="#none" class="btn btn_lgreen small w70">검수하기</a>
+                                        <a href="#none" class="btn btn_light small w70">다운로드</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="first">18</td>
+                                    <td>0000</td>
+                                    <td><a class="t_link" href="#none">국어 검수지</a></td>
+                                    <td>초등</td>
+                                    <td>국어</td>
+                                    <td>국어</td>
+                                    <td>대기</td>
+                                    <td>2022.02.14</td>
+                                    <td>0%    00/000</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>
+                                        <a href="#none" class="btn btn_lgreen small w70">검수하기</a>
+                                        <a href="#none" class="btn btn_light small w70">다운로드</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="first">19</td>
+                                    <td>0000</td>
+                                    <td><a class="t_link" href="#none">국어 검수지</a></td>
+                                    <td>초등</td>
+                                    <td>국어</td>
+                                    <td>국어</td>
+                                    <td>대기</td>
+                                    <td>2022.02.14</td>
+                                    <td>0%    00/000</td>
+                                    <td>YYYY.MM.DD</td>
+                                    <td>
+                                        <a href="#none" class="btn btn_lgreen small w70">검수하기</a>
+                                        <a href="#none" class="btn btn_light small w70">다운로드</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p class="p_text mt15">
+                        * 검수지 內 모든 문항이 승인되어야 해당 검수지의 검수 상태는 [승인]으로 변경됩니다.<br>
+                        * 1개의 문항이라도 보류 선택 시, 해당 검수지는 보류 상태로 변경됩니다.
+                    </p>
+                    <!-- 페이징 -->
+                    <div class="paging mt32">
+                        <a href="javascript:void(0);" class="pprev"><img src="../../images/page_pprev.svg" alt="처음"></a> 
+                        <a href="javascript:void(0);" class="prev"><img src="../../images/page_prev.svg" alt="이전"></a> 
+                        <a href="javascript:void(0);" class="on">1 </a>
+                        <a href="javascript:void(0);">2</a>
+                        <a href="javascript:void(0);">3</a>
+                        <a href="javascript:void(0);">4</a>
+                        <a href="javascript:void(0);">5</a>
+                        <a href="javascript:void(0);">6</a>
+                        <a href="javascript:void(0);">7</a>
+                        <a href="javascript:void(0);">8</a>
+                        <a href="javascript:void(0);">9</a>
+                        <a href="javascript:void(0);">10</a>
+                        <a href="javascript:void(0);" class="next"><img src="../../images/page_next.svg" alt="다음"></a>
+                        <a href="javascript:void(0);" class="nnext"><img src="../../images/page_nnext.svg" alt="끝"></a>
+                    </div>
+                </section>
+            </div>
+        </div>
+	</div>
+</body>
+</html>

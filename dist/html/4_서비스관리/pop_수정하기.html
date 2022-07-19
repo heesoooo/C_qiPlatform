@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>서비스관리-수정하기</title>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css">
+<!-- <link rel="stylesheet" href="../../css/webfonts/fontawesome.min.css"/> -->
+<link rel="stylesheet" href="../../css/style.min.css">
+
+<script type="text/javascript" src="../../js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../js/admin.js"></script> 
+<script type="text/javascript" src="../../js/swiper.min.js"></script> 
+</head>
+<body style="background-color: #fff;">
+	<!-- 수정하기 popup -->
+	<div class="window_pop pop_question_regist">
+		<h2 class="title mb30">수정하기</h2>
+		
+		<div class="justify_start">
+			<span class="sel_tit">서비스명</span>
+			<select class="select_box w220">
+				<option value="">선택</option>
+				<option value="">선택</option>
+				<option value="">선택</option>
+				<option value="">선택</option>
+			</select>
+		</div>
+		<div class="justify_start mt15">
+			<span class="sel_tit">학교급</span>
+			<select class="select_box">
+				<option value="">선택</option>
+				<option value="">선택</option>
+				<option value="">선택</option>
+				<option value="">선택</option>
+			</select>
+		</div>
+		<div class="justify_start mt15">
+			<span class="sel_tit">영역</span>
+			<select class="select_box">
+				<option value="">선택</option>
+				<option value="">선택</option>
+				<option value="">선택</option>
+				<option value="">선택</option>
+			</select>
+		</div>
+		<div class="justify_start mt15">
+			<span class="sel_tit">과목</span>
+			<select class="select_box">
+				<option value="">선택</option>
+			</select>
+		</div>
+		<div class="justify_start mt15">
+			<span class="sel_tit">상위 인덱스</span>
+			<input type="text" class="w220 placeholder_black" placeholder="AI 맞춤학습">
+		</div>						
+		<div class="justify_start mt15">
+			<span class="sel_tit">하위 인덱스</span>
+			<input type="text" class="w220 placeholder_black" placeholder="스마트 맞춤학습">
+		</div>        
+        <div class="justify_start_top mt25">
+			<span class="sel_tit">상태</span>
+			<div class="radio_box">
+				<input type="radio" name="typeActive" id="active">
+				<label for="active">활성화</label>
+
+				<input type="radio" name="typeActive" id="inactive" class="ml15">
+				<label for="inactive">비활성화</label>
+			</div>
+		</div>		
+		<div class="justify_center mt30">
+			<a class="btn btn_green large" href="#none">수정</a>
+		</div>
+	</div>
+	<!-- //수정하기 popup -->
+</body>
+</html>

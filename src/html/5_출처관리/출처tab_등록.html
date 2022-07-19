@@ -1,0 +1,498 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+	<head> 
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>문항통합플랫폼</title>
+		@@include('../include/inc_html_head.html')
+	</head>
+<body>
+	 
+	<div id="wrap">
+		<!-- 상단 공통 영역 -->
+		@@include('../include/inc_header.html')
+		<div class="container">
+			<div class="local_nav">
+				<ul class="menu">
+					<li><a href="#none">문항 삽화 이미지 관리</a></li>
+					<li><a href="#none">미디어 파일 관리</a></li>
+					<li><a href="#none" class="on">출처 관리</a></li>
+				</ul>
+			</div>
+
+			<!-- 컨텐츠 영역 -->
+			<div class="contents">
+				<h2 class="page_tit pt00">출처관리</h2>
+				<div class="tabmenu">
+					<ul>
+						<li class="tab_btn">
+							<input type="radio" checked name="tabmenu" id="tmenu1" class="tab">
+							<label class="label" for="tmenu1">일반 출처</label>
+							<div class="tab_con">
+								<h3 class="title mt40">일반 출처 등록</h3>
+								<!-- 일반 출처 - 교재,교과서 리스트  -->
+								<div class="source_list_wrap mt15">
+									<div class="search_box input_line justify_between">
+										<div class="terms justify_between_start">
+											<span><span class="mark">*</span>출처명</span>
+											<input type="text" placeholder="교과서·교재·출판사명" class="w300">
+										</div>
+									</div>
+									<div class="search_box justify_between">
+										<div class="terms justify_start_top">
+											<span>출처ID</span>
+											<span>000</span>
+										</div>
+									</div>
+									<div class="search_box justify_between">
+										<div class="terms justify_start">
+											<span><span class="mark">*</span>구분</span>
+											<div class="radio_box">
+												<input type="radio" id="c1" name="cate" value="" checked><label for="c1"> 교과서</label>
+												<input type="radio" id="c2" name="cate" value="" ><label for="c2"> 교재</label>
+												<input type="radio" id="c3" name="cate" value="" ><label for="c3"> 출판사</label>
+											</div>
+										</div>
+									</div>
+									<div class="search_box input_line justify_between">
+										<div class="terms justify_between_start">
+											<span><span class="mark">*</span>년도</span>
+											<div class="chk_list">
+												<select class="select_box w100 mr05">
+													<option value="">선택</option>
+													<option value="">선택1</option>
+													<option value="">선택2</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="search_box input_line justify_between">
+										<div class="terms justify_between_start">
+											<span>저자명</span>
+											<input type="text" placeholder="저자명" class="w300">
+										</div>
+									</div>
+									<div class="search_box input_line justify_between">
+										<div class="terms justify_between_start">
+											<span><span class="mark">*</span>출판사</span>
+											<div>
+												<div class="justify_start_top">
+													<div class="chk_list">
+														<select class="select_box w100 mr05">
+															<option value="">선택</option>
+															<option value="">선택1</option>
+														</select>
+													</div>
+													<a href="#none" class="btn btn_gray w80">직접입력</a>
+												</div>
+												<!-- D: 버튼 클릭시 input 노출-->
+												<!-- <input type="text" placeholder="출판사명을 입력해주세요" class="w300 mt10"> -->
+											</div>
+										</div>
+									</div>
+									<div class="search_box input_line justify_between">
+										<div class="terms justify_between_start">
+											<span><span class="mark">*</span>학교급</span>
+											<div class="chk_list">
+												<select class="select_box w100 mr05">
+													<option value="">선택</option>
+													<option value="">학교급</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="search_box justify_between">
+										<div class="terms justify_start_top">
+											<span><span class="mark">*</span>학년</span>
+											<!-- D: 학교급 선택시 노출  -->
+											<!-- <div class="chk_list">
+												<div>
+													<span class="check_box mr15">
+														<input type="checkbox" id="grade0">
+														<label for="grade0">전체</label>
+													</span>
+													<span class="check_box mr15">
+														<input type="checkbox" id="grade1">
+														<label for="grade1">초1</label>
+													</span>
+													<span class="check_box mr15">
+														<input type="checkbox" id="grade2">
+														<label for="grade2">초2</label>
+													</span>
+													<span class="check_box mr15">
+														<input type="checkbox" id="grade3">
+														<label for="grade3">초3</label>
+													</span>
+													<span class="check_box mr15">
+														<input type="checkbox" id="grade4">
+														<label for="grade4">초4</label>
+													</span>
+													<span class="check_box mr15">
+														<input type="checkbox" id="grade5">
+														<label for="grade5">초5</label>
+													</span>
+													<span class="check_box mr15">
+														<input type="checkbox" id="grade6">
+														<label for="grade6">초6</label>
+													</span>
+												</div>
+											</div> -->
+											<span class="p_text col_light_gray">학교급을 선택해주세요.</span>
+										</div>
+									</div>
+									<div class="search_box input_line justify_between">
+										<div class="terms justify_start_top">
+											<span><span class="mark">*</span>영역</span>
+											<div class="chk_list">
+												<select class="select_box w100 mr05">
+													<option value="">선택</option>
+													<option value="">영역</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="search_box input_line justify_between">
+										<div class="terms justify_between_start">
+											<span><span class="mark">*</span>과목</span>
+											<span class="p_text col_light_gray">과목을 선택해주세요.</span>
+										</div>
+									</div>
+									<div class="search_box justify_between">
+										<div class="terms justify_start">
+											<span><span class="mark">*</span>학기</span>
+											<div class="radio_box">
+												<input type="radio" id="g1" name="grade" value="전체" checked><label for="g1"> 0학기</label>
+												<input type="radio" id="g2" name="grade" value="1학년" ><label for="g2"> 1학기</label>
+												<input type="radio" id="g3" name="grade" value="2학년" ><label for="g3"> 2학기</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!--// 일반 출처 - 교재,교과서 리스트-->
+
+								<!-- 일반 출처 - 출판사 리스트 -->
+								<!-- <div class="source_list_wrap mt15">
+									<div class="search_box input_line justify_between">
+										<div class="terms justify_between_start">
+											<span class="mr20"><span class="mark">*</span>교재·출판·교과서명</span>
+											<input type="text" placeholder="교과서·교재·출판사명" class="w300">
+										</div>
+									</div>
+									<div class="search_box justify_between">
+										<div class="terms justify_start_top">
+											<span>출처ID</span>
+											<span>000</span>
+										</div>
+									</div>
+									<div class="search_box justify_between">
+										<div class="terms justify_start">
+											<span><span class="mark">*</span>구분</span>
+											<div class="radio_box">
+												<input type="radio" id="c1" name="cate" value="전체"><label for="c1"> 교과서</label>
+												<input type="radio" id="c2" name="cate" value="1학년"><label for="c2"> 교재</label>
+												<input type="radio" id="c3" name="cate" value="2학년" checked><label for="c3"> 출판사</label>
+											</div>
+										</div>
+									</div>
+									<div class="search_box input_line justify_between">
+										<div class="terms justify_between_start">
+											<span><span class="mark">*</span>년도</span>
+											<div class="chk_list">
+												<select class="select_box w100 mr05">
+													<option value="">선택</option>
+													<option value="">선택1</option>
+													<option value="">선택2</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="search_box input_line justify_between">
+										<div class="terms justify_between_start">
+											<span>저자명</span>
+											<input type="text" placeholder="저자명" class="w300">
+										</div>
+									</div>
+								</div> -->
+								<!--// 일반 출처 - 출판사 리스트 -->
+								
+								<div class="mt40 justify_center mb60">
+									<a class="btn btn_gray outline large w80" href="#none">취소</a>
+									<a class="btn btn_green large w80 ml15" href="#none">등록</a>
+								</div>
+							</div>
+						</li>
+						<li class="tab_btn">
+							<input type="radio" name="tabmenu" id="tmenu2" class="tab">
+							<label class="label" for="tmenu2">기타 출처</label>
+							<div class="tab_con">
+								<h3 class="title mt40">기타 출처 등록</h3>
+								<!-- 기타 출처 리스트  -->
+								<div class="source_list_wrap mt15">
+									<div class="search_box input_line justify_between">
+										<div class="terms justify_between_start">
+											<span><span class="mark">*</span>출처명</span>
+											
+											<input type="text" placeholder="기타 출처명" class="w300">
+										</div>
+									</div>
+									<div class="search_box justify_between">
+										<div class="terms justify_start_top">
+											<span>출처ID</span>
+											<span>000</span>
+										</div>
+									</div>
+									<div class="search_box justify_between">
+										<div class="terms justify_start">
+											<span><span class="mark">*</span>구분</span>
+											<div class="radio_box">
+												<input type="radio" id="t1" name="teacher" value="" checked><label for="t1"> 밀크T중학강사</label>
+												<input type="radio" id="t2" name="teacher" value="" ><label for="t2"> 밀크T강사</label>
+												<input type="radio" id="t3" name="teacher" value="" ><label for="t3"> 기타</label>
+											</div>
+										</div>
+									</div>
+									<div class="search_box input_line justify_between">
+										<div class="terms justify_between_start">
+											<span><span class="mark">*</span>년도</span>
+											<div class="chk_list">
+												<select class="select_box w100 mr05">
+													<option value="">선택</option>
+													<option value="">선택1</option>
+													<option value="">선택2</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="search_box input_line justify_between">
+										<div class="terms justify_between_start">
+											<span>학교급</span>
+											<div class="chk_list">
+												<select class="select_box w100 mr05">
+													<option value="">선택</option>
+													<option value="">학교급</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="search_box justify_between">
+										<div class="terms justify_start_top">
+											<span>학년</span>
+											<!-- D: 학교급 선택시 노출  -->
+											<!-- <div class="chk_list">
+												<div>
+													<span class="check_box mr15">
+														<input type="checkbox" id="grade0">
+														<label for="grade0">전체</label>
+													</span>
+													<span class="check_box mr15">
+														<input type="checkbox" id="grade1">
+														<label for="grade1">초1</label>
+													</span>
+													<span class="check_box mr15">
+														<input type="checkbox" id="grade2">
+														<label for="grade2">초2</label>
+													</span>
+													<span class="check_box mr15">
+														<input type="checkbox" id="grade3">
+														<label for="grade3">초3</label>
+													</span>
+													<span class="check_box mr15">
+														<input type="checkbox" id="grade4">
+														<label for="grade4">초4</label>
+													</span>
+													<span class="check_box mr15">
+														<input type="checkbox" id="grade5">
+														<label for="grade5">초5</label>
+													</span>
+													<span class="check_box mr15">
+														<input type="checkbox" id="grade6">
+														<label for="grade6">초6</label>
+													</span>
+												</div>
+											</div> -->
+											<span class="p_text col_light_gray">학교급을 선택해주세요.</span>
+										</div>
+									</div>
+									<div class="search_box input_line justify_between">
+										<div class="terms justify_start_top">
+											<span>영역</span>
+											<div class="chk_list">
+												<select class="select_box w100 mr05">
+													<option value="">선택</option>
+													<option value="">영역</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="search_box input_line justify_between">
+										<div class="terms justify_start">
+											<span class="mr20">원본 이미지/파일</span>
+											<input type="text" placeholder="선택된 파일 없음" class="w300">
+											<a href="#none" class="btn btn_green w80 ml05">파일 첨부</a>
+											<a href="#none" class="btn btn_gray w80 ml05">파일 추가</a>
+										</div>
+									</div>
+									<div class="search_box input_line justify_between">
+										<div class="terms justify_start">
+											<span>URL</span>
+											<input type="text" placeholder="선택된 파일 없음" class="w300">
+										</div>
+									</div>
+									<div class="search_box input_line justify_between">
+										<div class="terms justify_start w100p">
+											<span>비고</span>
+											<textarea placeholder="해당 출처에 대한 설명입력" style="height:36px" class="w100p" rows="auto" onkeydown="resize(this)" onkeyup="resize(this)"></textarea>
+										</div>
+									</div>
+								</div>
+								<!--// 기타 출처 리스트-->
+								<div class="mt40 justify_center mb60">
+									<a class="btn btn_gray outline large w80" href="#none">취소</a>
+									<a class="btn btn_green large w80 ml15" href="#none">등록</a>
+								</div>
+							</div>
+						</li>
+						<li class="tab_btn">
+							<input type="radio" name="tabmenu" id="tmenu3" class="tab">
+							<label class="label" for="tmenu3">기출 출처</label>
+							<div class="tab_con">
+								<h3 class="title mt40">기출 출처 등록</h3>
+								<!-- 기출 출처 리스트  -->
+								<div class="source_list_wrap mt15">
+									<div class="search_box input_line justify_between">
+										<div class="terms justify_between_start">
+											<span><span class="mark">*</span>기출명</span>
+											<input type="text" placeholder="기출명" class="w300">
+										</div>
+									</div>
+									<div class="search_box justify_between">
+										<div class="terms justify_start_top">
+											<span>출처ID</span>
+											<span>000</span>
+										</div>
+									</div>
+									<div class="search_box justify_between">
+										<div class="terms justify_start">
+											<span><span class="mark">*</span>구분</span>
+											<div class="radio_box">
+												<input type="radio" id="tt1" name="test" value="" checked><label for="tt1"> 학력평가</label>
+												<input type="radio" id="tt2" name="test" value="" ><label for="tt2"> 모의평가</label>
+												<input type="radio" id="tt3" name="test" value="" ><label for="tt3"> 학업성취도평가</label>
+											</div>
+										</div>
+									</div>
+									<div class="search_box input_line justify_between">
+										<div class="terms justify_between_start">
+											<span><span class="mark">*</span>기출년도</span>
+											<div class="chk_list">
+												<select class="select_box w100 mr05">
+													<option value="">선택</option>
+													<option value="">선택1</option>
+													<option value="">선택2</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="search_box input_line justify_between">
+										<div class="terms justify_between_start">
+											<span>시행처</span>
+											<input type="text" placeholder="시행처명" class="w300">
+										</div>
+									</div>
+									<div class="search_box input_line justify_between">
+										<div class="terms justify_between_start">
+											<span><span class="mark">*</span>시행일</span>
+											<input type="text" id="datepicker" class="w90">
+										</div>
+									</div>
+									<div class="search_box input_line justify_between">
+										<div class="terms justify_between_start">
+											<span><span class="mark">*</span>학교급</span>
+											<div class="chk_list">
+												<select class="select_box w100 mr05">
+													<option value="">선택</option>
+													<option value="">학교급</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="search_box justify_between">
+										<div class="terms justify_start_top">
+											<span><span class="mark">*</span>학년</span>
+											<!-- D: 학교급 선택시 노출  -->
+											<!-- <div class="chk_list">
+												<div>
+													<span class="check_box mr15">
+														<input type="checkbox" id="grade0">
+														<label for="grade0">전체</label>
+													</span>
+													<span class="check_box mr15">
+														<input type="checkbox" id="grade1">
+														<label for="grade1">초1</label>
+													</span>
+													<span class="check_box mr15">
+														<input type="checkbox" id="grade2">
+														<label for="grade2">초2</label>
+													</span>
+													<span class="check_box mr15">
+														<input type="checkbox" id="grade3">
+														<label for="grade3">초3</label>
+													</span>
+													<span class="check_box mr15">
+														<input type="checkbox" id="grade4">
+														<label for="grade4">초4</label>
+													</span>
+													<span class="check_box mr15">
+														<input type="checkbox" id="grade5">
+														<label for="grade5">초5</label>
+													</span>
+													<span class="check_box mr15">
+														<input type="checkbox" id="grade6">
+														<label for="grade6">초6</label>
+													</span>
+												</div>
+											</div> -->
+											<span class="p_text col_light_gray">학교급을 선택해주세요.</span>
+										</div>
+									</div>
+									<div class="search_box input_line justify_between">
+										<div class="terms justify_start_top">
+											<span><span class="mark">*</span>영역</span>
+											<div class="chk_list">
+												<select class="select_box w100 mr05">
+													<option value="">선택</option>
+													<option value="">영역</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="search_box justify_between">
+										<div class="terms justify_start_top">
+											<span><span class="mark">*</span>과목</span>
+											<span class="p_text col_light_gray">과목을 선택해주세요.</span>
+										</div>
+									</div>
+								</div>
+								<!--// 기출 출처 리스트  -->
+								<div class="mt40 justify_center mb60">
+									<a class="btn btn_gray outline large w80" href="#none">취소</a>
+									<a class="btn btn_green large w80 ml15" href="#none">등록</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<script>
+		/* textarea 높이값 자동 */
+        function resize(obj) {
+            obj.style.height = "1px";
+            obj.style.height = (obj.scrollHeight)+"px";
+        }
+
+	</script>
+</body>
+</html>

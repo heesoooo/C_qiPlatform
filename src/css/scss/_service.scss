@@ -1,0 +1,96 @@
+﻿// 디바이스별 템플릿 설정
+.setting_device {
+	& .left_section {
+		width: 283px;
+	}
+}
+
+.service_info {
+	padding: 12px 0 8px 17px;
+	color: $black;
+	& .txt {
+		font-size: 14px;
+		color: $black;
+	}
+	& h4 {
+		min-width: 91px;
+		font-size: 14px;
+		letter-spacing: -0.56px;
+		text-align: left;
+		color: #000;
+	}
+	& .radio_box {
+		& input[type="radio"] {
+			+ label {
+				margin-left: 2px;
+				font-size: 14px;
+				letter-spacing: -0.56px;
+				color: $black;
+			}
+		}
+	}
+	& .check_box {
+		& input[type="checkbox"] {
+			+ label {
+				line-height: 18px;
+				letter-spacing: -.56px;
+				& span {
+					padding-left: 21px;
+				}
+			}
+		}
+	}
+}
+
+// 개념속성
+.concept_attr_box {
+	padding: 20px 15px;
+	min-width: 285px;
+	border-radius: 4px;
+	border: solid 1px #ccc;
+	background-color: $white;
+	& h4 {
+		font-size: 20px;
+		font-weight: bold;
+		color: #010101;
+		letter-spacing: -.8px;
+	}
+	& .terms {
+		& h5 {
+			font-size: 14px;
+			letter-spacing: -.56px;
+			color: $black;
+		}
+		& input,
+		& textarea {
+			min-width: 226px;
+		}
+		& .btn {
+			min-width: 24px;
+			height: 24px;
+		}
+	}
+}
+
+
+// 서비스별 인덱스 관리
+.service_index_info {
+	padding: 8px 24px;
+	border: solid 1px #ccc;
+	border-radius: 4px;
+	background-color: #eee;
+
+	& span {
+		font-size: 16px;
+		font-weight: bold;
+		letter-spacing: -.64px;
+		color: $black;
+		&.bar {
+			display: inline-block;
+			margin: 0 8px;
+			width: 1px;
+			height: 12px;
+			background: #ccc;
+		}
+	}
+}
